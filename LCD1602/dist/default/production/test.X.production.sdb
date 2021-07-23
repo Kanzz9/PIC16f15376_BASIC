@@ -1,0 +1,274 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F15376 ]
+[d frameptr 6 ]
+"27 F:\work\pic16lf15376\Training\b1\test.X\main.c
+[e E7756 . `uc
+TEXTLCD0802 0
+TEXTLCD0804 1
+TEXTLCD1602 2
+TEXTLCD1604 3
+TEXTLCD2002 4
+TEXTLCD2004 5
+]
+"179 F:\work\pic16lf15376\Training\b1/Lib/TEXTLCD.c
+[e E36 . `uc
+TEXTLCD0802 0
+TEXTLCD0804 1
+TEXTLCD1602 2
+TEXTLCD1604 3
+TEXTLCD2002 4
+TEXTLCD2004 5
+]
+"11
+[v _TextLCD_4Bits_Write TextLCD_4Bits_Write `(v  1 s 1 TextLCD_4Bits_Write ]
+"37
+[v _TextLCD_Enable TextLCD_Enable `(v  1 s 1 TextLCD_Enable ]
+"45
+[v _TextLCD_Put TextLCD_Put `(v  1 s 1 TextLCD_Put ]
+"52
+[v _TextLCD_CMD TextLCD_CMD `(v  1 s 1 TextLCD_CMD ]
+"58
+[v _TextLCD_PutChar TextLCD_PutChar `(v  1 e 1 0 ]
+"64
+[v _TextLCD_SetCursor TextLCD_SetCursor `(v  1 e 1 0 ]
+"79
+[v _TextLCD_Puts TextLCD_Puts `(v  1 e 1 0 ]
+"179
+[v _TextLCD_Init TextLCD_Init `(a  1 e 1 0 ]
+"5 E:\microchip\xc8\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"5 E:\microchip\xc8\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"10 E:\microchip\xc8\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 E:\microchip\xc8\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"8 F:\work\pic16lf15376\Training\b1\test.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"50 F:\work\pic16lf15376\Training\b1\test.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"57
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"73
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+"55 F:\work\pic16lf15376\Training\b1\test.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"7 F:\work\pic16lf15376\Training\b1/Lib/TEXTLCD.c
+[v _MaxLine MaxLine `uc  1 s 1 MaxLine ]
+"8
+[v _MaxRow MaxRow `uc  1 s 1 MaxRow ]
+"9
+[v _DDRAM_Start_Address DDRAM_Start_Address `DC[4]uc  1 s 4 DDRAM_Start_Address ]
+"733 C:/Users/ADMIN/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f15376.h
+[v _TRISA TRISA `VEuc  1 e 1 @18 ]
+"795
+[v _TRISB TRISB `VEuc  1 e 1 @19 ]
+"857
+[v _TRISC TRISC `VEuc  1 e 1 @20 ]
+"919
+[v _TRISD TRISD `VEuc  1 e 1 @21 ]
+"981
+[v _TRISE TRISE `VEuc  1 e 1 @22 ]
+"1019
+[v _LATA LATA `VEuc  1 e 1 @24 ]
+[s S114 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 LATA3 1 0 :1:3 
+`uc 1 LATA4 1 0 :1:4 
+`uc 1 LATA5 1 0 :1:5 
+`uc 1 LATA6 1 0 :1:6 
+`uc 1 LATA7 1 0 :1:7 
+]
+"1036
+[u S123 . 1 `S114 1 . 1 0 ]
+[v _LATAbits LATAbits `VES123  1 e 1 @24 ]
+"1081
+[v _LATB LATB `VEuc  1 e 1 @25 ]
+"1143
+[v _LATC LATC `VEuc  1 e 1 @26 ]
+"1205
+[v _LATD LATD `VEuc  1 e 1 @27 ]
+"1267
+[v _LATE LATE `VEuc  1 e 1 @28 ]
+[s S135 . 1 `uc 1 LATE0 1 0 :1:0 
+`uc 1 LATE1 1 0 :1:1 
+`uc 1 LATE2 1 0 :1:2 
+]
+"1279
+[u S139 . 1 `S135 1 . 1 0 ]
+[v _LATEbits LATEbits `VES139  1 e 1 @28 ]
+"9909
+[v _PMD0 PMD0 `VEuc  1 e 1 @1942 ]
+"9954
+[v _PMD1 PMD1 `VEuc  1 e 1 @1943 ]
+"10002
+[v _PMD2 PMD2 `VEuc  1 e 1 @1944 ]
+"10047
+[v _PMD3 PMD3 `VEuc  1 e 1 @1945 ]
+"10097
+[v _PMD4 PMD4 `VEuc  1 e 1 @1946 ]
+"10142
+[v _PMD5 PMD5 `VEuc  1 e 1 @1947 ]
+"11204
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @2189 ]
+"11344
+[v _OSCCON3 OSCCON3 `VEuc  1 e 1 @2191 ]
+"11384
+[v _OSCSTAT OSCSTAT `VEuc  1 e 1 @2192 ]
+"11441
+[v _OSCEN OSCEN `VEuc  1 e 1 @2193 ]
+"11492
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @2194 ]
+"11550
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @2195 ]
+"20259
+[v _ANSELA ANSELA `VEuc  1 e 1 @7992 ]
+"20321
+[v _WPUA WPUA `VEuc  1 e 1 @7993 ]
+"20383
+[v _ODCONA ODCONA `VEuc  1 e 1 @7994 ]
+"20445
+[v _SLRCONA SLRCONA `VEuc  1 e 1 @7995 ]
+"20507
+[v _INLVLA INLVLA `VEuc  1 e 1 @7996 ]
+"20755
+[v _ANSELB ANSELB `VEuc  1 e 1 @8003 ]
+"20817
+[v _WPUB WPUB `VEuc  1 e 1 @8004 ]
+"20879
+[v _ODCONB ODCONB `VEuc  1 e 1 @8005 ]
+"20941
+[v _SLRCONB SLRCONB `VEuc  1 e 1 @8006 ]
+"21003
+[v _INLVLB INLVLB `VEuc  1 e 1 @8007 ]
+"21251
+[v _ANSELC ANSELC `VEuc  1 e 1 @8014 ]
+"21313
+[v _WPUC WPUC `VEuc  1 e 1 @8015 ]
+"21375
+[v _ODCONC ODCONC `VEuc  1 e 1 @8016 ]
+"21437
+[v _SLRCONC SLRCONC `VEuc  1 e 1 @8017 ]
+"21499
+[v _INLVLC INLVLC `VEuc  1 e 1 @8018 ]
+"21747
+[v _ANSELD ANSELD `VEuc  1 e 1 @8025 ]
+"21809
+[v _WPUD WPUD `VEuc  1 e 1 @8026 ]
+"21871
+[v _ODCOND ODCOND `VEuc  1 e 1 @8027 ]
+"21933
+[v _SLRCOND SLRCOND `VEuc  1 e 1 @8028 ]
+"21995
+[v _INLVLD INLVLD `VEuc  1 e 1 @8029 ]
+"22057
+[v _ANSELE ANSELE `VEuc  1 e 1 @8036 ]
+"22089
+[v _WPUE WPUE `VEuc  1 e 1 @8037 ]
+"22127
+[v _ODCONE ODCONE `VEuc  1 e 1 @8038 ]
+"22159
+[v _SLRCONE SLRCONE `VEuc  1 e 1 @8039 ]
+"22191
+[v _INLVLE INLVLE `VEuc  1 e 1 @8040 ]
+"8 F:\work\pic16lf15376\Training\b1\test.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"33
+} 0
+"79 F:\work\pic16lf15376\Training\b1/Lib/TEXTLCD.c
+[v _TextLCD_Puts TextLCD_Puts `(v  1 e 1 0 ]
+{
+[v TextLCD_Puts@line line `uc  1 a 1 wreg ]
+[v TextLCD_Puts@line line `uc  1 a 1 wreg ]
+[v TextLCD_Puts@idx idx `uc  1 p 1 8 ]
+[v TextLCD_Puts@data data `*.25DCuc  1 p 2 9 ]
+[v TextLCD_Puts@length_or_type length_or_type `uc  1 p 1 11 ]
+"81
+[v TextLCD_Puts@line line `uc  1 a 1 13 ]
+"94
+} 0
+"64
+[v _TextLCD_SetCursor TextLCD_SetCursor `(v  1 e 1 0 ]
+{
+[v TextLCD_SetCursor@line line `uc  1 a 1 wreg ]
+"66
+[v TextLCD_SetCursor@address address `uc  1 a 1 6 ]
+"64
+[v TextLCD_SetCursor@line line `uc  1 a 1 wreg ]
+[v TextLCD_SetCursor@idx idx `uc  1 p 1 4 ]
+"68
+[v TextLCD_SetCursor@line line `uc  1 a 1 7 ]
+"77
+} 0
+"58
+[v _TextLCD_PutChar TextLCD_PutChar `(v  1 e 1 0 ]
+{
+[v TextLCD_PutChar@data data `uc  1 a 1 wreg ]
+[v TextLCD_PutChar@data data `uc  1 a 1 wreg ]
+"60
+[v TextLCD_PutChar@data data `uc  1 a 1 3 ]
+"62
+} 0
+"179
+[v _TextLCD_Init TextLCD_Init `(a  1 e 1 0 ]
+{
+[v TextLCD_Init@TextLcdType TextLcdType `E36  1 a 1 wreg ]
+[v TextLCD_Init@TextLcdType TextLcdType `E36  1 a 1 wreg ]
+[v TextLCD_Init@TextLcdType TextLcdType `E36  1 a 1 6 ]
+"234
+} 0
+"52
+[v _TextLCD_CMD TextLCD_CMD `(v  1 s 1 TextLCD_CMD ]
+{
+[v TextLCD_CMD@cmd cmd `uc  1 a 1 wreg ]
+[v TextLCD_CMD@cmd cmd `uc  1 a 1 wreg ]
+"54
+[v TextLCD_CMD@cmd cmd `uc  1 a 1 3 ]
+"56
+} 0
+"45
+[v _TextLCD_Put TextLCD_Put `(v  1 s 1 TextLCD_Put ]
+{
+[v TextLCD_Put@b b `uc  1 a 1 wreg ]
+[v TextLCD_Put@b b `uc  1 a 1 wreg ]
+[v TextLCD_Put@b b `uc  1 a 1 2 ]
+"50
+} 0
+"37
+[v _TextLCD_Enable TextLCD_Enable `(v  1 s 1 TextLCD_Enable ]
+{
+"43
+} 0
+"11
+[v _TextLCD_4Bits_Write TextLCD_4Bits_Write `(v  1 s 1 TextLCD_4Bits_Write ]
+{
+[v TextLCD_4Bits_Write@nib nib `uc  1 a 1 wreg ]
+[v TextLCD_4Bits_Write@nib nib `uc  1 a 1 wreg ]
+"13
+[v TextLCD_4Bits_Write@nib nib `uc  1 a 1 0 ]
+"35
+} 0
+"50 F:\work\pic16lf15376\Training\b1\test.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"55
+} 0
+"73
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+{
+"87
+} 0
+"55 F:\work\pic16lf15376\Training\b1\test.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"126
+} 0
+"57 F:\work\pic16lf15376\Training\b1\test.X\mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"71
+} 0
