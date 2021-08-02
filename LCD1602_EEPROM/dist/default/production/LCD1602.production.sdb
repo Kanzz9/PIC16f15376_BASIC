@@ -1,0 +1,467 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F15376 ]
+[d frameptr 6 ]
+"88 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\LCD1602\mcc_generated_files/tmr2.c
+[e E7738 . `uc
+TMR2_ROP_STARTS_TMRON 0
+TMR2_ROP_STARTS_TMRON_ERSHIGH 1
+TMR2_ROP_STARTS_TMRON_ERSLOW 2
+TMR2_ROP_RESETS_ERSBOTHEDGE 3
+TMR2_ROP_RESETS_ERSRISINGEDGE 4
+TMR2_ROP_RESETS_ERSFALLINGEDGE 5
+TMR2_ROP_RESETS_ERSLOW 6
+TMR2_ROP_RESETS_ERSHIGH 7
+TMR2_OS_STARTS_TMRON 8
+TMR2_OS_STARTS_ERSRISINGEDGE 9
+TMR2_OS_STARTS_ERSFALLINGEDGE 10
+TMR2_OS_STARTS_ERSBOTHEDGE 11
+TMR2_OS_STARTS_ERSFIRSTRISINGEDGE 12
+TMR2_OS_STARTS_ERSFIRSTFALLINGEDGE 13
+TMR2_OS_STARTS_ERSRISINGEDGEDETECT 14
+TMR2_OS_STARTS_ERSFALLINGEDGEDETECT 15
+TMR2_OS_STARTS_TMRON_ERSHIGH 22
+TMR2_OS_STARTS_TMRON_ERSLOW 23
+TMR2_MS_STARTS_TMRON_ERSRISINGEDGEDETECT 17
+TMR2_MS_STARTS_TMRON_ERSFALLINGEDGEDETECT 18
+TMR2_MS_STARTS_TMRON_ERSBOTHEDGE 19
+]
+"94
+[e E7761 . `uc
+TMR2_T2INPPS 0
+TMR2_CCP1_OUT 1
+TMR2_CCP2_OUT 2
+TMR2_PWM3_OUT 3
+TMR2_PWM4_OUT 4
+TMR2_PWM5_OUT 5
+TMR2_PWM6_OUT 6
+TMR2_C1_OUT_SYNC 7
+TMR2_C2_OUT_SYNC 8
+TMR2_ZCD_OUTPUT 9
+TMR2_CLC1_OUT 10
+TMR2_CLC2_OUT 11
+TMR2_CLC3_OUT 12
+TMR2_CLC4_OUT 13
+]
+"27 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\LCD1602\main.c
+[e E7819 . `uc
+TEXTLCD0802 0
+TEXTLCD0804 1
+TEXTLCD1602 2
+TEXTLCD1604 3
+TEXTLCD2002 4
+TEXTLCD2004 5
+]
+"179 C:\Users\ADMIN\Desktop/Training/b1/Lib/TEXTLCD.c
+[e E36 . `uc
+TEXTLCD0802 0
+TEXTLCD0804 1
+TEXTLCD1602 2
+TEXTLCD1604 3
+TEXTLCD2002 4
+TEXTLCD2004 5
+]
+"11
+[v _TextLCD_4Bits_Write TextLCD_4Bits_Write `(v  1 s 1 TextLCD_4Bits_Write ]
+"37
+[v _TextLCD_Enable TextLCD_Enable `(v  1 s 1 TextLCD_Enable ]
+"45
+[v _TextLCD_Put TextLCD_Put `(v  1 s 1 TextLCD_Put ]
+"52
+[v _TextLCD_CMD TextLCD_CMD `(v  1 s 1 TextLCD_CMD ]
+"58
+[v _TextLCD_PutChar TextLCD_PutChar `(v  1 e 1 0 ]
+"64
+[v _TextLCD_SetCursor TextLCD_SetCursor `(v  1 e 1 0 ]
+"79
+[v _TextLCD_Puts TextLCD_Puts `(v  1 e 1 0 ]
+"179
+[v _TextLCD_Init TextLCD_Init `(a  1 e 1 0 ]
+"5 E:\microchip\xc8\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"5 E:\microchip\xc8\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"10 E:\microchip\xc8\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 E:\microchip\xc8\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"8 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\LCD1602\main.c
+[v _main main `(v  1 e 1 0 ]
+"50 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\LCD1602\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"59
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"75
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+"55 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\LCD1602\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"64 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\LCD1602\mcc_generated_files/pwm1.c
+[v _PWM1_Initialize PWM1_Initialize `(v  1 e 1 0 ]
+"62 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\LCD1602\mcc_generated_files/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+"100
+[v _TMR2_Start TMR2_Start `(v  1 e 1 0 ]
+"111
+[v _TMR2_Stop TMR2_Stop `(v  1 e 1 0 ]
+"122
+[v _TMR2_Counter8BitGet TMR2_Counter8BitGet `(uc  1 e 1 0 ]
+"136
+[v _TMR2_Counter8BitSet TMR2_Counter8BitSet `(v  1 e 1 0 ]
+"147
+[v _TMR2_Period8BitSet TMR2_Period8BitSet `(v  1 e 1 0 ]
+"7 C:\Users\ADMIN\Desktop/Training/b1/Lib/TEXTLCD.c
+[v _MaxLine MaxLine `uc  1 s 1 MaxLine ]
+"8
+[v _MaxRow MaxRow `uc  1 s 1 MaxRow ]
+"9
+[v _DDRAM_Start_Address DDRAM_Start_Address `DC[4]uc  1 s 4 DDRAM_Start_Address ]
+"733 C:/Users/ADMIN/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f15376.h
+[v _TRISA TRISA `VEuc  1 e 1 @18 ]
+"795
+[v _TRISB TRISB `VEuc  1 e 1 @19 ]
+"857
+[v _TRISC TRISC `VEuc  1 e 1 @20 ]
+"919
+[v _TRISD TRISD `VEuc  1 e 1 @21 ]
+"981
+[v _TRISE TRISE `VEuc  1 e 1 @22 ]
+"1019
+[v _LATA LATA `VEuc  1 e 1 @24 ]
+[s S433 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 LATA3 1 0 :1:3 
+`uc 1 LATA4 1 0 :1:4 
+`uc 1 LATA5 1 0 :1:5 
+`uc 1 LATA6 1 0 :1:6 
+`uc 1 LATA7 1 0 :1:7 
+]
+"1036
+[u S442 . 1 `S433 1 . 1 0 ]
+[v _LATAbits LATAbits `VES442  1 e 1 @24 ]
+"1081
+[v _LATB LATB `VEuc  1 e 1 @25 ]
+"1143
+[v _LATC LATC `VEuc  1 e 1 @26 ]
+"1205
+[v _LATD LATD `VEuc  1 e 1 @27 ]
+"1267
+[v _LATE LATE `VEuc  1 e 1 @28 ]
+[s S454 . 1 `uc 1 LATE0 1 0 :1:0 
+`uc 1 LATE1 1 0 :1:1 
+`uc 1 LATE2 1 0 :1:2 
+]
+"1279
+[u S458 . 1 `S454 1 . 1 0 ]
+[v _LATEbits LATEbits `VES458  1 e 1 @28 ]
+"5269
+[v _T2TMR T2TMR `VEuc  1 e 1 @652 ]
+"5274
+[v _TMR2 TMR2 `VEuc  1 e 1 @652 ]
+"5323
+[v _T2PR T2PR `VEuc  1 e 1 @653 ]
+"5328
+[v _PR2 PR2 `VEuc  1 e 1 @653 ]
+"5377
+[v _T2CON T2CON `VEuc  1 e 1 @654 ]
+[s S305 . 1 `uc 1 OUTPS 1 0 :4:0 
+`uc 1 CKPS 1 0 :3:4 
+`uc 1 ON 1 0 :1:7 
+]
+"5413
+[s S309 . 1 `uc 1 OUTPS0 1 0 :1:0 
+`uc 1 OUTPS1 1 0 :1:1 
+`uc 1 OUTPS2 1 0 :1:2 
+`uc 1 OUTPS3 1 0 :1:3 
+`uc 1 CKPS0 1 0 :1:4 
+`uc 1 CKPS1 1 0 :1:5 
+`uc 1 CKPS2 1 0 :1:6 
+]
+[s S317 . 1 `uc 1 T2OUTPS 1 0 :4:0 
+`uc 1 T2CKPS 1 0 :3:4 
+`uc 1 T2ON 1 0 :1:7 
+]
+[s S321 . 1 `uc 1 T2OUTPS0 1 0 :1:0 
+`uc 1 T2OUTPS1 1 0 :1:1 
+`uc 1 T2OUTPS2 1 0 :1:2 
+`uc 1 T2OUTPS3 1 0 :1:3 
+`uc 1 T2CKPS0 1 0 :1:4 
+`uc 1 T2CKPS1 1 0 :1:5 
+`uc 1 T2CKPS2 1 0 :1:6 
+`uc 1 TMR2ON 1 0 :1:7 
+]
+[u S330 . 1 `S305 1 . 1 0 `S309 1 . 1 0 `S317 1 . 1 0 `S321 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES330  1 e 1 @654 ]
+"5523
+[v _T2HLT T2HLT `VEuc  1 e 1 @655 ]
+[s S206 . 1 `uc 1 MODE 1 0 :5:0 
+`uc 1 CKSYNC 1 0 :1:5 
+`uc 1 CKPOL 1 0 :1:6 
+`uc 1 PSYNC 1 0 :1:7 
+]
+"5556
+[s S211 . 1 `uc 1 MODE0 1 0 :1:0 
+`uc 1 MODE1 1 0 :1:1 
+`uc 1 MODE2 1 0 :1:2 
+`uc 1 MODE3 1 0 :1:3 
+`uc 1 MODE4 1 0 :1:4 
+]
+[s S217 . 1 `uc 1 T2MODE 1 0 :5:0 
+`uc 1 T2CKSYNC 1 0 :1:5 
+`uc 1 T2CKPOL 1 0 :1:6 
+`uc 1 T2PSYNC 1 0 :1:7 
+]
+[s S222 . 1 `uc 1 T2MODE0 1 0 :1:0 
+`uc 1 T2MODE1 1 0 :1:1 
+`uc 1 T2MODE2 1 0 :1:2 
+`uc 1 T2MODE3 1 0 :1:3 
+`uc 1 T2MODE4 1 0 :1:4 
+]
+[u S228 . 1 `S206 1 . 1 0 `S211 1 . 1 0 `S217 1 . 1 0 `S222 1 . 1 0 ]
+[v _T2HLTbits T2HLTbits `VES228  1 e 1 @655 ]
+"5651
+[v _T2CLKCON T2CLKCON `VEuc  1 e 1 @656 ]
+"5731
+[v _T2RST T2RST `VEuc  1 e 1 @657 ]
+[s S271 . 1 `uc 1 RSEL 1 0 :4:0 
+]
+"5756
+[s S273 . 1 `uc 1 RSEL0 1 0 :1:0 
+`uc 1 RSEL1 1 0 :1:1 
+`uc 1 RSEL2 1 0 :1:2 
+`uc 1 RSEL3 1 0 :1:3 
+]
+[s S278 . 1 `uc 1 T2RSEL 1 0 :4:0 
+]
+[s S280 . 1 `uc 1 T2RSEL0 1 0 :1:0 
+`uc 1 T2RSEL1 1 0 :1:1 
+`uc 1 T2RSEL2 1 0 :1:2 
+`uc 1 T2RSEL3 1 0 :1:3 
+]
+[u S285 . 1 `S271 1 . 1 0 `S273 1 . 1 0 `S278 1 . 1 0 `S280 1 . 1 0 ]
+[v _T2RSTbits T2RSTbits `VES285  1 e 1 @657 ]
+"5818
+[v _CCPR1L CCPR1L `VEuc  1 e 1 @780 ]
+"5838
+[v _CCPR1H CCPR1H `VEuc  1 e 1 @781 ]
+"5858
+[v _CCP1CON CCP1CON `VEuc  1 e 1 @782 ]
+[s S98 . 1 `uc 1 MODE 1 0 :4:0 
+`uc 1 FMT 1 0 :1:4 
+`uc 1 OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 EN 1 0 :1:7 
+]
+"5895
+[s S104 . 1 `uc 1 MODE0 1 0 :1:0 
+`uc 1 MODE1 1 0 :1:1 
+`uc 1 MODE2 1 0 :1:2 
+`uc 1 MODE3 1 0 :1:3 
+]
+[s S109 . 1 `uc 1 CCP1MODE 1 0 :4:0 
+`uc 1 CCP1FMT 1 0 :1:4 
+`uc 1 CCP1OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 CCP1EN 1 0 :1:7 
+]
+[s S115 . 1 `uc 1 CCP1MODE0 1 0 :1:0 
+`uc 1 CCP1MODE1 1 0 :1:1 
+`uc 1 CCP1MODE2 1 0 :1:2 
+`uc 1 CCP1MODE3 1 0 :1:3 
+]
+[s S120 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 P1M1 1 0 :1:7 
+]
+[u S123 . 1 `S98 1 . 1 0 `S104 1 . 1 0 `S109 1 . 1 0 `S115 1 . 1 0 `S120 1 . 1 0 ]
+[v _CCP1CONbits CCP1CONbits `VES123  1 e 1 @782 ]
+[s S174 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+]
+"9475
+[u S177 . 1 `S174 1 . 1 0 ]
+[v _PIR4bits PIR4bits `VES177  1 e 1 @1808 ]
+"9909
+[v _PMD0 PMD0 `VEuc  1 e 1 @1942 ]
+"9954
+[v _PMD1 PMD1 `VEuc  1 e 1 @1943 ]
+"10002
+[v _PMD2 PMD2 `VEuc  1 e 1 @1944 ]
+"10047
+[v _PMD3 PMD3 `VEuc  1 e 1 @1945 ]
+"10097
+[v _PMD4 PMD4 `VEuc  1 e 1 @1946 ]
+"10142
+[v _PMD5 PMD5 `VEuc  1 e 1 @1947 ]
+"11204
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @2189 ]
+"11344
+[v _OSCCON3 OSCCON3 `VEuc  1 e 1 @2191 ]
+"11384
+[v _OSCSTAT OSCSTAT `VEuc  1 e 1 @2192 ]
+"11441
+[v _OSCEN OSCEN `VEuc  1 e 1 @2193 ]
+"11492
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @2194 ]
+"11550
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @2195 ]
+"19423
+[v _RC0PPS RC0PPS `VEuc  1 e 1 @7968 ]
+"20259
+[v _ANSELA ANSELA `VEuc  1 e 1 @7992 ]
+"20321
+[v _WPUA WPUA `VEuc  1 e 1 @7993 ]
+"20383
+[v _ODCONA ODCONA `VEuc  1 e 1 @7994 ]
+"20445
+[v _SLRCONA SLRCONA `VEuc  1 e 1 @7995 ]
+"20507
+[v _INLVLA INLVLA `VEuc  1 e 1 @7996 ]
+"20755
+[v _ANSELB ANSELB `VEuc  1 e 1 @8003 ]
+"20817
+[v _WPUB WPUB `VEuc  1 e 1 @8004 ]
+"20879
+[v _ODCONB ODCONB `VEuc  1 e 1 @8005 ]
+"20941
+[v _SLRCONB SLRCONB `VEuc  1 e 1 @8006 ]
+"21003
+[v _INLVLB INLVLB `VEuc  1 e 1 @8007 ]
+"21251
+[v _ANSELC ANSELC `VEuc  1 e 1 @8014 ]
+"21313
+[v _WPUC WPUC `VEuc  1 e 1 @8015 ]
+"21375
+[v _ODCONC ODCONC `VEuc  1 e 1 @8016 ]
+"21437
+[v _SLRCONC SLRCONC `VEuc  1 e 1 @8017 ]
+"21499
+[v _INLVLC INLVLC `VEuc  1 e 1 @8018 ]
+"21747
+[v _ANSELD ANSELD `VEuc  1 e 1 @8025 ]
+"21809
+[v _WPUD WPUD `VEuc  1 e 1 @8026 ]
+"21871
+[v _ODCOND ODCOND `VEuc  1 e 1 @8027 ]
+"21933
+[v _SLRCOND SLRCOND `VEuc  1 e 1 @8028 ]
+"21995
+[v _INLVLD INLVLD `VEuc  1 e 1 @8029 ]
+"22057
+[v _ANSELE ANSELE `VEuc  1 e 1 @8036 ]
+"22089
+[v _WPUE WPUE `VEuc  1 e 1 @8037 ]
+"22127
+[v _ODCONE ODCONE `VEuc  1 e 1 @8038 ]
+"22159
+[v _SLRCONE SLRCONE `VEuc  1 e 1 @8039 ]
+"22191
+[v _INLVLE INLVLE `VEuc  1 e 1 @8040 ]
+"8 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\LCD1602\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"33
+} 0
+"79 C:\Users\ADMIN\Desktop/Training/b1/Lib/TEXTLCD.c
+[v _TextLCD_Puts TextLCD_Puts `(v  1 e 1 0 ]
+{
+[v TextLCD_Puts@line line `uc  1 a 1 wreg ]
+[v TextLCD_Puts@line line `uc  1 a 1 wreg ]
+[v TextLCD_Puts@idx idx `uc  1 p 1 8 ]
+[v TextLCD_Puts@data data `*.25DCuc  1 p 2 9 ]
+[v TextLCD_Puts@length_or_type length_or_type `uc  1 p 1 11 ]
+"81
+[v TextLCD_Puts@line line `uc  1 a 1 13 ]
+"94
+} 0
+"64
+[v _TextLCD_SetCursor TextLCD_SetCursor `(v  1 e 1 0 ]
+{
+[v TextLCD_SetCursor@line line `uc  1 a 1 wreg ]
+"66
+[v TextLCD_SetCursor@address address `uc  1 a 1 6 ]
+"64
+[v TextLCD_SetCursor@line line `uc  1 a 1 wreg ]
+[v TextLCD_SetCursor@idx idx `uc  1 p 1 4 ]
+"68
+[v TextLCD_SetCursor@line line `uc  1 a 1 7 ]
+"77
+} 0
+"58
+[v _TextLCD_PutChar TextLCD_PutChar `(v  1 e 1 0 ]
+{
+[v TextLCD_PutChar@data data `uc  1 a 1 wreg ]
+[v TextLCD_PutChar@data data `uc  1 a 1 wreg ]
+"60
+[v TextLCD_PutChar@data data `uc  1 a 1 3 ]
+"62
+} 0
+"179
+[v _TextLCD_Init TextLCD_Init `(a  1 e 1 0 ]
+{
+[v TextLCD_Init@TextLcdType TextLcdType `E36  1 a 1 wreg ]
+[v TextLCD_Init@TextLcdType TextLcdType `E36  1 a 1 wreg ]
+[v TextLCD_Init@TextLcdType TextLcdType `E36  1 a 1 6 ]
+"234
+} 0
+"52
+[v _TextLCD_CMD TextLCD_CMD `(v  1 s 1 TextLCD_CMD ]
+{
+[v TextLCD_CMD@cmd cmd `uc  1 a 1 wreg ]
+[v TextLCD_CMD@cmd cmd `uc  1 a 1 wreg ]
+"54
+[v TextLCD_CMD@cmd cmd `uc  1 a 1 3 ]
+"56
+} 0
+"45
+[v _TextLCD_Put TextLCD_Put `(v  1 s 1 TextLCD_Put ]
+{
+[v TextLCD_Put@b b `uc  1 a 1 wreg ]
+[v TextLCD_Put@b b `uc  1 a 1 wreg ]
+[v TextLCD_Put@b b `uc  1 a 1 2 ]
+"50
+} 0
+"37
+[v _TextLCD_Enable TextLCD_Enable `(v  1 s 1 TextLCD_Enable ]
+{
+"43
+} 0
+"11
+[v _TextLCD_4Bits_Write TextLCD_4Bits_Write `(v  1 s 1 TextLCD_4Bits_Write ]
+{
+[v TextLCD_4Bits_Write@nib nib `uc  1 a 1 wreg ]
+[v TextLCD_4Bits_Write@nib nib `uc  1 a 1 wreg ]
+"13
+[v TextLCD_4Bits_Write@nib nib `uc  1 a 1 0 ]
+"35
+} 0
+"50 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\LCD1602\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"57
+} 0
+"62 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\LCD1602\mcc_generated_files/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+{
+"86
+} 0
+"64 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\LCD1602\mcc_generated_files/pwm1.c
+[v _PWM1_Initialize PWM1_Initialize `(v  1 e 1 0 ]
+{
+"78
+} 0
+"75 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\LCD1602\mcc_generated_files/mcc.c
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+{
+"89
+} 0
+"55 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\LCD1602\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"128
+} 0
+"59 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\LCD1602\mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"73
+} 0

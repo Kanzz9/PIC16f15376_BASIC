@@ -11,34 +11,32 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\ADMIN\AppData\Local\Temp\xcAsflo.o
+$C:\Users\ADMIN\AppData\Local\Temp\xcAse8s.o
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 2 2 2 2
 config CONFIG 4 8007 8007 5 2
 $dist/default/production\UART_TEST.X.production.o
 cinit CODE 0 7F5 7F5 B 2
-text1 CODE 0 6DB 6DB 17 2
-text2 CODE 0 6B4 6B4 12 2
-text3 CODE 0 714 714 28 2
-text4 CODE 0 77B 77B 7A 2
-text5 CODE 0 66E 66E 5 2
-text6 CODE 0 69D 69D A 2
-text7 CODE 0 6A7 6A7 D 2
-text8 CODE 0 68B 68B 8 2
-text9 CODE 0 73C 73C 3F 2
-text10 CODE 0 693 693 A 2
-text11 CODE 0 6F2 6F2 22 2
-text12 CODE 0 67F 67F 6 2
-text13 CODE 0 679 679 6 2
-text14 CODE 0 673 673 6 2
-nvBANK0 BANK0 1 54 54 6 1
-maintext CODE 0 6C6 6C6 15 2
+text1 CODE 0 6C5 6C5 12 2
+text2 CODE 0 714 714 28 2
+text3 CODE 0 77B 77B 7A 2
+text4 CODE 0 67F 67F 5 2
+text5 CODE 0 6AE 6AE A 2
+text6 CODE 0 6B8 6B8 D 2
+text7 CODE 0 69C 69C 8 2
+text8 CODE 0 73C 73C 3F 2
+text9 CODE 0 6A4 6A4 A 2
+text10 CODE 0 6F2 6F2 22 2
+text11 CODE 0 690 690 6 2
+text12 CODE 0 68A 68A 6 2
+text13 CODE 0 684 684 6 2
+nvBANK0 BANK0 1 56 56 6 1
+maintext CODE 0 6D7 6D7 1B 2
 cstackCOMMON COMMON 1 70 70 E 1
-cstackBANK0 BANK0 1 4A 4A A 1
-stringtext1 STRCODE 0 800 800 B 2
-stringtext2 STRCODE 0 80B 80B A 2
+cstackBANK0 BANK0 1 4A 4A C 1
+stringtext1 STRCODE 0 800 800 D 2
 bssBANK0 BANK0 1 20 20 2A 1
-clrtext CODE 0 685 685 6 2
+clrtext CODE 0 696 696 6 2
 config CONFIG 4 8007 8007 5 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -46,7 +44,7 @@ config CONFIG 4 8007 8007 5 2
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 5A-6F 1
+RAM 5C-6F 1
 RAM A0-EF 1
 RAM 120-16F 1
 RAM 1A0-1EF 1
@@ -72,7 +70,7 @@ RAM B20-B6F 1
 RAM BA0-BEF 1
 RAM C20-C6F 1
 RAM CA0-CBF 1
-BANK0 5A-6F 1
+BANK0 5C-6F 1
 BANK1 A0-EF 1
 BANK2 120-16F 1
 BANK3 1A0-1EF 1
@@ -82,10 +80,10 @@ BANK6 320-36F 1
 BANK7 3A0-3EF 1
 BANK8 420-46F 1
 BANK9 4A0-4EF 1
-CONST 4-66D 2
-CONST 815-3FFF 2
-ENTRY 4-66D 2
-ENTRY 815-3FFF 2
+CONST 4-67E 2
+CONST 80D-3FFF 2
+ENTRY 4-67E 2
+ENTRY 80D-3FFF 2
 IDLOC 8000-8003 2
 SFR10 500-51F 1
 SFR11 580-59F 1
@@ -141,9 +139,9 @@ SFR60 1E00-1E6F 1
 SFR61 1E80-1EEF 1
 SFR62 1F00-1F6F 1
 SFR63 1F80-1FEF 1
-STACK 203A-27EF 1
-CODE 4-66D 2
-CODE 815-3FFF 2
+STACK 203C-27EF 1
+CODE 4-67E 2
+CODE 80D-3FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-11F 1
@@ -171,10 +169,10 @@ BANK23 BA0-BEF 1
 BANK24 C20-C6F 1
 BANK25 CA0-CBF 1
 BIGRAM 2000-27EF 1
-STRCODE 4-66D 2
-STRCODE 815-3FFF 2
-STRING 4-66D 2
-STRING 815-3FFF 2
+STRCODE 4-67E 2
+STRCODE 80D-3FFF 2
+STRING 4-67E 2
+STRING 80D-3FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -189,155 +187,148 @@ STRING 815-3FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\UART_TEST.X.production.o
-7F5 cinit CODE >3272:C:\Users\ADMIN\AppData\Local\Temp\xcAsflo.s
-7F5 cinit CODE >3275:C:\Users\ADMIN\AppData\Local\Temp\xcAsflo.s
-7F5 cinit CODE >3317:C:\Users\ADMIN\AppData\Local\Temp\xcAsflo.s
-7F6 cinit CODE >3318:C:\Users\ADMIN\AppData\Local\Temp\xcAsflo.s
-7F7 cinit CODE >3319:C:\Users\ADMIN\AppData\Local\Temp\xcAsflo.s
-7F8 cinit CODE >3320:C:\Users\ADMIN\AppData\Local\Temp\xcAsflo.s
-7F9 cinit CODE >3321:C:\Users\ADMIN\AppData\Local\Temp\xcAsflo.s
-7FA cinit CODE >3322:C:\Users\ADMIN\AppData\Local\Temp\xcAsflo.s
-7FD cinit CODE >3328:C:\Users\ADMIN\AppData\Local\Temp\xcAsflo.s
-7FD cinit CODE >3330:C:\Users\ADMIN\AppData\Local\Temp\xcAsflo.s
-7FE cinit CODE >3331:C:\Users\ADMIN\AppData\Local\Temp\xcAsflo.s
-673 text14 CODE >165:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
-673 text14 CODE >166:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
-678 text14 CODE >167:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
-679 text13 CODE >157:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
-679 text13 CODE >158:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
-67E text13 CODE >159:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
-67F text12 CODE >161:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
-67F text12 CODE >162:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
-684 text12 CODE >163:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
-6F2 text11 CODE >66:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
-6F2 text11 CODE >71:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
-6F5 text11 CODE >74:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
-6F7 text11 CODE >77:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
-6F9 text11 CODE >80:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
-6FB text11 CODE >83:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
-6FC text11 CODE >86:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
-703 text11 CODE >87:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
-70A text11 CODE >88:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
-711 text11 CODE >90:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
-713 text11 CODE >92:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
-693 text10 CODE >58:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
-693 text10 CODE >61:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
-696 text10 CODE >63:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
-697 text10 CODE >65:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
-698 text10 CODE >67:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
-69A text10 CODE >69:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
-69B text10 CODE >71:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
-69C text10 CODE >72:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
-73C text9 CODE >55:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-73C text9 CODE >60:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-73E text9 CODE >61:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-73F text9 CODE >62:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-740 text9 CODE >63:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-741 text9 CODE >64:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-742 text9 CODE >69:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-744 text9 CODE >70:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-746 text9 CODE >71:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-748 text9 CODE >72:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-74A text9 CODE >73:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-74C text9 CODE >78:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-74F text9 CODE >79:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-751 text9 CODE >80:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-753 text9 CODE >81:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-755 text9 CODE >82:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-757 text9 CODE >87:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-758 text9 CODE >88:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-759 text9 CODE >89:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-75A text9 CODE >90:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-75B text9 CODE >91:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-75C text9 CODE >96:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-75D text9 CODE >97:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-75E text9 CODE >98:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-75F text9 CODE >99:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-760 text9 CODE >100:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-761 text9 CODE >105:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-763 text9 CODE >106:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-765 text9 CODE >107:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-767 text9 CODE >108:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-769 text9 CODE >109:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-76B text9 CODE >114:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-76D text9 CODE >115:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-76F text9 CODE >116:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-771 text9 CODE >117:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-773 text9 CODE >118:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-775 text9 CODE >127:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-777 text9 CODE >128:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-77A text9 CODE >129:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
-68B text8 CODE >74:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
-68B text8 CODE >77:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
-68D text8 CODE >79:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
-68E text8 CODE >81:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
-68F text8 CODE >83:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
-690 text8 CODE >85:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
-691 text8 CODE >87:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
-692 text8 CODE >88:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
-6A7 text7 CODE >50:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
-6A7 text7 CODE >52:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
-6AA text7 CODE >53:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
-6AD text7 CODE >54:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
-6B0 text7 CODE >55:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
-6B3 text7 CODE >56:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
-69D text6 CODE >132:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
-69E text6 CODE >134:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
-69E text6 CODE >136:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
-6A3 text6 CODE >138:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
-6A6 text6 CODE >139:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
-66E text5 CODE >57:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\main.c
-66E text5 CODE >59:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\main.c
-672 text5 CODE >61:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\main.c
-77B text4 CODE >692:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
-77C text4 CODE >702:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
-78D text4 CODE >703:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
-793 text4 CODE >703:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
-795 text4 CODE >705:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
-79A text4 CODE >706:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
-79E text4 CODE >1372:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
-7AF text4 CODE >1373:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
-7B5 text4 CODE >1373:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
-7B7 text4 CODE >1374:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
-7C2 text4 CODE >1375:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
-7C7 text4 CODE >1379:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
-7CD text4 CODE >1379:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
-7CF text4 CODE >1380:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
-7D2 text4 CODE >1384:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
-7EB text4 CODE >1385:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
-7F1 text4 CODE >1385:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
-7F4 text4 CODE >1387:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
-714 text3 CODE >1390:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
-716 text3 CODE >1395:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
-71A text3 CODE >1396:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
-71C text3 CODE >1397:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
-71D text3 CODE >1398:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
-72E text3 CODE >1397:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
-737 text3 CODE >1400:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
-73B text3 CODE >1404:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
-6B4 text2 CODE >5:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\printf.c
-6B4 text2 CODE >9:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\printf.c
-6B9 text2 CODE >10:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\printf.c
-6C5 text2 CODE >13:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\printf.c
-6DB text1 CODE >50:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\main.c
-6DB text1 CODE >52:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\main.c
-6DC text1 CODE >54:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\main.c
-6E8 text1 CODE >52:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\main.c
-6F1 text1 CODE >56:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\main.c
-6C6 maintext CODE >62:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\main.c
-6C6 maintext CODE >65:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\main.c
-6C9 maintext CODE >84:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\main.c
-6D1 maintext CODE >85:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\main.c
-6D8 maintext CODE >86:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\main.c
-6D8 maintext CODE >91:F:\work\pic16lf15376\pic16lf15376\UART_TEST.X\main.c
-685 clrtext CODE >3306:C:\Users\ADMIN\AppData\Local\Temp\xcAsflo.s
-685 clrtext CODE >3307:C:\Users\ADMIN\AppData\Local\Temp\xcAsflo.s
-686 clrtext CODE >3308:C:\Users\ADMIN\AppData\Local\Temp\xcAsflo.s
-686 clrtext CODE >3309:C:\Users\ADMIN\AppData\Local\Temp\xcAsflo.s
-687 clrtext CODE >3310:C:\Users\ADMIN\AppData\Local\Temp\xcAsflo.s
-688 clrtext CODE >3311:C:\Users\ADMIN\AppData\Local\Temp\xcAsflo.s
-689 clrtext CODE >3312:C:\Users\ADMIN\AppData\Local\Temp\xcAsflo.s
-68A clrtext CODE >3313:C:\Users\ADMIN\AppData\Local\Temp\xcAsflo.s
+7F5 cinit CODE >3257:C:\Users\ADMIN\AppData\Local\Temp\xcAse8s.s
+7F5 cinit CODE >3260:C:\Users\ADMIN\AppData\Local\Temp\xcAse8s.s
+7F5 cinit CODE >3302:C:\Users\ADMIN\AppData\Local\Temp\xcAse8s.s
+7F6 cinit CODE >3303:C:\Users\ADMIN\AppData\Local\Temp\xcAse8s.s
+7F7 cinit CODE >3304:C:\Users\ADMIN\AppData\Local\Temp\xcAse8s.s
+7F8 cinit CODE >3305:C:\Users\ADMIN\AppData\Local\Temp\xcAse8s.s
+7F9 cinit CODE >3306:C:\Users\ADMIN\AppData\Local\Temp\xcAse8s.s
+7FA cinit CODE >3307:C:\Users\ADMIN\AppData\Local\Temp\xcAse8s.s
+7FD cinit CODE >3313:C:\Users\ADMIN\AppData\Local\Temp\xcAse8s.s
+7FD cinit CODE >3315:C:\Users\ADMIN\AppData\Local\Temp\xcAse8s.s
+7FE cinit CODE >3316:C:\Users\ADMIN\AppData\Local\Temp\xcAse8s.s
+684 text13 CODE >165:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
+684 text13 CODE >166:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
+689 text13 CODE >167:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
+68A text12 CODE >157:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
+68A text12 CODE >158:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
+68F text12 CODE >159:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
+690 text11 CODE >161:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
+690 text11 CODE >162:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
+695 text11 CODE >163:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
+6F2 text10 CODE >66:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
+6F2 text10 CODE >71:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
+6F5 text10 CODE >74:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
+6F7 text10 CODE >77:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
+6F9 text10 CODE >80:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
+6FB text10 CODE >83:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
+6FC text10 CODE >86:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
+703 text10 CODE >87:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
+70A text10 CODE >88:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
+711 text10 CODE >90:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
+713 text10 CODE >92:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
+6A4 text9 CODE >58:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
+6A4 text9 CODE >61:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
+6A7 text9 CODE >63:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
+6A8 text9 CODE >65:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
+6A9 text9 CODE >67:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
+6AB text9 CODE >69:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
+6AC text9 CODE >71:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
+6AD text9 CODE >72:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
+73C text8 CODE >55:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+73C text8 CODE >60:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+73E text8 CODE >61:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+73F text8 CODE >62:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+740 text8 CODE >63:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+741 text8 CODE >64:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+742 text8 CODE >69:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+744 text8 CODE >70:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+746 text8 CODE >71:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+748 text8 CODE >72:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+74A text8 CODE >73:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+74C text8 CODE >78:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+74F text8 CODE >79:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+751 text8 CODE >80:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+753 text8 CODE >81:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+755 text8 CODE >82:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+757 text8 CODE >87:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+758 text8 CODE >88:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+759 text8 CODE >89:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+75A text8 CODE >90:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+75B text8 CODE >91:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+75C text8 CODE >96:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+75D text8 CODE >97:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+75E text8 CODE >98:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+75F text8 CODE >99:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+760 text8 CODE >100:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+761 text8 CODE >105:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+763 text8 CODE >106:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+765 text8 CODE >107:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+767 text8 CODE >108:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+769 text8 CODE >109:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+76B text8 CODE >114:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+76D text8 CODE >115:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+76F text8 CODE >116:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+771 text8 CODE >117:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+773 text8 CODE >118:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+775 text8 CODE >127:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+777 text8 CODE >128:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+77A text8 CODE >129:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+69C text7 CODE >74:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
+69C text7 CODE >77:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
+69E text7 CODE >79:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
+69F text7 CODE >81:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
+6A0 text7 CODE >83:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
+6A1 text7 CODE >85:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
+6A2 text7 CODE >87:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
+6A3 text7 CODE >88:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
+6B8 text6 CODE >50:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
+6B8 text6 CODE >52:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
+6BB text6 CODE >53:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
+6BE text6 CODE >54:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
+6C1 text6 CODE >55:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
+6C4 text6 CODE >56:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
+6AE text5 CODE >132:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
+6AF text5 CODE >134:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
+6AF text5 CODE >136:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
+6B4 text5 CODE >138:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
+6B7 text5 CODE >139:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
+67F text4 CODE >57:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\main.c
+67F text4 CODE >59:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\main.c
+683 text4 CODE >61:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\main.c
+77B text3 CODE >692:E:\microchip\xc8\pic\sources\c99\common\doprnt.c
+77C text3 CODE >702:E:\microchip\xc8\pic\sources\c99\common\doprnt.c
+78D text3 CODE >703:E:\microchip\xc8\pic\sources\c99\common\doprnt.c
+793 text3 CODE >703:E:\microchip\xc8\pic\sources\c99\common\doprnt.c
+795 text3 CODE >705:E:\microchip\xc8\pic\sources\c99\common\doprnt.c
+79A text3 CODE >706:E:\microchip\xc8\pic\sources\c99\common\doprnt.c
+79E text3 CODE >1372:E:\microchip\xc8\pic\sources\c99\common\doprnt.c
+7AF text3 CODE >1373:E:\microchip\xc8\pic\sources\c99\common\doprnt.c
+7B5 text3 CODE >1373:E:\microchip\xc8\pic\sources\c99\common\doprnt.c
+7B7 text3 CODE >1374:E:\microchip\xc8\pic\sources\c99\common\doprnt.c
+7C2 text3 CODE >1375:E:\microchip\xc8\pic\sources\c99\common\doprnt.c
+7C7 text3 CODE >1379:E:\microchip\xc8\pic\sources\c99\common\doprnt.c
+7CD text3 CODE >1379:E:\microchip\xc8\pic\sources\c99\common\doprnt.c
+7CF text3 CODE >1380:E:\microchip\xc8\pic\sources\c99\common\doprnt.c
+7D2 text3 CODE >1384:E:\microchip\xc8\pic\sources\c99\common\doprnt.c
+7EB text3 CODE >1385:E:\microchip\xc8\pic\sources\c99\common\doprnt.c
+7F1 text3 CODE >1385:E:\microchip\xc8\pic\sources\c99\common\doprnt.c
+7F4 text3 CODE >1387:E:\microchip\xc8\pic\sources\c99\common\doprnt.c
+714 text2 CODE >1390:E:\microchip\xc8\pic\sources\c99\common\doprnt.c
+716 text2 CODE >1395:E:\microchip\xc8\pic\sources\c99\common\doprnt.c
+71A text2 CODE >1396:E:\microchip\xc8\pic\sources\c99\common\doprnt.c
+71C text2 CODE >1397:E:\microchip\xc8\pic\sources\c99\common\doprnt.c
+71D text2 CODE >1398:E:\microchip\xc8\pic\sources\c99\common\doprnt.c
+72E text2 CODE >1397:E:\microchip\xc8\pic\sources\c99\common\doprnt.c
+737 text2 CODE >1400:E:\microchip\xc8\pic\sources\c99\common\doprnt.c
+73B text2 CODE >1404:E:\microchip\xc8\pic\sources\c99\common\doprnt.c
+6C5 text1 CODE >5:E:\microchip\xc8\pic\sources\c99\common\printf.c
+6C5 text1 CODE >9:E:\microchip\xc8\pic\sources\c99\common\printf.c
+6CA text1 CODE >10:E:\microchip\xc8\pic\sources\c99\common\printf.c
+6D6 text1 CODE >13:E:\microchip\xc8\pic\sources\c99\common\printf.c
+6D7 maintext CODE >62:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\main.c
+6D7 maintext CODE >65:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\main.c
+6DA maintext CODE >87:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\main.c
+6E2 maintext CODE >88:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\main.c
+696 clrtext CODE >3291:C:\Users\ADMIN\AppData\Local\Temp\xcAse8s.s
+696 clrtext CODE >3292:C:\Users\ADMIN\AppData\Local\Temp\xcAse8s.s
+697 clrtext CODE >3293:C:\Users\ADMIN\AppData\Local\Temp\xcAse8s.s
+697 clrtext CODE >3294:C:\Users\ADMIN\AppData\Local\Temp\xcAse8s.s
+698 clrtext CODE >3295:C:\Users\ADMIN\AppData\Local\Temp\xcAse8s.s
+699 clrtext CODE >3296:C:\Users\ADMIN\AppData\Local\Temp\xcAse8s.s
+69A clrtext CODE >3297:C:\Users\ADMIN\AppData\Local\Temp\xcAse8s.s
+69B clrtext CODE >3298:C:\Users\ADMIN\AppData\Local\Temp\xcAse8s.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -351,16 +342,15 @@ $dist/default/production\UART_TEST.X.production.o
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 ___latbits 3 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
-_send_string DB6 0 CODE 0 text1 dist/default/production\UART_TEST.X.production.o
-__Hspace_0 815 0 ABS 0 - -
+__Hspace_0 80D 0 ABS 0 - -
 __Hspace_1 7E 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 10013 0 ABS 0 - -
 EUSART1_SetErrorHandler@interruptHandler 70 0 COMMON 1 cstackCOMMON dist/default/production\UART_TEST.X.production.o
-_EUSART1_Initialize DE4 0 CODE 0 text11 dist/default/production\UART_TEST.X.production.o
+_EUSART1_Initialize DE4 0 CODE 0 text10 dist/default/production\UART_TEST.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-_PMD_Initialize D16 0 CODE 0 text8 dist/default/production\UART_TEST.X.production.o
+_PMD_Initialize D38 0 CODE 0 text7 dist/default/production\UART_TEST.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 ?_vfprintf 4A 0 BANK0 1 cstackBANK0 dist/default/production\UART_TEST.X.production.o
 _LATA 18 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
@@ -379,31 +369,31 @@ _WPUB 1F44 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
 _WPUC 1F4F 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
 _WPUD 1F5A 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
 _WPUE 1F65 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\ADMIN\AppData\Local\Temp\xcAsflo.o
-_main D8C 0 CODE 0 maintext dist/default/production\UART_TEST.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\ADMIN\AppData\Local\Temp\xcAse8s.o
+_main DAE 0 CODE 0 maintext dist/default/production\UART_TEST.X.production.o
 _nout 40 0 BANK0 1 bssBANK0 dist/default/production\UART_TEST.X.production.o
 _prec 44 0 BANK0 1 bssBANK0 dist/default/production\UART_TEST.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
-start 4 0 CODE 0 init C:\Users\ADMIN\AppData\Local\Temp\xcAsflo.o
+start 4 0 CODE 0 init C:\Users\ADMIN\AppData\Local\Temp\xcAse8s.o
 __size_of_main 0 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-__end_of_vfpfcnvrt FEA 0 CODE 0 text4 dist/default/production\UART_TEST.X.production.o
+__end_of_vfpfcnvrt FEA 0 CODE 0 text3 dist/default/production\UART_TEST.X.production.o
 __size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
 __size_of_vfpfcnvrt 0 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\ADMIN\AppData\Local\Temp\xcAsflo.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\ADMIN\AppData\Local\Temp\xcAsflo.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\ADMIN\AppData\Local\Temp\xcAsflo.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\ADMIN\AppData\Local\Temp\xcAsflo.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\ADMIN\AppData\Local\Temp\xcAsflo.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\ADMIN\AppData\Local\Temp\xcAsflo.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\ADMIN\AppData\Local\Temp\xcAse8s.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\ADMIN\AppData\Local\Temp\xcAse8s.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\ADMIN\AppData\Local\Temp\xcAse8s.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\ADMIN\AppData\Local\Temp\xcAse8s.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\ADMIN\AppData\Local\Temp\xcAse8s.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\ADMIN\AppData\Local\Temp\xcAse8s.o
 __size_of_EUSART1_SetErrorHandler 0 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 _RC1STAbits 11D 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
-__end_of_PMD_Initialize D26 0 CODE 0 text8 dist/default/production\UART_TEST.X.production.o
+__end_of_PMD_Initialize D48 0 CODE 0 text7 dist/default/production\UART_TEST.X.production.o
 EUSART1_Write@txData 70 0 COMMON 1 cstackCOMMON dist/default/production\UART_TEST.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
-_vfpfcnvrt EF6 0 CODE 0 text4 dist/default/production\UART_TEST.X.production.o
+_vfpfcnvrt EF6 0 CODE 0 text3 dist/default/production\UART_TEST.X.production.o
 _ANSELA 1F38 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
 _ANSELB 1F43 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
 _ANSELC 1F4E 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
@@ -418,10 +408,10 @@ _INLVLB 1F47 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
 _INLVLC 1F52 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
 _INLVLD 1F5D 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
 _INLVLE 1F68 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
-___stackhi 27EF 0 ABS 0 - C:\Users\ADMIN\AppData\Local\Temp\xcAsflo.o
-___stacklo 203A 0 ABS 0 - C:\Users\ADMIN\AppData\Local\Temp\xcAsflo.o
+___stackhi 27EF 0 ABS 0 - C:\Users\ADMIN\AppData\Local\Temp\xcAse8s.o
+___stacklo 203C 0 ABS 0 - C:\Users\ADMIN\AppData\Local\Temp\xcAse8s.o
 __size_of_fputc 0 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
-_PIN_MANAGER_Initialize E78 0 CODE 0 text9 dist/default/production\UART_TEST.X.production.o
+_PIN_MANAGER_Initialize E78 0 CODE 0 text8 dist/default/production\UART_TEST.X.production.o
 start_initialization FEA 0 CODE 0 cinit dist/default/production\UART_TEST.X.production.o
 _eusart1RxLastError 49 0 BANK0 1 bssBANK0 dist/default/production\UART_TEST.X.production.o
 _ODCONA 1F3A 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
@@ -433,19 +423,18 @@ _OSCFRQ 893 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
 _RC1REG 119 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
 _RC1STA 11D 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
 _RC2PPS 1F22 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
-__end_of_SYSTEM_Initialize D68 0 CODE 0 text7 dist/default/production\UART_TEST.X.production.o
-clear_ram0 D0A 0 CODE 0 clrtext dist/default/production\UART_TEST.X.production.o
+__end_of_SYSTEM_Initialize D8A 0 CODE 0 text6 dist/default/production\UART_TEST.X.production.o
+clear_ram0 D2C 0 CODE 0 clrtext dist/default/production\UART_TEST.X.production.o
 __pcstackBANK0 4A 0 BANK0 1 cstackBANK0 dist/default/production\UART_TEST.X.production.o
 _TX1REG 11A 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
 _TX1STA 11E 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
-__end_of_printf D8C 0 CODE 0 text2 dist/default/production\UART_TEST.X.production.o
+__end_of_printf DAE 0 CODE 0 text1 dist/default/production\UART_TEST.X.production.o
 _EUSART1_DefaultFramingErrorHandler 0 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
 _EUSART1_DefaultOverrunErrorHandler 0 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
 __size_of_EUSART1_Initialize 0 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
 fputc@ch 71 0 COMMON 1 cstackCOMMON dist/default/production\UART_TEST.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\ADMIN\AppData\Local\Temp\xcAsflo.o
-__end_of_send_string DE4 0 CODE 0 text1 dist/default/production\UART_TEST.X.production.o
-_EUSART1_Write D3A 0 CODE 0 text6 dist/default/production\UART_TEST.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\ADMIN\AppData\Local\Temp\xcAse8s.o
+_EUSART1_Write D5C 0 CODE 0 text5 dist/default/production\UART_TEST.X.production.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -638,8 +627,8 @@ __Lsfr61 0 0 ABS 0 sfr61 -
 __Lsfr62 0 0 ABS 0 sfr62 -
 __Lsfr63 0 0 ABS 0 sfr63 -
 __Lstack 0 0 STACK 2 stack -
-_EUSART1_FramingErrorHandler 58 0 BANK0 1 nvBANK0 dist/default/production\UART_TEST.X.production.o
-_EUSART1_OverrunErrorHandler 56 0 BANK0 1 nvBANK0 dist/default/production\UART_TEST.X.production.o
+_EUSART1_FramingErrorHandler 5A 0 BANK0 1 nvBANK0 dist/default/production\UART_TEST.X.production.o
+_EUSART1_OverrunErrorHandler 58 0 BANK0 1 nvBANK0 dist/default/production\UART_TEST.X.production.o
 __size_of_EUSART1_SetFramingErrorHandler 0 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
 __size_of_EUSART1_SetOverrunErrorHandler 0 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
 __Habs1 0 0 ABS 0 abs1 -
@@ -671,34 +660,30 @@ __Lsfr8 0 0 ABS 0 sfr8 -
 __Lsfr9 0 0 ABS 0 sfr9 -
 __Ltext 0 0 ABS 0 text -
 __pstringtext1 1000 0 STRCODE 0 stringtext1 dist/default/production\UART_TEST.X.production.o
-__pstringtext2 1016 0 STRCODE 0 stringtext2 dist/default/production\UART_TEST.X.production.o
-__pstringtext3 0 0 STRCODE 0 stringtext3 dist/default/production\UART_TEST.X.production.o
-__pnvBANK0 54 0 BANK0 1 nvBANK0 dist/default/production\UART_TEST.X.production.o
+__pstringtext2 0 0 STRCODE 0 stringtext2 dist/default/production\UART_TEST.X.production.o
+__pnvBANK0 56 0 BANK0 1 nvBANK0 dist/default/production\UART_TEST.X.production.o
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-__S0 815 0 ABS 0 - -
+__S0 80D 0 ABS 0 - -
 __S1 7E 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 _EUSART1_DefaultErrorHandler 0 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
-_SYSTEM_Initialize D4E 0 CODE 0 text7 dist/default/production\UART_TEST.X.production.o
+_SYSTEM_Initialize D70 0 CODE 0 text6 dist/default/production\UART_TEST.X.production.o
 __HnvBANK0 0 0 ABS 0 nvBANK0 -
 __Lintentry 4 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\ADMIN\AppData\Local\Temp\xcAsflo.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\ADMIN\AppData\Local\Temp\xcAse8s.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
-send_string@x 71 0 COMMON 1 cstackCOMMON dist/default/production\UART_TEST.X.production.o
 __Lstringtext1 0 0 ABS 0 stringtext1 -
 __Lstringtext2 0 0 ABS 0 stringtext2 -
-__Lstringtext3 0 0 ABS 0 stringtext3 -
 vfpfcnvrt@fmt 74 0 COMMON 1 cstackCOMMON dist/default/production\UART_TEST.X.production.o
 __size_of_PMD_Initialize 0 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
 __size_of_EUSART1_Write 0 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
-__ptext10 D26 0 CODE 0 text10 dist/default/production\UART_TEST.X.production.o
-__ptext11 DE4 0 CODE 0 text11 dist/default/production\UART_TEST.X.production.o
-__ptext12 CFE 0 CODE 0 text12 dist/default/production\UART_TEST.X.production.o
-__ptext13 CF2 0 CODE 0 text13 dist/default/production\UART_TEST.X.production.o
-__ptext14 CE6 0 CODE 0 text14 dist/default/production\UART_TEST.X.production.o
-__end_of_PIN_MANAGER_Initialize EF6 0 CODE 0 text9 dist/default/production\UART_TEST.X.production.o
-_EUSART1_ErrorHandler 54 0 BANK0 1 nvBANK0 dist/default/production\UART_TEST.X.production.o
+__ptext10 DE4 0 CODE 0 text10 dist/default/production\UART_TEST.X.production.o
+__ptext11 D20 0 CODE 0 text11 dist/default/production\UART_TEST.X.production.o
+__ptext12 D14 0 CODE 0 text12 dist/default/production\UART_TEST.X.production.o
+__ptext13 D08 0 CODE 0 text13 dist/default/production\UART_TEST.X.production.o
+__end_of_PIN_MANAGER_Initialize EF6 0 CODE 0 text8 dist/default/production\UART_TEST.X.production.o
+_EUSART1_ErrorHandler 56 0 BANK0 1 nvBANK0 dist/default/production\UART_TEST.X.production.o
 __Lbank10 0 0 ABS 0 bank10 -
 __Lbank11 0 0 ABS 0 bank11 -
 __Lbank12 0 0 ABS 0 bank12 -
@@ -753,18 +738,17 @@ __Lbank60 0 0 BANK60 1 bank60 -
 __Lbank61 0 0 BANK61 1 bank61 -
 __Lbank62 0 0 BANK62 1 bank62 -
 __Lbank63 0 0 BANK63 1 bank63 -
-__pmaintext D8C 0 CODE 0 maintext dist/default/production\UART_TEST.X.production.o
+__pmaintext DAE 0 CODE 0 maintext dist/default/production\UART_TEST.X.production.o
 __Lbigram 0 0 ABS 0 bigram -
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
-_printf D68 0 CODE 0 text2 dist/default/production\UART_TEST.X.production.o
-_EUSART1_SetErrorHandler CE6 0 CODE 0 text14 dist/default/production\UART_TEST.X.production.o
-__end_of_EUSART1_SetErrorHandler CF2 0 CODE 0 text14 dist/default/production\UART_TEST.X.production.o
-__size_of_send_string 0 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
+_printf D8A 0 CODE 0 text1 dist/default/production\UART_TEST.X.production.o
+_EUSART1_SetErrorHandler D08 0 CODE 0 text13 dist/default/production\UART_TEST.X.production.o
+__end_of_EUSART1_SetErrorHandler D14 0 CODE 0 text13 dist/default/production\UART_TEST.X.production.o
 __size_of_vfprintf 0 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
-__end_of_EUSART1_SetFramingErrorHandler CFE 0 CODE 0 text13 dist/default/production\UART_TEST.X.production.o
-__end_of_EUSART1_SetOverrunErrorHandler D0A 0 CODE 0 text12 dist/default/production\UART_TEST.X.production.o
-__end_of_EUSART1_Write D4E 0 CODE 0 text6 dist/default/production\UART_TEST.X.production.o
+__end_of_EUSART1_SetFramingErrorHandler D20 0 CODE 0 text12 dist/default/production\UART_TEST.X.production.o
+__end_of_EUSART1_SetOverrunErrorHandler D2C 0 CODE 0 text11 dist/default/production\UART_TEST.X.production.o
+__end_of_EUSART1_Write D70 0 CODE 0 text5 dist/default/production\UART_TEST.X.production.o
 _OSCCON1 88D 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
 _OSCCON3 88F 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
 _OSCSTAT 890 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
@@ -791,27 +775,26 @@ __Hreset_vec 4 0 CODE 0 reset_vec -
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
 vfpfcnvrt@ap 75 0 COMMON 1 cstackCOMMON dist/default/production\UART_TEST.X.production.o
 vfpfcnvrt@fp 7B 0 COMMON 1 cstackCOMMON dist/default/production\UART_TEST.X.production.o
-__ptext1 DB6 0 CODE 0 text1 dist/default/production\UART_TEST.X.production.o
-__ptext2 D68 0 CODE 0 text2 dist/default/production\UART_TEST.X.production.o
-__ptext3 E28 0 CODE 0 text3 dist/default/production\UART_TEST.X.production.o
-__ptext4 EF6 0 CODE 0 text4 dist/default/production\UART_TEST.X.production.o
-__ptext5 CDC 0 CODE 0 text5 dist/default/production\UART_TEST.X.production.o
-__ptext6 D3A 0 CODE 0 text6 dist/default/production\UART_TEST.X.production.o
-__ptext7 D4E 0 CODE 0 text7 dist/default/production\UART_TEST.X.production.o
-__ptext8 D16 0 CODE 0 text8 dist/default/production\UART_TEST.X.production.o
-__ptext9 E78 0 CODE 0 text9 dist/default/production\UART_TEST.X.production.o
+__ptext1 D8A 0 CODE 0 text1 dist/default/production\UART_TEST.X.production.o
+__ptext2 E28 0 CODE 0 text2 dist/default/production\UART_TEST.X.production.o
+__ptext3 EF6 0 CODE 0 text3 dist/default/production\UART_TEST.X.production.o
+__ptext4 CFE 0 CODE 0 text4 dist/default/production\UART_TEST.X.production.o
+__ptext5 D5C 0 CODE 0 text5 dist/default/production\UART_TEST.X.production.o
+__ptext6 D70 0 CODE 0 text6 dist/default/production\UART_TEST.X.production.o
+__ptext7 D38 0 CODE 0 text7 dist/default/production\UART_TEST.X.production.o
+__ptext8 E78 0 CODE 0 text8 dist/default/production\UART_TEST.X.production.o
+__ptext9 D48 0 CODE 0 text9 dist/default/production\UART_TEST.X.production.o
 _RX1DTPPS 1ECB 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
 vfprintf@ap 4C 0 BANK0 1 cstackBANK0 dist/default/production\UART_TEST.X.production.o
 vfprintf@fp 4D 0 BANK0 1 cstackBANK0 dist/default/production\UART_TEST.X.production.o
 vfprintf@cfmt 4E 0 BANK0 1 cstackBANK0 dist/default/production\UART_TEST.X.production.o
-_vfprintf E28 0 CODE 0 text3 dist/default/production\UART_TEST.X.production.o
+_vfprintf E28 0 CODE 0 text2 dist/default/production\UART_TEST.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
 __Hstringtext1 0 0 ABS 0 stringtext1 -
 __Hstringtext2 0 0 ABS 0 stringtext2 -
-__Hstringtext3 0 0 ABS 0 stringtext3 -
-__end_of_vfprintf E78 0 CODE 0 text3 dist/default/production\UART_TEST.X.production.o
+__end_of_vfprintf E78 0 CODE 0 text2 dist/default/production\UART_TEST.X.production.o
 _SLRCONA 1F3B 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
 _SLRCONB 1F46 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
 _SLRCONC 1F51 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
@@ -824,11 +807,11 @@ _SP1BRGL 11B 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\UART_TEST.X.production.o
 __Hend_init 8 0 CODE 0 end_init -
-_EUSART1_SetFramingErrorHandler CF2 0 CODE 0 text13 dist/default/production\UART_TEST.X.production.o
-_EUSART1_SetOverrunErrorHandler CFE 0 CODE 0 text12 dist/default/production\UART_TEST.X.production.o
-__end_of_main DB6 0 CODE 0 maintext dist/default/production\UART_TEST.X.production.o
+_EUSART1_SetFramingErrorHandler D14 0 CODE 0 text12 dist/default/production\UART_TEST.X.production.o
+_EUSART1_SetOverrunErrorHandler D20 0 CODE 0 text11 dist/default/production\UART_TEST.X.production.o
+__end_of_main DE4 0 CODE 0 maintext dist/default/production\UART_TEST.X.production.o
 printf@fmt 50 0 BANK0 1 cstackBANK0 dist/default/production\UART_TEST.X.production.o
-__end_of_fputc CE6 0 CODE 0 text5 dist/default/production\UART_TEST.X.production.o
+__end_of_fputc D08 0 CODE 0 text4 dist/default/production\UART_TEST.X.production.o
 _OSCEN 891 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
 _TRISA 12 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
 _TRISB 13 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
@@ -838,15 +821,15 @@ _TRISE 16 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 _flags 46 0 BANK0 1 bssBANK0 dist/default/production\UART_TEST.X.production.o
-_fputc CDC 0 CODE 0 text5 dist/default/production\UART_TEST.X.production.o
+_fputc CFE 0 CODE 0 text4 dist/default/production\UART_TEST.X.production.o
 _width 42 0 BANK0 1 bssBANK0 dist/default/production\UART_TEST.X.production.o
 __size_of_PIN_MANAGER_Initialize 0 0 ABS 0 - dist/default/production\UART_TEST.X.production.o
-__end_of_EUSART1_Initialize E28 0 CODE 0 text11 dist/default/production\UART_TEST.X.production.o
-__end_of_OSCILLATOR_Initialize D3A 0 CODE 0 text10 dist/default/production\UART_TEST.X.production.o
+__end_of_EUSART1_Initialize E28 0 CODE 0 text10 dist/default/production\UART_TEST.X.production.o
+__end_of_OSCILLATOR_Initialize D5C 0 CODE 0 text9 dist/default/production\UART_TEST.X.production.o
 __initialization FEA 0 CODE 0 cinit dist/default/production\UART_TEST.X.production.o
 __pbssBANK0 20 0 BANK0 1 bssBANK0 dist/default/production\UART_TEST.X.production.o
 EUSART1_SetOverrunErrorHandler@interruptHandler 70 0 COMMON 1 cstackCOMMON dist/default/production\UART_TEST.X.production.o
-_OSCILLATOR_Initialize D26 0 CODE 0 text10 dist/default/production\UART_TEST.X.production.o
+_OSCILLATOR_Initialize D48 0 CODE 0 text9 dist/default/production\UART_TEST.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -873,26 +856,25 @@ _OSCILLATOR_Initialize D26 0 CODE 0 text10 dist/default/production\UART_TEST.X.p
 # All other numeric quantities are in decimal.
 %SEGMENTS
 cinit 0 7F5 FEA B 2
-text1 0 6DB DB6 17 2
-text2 0 6B4 D68 12 2
-text3 0 714 E28 28 2
-text4 0 77B EF6 7A 2
-text5 0 66E CDC 5 2
-text6 0 69D D3A A 2
-text7 0 6A7 D4E D 2
-text8 0 68B D16 8 2
-text9 0 73C E78 3F 2
-text10 0 693 D26 A 2
-text11 0 6F2 DE4 22 2
-text12 0 67F CFE 6 2
-text13 0 679 CF2 6 2
-text14 0 673 CE6 6 2
-maintext 0 6C6 D8C 15 2
+text1 0 6C5 D8A 12 2
+text2 0 714 E28 28 2
+text3 0 77B EF6 7A 2
+text4 0 67F CFE 5 2
+text5 0 6AE D5C A 2
+text6 0 6B8 D70 D 2
+text7 0 69C D38 8 2
+text8 0 73C E78 3F 2
+text9 0 6A4 D48 A 2
+text10 0 6F2 DE4 22 2
+text11 0 690 D20 6 2
+text12 0 68A D14 6 2
+text13 0 684 D08 6 2
+maintext 0 6D7 DAE 1B 2
 cstackCOMMON 1 70 70 E 1
-stringtext1 0 800 1000 15 2
+stringtext1 0 800 1000 D 2
 reset_vec 0 0 0 4 2
-bssBANK0 1 20 20 3A 1
-clrtext 0 685 D0A 6 2
+bssBANK0 1 20 20 3C 1
+clrtext 0 696 D2C 6 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal

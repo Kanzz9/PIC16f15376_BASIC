@@ -56,16 +56,16 @@ void send_string(const char *x)
 }
 int fputc(int ch, FILE *f){
 	
-	EUSART1_Write((char*)&ch);
+	EUSART1_Write((char)ch);
 	return ch;
 }
+
 void main(void)
 {
     // initialize the device
     SYSTEM_Initialize();
 
-    volatile uint8_t rxData;
-    volatile eusart1_status_t rxStatus;
+
     // When using interrupts, you need to set the Global and Peripheral Interrupt Enable bits
     // Use the following macros to:
 
@@ -81,11 +81,11 @@ void main(void)
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
 
-    printf("HOANG TOAN");
-    send_string("hoangtoan");
+  
     while (1)
     {
-        
+        printf("HOANG TOAN \n");
+        __delay_ms(1000);
         //EUSART1_Write();
         // Add your application code
     }
