@@ -65,26 +65,6 @@
 #define PULL_UP_ENABLED      1
 #define PULL_UP_DISABLED     0
 
-// get/set LED aliases
-#define LED_TRIS                 TRISAbits.TRISA7
-#define LED_LAT                  LATAbits.LATA7
-#define LED_PORT                 PORTAbits.RA7
-#define LED_WPU                  WPUAbits.WPUA7
-#define LED_OD                   ODCONAbits.ODCA7
-#define LED_ANS                  ANSELAbits.ANSA7
-#define LED_SetHigh()            do { LATAbits.LATA7 = 1; } while(0)
-#define LED_SetLow()             do { LATAbits.LATA7 = 0; } while(0)
-#define LED_Toggle()             do { LATAbits.LATA7 = ~LATAbits.LATA7; } while(0)
-#define LED_GetValue()           PORTAbits.RA7
-#define LED_SetDigitalInput()    do { TRISAbits.TRISA7 = 1; } while(0)
-#define LED_SetDigitalOutput()   do { TRISAbits.TRISA7 = 0; } while(0)
-#define LED_SetPullup()          do { WPUAbits.WPUA7 = 1; } while(0)
-#define LED_ResetPullup()        do { WPUAbits.WPUA7 = 0; } while(0)
-#define LED_SetPushPull()        do { ODCONAbits.ODCA7 = 0; } while(0)
-#define LED_SetOpenDrain()       do { ODCONAbits.ODCA7 = 1; } while(0)
-#define LED_SetAnalogMode()      do { ANSELAbits.ANSA7 = 1; } while(0)
-#define LED_SetDigitalMode()     do { ANSELAbits.ANSA7 = 0; } while(0)
-
 // get/set RC1 procedures
 #define RC1_SetHigh()            do { LATCbits.LATC1 = 1; } while(0)
 #define RC1_SetLow()             do { LATCbits.LATC1 = 0; } while(0)

@@ -46,7 +46,6 @@
 /*
                          Main application
  */
-
 char data;
 void send_string(const char *x)
 {
@@ -57,43 +56,38 @@ void send_string(const char *x)
 }
 int fputc(int ch, FILE *f){
 	
-    EUSART1_Write((char)ch);
-    return ch;
-}
-
-void abc(void){
-    
-    char b;
-    LED_Toggle();
-    b = RC1REG;
-    EUSART1_Write(b);
-    EUSART1_Receive_ISR();
+	EUSART1_Write((char)ch);
+	return ch;
 }
 
 void main(void)
 {
     // initialize the device
     SYSTEM_Initialize();
+
+
     // When using interrupts, you need to set the Global and Peripheral Interrupt Enable bits
     // Use the following macros to:
 
     // Enable the Global Interrupts
-    INTERRUPT_GlobalInterruptEnable();
+    //INTERRUPT_GlobalInterruptEnable();
 
     // Enable the Peripheral Interrupts
-    INTERRUPT_PeripheralInterruptEnable();
+    //INTERRUPT_PeripheralInterruptEnable();
 
     // Disable the Global Interrupts
     //INTERRUPT_GlobalInterruptDisable();
 
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
-    EUSART1_SetRxInterruptHandler(abc);
+
+  
     while (1)
     {
-        // Add your application code
-        printf("HOANG TOAN\n");       
+        printf("HOANG TOAN \n");
         __delay_ms(1000);
+        //EUSART1_Write();
+        // Add your application code
     }
 }
 /**

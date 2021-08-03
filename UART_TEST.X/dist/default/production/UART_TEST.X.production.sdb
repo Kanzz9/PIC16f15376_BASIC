@@ -3,68 +3,49 @@
 [d edition pro ]
 [d chip 16LF15376 ]
 [d frameptr 6 ]
-"692 D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+"692 E:\microchip\xc8\pic\sources\c99\common\doprnt.c
 [v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
 "1390
 [v _vfprintf vfprintf `(i  1 e 2 0 ]
-"8 D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputs.c
+"8 E:\microchip\xc8\pic\sources\c99\common\nf_fputs.c
 [v _fputs fputs `(i  1 e 2 0 ]
-"5 D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\printf.c
+"5 E:\microchip\xc8\pic\sources\c99\common\printf.c
 [v _printf printf `(i  1 e 2 0 ]
-"10 D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
+"10 E:\microchip\xc8\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
-"5 D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
+"5 E:\microchip\xc8\pic\sources\c99\common\strlen.c
 [v _strlen strlen `(ui  1 e 2 0 ]
-"4 D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul8_16.c
+"4 E:\microchip\xc8\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-"58 D:\work\pic_mplab\pic16lf15376\pic16lf15376\UART_TEST.X\main.c
+"57 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\main.c
 [v _fputc fputc `(i  1 e 2 0 ]
-"64
-[v _abc abc `(v  1 e 1 0 ]
-"73
+"62
 [v _main main `(v  1 e 1 0 ]
-"83 D:\work\pic_mplab\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
+"66 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
 [v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
-"162
+"132
 [v _EUSART1_Write EUSART1_Write `(v  1 e 1 0 ]
-[v i1_EUSART1_Write EUSART1_Write `(v  1 e 1 0 ]
-"173
-[v _EUSART1_Receive_ISR EUSART1_Receive_ISR `(v  1 e 1 0 ]
-"197
-[v _EUSART1_RxDataHandler EUSART1_RxDataHandler `(v  1 e 1 0 ]
-"207
+"144
 [v _EUSART1_DefaultFramingErrorHandler EUSART1_DefaultFramingErrorHandler `(v  1 e 1 0 ]
-"209
+"146
 [v _EUSART1_DefaultOverrunErrorHandler EUSART1_DefaultOverrunErrorHandler `(v  1 e 1 0 ]
-"217
+"154
 [v _EUSART1_DefaultErrorHandler EUSART1_DefaultErrorHandler `(v  1 e 1 0 ]
-"221
+"157
 [v _EUSART1_SetFramingErrorHandler EUSART1_SetFramingErrorHandler `(v  1 e 1 0 ]
-"225
+"161
 [v _EUSART1_SetOverrunErrorHandler EUSART1_SetOverrunErrorHandler `(v  1 e 1 0 ]
-"229
+"165
 [v _EUSART1_SetErrorHandler EUSART1_SetErrorHandler `(v  1 e 1 0 ]
-"234
-[v _EUSART1_SetRxInterruptHandler EUSART1_SetRxInterruptHandler `(v  1 e 1 0 ]
-"52 D:\work\pic_mplab\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/interrupt_manager.c
-[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
-"50 D:\work\pic_mplab\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
+"50 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 "58
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 "74
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
-"55 D:\work\pic_mplab\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+"55 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-[s S349 . 1 `uc 1 INTEDG 1 0 :1:0 
-`uc 1 . 1 0 :5:1 
-`uc 1 PEIE 1 0 :1:6 
-`uc 1 GIE 1 0 :1:7 
-]
-"427 D:\program files\Microchip\xc8\v2.31\pic\include\proc\pic16lf15376.h
-[u S354 . 1 `S349 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES354  1 e 1 @11 ]
-"733
+"733 C:/Users/ADMIN/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h
 [v _TRISA TRISA `VEuc  1 e 1 @18 ]
 "795
 [v _TRISB TRISB `VEuc  1 e 1 @19 ]
@@ -76,18 +57,6 @@
 [v _TRISE TRISE `VEuc  1 e 1 @22 ]
 "1019
 [v _LATA LATA `VEuc  1 e 1 @24 ]
-[s S325 . 1 `uc 1 LATA0 1 0 :1:0 
-`uc 1 LATA1 1 0 :1:1 
-`uc 1 LATA2 1 0 :1:2 
-`uc 1 LATA3 1 0 :1:3 
-`uc 1 LATA4 1 0 :1:4 
-`uc 1 LATA5 1 0 :1:5 
-`uc 1 LATA6 1 0 :1:6 
-`uc 1 LATA7 1 0 :1:7 
-]
-"1036
-[u S334 . 1 `S325 1 . 1 0 ]
-[v _LATAbits LATAbits `VES334  1 e 1 @24 ]
 "1081
 [v _LATB LATB `VEuc  1 e 1 @25 ]
 "1143
@@ -106,7 +75,7 @@
 [v _SP1BRGH SP1BRGH `VEuc  1 e 1 @284 ]
 "1880
 [v _RC1STA RC1STA `VEuc  1 e 1 @285 ]
-[s S211 . 1 `uc 1 RX9D 1 0 :1:0 
+[s S178 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -116,11 +85,11 @@
 `uc 1 SPEN 1 0 :1:7 
 ]
 "1906
-[u S220 . 1 `S211 1 . 1 0 ]
-[v _RC1STAbits RC1STAbits `VES220  1 e 1 @285 ]
+[u S187 . 1 `S178 1 . 1 0 ]
+[v _RC1STAbits RC1STAbits `VES187  1 e 1 @285 ]
 "2060
 [v _TX1STA TX1STA `VEuc  1 e 1 @286 ]
-[s S189 . 1 `uc 1 TX9D 1 0 :1:0 
+[s S157 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -130,11 +99,11 @@
 `uc 1 CSRC 1 0 :1:7 
 ]
 "2086
-[u S198 . 1 `S189 1 . 1 0 ]
-[v _TX1STAbits TX1STAbits `VES198  1 e 1 @286 ]
+[u S166 . 1 `S157 1 . 1 0 ]
+[v _TX1STAbits TX1STAbits `VES166  1 e 1 @286 ]
 "2240
 [v _BAUD1CON BAUD1CON `VEuc  1 e 1 @287 ]
-[s S168 . 1 `uc 1 SSP1IF 1 0 :1:0 
+[s S136 . 1 `uc 1 SSP1IF 1 0 :1:0 
 `uc 1 BCL1IF 1 0 :1:1 
 `uc 1 SSP2IF 1 0 :1:2 
 `uc 1 BCL2IF 1 0 :1:3 
@@ -144,20 +113,8 @@
 `uc 1 RC2IF 1 0 :1:7 
 ]
 "9419
-[u S177 . 1 `S168 1 . 1 0 ]
-[v _PIR3bits PIR3bits `VES177  1 e 1 @1807 ]
-[s S102 . 1 `uc 1 SSP1IE 1 0 :1:0 
-`uc 1 BCL1IE 1 0 :1:1 
-`uc 1 SSP2IE 1 0 :1:2 
-`uc 1 BCL2IE 1 0 :1:3 
-`uc 1 TX1IE 1 0 :1:4 
-`uc 1 RC1IE 1 0 :1:5 
-`uc 1 TX2IE 1 0 :1:6 
-`uc 1 RC2IE 1 0 :1:7 
-]
-"9725
-[u S111 . 1 `S102 1 . 1 0 ]
-[v _PIE3bits PIE3bits `VES111  1 e 1 @1817 ]
+[u S145 . 1 `S136 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES145  1 e 1 @1807 ]
 "9909
 [v _PMD0 PMD0 `VEuc  1 e 1 @1942 ]
 "9954
@@ -236,98 +193,86 @@
 [v _SLRCONE SLRCONE `VEuc  1 e 1 @8039 ]
 "22170
 [v _INLVLE INLVLE `VEuc  1 e 1 @8040 ]
-"55 D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+"55 E:\microchip\xc8\pic\sources\c99\common\doprnt.c
 [v _flags flags `i  1 s 2 flags ]
 [v _prec prec `i  1 s 2 prec ]
 [v _width width `i  1 s 2 width ]
 "69
 [v _nout nout `i  1 s 2 nout ]
-"63 D:\work\pic_mplab\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
-[v _eusart1RxHead eusart1RxHead `VEuc  1 e 1 0 ]
-"64
-[v _eusart1RxTail eusart1RxTail `VEuc  1 e 1 0 ]
-"65
-[v _eusart1RxBuffer eusart1RxBuffer `VE[8]uc  1 e 8 0 ]
 [s S90 . 1 `uc 1 perr 1 0 :1:0 
 `uc 1 ferr 1 0 :1:1 
 `uc 1 oerr 1 0 :1:2 
 `uc 1 reserved 1 0 :5:3 
 ]
-"66
+"52 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
 [u S95 . 1 `S90 1 . 1 0 `uc 1 status 1 0 ]
-[v _eusart1RxStatusBuffer eusart1RxStatusBuffer `VE[8]S95  1 e 8 0 ]
-"67
-[v _eusart1RxCount eusart1RxCount `VEuc  1 e 1 0 ]
-"68
 [v _eusart1RxLastError eusart1RxLastError `VES95  1 e 1 0 ]
-"73
-[v _EUSART1_RxDefaultInterruptHandler EUSART1_RxDefaultInterruptHandler `*.37(v  1 e 2 0 ]
-"75
+"58
 [v _EUSART1_FramingErrorHandler EUSART1_FramingErrorHandler `*.37(v  1 e 2 0 ]
-"76
+"59
 [v _EUSART1_OverrunErrorHandler EUSART1_OverrunErrorHandler `*.37(v  1 e 2 0 ]
-"77
+"60
 [v _EUSART1_ErrorHandler EUSART1_ErrorHandler `*.37(v  1 e 2 0 ]
-"73 D:\work\pic_mplab\pic16lf15376\pic16lf15376\UART_TEST.X\main.c
+"62 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"98
+"92
 } 0
-"5 D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\printf.c
+"5 E:\microchip\xc8\pic\sources\c99\common\printf.c
 [v _printf printf `(i  1 e 2 0 ]
 {
 "8
-[v printf@ap ap `[1]*.4v  1 a 1 20 ]
+[v printf@ap ap `[1]*.4v  1 a 1 9 ]
 "5
-[v printf@fmt fmt `*.25DCuc  1 p 2 15 ]
+[v printf@fmt fmt `*.25DCuc  1 p 2 6 ]
 "13
 } 0
-"1390 D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+"1390 E:\microchip\xc8\pic\sources\c99\common\doprnt.c
 [v _vfprintf vfprintf `(i  1 e 2 0 ]
 {
-[s S776 _IO_FILE 0 ]
-[v vfprintf@fp fp `*.1S776  1 a 1 wreg ]
+[s S636 _IO_FILE 0 ]
+[v vfprintf@fp fp `*.1S636  1 a 1 wreg ]
 "1393
-[v vfprintf@cfmt cfmt `*.25uc  1 a 2 13 ]
+[v vfprintf@cfmt cfmt `*.25uc  1 a 2 4 ]
 "1390
-[v vfprintf@fp fp `*.1S776  1 a 1 wreg ]
-[v vfprintf@fmt fmt `*.25DCuc  1 p 2 7 ]
-[v vfprintf@ap ap `*.4*.4v  1 p 1 9 ]
+[v vfprintf@fp fp `*.1S636  1 a 1 wreg ]
+[v vfprintf@fmt fmt `*.25DCuc  1 p 2 0 ]
+[v vfprintf@ap ap `*.4*.4v  1 p 1 2 ]
 "1395
 "1390
-[v vfprintf@fp fp `*.1S776  1 a 1 12 ]
+[v vfprintf@fp fp `*.1S636  1 a 1 3 ]
 "1404
 } 0
 "692
 [v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
 {
-[s S776 _IO_FILE 0 ]
-[v vfpfcnvrt@fp fp `*.1S776  1 a 1 wreg ]
-[v vfpfcnvrt@fp fp `*.1S776  1 a 1 wreg ]
-[v vfpfcnvrt@fmt fmt `*.4*.25uc  1 p 1 0 ]
-[v vfpfcnvrt@ap ap `*.4*.4v  1 p 1 1 ]
+[s S636 _IO_FILE 0 ]
+[v vfpfcnvrt@fp fp `*.1S636  1 a 1 wreg ]
+[v vfpfcnvrt@fp fp `*.1S636  1 a 1 wreg ]
+[v vfpfcnvrt@fmt fmt `*.4*.25uc  1 p 1 4 ]
+[v vfpfcnvrt@ap ap `*.4*.4v  1 p 1 5 ]
 "702
 "692
-[v vfpfcnvrt@fp fp `*.1S776  1 a 1 7 ]
+[v vfpfcnvrt@fp fp `*.1S636  1 a 1 11 ]
 "1387
 } 0
-"58 D:\work\pic_mplab\pic16lf15376\pic16lf15376\UART_TEST.X\main.c
+"57 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\main.c
 [v _fputc fputc `(i  1 e 2 0 ]
 {
-[v fputc@ch ch `i  1 p 2 4 ]
-[s S324 _IO_FILE 0 ]
-[v fputc@f f `*.1S324  1 p 1 6 ]
-"62
+[v fputc@ch ch `i  1 p 2 1 ]
+[s S260 _IO_FILE 0 ]
+[v fputc@f f `*.1S260  1 p 1 3 ]
+"61
 } 0
-"162 D:\work\pic_mplab\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
+"132 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
 [v _EUSART1_Write EUSART1_Write `(v  1 e 1 0 ]
 {
 [v EUSART1_Write@txData txData `uc  1 a 1 wreg ]
 [v EUSART1_Write@txData txData `uc  1 a 1 wreg ]
-[v EUSART1_Write@txData txData `uc  1 a 1 3 ]
-"169
+[v EUSART1_Write@txData txData `uc  1 a 1 0 ]
+"139
 } 0
-"50 D:\work\pic_mplab\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
+"50 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
 "56
@@ -337,86 +282,36 @@
 {
 "88
 } 0
-"55 D:\work\pic_mplab\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
+"55 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
 "129
 } 0
-"58 D:\work\pic_mplab\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
+"58 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
 "72
 } 0
-"83 D:\work\pic_mplab\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
+"66 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
 [v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
 {
-"119
+"92
 } 0
-"234
-[v _EUSART1_SetRxInterruptHandler EUSART1_SetRxInterruptHandler `(v  1 e 1 0 ]
-{
-[v EUSART1_SetRxInterruptHandler@interruptHandler interruptHandler `*.37(v  1 p 2 3 ]
-"236
-} 0
-"225
+"161
 [v _EUSART1_SetOverrunErrorHandler EUSART1_SetOverrunErrorHandler `(v  1 e 1 0 ]
 {
-[v EUSART1_SetOverrunErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 3 ]
-"227
+[v EUSART1_SetOverrunErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
+"163
 } 0
-"221
+"157
 [v _EUSART1_SetFramingErrorHandler EUSART1_SetFramingErrorHandler `(v  1 e 1 0 ]
 {
-[v EUSART1_SetFramingErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 3 ]
-"223
+[v EUSART1_SetFramingErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
+"159
 } 0
-"229
+"165
 [v _EUSART1_SetErrorHandler EUSART1_SetErrorHandler `(v  1 e 1 0 ]
 {
-[v EUSART1_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 3 ]
-"231
-} 0
-"52 D:\work\pic_mplab\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/interrupt_manager.c
-[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
-{
-"70
-} 0
-"173 D:\work\pic_mplab\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
-[v _EUSART1_Receive_ISR EUSART1_Receive_ISR `(v  1 e 1 0 ]
-{
-"195
-} 0
-"64 D:\work\pic_mplab\pic16lf15376\pic16lf15376\UART_TEST.X\main.c
-[v _abc abc `(v  1 e 1 0 ]
-{
-"66
-[v abc@b b `uc  1 a 1 2 ]
-"71
-} 0
-"162 D:\work\pic_mplab\pic16lf15376\pic16lf15376\UART_TEST.X\mcc_generated_files/eusart1.c
-[v i1_EUSART1_Write EUSART1_Write `(v  1 e 1 0 ]
-{
-[v i1EUSART1_Write@txData txData `uc  1 a 1 wreg ]
-[v i1EUSART1_Write@txData txData `uc  1 a 1 wreg ]
-[v i1EUSART1_Write@txData txData `uc  1 a 1 0 ]
-"169
-} 0
-"209
-[v _EUSART1_DefaultOverrunErrorHandler EUSART1_DefaultOverrunErrorHandler `(v  1 e 1 0 ]
-{
-"215
-} 0
-"207
-[v _EUSART1_DefaultFramingErrorHandler EUSART1_DefaultFramingErrorHandler `(v  1 e 1 0 ]
-{
-} 0
-"217
-[v _EUSART1_DefaultErrorHandler EUSART1_DefaultErrorHandler `(v  1 e 1 0 ]
-{
-"219
-} 0
-"197
-[v _EUSART1_RxDataHandler EUSART1_RxDataHandler `(v  1 e 1 0 ]
-{
-"205
+[v EUSART1_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
+"167
 } 0
