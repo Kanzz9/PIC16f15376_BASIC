@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.32 build 20210201212658 
-                                                                                               Tue Aug 03 23:30:01 2021
+                                                                                               Wed Aug 04 15:52:59 2021
 
 Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1 
      1                           	processor	16LF15376
@@ -1909,51 +1909,51 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   1895  1FEE                     	;# 
   1896  1FEF                     	;# 
   1897                           
-  1898 ;; Function _I2C1_DO_IDLE is unused but had its address taken
+  1898 ;; Function _rd1RegCompleteHandler is unused but had its address taken
   1899  0000                     
-  1900 ;; Function _I2C1_DO_SEND_ADR_READ is unused but had its address taken
+  1900 ;; Function _rd2RegCompleteHandler is unused but had its address taken
   1901  0000                     
-  1902 ;; Function _I2C1_DO_SEND_ADR_WRITE is unused but had its address taken
+  1902 ;; Function _wr1RegCompleteHandler is unused but had its address taken
   1903  0000                     
-  1904 ;; Function _I2C1_DO_TX is unused but had its address taken
+  1904 ;; Function _wr2RegCompleteHandler is unused but had its address taken
   1905  0000                     
-  1906 ;; Function _I2C1_DO_RX is unused but had its address taken
+  1906 ;; Function _rdBlkRegCompleteHandler is unused but had its address taken
   1907  0000                     
-  1908 ;; Function _I2C1_DO_RCEN is unused but had its address taken
+  1908 ;; Function _I2C1_DO_IDLE is unused but had its address taken
   1909  0000                     
-  1910 ;; Function _I2C1_DO_TX_EMPTY is unused but had its address taken
+  1910 ;; Function _I2C1_DO_SEND_ADR_READ is unused but had its address taken
   1911  0000                     
-  1912 ;; Function _I2C1_DO_SEND_RESTART_READ is unused but had its address taken
+  1912 ;; Function _I2C1_DO_SEND_ADR_WRITE is unused but had its address taken
   1913  0000                     
-  1914 ;; Function _I2C1_DO_SEND_RESTART_WRITE is unused but had its address taken
+  1914 ;; Function _I2C1_DO_TX is unused but had its address taken
   1915  0000                     
-  1916 ;; Function _I2C1_DO_SEND_RESTART is unused but had its address taken
+  1916 ;; Function _I2C1_DO_RX is unused but had its address taken
   1917  0000                     
-  1918 ;; Function _I2C1_DO_SEND_STOP is unused but had its address taken
+  1918 ;; Function _I2C1_DO_RCEN is unused but had its address taken
   1919  0000                     
-  1920 ;; Function _I2C1_DO_RX_ACK is unused but had its address taken
+  1920 ;; Function _I2C1_DO_TX_EMPTY is unused but had its address taken
   1921  0000                     
-  1922 ;; Function _I2C1_DO_RX_NACK_STOP is unused but had its address taken
+  1922 ;; Function _I2C1_DO_SEND_RESTART_READ is unused but had its address taken
   1923  0000                     
-  1924 ;; Function _I2C1_DO_RX_NACK_RESTART is unused but had its address taken
+  1924 ;; Function _I2C1_DO_SEND_RESTART_WRITE is unused but had its address taken
   1925  0000                     
-  1926 ;; Function _I2C1_DO_RESET is unused but had its address taken
+  1926 ;; Function _I2C1_DO_SEND_RESTART is unused but had its address taken
   1927  0000                     
-  1928 ;; Function _I2C1_DO_ADDRESS_NACK is unused but had its address taken
+  1928 ;; Function _I2C1_DO_SEND_STOP is unused but had its address taken
   1929  0000                     
-  1930 ;; Function _I2C1_CallbackReturnStop is unused but had its address taken
+  1930 ;; Function _I2C1_DO_RX_ACK is unused but had its address taken
   1931  0000                     
-  1932 ;; Function _I2C1_CallbackReturnReset is unused but had its address taken
+  1932 ;; Function _I2C1_DO_RX_NACK_STOP is unused but had its address taken
   1933  0000                     
-  1934 ;; Function _rd1RegCompleteHandler is unused but had its address taken
+  1934 ;; Function _I2C1_DO_RX_NACK_RESTART is unused but had its address taken
   1935  0000                     
-  1936 ;; Function _rd2RegCompleteHandler is unused but had its address taken
+  1936 ;; Function _I2C1_DO_RESET is unused but had its address taken
   1937  0000                     
-  1938 ;; Function _wr1RegCompleteHandler is unused but had its address taken
+  1938 ;; Function _I2C1_DO_ADDRESS_NACK is unused but had its address taken
   1939  0000                     
-  1940 ;; Function _wr2RegCompleteHandler is unused but had its address taken
+  1940 ;; Function _I2C1_CallbackReturnStop is unused but had its address taken
   1941  0000                     
-  1942 ;; Function _rdBlkRegCompleteHandler is unused but had its address taken
+  1942 ;; Function _I2C1_CallbackReturnReset is unused but had its address taken
   1943  0000                     
   1944                           	psect	idataCOMMON
   1945  0771                     __pidataCOMMON:
@@ -2147,32 +2147,32 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   2133                           
   2134                           	psect	cstackCOMMON
   2135  0000                     __pcstackCOMMON:
-  2136  0000                     ?_SYSTEM_Initialize:
-  2137  0000                     ??_SYSTEM_Initialize:	
+  2136  0000                     ?_PMD_Initialize:
+  2137  0000                     ??_PMD_Initialize:	
   2138                           ; 1 bytes @ 0x0
   2139                           
-  2140  0000                     ?_PMD_Initialize:	
+  2140  0000                     ?_OSCILLATOR_Initialize:	
   2141                           ; 1 bytes @ 0x0
   2142                           
-  2143  0000                     ??_PMD_Initialize:	
+  2143  0000                     ??_OSCILLATOR_Initialize:	
   2144                           ; 1 bytes @ 0x0
   2145                           
-  2146  0000                     ?_OSCILLATOR_Initialize:	
+  2146  0000                     ?_I2C1_Initialize:	
   2147                           ; 1 bytes @ 0x0
   2148                           
-  2149  0000                     ??_OSCILLATOR_Initialize:	
+  2149  0000                     ??_I2C1_Initialize:	
   2150                           ; 1 bytes @ 0x0
   2151                           
-  2152  0000                     ?_I2C1_Initialize:	
+  2152  0000                     ?_PIN_MANAGER_Initialize:	
   2153                           ; 1 bytes @ 0x0
   2154                           
-  2155  0000                     ??_I2C1_Initialize:	
+  2155  0000                     ??_PIN_MANAGER_Initialize:	
   2156                           ; 1 bytes @ 0x0
   2157                           
-  2158  0000                     ?_PIN_MANAGER_Initialize:	
+  2158  0000                     ?_SYSTEM_Initialize:	
   2159                           ; 1 bytes @ 0x0
   2160                           
-  2161  0000                     ??_PIN_MANAGER_Initialize:	
+  2161  0000                     ??_SYSTEM_Initialize:	
   2162                           ; 1 bytes @ 0x0
   2163                           
   2164  0000                     ?_main:	
@@ -2225,20 +2225,20 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   2206                           
   2207                           ;psect for function _main
   2208  0773                     _main:
-  2209  0773                     l1757:	
+  2209  0773                     l1883:	
   2210                           ;incstack = 0
   2211                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
   2212                           
   2213                           
   2214                           ;main.c: 67:     SYSTEM_Initialize();
   2215  0773  3187  279B  3187   	fcall	_SYSTEM_Initialize
-  2216  0776                     l431:	
+  2216  0776                     l574:	
   2217                           ;main.c: 84:     while (1)
   2218                           
-  2219  0776                     l432:	
+  2219  0776                     l575:	
   2220                           ;main.c: 85:     {;main.c: 87:     }
   2221                           
-  2222  0776  2F76               	goto	l431
+  2222  0776  2F76               	goto	l574
   2223  0777  3180  2802         	ljmp	start
   2224  0779                     __end_of_main:
   2225                           
@@ -2285,26 +2285,26 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   2261                           
   2262                           ;psect for function _SYSTEM_Initialize
   2263  079B                     _SYSTEM_Initialize:
-  2264  079B                     l1653:	
+  2264  079B                     l1379:	
   2265                           ;incstack = 0
   2266                           ; Regs used in _SYSTEM_Initialize: [wreg+status,2+status,0+pclath+cstack]
   2267                           
   2268                           
   2269                           ;mcc_generated_files/mcc.c: 52:     PMD_Initialize();
   2270  079B  3187  277F  3187   	fcall	_PMD_Initialize
-  2271  079E                     l1655:
+  2271  079E                     l1381:
   2272                           
   2273                           ;mcc_generated_files/mcc.c: 53:     I2C1_Initialize();
   2274  079E  3187  2787  3187   	fcall	_I2C1_Initialize
-  2275  07A1                     l1657:
+  2275  07A1                     l1383:
   2276                           
   2277                           ;mcc_generated_files/mcc.c: 54:     PIN_MANAGER_Initialize();
   2278  07A1  3187  27A8  3187   	fcall	_PIN_MANAGER_Initialize
-  2279  07A4                     l1659:
+  2279  07A4                     l1385:
   2280                           
   2281                           ;mcc_generated_files/mcc.c: 55:     OSCILLATOR_Initialize();
   2282  07A4  3187  2791  3187   	fcall	_OSCILLATOR_Initialize
-  2283  07A7                     l469:
+  2283  07A7                     l556:
   2284  07A7  0008               	return
   2285  07A8                     __end_of_SYSTEM_Initialize:
   2286                           
@@ -2347,7 +2347,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   2318                           
   2319                           ;psect for function _PMD_Initialize
   2320  077F                     _PMD_Initialize:
-  2321  077F                     l1569:	
+  2321  077F                     l1297:	
   2322                           ;incstack = 0
   2323                           ; Regs used in _PMD_Initialize: [status,2]
   2324                           
@@ -2370,7 +2370,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   2341                           
   2342                           ;mcc_generated_files/mcc.c: 87:     PMD5 = 0x00;
   2343  0785  019B               	clrf	27	;volatile
-  2344  0786                     l475:
+  2344  0786                     l562:
   2345  0786  0008               	return
   2346  0787                     __end_of_PMD_Initialize:
   2347                           
@@ -2413,7 +2413,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   2379                           
   2380                           ;psect for function _PIN_MANAGER_Initialize
   2381  07A8                     _PIN_MANAGER_Initialize:
-  2382  07A8                     l1519:	
+  2382  07A8                     l1247:	
   2383                           ;incstack = 0
   2384                           ; Regs used in _PIN_MANAGER_Initialize: [wreg+status,2]
   2385                           
@@ -2433,53 +2433,53 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   2399                           
   2400                           ;mcc_generated_files/pin_manager.c: 64:     LATC = 0x00;
   2401  07AD  019A               	clrf	26	;volatile
-  2402  07AE                     l1521:
+  2402  07AE                     l1249:
   2403                           
   2404                           ;mcc_generated_files/pin_manager.c: 69:     TRISE = 0x09;
   2405  07AE  3009               	movlw	9
   2406  07AF  0096               	movwf	22	;volatile
-  2407  07B0                     l1523:
+  2407  07B0                     l1251:
   2408                           
   2409                           ;mcc_generated_files/pin_manager.c: 70:     TRISA = 0xE4;
   2410  07B0  30E4               	movlw	228
   2411  07B1  0092               	movwf	18	;volatile
-  2412  07B2                     l1525:
+  2412  07B2                     l1253:
   2413                           
   2414                           ;mcc_generated_files/pin_manager.c: 71:     TRISB = 0xFC;
   2415  07B2  30FC               	movlw	252
   2416  07B3  0093               	movwf	19	;volatile
-  2417  07B4                     l1527:
+  2417  07B4                     l1255:
   2418                           
   2419                           ;mcc_generated_files/pin_manager.c: 72:     TRISC = 0xEF;
   2420  07B4  30EF               	movlw	239
   2421  07B5  0094               	movwf	20	;volatile
-  2422  07B6                     l1529:
+  2422  07B6                     l1257:
   2423                           
   2424                           ;mcc_generated_files/pin_manager.c: 73:     TRISD = 0x7F;
   2425  07B6  307F               	movlw	127
   2426  07B7  0095               	movwf	21	;volatile
-  2427  07B8                     l1531:
+  2427  07B8                     l1259:
   2428                           
   2429                           ;mcc_generated_files/pin_manager.c: 78:     ANSELD = 0x7F;
   2430  07B8  307F               	movlw	127
   2431  07B9  017E               	movlb	62	; select bank62
   2432  07BA  00D9               	movwf	89	;volatile
-  2433  07BB                     l1533:
+  2433  07BB                     l1261:
   2434                           
   2435                           ;mcc_generated_files/pin_manager.c: 79:     ANSELC = 0xAF;
   2436  07BB  30AF               	movlw	175
   2437  07BC  00CE               	movwf	78	;volatile
-  2438  07BD                     l1535:
+  2438  07BD                     l1263:
   2439                           
   2440                           ;mcc_generated_files/pin_manager.c: 80:     ANSELB = 0xF8;
   2441  07BD  30F8               	movlw	248
   2442  07BE  00C3               	movwf	67	;volatile
-  2443  07BF                     l1537:
+  2443  07BF                     l1265:
   2444                           
   2445                           ;mcc_generated_files/pin_manager.c: 81:     ANSELE = 0x01;
   2446  07BF  3001               	movlw	1
   2447  07C0  00E4               	movwf	100	;volatile
-  2448  07C1                     l1539:
+  2448  07C1                     l1267:
   2449                           
   2450                           ;mcc_generated_files/pin_manager.c: 82:     ANSELA = 0xE4;
   2451  07C1  30E4               	movlw	228
@@ -2514,80 +2514,80 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   2480                           
   2481                           ;mcc_generated_files/pin_manager.c: 100:     ODCOND = 0x00;
   2482  07CC  01DB               	clrf	91	;volatile
-  2483  07CD                     l1541:
+  2483  07CD                     l1269:
   2484                           
   2485                           ;mcc_generated_files/pin_manager.c: 105:     SLRCONA = 0xFF;
   2486  07CD  30FF               	movlw	255
   2487  07CE  00BB               	movwf	59	;volatile
-  2488  07CF                     l1543:
+  2488  07CF                     l1271:
   2489                           
   2490                           ;mcc_generated_files/pin_manager.c: 106:     SLRCONB = 0xFF;
   2491  07CF  30FF               	movlw	255
   2492  07D0  00C6               	movwf	70	;volatile
-  2493  07D1                     l1545:
+  2493  07D1                     l1273:
   2494                           
   2495                           ;mcc_generated_files/pin_manager.c: 107:     SLRCONC = 0xFF;
   2496  07D1  30FF               	movlw	255
   2497  07D2  00D1               	movwf	81	;volatile
-  2498  07D3                     l1547:
+  2498  07D3                     l1275:
   2499                           
   2500                           ;mcc_generated_files/pin_manager.c: 108:     SLRCOND = 0xFF;
   2501  07D3  30FF               	movlw	255
   2502  07D4  00DC               	movwf	92	;volatile
-  2503  07D5                     l1549:
+  2503  07D5                     l1277:
   2504                           
   2505                           ;mcc_generated_files/pin_manager.c: 109:     SLRCONE = 0x07;
   2506  07D5  3007               	movlw	7
   2507  07D6  00E7               	movwf	103	;volatile
-  2508  07D7                     l1551:
+  2508  07D7                     l1279:
   2509                           
   2510                           ;mcc_generated_files/pin_manager.c: 114:     INLVLA = 0xFF;
   2511  07D7  30FF               	movlw	255
   2512  07D8  00BC               	movwf	60	;volatile
-  2513  07D9                     l1553:
+  2513  07D9                     l1281:
   2514                           
   2515                           ;mcc_generated_files/pin_manager.c: 115:     INLVLB = 0xFF;
   2516  07D9  30FF               	movlw	255
   2517  07DA  00C7               	movwf	71	;volatile
-  2518  07DB                     l1555:
+  2518  07DB                     l1283:
   2519                           
   2520                           ;mcc_generated_files/pin_manager.c: 116:     INLVLC = 0xFF;
   2521  07DB  30FF               	movlw	255
   2522  07DC  00D2               	movwf	82	;volatile
-  2523  07DD                     l1557:
+  2523  07DD                     l1285:
   2524                           
   2525                           ;mcc_generated_files/pin_manager.c: 117:     INLVLD = 0xFF;
   2526  07DD  30FF               	movlw	255
   2527  07DE  00DD               	movwf	93	;volatile
-  2528  07DF                     l1559:
+  2528  07DF                     l1287:
   2529                           
   2530                           ;mcc_generated_files/pin_manager.c: 118:     INLVLE = 0x0F;
   2531  07DF  300F               	movlw	15
   2532  07E0  00E8               	movwf	104	;volatile
-  2533  07E1                     l1561:
+  2533  07E1                     l1289:
   2534                           
   2535                           ;mcc_generated_files/pin_manager.c: 127:     SSP1CLKPPS = 0x16;
   2536  07E1  3016               	movlw	22
   2537  07E2  017D               	movlb	61	; select bank61
   2538  07E3  00C5               	movwf	69	;volatile
-  2539  07E4                     l1563:
+  2539  07E4                     l1291:
   2540                           
   2541                           ;mcc_generated_files/pin_manager.c: 128:     RB2PPS = 0x16;
   2542  07E4  3016               	movlw	22
   2543  07E5  017E               	movlb	62	; select bank62
   2544  07E6  009A               	movwf	26	;volatile
-  2545  07E7                     l1565:
+  2545  07E7                     l1293:
   2546                           
   2547                           ;mcc_generated_files/pin_manager.c: 129:     RC6PPS = 0x15;
   2548  07E7  3015               	movlw	21
   2549  07E8  00A6               	movwf	38	;volatile
-  2550  07E9                     l1567:
+  2550  07E9                     l1295:
   2551                           
   2552                           ;mcc_generated_files/pin_manager.c: 130:     SSP1DATPPS = 0x0A;
   2553  07E9  300A               	movlw	10
   2554  07EA  017D               	movlb	61	; select bank61
   2555  07EB  00C6               	movwf	70	;volatile
-  2556  07EC                     l416:
+  2556  07EC                     l518:
   2557  07EC  0008               	return
   2558  07ED                     __end_of_PIN_MANAGER_Initialize:
   2559                           
@@ -2630,7 +2630,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   2591                           
   2592                           ;psect for function _OSCILLATOR_Initialize
   2593  0791                     _OSCILLATOR_Initialize:
-  2594  0791                     l1571:	
+  2594  0791                     l1299:	
   2595                           ;incstack = 0
   2596                           ; Regs used in _OSCILLATOR_Initialize: [wreg+status,2]
   2597                           
@@ -2639,11 +2639,11 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   2600  0791  3062               	movlw	98
   2601  0792  0151               	movlb	17	; select bank17
   2602  0793  008D               	movwf	13	;volatile
-  2603  0794                     l1573:
+  2603  0794                     l1301:
   2604                           
   2605                           ;mcc_generated_files/mcc.c: 63:     OSCCON3 = 0x00;
   2606  0794  018F               	clrf	15	;volatile
-  2607  0795                     l1575:
+  2607  0795                     l1303:
   2608                           
   2609                           ;mcc_generated_files/mcc.c: 65:     OSCEN = 0x00;
   2610  0795  0191               	clrf	17	;volatile
@@ -2651,15 +2651,15 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   2612                           ;mcc_generated_files/mcc.c: 67:     OSCFRQ = 0x02;
   2613  0796  3002               	movlw	2
   2614  0797  0093               	movwf	19	;volatile
-  2615  0798                     l1577:
+  2615  0798                     l1305:
   2616                           
   2617                           ;mcc_generated_files/mcc.c: 69:     OSCSTAT = 0x00;
   2618  0798  0190               	clrf	16	;volatile
-  2619  0799                     l1579:
+  2619  0799                     l1307:
   2620                           
   2621                           ;mcc_generated_files/mcc.c: 71:     OSCTUNE = 0x00;
   2622  0799  0192               	clrf	18	;volatile
-  2623  079A                     l472:
+  2623  079A                     l559:
   2624  079A  0008               	return
   2625  079B                     __end_of_OSCILLATOR_Initialize:
   2626                           
@@ -2702,7 +2702,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   2658                           
   2659                           ;psect for function _I2C1_Initialize
   2660  0787                     _I2C1_Initialize:
-  2661  0787                     l1469:	
+  2661  0787                     l1239:	
   2662                           ;incstack = 0
   2663                           ; Regs used in _I2C1_Initialize: [wreg+status,2]
   2664                           
@@ -2715,20 +2715,20 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   2671                           ;mcc_generated_files/i2c1_master.c: 170:     SSP1CON1 = 0x08;
   2672  078A  3008               	movlw	8
   2673  078B  0090               	movwf	16	;volatile
-  2674  078C                     l1471:
+  2674  078C                     l1241:
   2675                           
   2676                           ;mcc_generated_files/i2c1_master.c: 171:     SSP1CON2 = 0x00;
   2677  078C  0191               	clrf	17	;volatile
-  2678  078D                     l1473:
+  2678  078D                     l1243:
   2679                           
   2680                           ;mcc_generated_files/i2c1_master.c: 172:     SSP1ADD = 0x03;
   2681  078D  3003               	movlw	3
   2682  078E  008D               	movwf	13	;volatile
-  2683  078F                     l1475:
+  2683  078F                     l1245:
   2684                           
   2685                           ;mcc_generated_files/i2c1_master.c: 173:     SSP1CON1bits.SSPEN = 0;
   2686  078F  1290               	bcf	16,5	;volatile
-  2687  0790                     l105:
+  2687  0790                     l207:
   2688  0790  0008               	return
   2689  0791                     __end_of_I2C1_Initialize:
   2690  007E                     btemp	set	126	;btemp
@@ -2857,63 +2857,63 @@ Pointer List with Targets:
 
     I2C1_Write2ByteRegister@data.data	PTR unsigned char  size(1) Largest target is 0
 
-    I2C1_DO_TX$1640$0	PTR void  size(1) Largest target is 4
+    I2C1_DO_TX$1647$0	PTR void  size(1) Largest target is 4
 		 -> I2C1_ReadDataBlock@bufferBlock(COMMON[3]), I2C1_Write2ByteRegister@data(COMMON[2]), I2C1_Write1ByteRegister@data(COMMON[1]), I2C1_Read2ByteRegister@returnValue(COMMON[2]), 
-		 -> I2C1_Read1ByteRegister@returnValue(COMMON[1]), NULL(NULL[0]), 
+		 -> NULL(NULL[0]), I2C1_Read1ByteRegister@returnValue(COMMON[1]), 
 
     cb$0	PTR void  size(1) Largest target is 4
 		 -> I2C1_ReadDataBlock@bufferBlock(COMMON[3]), I2C1_Write2ByteRegister@data(COMMON[2]), I2C1_Write1ByteRegister@data(COMMON[1]), I2C1_Read2ByteRegister@returnValue(COMMON[2]), 
-		 -> I2C1_Read1ByteRegister@returnValue(COMMON[1]), NULL(NULL[0]), 
+		 -> NULL(NULL[0]), I2C1_Read1ByteRegister@returnValue(COMMON[1]), 
 
     Absolute function$0	PTR void  size(1) Largest target is 4
 		 -> I2C1_ReadDataBlock@bufferBlock(COMMON[3]), I2C1_Write2ByteRegister@data(COMMON[2]), I2C1_Write1ByteRegister@data(COMMON[1]), I2C1_Read2ByteRegister@returnValue(COMMON[2]), 
-		 -> I2C1_Read1ByteRegister@returnValue(COMMON[1]), NULL(NULL[0]), 
+		 -> NULL(NULL[0]), I2C1_Read1ByteRegister@returnValue(COMMON[1]), 
 
     cb$0	PTR void  size(1) Largest target is 4
 		 -> I2C1_ReadDataBlock@bufferBlock(COMMON[3]), I2C1_Write2ByteRegister@data(COMMON[2]), I2C1_Write1ByteRegister@data(COMMON[1]), I2C1_Read2ByteRegister@returnValue(COMMON[2]), 
-		 -> I2C1_Read1ByteRegister@returnValue(COMMON[1]), NULL(NULL[0]), 
+		 -> NULL(NULL[0]), I2C1_Read1ByteRegister@returnValue(COMMON[1]), 
 
-    S115$0$0	PTR void  size(1) Largest target is 4
+    S246$0$0	PTR void  size(1) Largest target is 4
 		 -> I2C1_ReadDataBlock@bufferBlock(COMMON[3]), I2C1_Write2ByteRegister@data(COMMON[2]), I2C1_Write1ByteRegister@data(COMMON[1]), I2C1_Read2ByteRegister@returnValue(COMMON[2]), 
-		 -> I2C1_Read1ByteRegister@returnValue(COMMON[1]), NULL(NULL[0]), 
+		 -> NULL(NULL[0]), I2C1_Read1ByteRegister@returnValue(COMMON[1]), 
 
-    rdBlkRegCompleteHandler@ptr.data	PTR unsigned char  size(1) Largest target is 0
-
-    S955$data	PTR unsigned char  size(1) Largest target is 0
-
-    bufferBlock.data	PTR unsigned char  size(1) Largest target is 0
-
-    S115$data_ptr	PTR unsigned char  size(1) Largest target is 4
+    S246$data_ptr	PTR unsigned char  size(1) Largest target is 4
 		 -> I2C1_ReadDataBlock@reg(COMMON[1]), I2C1_ReadDataBlock@bufferBlock(COMMON[3]), I2C1_Write2ByteRegister@reg(COMMON[1]), I2C1_Write2ByteRegister@data(COMMON[2]), 
 		 -> I2C1_Write1ByteRegister@reg(COMMON[1]), I2C1_Write1ByteRegister@data(COMMON[1]), I2C1_Read2ByteRegister@reg(COMMON[1]), I2C1_Read2ByteRegister@returnValue(COMMON[2]), 
-		 -> I2C1_Read1ByteRegister@reg(COMMON[1]), I2C1_Read1ByteRegister@returnValue(COMMON[1]), NULL(NULL[0]), 
+		 -> NULL(NULL[0]), I2C1_Read1ByteRegister@reg(COMMON[1]), I2C1_Read1ByteRegister@returnValue(COMMON[1]), 
 
     I2C1_Status.data_ptr	PTR unsigned char  size(1) Largest target is 4
 		 -> I2C1_ReadDataBlock@reg(COMMON[1]), I2C1_ReadDataBlock@bufferBlock(COMMON[3]), I2C1_Write2ByteRegister@reg(COMMON[1]), I2C1_Write2ByteRegister@data(COMMON[2]), 
 		 -> I2C1_Write1ByteRegister@reg(COMMON[1]), I2C1_Write1ByteRegister@data(COMMON[1]), I2C1_Read2ByteRegister@reg(COMMON[1]), I2C1_Read2ByteRegister@returnValue(COMMON[2]), 
-		 -> I2C1_Read1ByteRegister@reg(COMMON[1]), I2C1_Read1ByteRegister@returnValue(COMMON[1]), NULL(NULL[0]), 
+		 -> NULL(NULL[0]), I2C1_Read1ByteRegister@reg(COMMON[1]), I2C1_Read1ByteRegister@returnValue(COMMON[1]), 
 
-    S115$callbackPayload	PTR void [6] size(1) Largest target is 4
+    S246$callbackPayload	PTR void [6] size(1) Largest target is 4
 		 -> I2C1_ReadDataBlock@bufferBlock(COMMON[3]), I2C1_Write2ByteRegister@data(COMMON[2]), I2C1_Write1ByteRegister@data(COMMON[1]), I2C1_Read2ByteRegister@returnValue(COMMON[2]), 
-		 -> I2C1_Read1ByteRegister@returnValue(COMMON[1]), NULL(NULL[0]), 
+		 -> NULL(NULL[0]), I2C1_Read1ByteRegister@returnValue(COMMON[1]), 
 
     I2C1_Status.callbackPayload	PTR void [6] size(1) Largest target is 4
 		 -> I2C1_ReadDataBlock@bufferBlock(COMMON[3]), I2C1_Write2ByteRegister@data(COMMON[2]), I2C1_Write1ByteRegister@data(COMMON[1]), I2C1_Read2ByteRegister@returnValue(COMMON[2]), 
-		 -> I2C1_Read1ByteRegister@returnValue(COMMON[1]), NULL(NULL[0]), 
+		 -> NULL(NULL[0]), I2C1_Read1ByteRegister@returnValue(COMMON[1]), 
 
-    S115$callbackTable	PTR FTN(PTR void ,)enum E360[6] size(2) Largest target is 1
-		 -> rdBlkRegCompleteHandler(), wr2RegCompleteHandler(), wr1RegCompleteHandler(), rd2RegCompleteHandler(), 
-		 -> rd1RegCompleteHandler(), I2C1_CallbackReturnReset(), I2C1_CallbackReturnStop(), Absolute function(), 
+    S246$callbackTable	PTR FTN(PTR void ,)enum E360[6] size(2) Largest target is 1
+		 -> I2C1_CallbackReturnReset(), I2C1_CallbackReturnStop(), Absolute function(), rdBlkRegCompleteHandler(), 
+		 -> wr2RegCompleteHandler(), wr1RegCompleteHandler(), rd2RegCompleteHandler(), rd1RegCompleteHandler(), 
 
     I2C1_Status.callbackTable	PTR FTN(PTR void ,)enum E360[6] size(2) Largest target is 1
-		 -> rdBlkRegCompleteHandler(), wr2RegCompleteHandler(), wr1RegCompleteHandler(), rd2RegCompleteHandler(), 
-		 -> rd1RegCompleteHandler(), I2C1_CallbackReturnReset(), I2C1_CallbackReturnStop(), Absolute function(), 
+		 -> I2C1_CallbackReturnReset(), I2C1_CallbackReturnStop(), Absolute function(), rdBlkRegCompleteHandler(), 
+		 -> wr2RegCompleteHandler(), wr1RegCompleteHandler(), rd2RegCompleteHandler(), rd1RegCompleteHandler(), 
 
     i2c1_fsmStateTable	const PTR FTN()enum E8119[16] size(2) Largest target is 1
 		 -> I2C1_DO_ADDRESS_NACK(), I2C1_DO_RESET(), I2C1_DO_RX_NACK_RESTART(), I2C1_DO_RX_NACK_STOP(), 
 		 -> I2C1_DO_RX_ACK(), I2C1_DO_SEND_STOP(), I2C1_DO_SEND_RESTART(), I2C1_DO_SEND_RESTART_WRITE(), 
 		 -> I2C1_DO_SEND_RESTART_READ(), I2C1_DO_TX_EMPTY(), I2C1_DO_RCEN(), I2C1_DO_RX(), 
 		 -> I2C1_DO_TX(), I2C1_DO_SEND_ADR_WRITE(), I2C1_DO_SEND_ADR_READ(), I2C1_DO_IDLE(), 
+
+    rdBlkRegCompleteHandler@ptr.data	PTR unsigned char  size(1) Largest target is 0
+
+    S94$data	PTR unsigned char  size(1) Largest target is 0
+
+    bufferBlock.data	PTR unsigned char  size(1) Largest target is 0
 
 
 Critical Paths under _main in COMMON
@@ -3251,25 +3251,25 @@ SFR63                0      0       0      64        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.32 build 20210201212658 
-Symbol Table                                                                                   Tue Aug 03 23:30:01 2021
+Symbol Table                                                                                   Wed Aug 04 15:52:59 2021
 
-                            l105 0790                              l431 0776                              l416 07EC  
-                            l432 0776                              l472 079A                              l475 0786  
-                            l469 07A7          __size_of_PMD_Initialize 0008                              wreg 0009  
-           _I2C1_DO_RX_NACK_STOP 0000                             l1521 07AE                             l1531 07B8  
-                           l1523 07B0                             l1541 07CD                             l1533 07BB  
-                           l1525 07B2                             l1471 078C                             l1551 07D7  
-                           l1543 07CF                             l1535 07BD                             l1527 07B4  
-                           l1519 07A8                             l1473 078D                             l1561 07E1  
-                           l1553 07D9                             l1545 07D1                             l1537 07BF  
-                           l1529 07B6                             l1475 078F                             l1571 0791  
-                           l1563 07E4                             l1555 07DB                             l1547 07D3  
-                           l1539 07C1                             l1469 0787                             l1573 0794  
-                           l1565 07E7                             l1557 07DD                             l1549 07D5  
-                           l1653 079B                             l1575 0795                             l1567 07E9  
-                           l1559 07DF                             l1655 079E                             l1577 0798  
-                           l1569 077F                             l1657 07A1                             l1579 0799  
-                           l1659 07A4                             l1757 0773                             STR_1 0824  
+                            l207 0790                              l518 07EC                              l562 0786  
+                            l556 07A7                              l574 0776                              l559 079A  
+                            l575 0776          __size_of_PMD_Initialize 0008                              wreg 0009  
+           _I2C1_DO_RX_NACK_STOP 0000                             l1301 0794                             l1303 0795  
+                           l1241 078C                             l1305 0798                             l1243 078D  
+                           l1307 0799                             l1251 07B0                             l1245 078F  
+                           l1261 07BB                             l1253 07B2                             l1239 0787  
+                           l1271 07CF                             l1263 07BD                             l1255 07B4  
+                           l1247 07A8                             l1281 07D9                             l1273 07D1  
+                           l1265 07BF                             l1257 07B6                             l1249 07AE  
+                           l1291 07E4                             l1283 07DB                             l1275 07D3  
+                           l1267 07C1                             l1259 07B8                             l1293 07E7  
+                           l1285 07DD                             l1277 07D5                             l1269 07CD  
+                           l1381 079E                             l1295 07E9                             l1287 07DF  
+                           l1279 07D7                             l1383 07A1                             l1289 07E1  
+                           l1297 077F                             l1385 07A4                             l1299 0791  
+                           l1379 079B                             l1883 0773                             STR_1 0824  
                            _LATA 0018                             _LATB 0019                             _LATC 001A  
                            _LATD 001B                             _LATE 001C                             _PMD0 0796  
                            _PMD1 0797                             _PMD2 0798                             _PMD3 0799  

@@ -1,4 +1,4 @@
-# 1 "../Lib/TEXTLCD.c"
+# 1 "../../Lib/TEXTLCD.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:/Users/ADMIN/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "../Lib/TEXTLCD.c" 2
+# 1 "../../Lib/TEXTLCD.c" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 1 3
 
 
@@ -113,14 +113,14 @@ typedef int32_t int_fast32_t;
 typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 144 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 2 3
-# 1 "../Lib/TEXTLCD.c" 2
+# 1 "../../Lib/TEXTLCD.c" 2
 
 
-# 1 "../Lib/TEXTLCD.h" 1
-# 16 "../Lib/TEXTLCD.h"
+# 1 "../../Lib/TEXTLCD.h" 1
+# 16 "../../Lib/TEXTLCD.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdbool.h" 1 3
-# 16 "../Lib/TEXTLCD.h" 2
-# 43 "../Lib/TEXTLCD.h"
+# 16 "../../Lib/TEXTLCD.h" 2
+# 43 "../../Lib/TEXTLCD.h"
 typedef enum {
     TEXTLCD0802 = 0,
     TEXTLCD0804,
@@ -137,7 +137,7 @@ typedef enum {
        void TextLCD_ClearLine(uint8_t line);
        void TextLCD_Puts(uint8_t line, uint8_t idx, const char *data, uint8_t length_or_type);
        void TextLCD_Three_Number_Int(uint8_t line, uint8_t idx, int16_t value);
-# 3 "../Lib/TEXTLCD.c" 2
+# 3 "../../Lib/TEXTLCD.c" 2
 
 # 1 "mcc_generated_files\\mcc.h" 1
 # 49 "mcc_generated_files\\mcc.h"
@@ -13578,7 +13578,7 @@ void SYSTEM_Initialize(void);
 void OSCILLATOR_Initialize(void);
 # 96 "mcc_generated_files\\mcc.h"
 void PMD_Initialize(void);
-# 4 "../Lib/TEXTLCD.c" 2
+# 4 "../../Lib/TEXTLCD.c" 2
 
 
 

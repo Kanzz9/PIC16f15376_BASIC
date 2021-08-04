@@ -145,77 +145,77 @@
 #define TEXTLCD_D4_SetAnalogMode()      do { ANSELAbits.ANSA4 = 1; } while(0)
 #define TEXTLCD_D4_SetDigitalMode()     do { ANSELAbits.ANSA4 = 0; } while(0)
 
-// get/set UNIBUS_RTS_IO aliases
-#define UNIBUS_RTS_IO_TRIS                 TRISBbits.TRISB0
-#define UNIBUS_RTS_IO_LAT                  LATBbits.LATB0
-#define UNIBUS_RTS_IO_PORT                 PORTBbits.RB0
-#define UNIBUS_RTS_IO_WPU                  WPUBbits.WPUB0
-#define UNIBUS_RTS_IO_OD                   ODCONBbits.ODCB0
-#define UNIBUS_RTS_IO_ANS                  ANSELBbits.ANSB0
-#define UNIBUS_RTS_IO_SetHigh()            do { LATBbits.LATB0 = 1; } while(0)
-#define UNIBUS_RTS_IO_SetLow()             do { LATBbits.LATB0 = 0; } while(0)
-#define UNIBUS_RTS_IO_Toggle()             do { LATBbits.LATB0 = ~LATBbits.LATB0; } while(0)
-#define UNIBUS_RTS_IO_GetValue()           PORTBbits.RB0
-#define UNIBUS_RTS_IO_SetDigitalInput()    do { TRISBbits.TRISB0 = 1; } while(0)
-#define UNIBUS_RTS_IO_SetDigitalOutput()   do { TRISBbits.TRISB0 = 0; } while(0)
-#define UNIBUS_RTS_IO_SetPullup()          do { WPUBbits.WPUB0 = 1; } while(0)
-#define UNIBUS_RTS_IO_ResetPullup()        do { WPUBbits.WPUB0 = 0; } while(0)
-#define UNIBUS_RTS_IO_SetPushPull()        do { ODCONBbits.ODCB0 = 0; } while(0)
-#define UNIBUS_RTS_IO_SetOpenDrain()       do { ODCONBbits.ODCB0 = 1; } while(0)
-#define UNIBUS_RTS_IO_SetAnalogMode()      do { ANSELBbits.ANSB0 = 1; } while(0)
-#define UNIBUS_RTS_IO_SetDigitalMode()     do { ANSELBbits.ANSB0 = 0; } while(0)
+// get/set UNIBUS_WP aliases
+#define UNIBUS_WP_TRIS                 TRISBbits.TRISB0
+#define UNIBUS_WP_LAT                  LATBbits.LATB0
+#define UNIBUS_WP_PORT                 PORTBbits.RB0
+#define UNIBUS_WP_WPU                  WPUBbits.WPUB0
+#define UNIBUS_WP_OD                   ODCONBbits.ODCB0
+#define UNIBUS_WP_ANS                  ANSELBbits.ANSB0
+#define UNIBUS_WP_SetHigh()            do { LATBbits.LATB0 = 1; } while(0)
+#define UNIBUS_WP_SetLow()             do { LATBbits.LATB0 = 0; } while(0)
+#define UNIBUS_WP_Toggle()             do { LATBbits.LATB0 = ~LATBbits.LATB0; } while(0)
+#define UNIBUS_WP_GetValue()           PORTBbits.RB0
+#define UNIBUS_WP_SetDigitalInput()    do { TRISBbits.TRISB0 = 1; } while(0)
+#define UNIBUS_WP_SetDigitalOutput()   do { TRISBbits.TRISB0 = 0; } while(0)
+#define UNIBUS_WP_SetPullup()          do { WPUBbits.WPUB0 = 1; } while(0)
+#define UNIBUS_WP_ResetPullup()        do { WPUBbits.WPUB0 = 0; } while(0)
+#define UNIBUS_WP_SetPushPull()        do { ODCONBbits.ODCB0 = 0; } while(0)
+#define UNIBUS_WP_SetOpenDrain()       do { ODCONBbits.ODCB0 = 1; } while(0)
+#define UNIBUS_WP_SetAnalogMode()      do { ANSELBbits.ANSB0 = 1; } while(0)
+#define UNIBUS_WP_SetDigitalMode()     do { ANSELBbits.ANSB0 = 0; } while(0)
 
-// get/set UNIBUS_CTS_IO aliases
-#define UNIBUS_CTS_IO_TRIS                 TRISBbits.TRISB1
-#define UNIBUS_CTS_IO_LAT                  LATBbits.LATB1
-#define UNIBUS_CTS_IO_PORT                 PORTBbits.RB1
-#define UNIBUS_CTS_IO_WPU                  WPUBbits.WPUB1
-#define UNIBUS_CTS_IO_OD                   ODCONBbits.ODCB1
-#define UNIBUS_CTS_IO_ANS                  ANSELBbits.ANSB1
-#define UNIBUS_CTS_IO_SetHigh()            do { LATBbits.LATB1 = 1; } while(0)
-#define UNIBUS_CTS_IO_SetLow()             do { LATBbits.LATB1 = 0; } while(0)
-#define UNIBUS_CTS_IO_Toggle()             do { LATBbits.LATB1 = ~LATBbits.LATB1; } while(0)
-#define UNIBUS_CTS_IO_GetValue()           PORTBbits.RB1
-#define UNIBUS_CTS_IO_SetDigitalInput()    do { TRISBbits.TRISB1 = 1; } while(0)
-#define UNIBUS_CTS_IO_SetDigitalOutput()   do { TRISBbits.TRISB1 = 0; } while(0)
-#define UNIBUS_CTS_IO_SetPullup()          do { WPUBbits.WPUB1 = 1; } while(0)
-#define UNIBUS_CTS_IO_ResetPullup()        do { WPUBbits.WPUB1 = 0; } while(0)
-#define UNIBUS_CTS_IO_SetPushPull()        do { ODCONBbits.ODCB1 = 0; } while(0)
-#define UNIBUS_CTS_IO_SetOpenDrain()       do { ODCONBbits.ODCB1 = 1; } while(0)
-#define UNIBUS_CTS_IO_SetAnalogMode()      do { ANSELBbits.ANSB1 = 1; } while(0)
-#define UNIBUS_CTS_IO_SetDigitalMode()     do { ANSELBbits.ANSB1 = 0; } while(0)
+// get/set UNIBUS_A2 aliases
+#define UNIBUS_A2_TRIS                 TRISBbits.TRISB1
+#define UNIBUS_A2_LAT                  LATBbits.LATB1
+#define UNIBUS_A2_PORT                 PORTBbits.RB1
+#define UNIBUS_A2_WPU                  WPUBbits.WPUB1
+#define UNIBUS_A2_OD                   ODCONBbits.ODCB1
+#define UNIBUS_A2_ANS                  ANSELBbits.ANSB1
+#define UNIBUS_A2_SetHigh()            do { LATBbits.LATB1 = 1; } while(0)
+#define UNIBUS_A2_SetLow()             do { LATBbits.LATB1 = 0; } while(0)
+#define UNIBUS_A2_Toggle()             do { LATBbits.LATB1 = ~LATBbits.LATB1; } while(0)
+#define UNIBUS_A2_GetValue()           PORTBbits.RB1
+#define UNIBUS_A2_SetDigitalInput()    do { TRISBbits.TRISB1 = 1; } while(0)
+#define UNIBUS_A2_SetDigitalOutput()   do { TRISBbits.TRISB1 = 0; } while(0)
+#define UNIBUS_A2_SetPullup()          do { WPUBbits.WPUB1 = 1; } while(0)
+#define UNIBUS_A2_ResetPullup()        do { WPUBbits.WPUB1 = 0; } while(0)
+#define UNIBUS_A2_SetPushPull()        do { ODCONBbits.ODCB1 = 0; } while(0)
+#define UNIBUS_A2_SetOpenDrain()       do { ODCONBbits.ODCB1 = 1; } while(0)
+#define UNIBUS_A2_SetAnalogMode()      do { ANSELBbits.ANSB1 = 1; } while(0)
+#define UNIBUS_A2_SetDigitalMode()     do { ANSELBbits.ANSB1 = 0; } while(0)
 
-// get/set RB2 procedures
-#define RB2_SetHigh()            do { LATBbits.LATB2 = 1; } while(0)
-#define RB2_SetLow()             do { LATBbits.LATB2 = 0; } while(0)
-#define RB2_Toggle()             do { LATBbits.LATB2 = ~LATBbits.LATB2; } while(0)
-#define RB2_GetValue()              PORTBbits.RB2
-#define RB2_SetDigitalInput()    do { TRISBbits.TRISB2 = 1; } while(0)
-#define RB2_SetDigitalOutput()   do { TRISBbits.TRISB2 = 0; } while(0)
-#define RB2_SetPullup()             do { WPUBbits.WPUB2 = 1; } while(0)
-#define RB2_ResetPullup()           do { WPUBbits.WPUB2 = 0; } while(0)
-#define RB2_SetAnalogMode()         do { ANSELBbits.ANSB2 = 1; } while(0)
-#define RB2_SetDigitalMode()        do { ANSELBbits.ANSB2 = 0; } while(0)
+// get/set UNIBUS_A1 aliases
+#define UNIBUS_A1_TRIS                 TRISBbits.TRISB2
+#define UNIBUS_A1_LAT                  LATBbits.LATB2
+#define UNIBUS_A1_PORT                 PORTBbits.RB2
+#define UNIBUS_A1_WPU                  WPUBbits.WPUB2
+#define UNIBUS_A1_OD                   ODCONBbits.ODCB2
+#define UNIBUS_A1_ANS                  ANSELBbits.ANSB2
+#define UNIBUS_A1_SetHigh()            do { LATBbits.LATB2 = 1; } while(0)
+#define UNIBUS_A1_SetLow()             do { LATBbits.LATB2 = 0; } while(0)
+#define UNIBUS_A1_Toggle()             do { LATBbits.LATB2 = ~LATBbits.LATB2; } while(0)
+#define UNIBUS_A1_GetValue()           PORTBbits.RB2
+#define UNIBUS_A1_SetDigitalInput()    do { TRISBbits.TRISB2 = 1; } while(0)
+#define UNIBUS_A1_SetDigitalOutput()   do { TRISBbits.TRISB2 = 0; } while(0)
+#define UNIBUS_A1_SetPullup()          do { WPUBbits.WPUB2 = 1; } while(0)
+#define UNIBUS_A1_ResetPullup()        do { WPUBbits.WPUB2 = 0; } while(0)
+#define UNIBUS_A1_SetPushPull()        do { ODCONBbits.ODCB2 = 0; } while(0)
+#define UNIBUS_A1_SetOpenDrain()       do { ODCONBbits.ODCB2 = 1; } while(0)
+#define UNIBUS_A1_SetAnalogMode()      do { ANSELBbits.ANSB2 = 1; } while(0)
+#define UNIBUS_A1_SetDigitalMode()     do { ANSELBbits.ANSB2 = 0; } while(0)
 
-// get/set UNIBUS_SCK aliases
-#define UNIBUS_SCK_TRIS                 TRISCbits.TRISC4
-#define UNIBUS_SCK_LAT                  LATCbits.LATC4
-#define UNIBUS_SCK_PORT                 PORTCbits.RC4
-#define UNIBUS_SCK_WPU                  WPUCbits.WPUC4
-#define UNIBUS_SCK_OD                   ODCONCbits.ODCC4
-#define UNIBUS_SCK_ANS                  ANSELCbits.ANSC4
-#define UNIBUS_SCK_SetHigh()            do { LATCbits.LATC4 = 1; } while(0)
-#define UNIBUS_SCK_SetLow()             do { LATCbits.LATC4 = 0; } while(0)
-#define UNIBUS_SCK_Toggle()             do { LATCbits.LATC4 = ~LATCbits.LATC4; } while(0)
-#define UNIBUS_SCK_GetValue()           PORTCbits.RC4
-#define UNIBUS_SCK_SetDigitalInput()    do { TRISCbits.TRISC4 = 1; } while(0)
-#define UNIBUS_SCK_SetDigitalOutput()   do { TRISCbits.TRISC4 = 0; } while(0)
-#define UNIBUS_SCK_SetPullup()          do { WPUCbits.WPUC4 = 1; } while(0)
-#define UNIBUS_SCK_ResetPullup()        do { WPUCbits.WPUC4 = 0; } while(0)
-#define UNIBUS_SCK_SetPushPull()        do { ODCONCbits.ODCC4 = 0; } while(0)
-#define UNIBUS_SCK_SetOpenDrain()       do { ODCONCbits.ODCC4 = 1; } while(0)
-#define UNIBUS_SCK_SetAnalogMode()      do { ANSELCbits.ANSC4 = 1; } while(0)
-#define UNIBUS_SCK_SetDigitalMode()     do { ANSELCbits.ANSC4 = 0; } while(0)
+// get/set RC4 procedures
+#define RC4_SetHigh()            do { LATCbits.LATC4 = 1; } while(0)
+#define RC4_SetLow()             do { LATCbits.LATC4 = 0; } while(0)
+#define RC4_Toggle()             do { LATCbits.LATC4 = ~LATCbits.LATC4; } while(0)
+#define RC4_GetValue()              PORTCbits.RC4
+#define RC4_SetDigitalInput()    do { TRISCbits.TRISC4 = 1; } while(0)
+#define RC4_SetDigitalOutput()   do { TRISCbits.TRISC4 = 0; } while(0)
+#define RC4_SetPullup()             do { WPUCbits.WPUC4 = 1; } while(0)
+#define RC4_ResetPullup()           do { WPUCbits.WPUC4 = 0; } while(0)
+#define RC4_SetAnalogMode()         do { ANSELCbits.ANSC4 = 1; } while(0)
+#define RC4_SetDigitalMode()        do { ANSELCbits.ANSC4 = 0; } while(0)
 
 // get/set RC6 procedures
 #define RC6_SetHigh()            do { LATCbits.LATC6 = 1; } while(0)
@@ -229,25 +229,25 @@
 #define RC6_SetAnalogMode()         do { ANSELCbits.ANSC6 = 1; } while(0)
 #define RC6_SetDigitalMode()        do { ANSELCbits.ANSC6 = 0; } while(0)
 
-// get/set UNIBUS_SS_IO aliases
-#define UNIBUS_SS_IO_TRIS                 TRISDbits.TRISD7
-#define UNIBUS_SS_IO_LAT                  LATDbits.LATD7
-#define UNIBUS_SS_IO_PORT                 PORTDbits.RD7
-#define UNIBUS_SS_IO_WPU                  WPUDbits.WPUD7
-#define UNIBUS_SS_IO_OD                   ODCONDbits.ODCD7
-#define UNIBUS_SS_IO_ANS                  ANSELDbits.ANSD7
-#define UNIBUS_SS_IO_SetHigh()            do { LATDbits.LATD7 = 1; } while(0)
-#define UNIBUS_SS_IO_SetLow()             do { LATDbits.LATD7 = 0; } while(0)
-#define UNIBUS_SS_IO_Toggle()             do { LATDbits.LATD7 = ~LATDbits.LATD7; } while(0)
-#define UNIBUS_SS_IO_GetValue()           PORTDbits.RD7
-#define UNIBUS_SS_IO_SetDigitalInput()    do { TRISDbits.TRISD7 = 1; } while(0)
-#define UNIBUS_SS_IO_SetDigitalOutput()   do { TRISDbits.TRISD7 = 0; } while(0)
-#define UNIBUS_SS_IO_SetPullup()          do { WPUDbits.WPUD7 = 1; } while(0)
-#define UNIBUS_SS_IO_ResetPullup()        do { WPUDbits.WPUD7 = 0; } while(0)
-#define UNIBUS_SS_IO_SetPushPull()        do { ODCONDbits.ODCD7 = 0; } while(0)
-#define UNIBUS_SS_IO_SetOpenDrain()       do { ODCONDbits.ODCD7 = 1; } while(0)
-#define UNIBUS_SS_IO_SetAnalogMode()      do { ANSELDbits.ANSD7 = 1; } while(0)
-#define UNIBUS_SS_IO_SetDigitalMode()     do { ANSELDbits.ANSD7 = 0; } while(0)
+// get/set UNIBUS_A0 aliases
+#define UNIBUS_A0_TRIS                 TRISDbits.TRISD7
+#define UNIBUS_A0_LAT                  LATDbits.LATD7
+#define UNIBUS_A0_PORT                 PORTDbits.RD7
+#define UNIBUS_A0_WPU                  WPUDbits.WPUD7
+#define UNIBUS_A0_OD                   ODCONDbits.ODCD7
+#define UNIBUS_A0_ANS                  ANSELDbits.ANSD7
+#define UNIBUS_A0_SetHigh()            do { LATDbits.LATD7 = 1; } while(0)
+#define UNIBUS_A0_SetLow()             do { LATDbits.LATD7 = 0; } while(0)
+#define UNIBUS_A0_Toggle()             do { LATDbits.LATD7 = ~LATDbits.LATD7; } while(0)
+#define UNIBUS_A0_GetValue()           PORTDbits.RD7
+#define UNIBUS_A0_SetDigitalInput()    do { TRISDbits.TRISD7 = 1; } while(0)
+#define UNIBUS_A0_SetDigitalOutput()   do { TRISDbits.TRISD7 = 0; } while(0)
+#define UNIBUS_A0_SetPullup()          do { WPUDbits.WPUD7 = 1; } while(0)
+#define UNIBUS_A0_ResetPullup()        do { WPUDbits.WPUD7 = 0; } while(0)
+#define UNIBUS_A0_SetPushPull()        do { ODCONDbits.ODCD7 = 0; } while(0)
+#define UNIBUS_A0_SetOpenDrain()       do { ODCONDbits.ODCD7 = 1; } while(0)
+#define UNIBUS_A0_SetAnalogMode()      do { ANSELDbits.ANSD7 = 1; } while(0)
+#define UNIBUS_A0_SetDigitalMode()     do { ANSELDbits.ANSD7 = 0; } while(0)
 
 // get/set TEXTLCD_EN aliases
 #define TEXTLCD_EN_TRIS                 TRISEbits.TRISE1

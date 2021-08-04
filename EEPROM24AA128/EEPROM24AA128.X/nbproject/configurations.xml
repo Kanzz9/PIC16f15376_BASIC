@@ -15,7 +15,7 @@
         <itemPath>mcc_generated_files/pin_manager.h</itemPath>
         <itemPath>mcc_generated_files/mcc.h</itemPath>
       </logicalFolder>
-      <itemPath>../Lib/TEXTLCD.h</itemPath>
+      <itemPath>../../Lib/TEXTLCD.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -36,7 +36,7 @@
         <itemPath>mcc_generated_files/mcc.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
-      <itemPath>../Lib/TEXTLCD.c</itemPath>
+      <itemPath>../../Lib/TEXTLCD.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -47,6 +47,7 @@
   </logicalFolder>
   <sourceRootList>
     <Elem>../Lib</Elem>
+    <Elem>../../Lib</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -99,7 +100,7 @@
         <property key="default-char-type" value="true"/>
         <property key="define-macros" value=""/>
         <property key="disable-optimizations" value="true"/>
-        <property key="extra-include-directories" value="mcc_generated_files;..\Lib"/>
+        <property key="extra-include-directories" value="mcc_generated_files;..\..\Lib"/>
         <property key="favor-optimization-for" value="-speed,+space"/>
         <property key="garbage-collect-data" value="true"/>
         <property key="garbage-collect-functions" value="true"/>

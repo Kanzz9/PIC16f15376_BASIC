@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.o
+$C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.o
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 2 2 2 2
 config CONFIG 4 8007 8007 5 2
@@ -180,103 +180,103 @@ STRING 835-3FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\EEPROM24AA128.X.production.o
-7ED cinit CODE >4121:C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.s
-7ED cinit CODE >4124:C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.s
-7ED cinit CODE >4150:C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.s
-7F0 cinit CODE >4151:C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.s
-7F1 cinit CODE >4152:C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.s
-7F4 cinit CODE >4153:C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.s
-7F5 cinit CODE >4170:C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.s
-7F6 cinit CODE >4171:C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.s
-7F7 cinit CODE >4172:C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.s
-7F8 cinit CODE >4173:C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.s
-7F9 cinit CODE >4174:C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.s
-7FA cinit CODE >4175:C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.s
-7FD cinit CODE >4181:C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.s
-7FD cinit CODE >4183:C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.s
-7FE cinit CODE >4184:C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.s
-787 text5 CODE >167:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/i2c1_master.c
-787 text5 CODE >169:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/i2c1_master.c
-78A text5 CODE >170:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/i2c1_master.c
-78C text5 CODE >171:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/i2c1_master.c
-78D text5 CODE >172:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/i2c1_master.c
-78F text5 CODE >173:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/i2c1_master.c
-790 text5 CODE >174:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/i2c1_master.c
-791 text4 CODE >58:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/mcc.c
-791 text4 CODE >61:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/mcc.c
-794 text4 CODE >63:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/mcc.c
-795 text4 CODE >65:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/mcc.c
-796 text4 CODE >67:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/mcc.c
-798 text4 CODE >69:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/mcc.c
-799 text4 CODE >71:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/mcc.c
-79A text4 CODE >72:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/mcc.c
-7A8 text3 CODE >55:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7A8 text3 CODE >60:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7AA text3 CODE >61:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7AB text3 CODE >62:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7AC text3 CODE >63:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7AD text3 CODE >64:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7AE text3 CODE >69:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7B0 text3 CODE >70:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7B2 text3 CODE >71:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7B4 text3 CODE >72:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7B6 text3 CODE >73:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7B8 text3 CODE >78:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7BB text3 CODE >79:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7BD text3 CODE >80:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7BF text3 CODE >81:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7C1 text3 CODE >82:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7C3 text3 CODE >87:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7C4 text3 CODE >88:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7C5 text3 CODE >89:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7C6 text3 CODE >90:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7C7 text3 CODE >91:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7C8 text3 CODE >96:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7C9 text3 CODE >97:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7CA text3 CODE >98:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7CB text3 CODE >99:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7CC text3 CODE >100:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7CD text3 CODE >105:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7CF text3 CODE >106:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7D1 text3 CODE >107:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7D3 text3 CODE >108:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7D5 text3 CODE >109:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7D7 text3 CODE >114:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7D9 text3 CODE >115:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7DB text3 CODE >116:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7DD text3 CODE >117:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7DF text3 CODE >118:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7E1 text3 CODE >127:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7E4 text3 CODE >128:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7E7 text3 CODE >129:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7E9 text3 CODE >130:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-7EC text3 CODE >131:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
-77F text2 CODE >74:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/mcc.c
-77F text2 CODE >77:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/mcc.c
-781 text2 CODE >79:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/mcc.c
-782 text2 CODE >81:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/mcc.c
-783 text2 CODE >83:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/mcc.c
-784 text2 CODE >85:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/mcc.c
-785 text2 CODE >87:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/mcc.c
-786 text2 CODE >88:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/mcc.c
-79B text1 CODE >50:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/mcc.c
-79B text1 CODE >52:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/mcc.c
-79E text1 CODE >53:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/mcc.c
-7A1 text1 CODE >54:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/mcc.c
-7A4 text1 CODE >55:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/mcc.c
-7A7 text1 CODE >56:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\mcc_generated_files/mcc.c
-773 maintext CODE >64:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\main.c
-773 maintext CODE >67:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\main.c
-776 maintext CODE >84:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\main.c
-776 maintext CODE >87:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128.X\main.c
-779 clrtext CODE >4159:C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.s
-779 clrtext CODE >4160:C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.s
-77A clrtext CODE >4161:C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.s
-77A clrtext CODE >4162:C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.s
-77B clrtext CODE >4163:C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.s
-77C clrtext CODE >4164:C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.s
-77D clrtext CODE >4165:C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.s
-77E clrtext CODE >4166:C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.s
+7ED cinit CODE >4121:C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.s
+7ED cinit CODE >4124:C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.s
+7ED cinit CODE >4150:C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.s
+7F0 cinit CODE >4151:C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.s
+7F1 cinit CODE >4152:C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.s
+7F4 cinit CODE >4153:C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.s
+7F5 cinit CODE >4170:C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.s
+7F6 cinit CODE >4171:C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.s
+7F7 cinit CODE >4172:C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.s
+7F8 cinit CODE >4173:C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.s
+7F9 cinit CODE >4174:C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.s
+7FA cinit CODE >4175:C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.s
+7FD cinit CODE >4181:C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.s
+7FD cinit CODE >4183:C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.s
+7FE cinit CODE >4184:C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.s
+787 text5 CODE >167:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/i2c1_master.c
+787 text5 CODE >169:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/i2c1_master.c
+78A text5 CODE >170:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/i2c1_master.c
+78C text5 CODE >171:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/i2c1_master.c
+78D text5 CODE >172:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/i2c1_master.c
+78F text5 CODE >173:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/i2c1_master.c
+790 text5 CODE >174:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/i2c1_master.c
+791 text4 CODE >58:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/mcc.c
+791 text4 CODE >61:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/mcc.c
+794 text4 CODE >63:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/mcc.c
+795 text4 CODE >65:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/mcc.c
+796 text4 CODE >67:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/mcc.c
+798 text4 CODE >69:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/mcc.c
+799 text4 CODE >71:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/mcc.c
+79A text4 CODE >72:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/mcc.c
+7A8 text3 CODE >55:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7A8 text3 CODE >60:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7AA text3 CODE >61:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7AB text3 CODE >62:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7AC text3 CODE >63:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7AD text3 CODE >64:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7AE text3 CODE >69:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7B0 text3 CODE >70:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7B2 text3 CODE >71:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7B4 text3 CODE >72:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7B6 text3 CODE >73:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7B8 text3 CODE >78:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7BB text3 CODE >79:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7BD text3 CODE >80:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7BF text3 CODE >81:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7C1 text3 CODE >82:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7C3 text3 CODE >87:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7C4 text3 CODE >88:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7C5 text3 CODE >89:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7C6 text3 CODE >90:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7C7 text3 CODE >91:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7C8 text3 CODE >96:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7C9 text3 CODE >97:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7CA text3 CODE >98:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7CB text3 CODE >99:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7CC text3 CODE >100:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7CD text3 CODE >105:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7CF text3 CODE >106:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7D1 text3 CODE >107:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7D3 text3 CODE >108:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7D5 text3 CODE >109:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7D7 text3 CODE >114:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7D9 text3 CODE >115:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7DB text3 CODE >116:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7DD text3 CODE >117:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7DF text3 CODE >118:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7E1 text3 CODE >127:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7E4 text3 CODE >128:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7E7 text3 CODE >129:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7E9 text3 CODE >130:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+7EC text3 CODE >131:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+77F text2 CODE >74:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/mcc.c
+77F text2 CODE >77:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/mcc.c
+781 text2 CODE >79:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/mcc.c
+782 text2 CODE >81:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/mcc.c
+783 text2 CODE >83:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/mcc.c
+784 text2 CODE >85:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/mcc.c
+785 text2 CODE >87:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/mcc.c
+786 text2 CODE >88:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/mcc.c
+79B text1 CODE >50:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/mcc.c
+79B text1 CODE >52:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/mcc.c
+79E text1 CODE >53:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/mcc.c
+7A1 text1 CODE >54:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/mcc.c
+7A4 text1 CODE >55:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/mcc.c
+7A7 text1 CODE >56:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/mcc.c
+773 maintext CODE >64:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\main.c
+773 maintext CODE >67:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\main.c
+776 maintext CODE >84:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\main.c
+776 maintext CODE >87:C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\main.c
+779 clrtext CODE >4159:C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.s
+779 clrtext CODE >4160:C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.s
+77A clrtext CODE >4161:C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.s
+77A clrtext CODE >4162:C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.s
+77B clrtext CODE >4163:C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.s
+77C clrtext CODE >4164:C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.s
+77D clrtext CODE >4165:C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.s
+77E clrtext CODE >4166:C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -317,10 +317,10 @@ _WPUB 1F44 0 ABS 0 - dist/default/production\EEPROM24AA128.X.production.o
 _WPUC 1F4F 0 ABS 0 - dist/default/production\EEPROM24AA128.X.production.o
 _WPUD 1F5A 0 ABS 0 - dist/default/production\EEPROM24AA128.X.production.o
 _WPUE 1F65 0 ABS 0 - dist/default/production\EEPROM24AA128.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.o
+___sp 0 0 STACK 2 stack C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.o
 _main EE6 0 CODE 0 maintext dist/default/production\EEPROM24AA128.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\EEPROM24AA128.X.production.o
-start 4 0 CODE 0 init C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.o
+start 4 0 CODE 0 init C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.o
 __size_of_main 0 0 ABS 0 - dist/default/production\EEPROM24AA128.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
 _I2C1_DO_IDLE 0 0 ABS 0 - dist/default/production\EEPROM24AA128.X.production.o
@@ -328,12 +328,12 @@ _I2C1_DO_RCEN 0 0 ABS 0 - dist/default/production\EEPROM24AA128.X.production.o
 _I2C1_CallbackReturnReset 0 0 ABS 0 - dist/default/production\EEPROM24AA128.X.production.o
 __size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production\EEPROM24AA128.X.production.o
 __HdataCOMMON 0 0 ABS 0 dataCOMMON -
-intlevel0 0 0 ENTRY 0 functab C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.o
 wtemp0 7E 0 ABS 0 - dist/default/production\EEPROM24AA128.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 _wr2RegCompleteHandler 0 0 ABS 0 - dist/default/production\EEPROM24AA128.X.production.o
@@ -358,8 +358,8 @@ _INLVLB 1F47 0 ABS 0 - dist/default/production\EEPROM24AA128.X.production.o
 _INLVLC 1F52 0 ABS 0 - dist/default/production\EEPROM24AA128.X.production.o
 _INLVLD 1F5D 0 ABS 0 - dist/default/production\EEPROM24AA128.X.production.o
 _INLVLE 1F68 0 ABS 0 - dist/default/production\EEPROM24AA128.X.production.o
-___stackhi 27EF 0 ABS 0 - C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.o
-___stacklo 201D 0 ABS 0 - C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.o
+___stackhi 27EF 0 ABS 0 - C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.o
+___stacklo 201D 0 ABS 0 - C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.o
 __LidataCOMMON 0 0 ABS 0 idataCOMMON -
 _MaxRow 70 0 COMMON 1 dataCOMMON dist/default/production\EEPROM24AA128.X.production.o
 _I2C1_DO_SEND_RESTART_READ 0 0 ABS 0 - dist/default/production\EEPROM24AA128.X.production.o
@@ -377,7 +377,7 @@ _RC6PPS 1F26 0 ABS 0 - dist/default/production\EEPROM24AA128.X.production.o
 __end_of_SYSTEM_Initialize F50 0 CODE 0 text1 dist/default/production\EEPROM24AA128.X.production.o
 clear_ram0 EF2 0 CODE 0 clrtext dist/default/production\EEPROM24AA128.X.production.o
 _I2C1_Status 20 0 BANK0 1 bssBANK0 dist/default/production\EEPROM24AA128.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.o
+___int_sp 0 0 STACK 2 stack C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.o
 _rd2RegCompleteHandler 0 0 ABS 0 - dist/default/production\EEPROM24AA128.X.production.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
@@ -614,7 +614,7 @@ __HidataCOMMON 0 0 ABS 0 idataCOMMON -
 _I2C1_DO_RESET 0 0 ABS 0 - dist/default/production\EEPROM24AA128.X.production.o
 _SYSTEM_Initialize F36 0 CODE 0 text1 dist/default/production\EEPROM24AA128.X.production.o
 __Lintentry 4 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\ADMIN\AppData\Local\Temp\xcAsce4.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\ADMIN\AppData\Local\Temp\xcAs8ug.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 __Lstringtext1 0 0 ABS 0 stringtext1 -
 __Lstringtext2 0 0 ABS 0 stringtext2 -
