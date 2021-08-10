@@ -1,15 +1,25 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"399 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\bits/alltypes.h
-[; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\bits/alltypes.h: 399: typedef struct _IO_FILE FILE;
+"399 E:\microchip\xc8\pic\include\c99\bits/alltypes.h
+[; ;E:\microchip\xc8\pic\include\c99\bits/alltypes.h: 399: typedef struct _IO_FILE FILE;
 [s S1024 ]
 [n S1024 _IO_FILE ]
-"54 ../../Lib\TEXTLCD.h
-[; ;../../Lib\TEXTLCD.h: 54:        void TextLCD_PutChar(char data);
-[v _TextLCD_PutChar `(v ~T0 @X0 0 ef1`uc ]
+"341 ./mcc_generated_files/eusart1.h
+[; ;./mcc_generated_files/eusart1.h: 341: void EUSART1_Write(uint8_t txData);
+[v _EUSART1_Write `(v ~T0 @X0 0 ef1`uc ]
 [p mainexit ]
-"70 ./mcc_generated_files/mcc.h
-[; ;./mcc_generated_files/mcc.h: 70: void SYSTEM_Initialize(void);
+"73 ./mcc_generated_files/mcc.h
+[; ;./mcc_generated_files/mcc.h: 73: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
+"42 mcc_generated_files/drivers\i2c_simple_master.h
+[v _i2c_writeNBytes `(v ~T0 @X0 0 ef3`uc`*v`ui ]
+"44
+[v _i2c_readNBytes `(v ~T0 @X0 0 ef3`uc`*v`ui ]
+[v F183 `(v ~T0 @X0 1 tf1`ul ]
+"12 C:/Users/ADMIN/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\builtins.h
+[v __delay `JF183 ~T0 @X0 0 e ]
+[p i __delay ]
+"111 E:\microchip\xc8\pic\include\c99\stdio.h
+[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
 "111 C:/Users/ADMIN/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h
 [; ;C:/Users/ADMIN/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h: 111: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1114,50 +1124,112 @@ Version 4.0 HI-TECH Software Intermediate Code
 "22554
 [; ;C:/Users/ADMIN/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h: 22554: __asm("TOSH equ 01FEFh");
 [; <" TOSH equ 01FEFh ;# ">
-"58 main.c
-[; ;main.c: 58: int fputc(int ch, FILE *f){
+"53 main.c
+[; ;main.c: 53: int fputc(int ch, FILE *f){
 [v _fputc `(i ~T0 @X0 1 ef2`i`*S1024 ]
 {
 [e :U _fputc ]
 [v _ch `i ~T0 @X0 1 r1 ]
 [v _f `*S1024 ~T0 @X0 1 r2 ]
 [f ]
-"61
-[; ;main.c: 61:     TextLCD_PutChar((char)ch);
-[e ( _TextLCD_PutChar (1 -> _ch `uc ]
-"62
-[; ;main.c: 62:     return ch;
+"55
+[; ;main.c: 55:     EUSART1_Write((char)ch);
+[e ( _EUSART1_Write (1 -> -> _ch `uc `uc ]
+"57
+[; ;main.c: 57:     return ch;
 [e ) _ch ]
-[e $UE 1026  ]
-"63
-[; ;main.c: 63: }
-[e :UE 1026 ]
+[e $UE 1028  ]
+"58
+[; ;main.c: 58: }
+[e :UE 1028 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"64
-[; ;main.c: 64: void main(void)
+"120
+[; ;main.c: 120: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"65
-[; ;main.c: 65: {
+"121
+[; ;main.c: 121: {
 {
 [e :U _main ]
 [f ]
-"67
-[; ;main.c: 67:     SYSTEM_Initialize();
+"123
+[; ;main.c: 123:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"84
-[; ;main.c: 84:     while (1)
-[e :U 1029 ]
-"85
-[; ;main.c: 85:     {
+[v F8201 `uc ~T0 @X0 -> 5 `i s ]
+[i F8201
+:U ..
+"140
+[; ;main.c: 140:     uint8_t data[5]={1,2,3,4,5};
+-> -> 1 `i `uc
+-> -> 2 `i `uc
+-> -> 3 `i `uc
+-> -> 4 `i `uc
+-> -> 5 `i `uc
+..
+]
+[v _data `uc ~T0 @X0 -> 5 `i a ]
+[e = _data F8201 ]
+[v F8203 `uc ~T0 @X0 -> 5 `i s ]
+[i F8203
+:U ..
+"141
+[; ;main.c: 141:     uint8_t value[5]={0};
+-> -> 0 `i `uc
+..
+]
+[v _value `uc ~T0 @X0 -> 5 `i a ]
+[e = _value F8203 ]
+"143
+[; ;main.c: 143:     i2c_writeNBytes(0xA0,data,5);
+[e ( _i2c_writeNBytes (3 , , -> -> 160 `i `uc -> &U _data `*v -> -> 5 `i `ui ]
+"144
+[; ;main.c: 144:     i2c_readNBytes(0xA0,value,5);
+[e ( _i2c_readNBytes (3 , , -> -> 160 `i `uc -> &U _value `*v -> -> 5 `i `ui ]
+"146
+[; ;main.c: 146:     while (1)
+[e :U 1031 ]
+"147
+[; ;main.c: 147:     {
 {
-"87
-[; ;main.c: 87:     }
+"150
+[; ;main.c: 150:         _delay((unsigned long)((500)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"152
+[; ;main.c: 152:         printf("value:");
+[e ( _printf :s 1C ]
+"154
+[; ;main.c: 154:         for(uint8_t i=0; i<5; i++){
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 5 `i 1033  ]
+[e $U 1034  ]
+[e :U 1033 ]
+{
+"156
+[; ;main.c: 156:             printf("%d, ",value[i]);
+[e ( _printf , (. :s 2C -> *U + &U _value * -> _i `ux -> -> # *U &U _value `ui `ux `i ]
+"157
+[; ;main.c: 157:         }
 }
-[e :U 1028 ]
-[e $U 1029  ]
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 5 `i 1033  ]
+[e :U 1034 ]
+}
+"159
+[; ;main.c: 159:         printf("\n");
+[e ( _printf :s 3C ]
+"164
+[; ;main.c: 164:     }
+}
 [e :U 1030 ]
-"88
-[; ;main.c: 88: }
-[e :UE 1027 ]
+[e $U 1031  ]
+[e :U 1032 ]
+"165
+[; ;main.c: 165: }
+[e :UE 1029 ]
 }
+[p f _printf 8388736 ]
+[a 1C 118 97 108 117 101 58 0 ]
+[a 2C 37 100 44 32 0 ]
+[a 3C 10 0 ]

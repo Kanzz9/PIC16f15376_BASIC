@@ -14,7 +14,8 @@
             <make-dep-projects/>
             <sourceRootList>
                 <sourceRootElem>../Lib</sourceRootElem>
-                <sourceRootElem>../../Lib</sourceRootElem>
+                <sourceRootElem>lib</sourceRootElem>
+                <sourceRootElem>../../Lib/EEPROM24xx128</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

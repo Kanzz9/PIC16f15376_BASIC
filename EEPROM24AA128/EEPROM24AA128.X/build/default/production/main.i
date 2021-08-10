@@ -18,35 +18,35 @@ extern double __fpnormalize(double);
 
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\xc8debug.h" 1 3
+# 1 "E:\\microchip\\xc8\\pic\\include\\c99\\xc8debug.h" 1 3
 
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdlib.h" 1 3
+# 1 "E:\\microchip\\xc8\\pic\\include\\c99\\stdlib.h" 1 3
 
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\musl_xc8.h" 1 3
-# 4 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdlib.h" 2 3
+# 1 "E:\\microchip\\xc8\\pic\\include\\c99\\musl_xc8.h" 1 3
+# 4 "E:\\microchip\\xc8\\pic\\include\\c99\\stdlib.h" 2 3
 
 
 
 
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\features.h" 1 3
-# 10 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdlib.h" 2 3
-# 21 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdlib.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 18 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
+# 1 "E:\\microchip\\xc8\\pic\\include\\c99\\features.h" 1 3
+# 10 "E:\\microchip\\xc8\\pic\\include\\c99\\stdlib.h" 2 3
+# 21 "E:\\microchip\\xc8\\pic\\include\\c99\\stdlib.h" 3
+# 1 "E:\\microchip\\xc8\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 18 "E:\\microchip\\xc8\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef long int wchar_t;
-# 122 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
+# 122 "E:\\microchip\\xc8\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef unsigned size_t;
-# 168 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
+# 168 "E:\\microchip\\xc8\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef __int24 int24_t;
-# 204 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
+# 204 "E:\\microchip\\xc8\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef __uint24 uint24_t;
-# 21 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdlib.h" 2 3
+# 21 "E:\\microchip\\xc8\\pic\\include\\c99\\stdlib.h" 2 3
 
 
 int atoi (const char *);
@@ -99,7 +99,7 @@ uldiv_t uldiv (unsigned long, unsigned long);
 
 
 size_t __ctype_get_mb_cur_max(void);
-# 4 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\xc8debug.h" 2 3
+# 4 "E:\\microchip\\xc8\\pic\\include\\c99\\xc8debug.h" 2 3
 
 
 
@@ -115,21 +115,21 @@ extern void __builtin_software_breakpoint(void);
 
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 1 3
-# 22 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 127 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
+# 1 "E:\\microchip\\xc8\\pic\\include\\c99\\stdint.h" 1 3
+# 22 "E:\\microchip\\xc8\\pic\\include\\c99\\stdint.h" 3
+# 1 "E:\\microchip\\xc8\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 127 "E:\\microchip\\xc8\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef unsigned long uintptr_t;
-# 142 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
+# 142 "E:\\microchip\\xc8\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef long intptr_t;
-# 158 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
+# 158 "E:\\microchip\\xc8\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef signed char int8_t;
 
 
 
 
 typedef short int16_t;
-# 173 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
+# 173 "E:\\microchip\\xc8\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef long int32_t;
 
 
@@ -137,7 +137,7 @@ typedef long int32_t;
 
 
 typedef long long int64_t;
-# 188 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
+# 188 "E:\\microchip\\xc8\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef long long intmax_t;
 
 
@@ -150,7 +150,7 @@ typedef unsigned char uint8_t;
 
 
 typedef unsigned short uint16_t;
-# 209 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
+# 209 "E:\\microchip\\xc8\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef unsigned long uint32_t;
 
 
@@ -158,9 +158,9 @@ typedef unsigned long uint32_t;
 
 
 typedef unsigned long long uint64_t;
-# 229 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
+# 229 "E:\\microchip\\xc8\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef unsigned long long uintmax_t;
-# 22 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 2 3
+# 22 "E:\\microchip\\xc8\\pic\\include\\c99\\stdint.h" 2 3
 
 
 typedef int8_t int_fast8_t;
@@ -193,13 +193,13 @@ typedef uint24_t uint_fast24_t;
 typedef uint32_t uint_least32_t;
 
 typedef uint64_t uint_least64_t;
-# 144 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/stdint.h" 1 3
+# 144 "E:\\microchip\\xc8\\pic\\include\\c99\\stdint.h" 3
+# 1 "E:\\microchip\\xc8\\pic\\include\\c99\\bits/stdint.h" 1 3
 typedef int16_t int_fast16_t;
 typedef int32_t int_fast32_t;
 typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
-# 144 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 2 3
+# 144 "E:\\microchip\\xc8\\pic\\include\\c99\\stdint.h" 2 3
 # 5 "C:/Users/ADMIN/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\\pic\\include\\builtins.h" 2 3
 
 
@@ -13287,21 +13287,21 @@ extern __bank0 __bit __timeout;
 # 29 "C:/Users/ADMIN/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\\pic\\include\\xc.h" 2 3
 # 49 "./mcc_generated_files/mcc.h" 2
 
-# 1 "mcc_generated_files/device_config.h" 1
+# 1 "./mcc_generated_files/device_config.h" 1
 # 50 "./mcc_generated_files/mcc.h" 2
 
-# 1 "mcc_generated_files/pin_manager.h" 1
-# 302 "mcc_generated_files/pin_manager.h"
+# 1 "./mcc_generated_files/pin_manager.h" 1
+# 346 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 314 "mcc_generated_files/pin_manager.h"
+# 358 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 51 "./mcc_generated_files/mcc.h" 2
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdbool.h" 1 3
+# 1 "E:\\microchip\\xc8\\pic\\include\\c99\\stdbool.h" 1 3
 # 53 "./mcc_generated_files/mcc.h" 2
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\conio.h" 1 3
+# 1 "E:\\microchip\\xc8\\pic\\include\\c99\\conio.h" 1 3
 
 
 
@@ -13309,13 +13309,13 @@ void PIN_MANAGER_IOC(void);
 
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\errno.h" 1 3
-# 12 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\errno.h" 3
+# 1 "E:\\microchip\\xc8\\pic\\include\\c99\\errno.h" 1 3
+# 12 "E:\\microchip\\xc8\\pic\\include\\c99\\errno.h" 3
 extern int errno;
-# 8 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\conio.h" 2 3
+# 8 "E:\\microchip\\xc8\\pic\\include\\c99\\conio.h" 2 3
 
 # 1 "C:/Users/ADMIN/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\\pic\\include\\__null.h" 1 3
-# 9 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\conio.h" 2 3
+# 9 "E:\\microchip\\xc8\\pic\\include\\c99\\conio.h" 2 3
 
 
 
@@ -13334,11 +13334,11 @@ extern char * cgets(char *);
 extern void cputs(const char *);
 # 54 "./mcc_generated_files/mcc.h" 2
 
-# 1 "mcc_generated_files/i2c1_master.h" 1
-# 54 "mcc_generated_files/i2c1_master.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdio.h" 1 3
-# 24 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdio.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 1 "./mcc_generated_files/i2c1_master.h" 1
+# 54 "./mcc_generated_files/i2c1_master.h"
+# 1 "E:\\microchip\\xc8\\pic\\include\\c99\\stdio.h" 1 3
+# 24 "E:\\microchip\\xc8\\pic\\include\\c99\\stdio.h" 3
+# 1 "E:\\microchip\\xc8\\pic\\include\\c99\\bits/alltypes.h" 1 3
 
 
 
@@ -13350,14 +13350,14 @@ typedef void * va_list[1];
 
 
 typedef void * __isoc_va_list[1];
-# 137 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
+# 137 "E:\\microchip\\xc8\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef long ssize_t;
-# 246 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
+# 246 "E:\\microchip\\xc8\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef long long off_t;
-# 399 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
+# 399 "E:\\microchip\\xc8\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef struct _IO_FILE FILE;
-# 24 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdio.h" 2 3
-# 52 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdio.h" 3
+# 24 "E:\\microchip\\xc8\\pic\\include\\c99\\stdio.h" 2 3
+# 52 "E:\\microchip\\xc8\\pic\\include\\c99\\stdio.h" 3
 typedef union _G_fpos64_t {
  char __opaque[16];
  double __align;
@@ -13474,7 +13474,7 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 54 "mcc_generated_files/i2c1_master.h" 2
+# 54 "./mcc_generated_files/i2c1_master.h" 2
 
 
 
@@ -13511,11 +13511,11 @@ i2c1_operations_t I2C1_CallbackRestartRead(void *funPtr);
 
 
 void I2C1_Initialize(void);
-# 101 "mcc_generated_files/i2c1_master.h"
+# 101 "./mcc_generated_files/i2c1_master.h"
 i2c1_error_t I2C1_Open(i2c1_address_t address);
-# 111 "mcc_generated_files/i2c1_master.h"
+# 111 "./mcc_generated_files/i2c1_master.h"
 i2c1_error_t I2C1_Close(void);
-# 123 "mcc_generated_files/i2c1_master.h"
+# 123 "./mcc_generated_files/i2c1_master.h"
 i2c1_error_t I2C1_MasterOperation(_Bool read);
 
 
@@ -13527,63 +13527,115 @@ i2c1_error_t I2C1_MasterWrite(void);
 
 
 i2c1_error_t I2C1_MasterRead(void);
-# 142 "mcc_generated_files/i2c1_master.h"
+# 142 "./mcc_generated_files/i2c1_master.h"
 void I2C1_SetTimeout(uint8_t timeOut);
-# 152 "mcc_generated_files/i2c1_master.h"
+# 152 "./mcc_generated_files/i2c1_master.h"
 void I2C1_SetBuffer(void *buffer, size_t bufferSize);
-# 164 "mcc_generated_files/i2c1_master.h"
+# 164 "./mcc_generated_files/i2c1_master.h"
 void I2C1_SetDataCompleteCallback(i2c1_callback_t cb, void *ptr);
-# 174 "mcc_generated_files/i2c1_master.h"
+# 174 "./mcc_generated_files/i2c1_master.h"
 void I2C1_SetWriteCollisionCallback(i2c1_callback_t cb, void *ptr);
-# 184 "mcc_generated_files/i2c1_master.h"
+# 184 "./mcc_generated_files/i2c1_master.h"
 void I2C1_SetAddressNackCallback(i2c1_callback_t cb, void *ptr);
-# 194 "mcc_generated_files/i2c1_master.h"
+# 194 "./mcc_generated_files/i2c1_master.h"
 void I2C1_SetDataNackCallback(i2c1_callback_t cb, void *ptr);
-# 204 "mcc_generated_files/i2c1_master.h"
+# 204 "./mcc_generated_files/i2c1_master.h"
 void I2C1_SetTimeoutCallback(i2c1_callback_t cb, void *ptr);
 # 55 "./mcc_generated_files/mcc.h" 2
-# 70 "./mcc_generated_files/mcc.h"
+
+# 1 "./mcc_generated_files/eusart1.h" 1
+# 75 "./mcc_generated_files/eusart1.h"
+typedef union {
+    struct {
+        unsigned perr : 1;
+        unsigned ferr : 1;
+        unsigned oerr : 1;
+        unsigned reserved : 5;
+    };
+    uint8_t status;
+}eusart1_status_t;
+# 110 "./mcc_generated_files/eusart1.h"
+void EUSART1_Initialize(void);
+# 158 "./mcc_generated_files/eusart1.h"
+_Bool EUSART1_is_tx_ready(void);
+# 206 "./mcc_generated_files/eusart1.h"
+_Bool EUSART1_is_rx_ready(void);
+# 253 "./mcc_generated_files/eusart1.h"
+_Bool EUSART1_is_tx_done(void);
+# 301 "./mcc_generated_files/eusart1.h"
+eusart1_status_t EUSART1_get_last_status(void);
+# 321 "./mcc_generated_files/eusart1.h"
+uint8_t EUSART1_Read(void);
+# 341 "./mcc_generated_files/eusart1.h"
+void EUSART1_Write(uint8_t txData);
+# 361 "./mcc_generated_files/eusart1.h"
+void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
+# 379 "./mcc_generated_files/eusart1.h"
+void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
+# 397 "./mcc_generated_files/eusart1.h"
+void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
+# 56 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/delay.h" 1
+# 34 "./mcc_generated_files/delay.h"
+void DELAY_milliseconds(uint16_t milliseconds);
+void DELAY_microseconds(uint16_t microseconds);
+# 57 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/drivers/i2c_simple_master.h" 1
+# 37 "./mcc_generated_files/drivers/i2c_simple_master.h"
+uint8_t i2c_read1ByteRegister(i2c1_address_t address, uint8_t reg);
+uint16_t i2c_read2ByteRegister(i2c1_address_t address, uint8_t reg);
+void i2c_write1ByteRegister(i2c1_address_t address, uint8_t reg, uint8_t data);
+void i2c_write2ByteRegister(i2c1_address_t address, uint8_t reg, uint16_t data);
+
+void i2c_writeNBytes(i2c1_address_t address, void* data, size_t len);
+void i2c_readDataBlock(i2c1_address_t address, uint8_t reg, void *data, size_t len);
+void i2c_readNBytes(i2c1_address_t address, void *data, size_t len);
+# 58 "./mcc_generated_files/mcc.h" 2
+# 73 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 83 "./mcc_generated_files/mcc.h"
+# 86 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 96 "./mcc_generated_files/mcc.h"
+# 99 "./mcc_generated_files/mcc.h"
 void PMD_Initialize(void);
 # 44 "main.c" 2
-
-
-# 1 "../../Lib\\TEXTLCD.h" 1
-# 43 "../../Lib\\TEXTLCD.h"
-typedef enum {
-    TEXTLCD0802 = 0,
-    TEXTLCD0804,
-    TEXTLCD1602,
-    TEXTLCD1604,
-    TEXTLCD2002,
-    TEXTLCD2004
-} textlcd_t;
-
-       _Bool TextLCD_Init(textlcd_t TextLcdType);
-       void TextLCD_Clear(void);
-       void TextLCD_PutChar(char data);
-       void TextLCD_SetCursor(uint8_t line, uint8_t idx);
-       void TextLCD_ClearLine(uint8_t line);
-       void TextLCD_Puts(uint8_t line, uint8_t idx, const char *data, uint8_t length_or_type);
-       void TextLCD_Three_Number_Int(uint8_t line, uint8_t idx, int16_t value);
-# 46 "main.c" 2
-# 58 "main.c"
+# 53 "main.c"
 int fputc(int ch, FILE *f){
 
+    EUSART1_Write((char)ch);
 
-    TextLCD_PutChar((char)ch);
     return ch;
 }
+# 120 "main.c"
 void main(void)
 {
 
     SYSTEM_Initialize();
-# 84 "main.c"
+# 140 "main.c"
+    uint8_t data[5]={1,2,3,4,5};
+    uint8_t value[5]={0};
+
+    i2c_writeNBytes(0xA0,data,5);
+    i2c_readNBytes(0xA0,value,5);
+
     while (1)
     {
+
+
+        _delay((unsigned long)((500)*(4000000/4000.0)));
+
+        printf("value:");
+
+        for(uint8_t i=0; i<5; i++){
+
+            printf("%d, ",value[i]);
+        }
+
+        printf("\n");
+
+
+
 
     }
 }

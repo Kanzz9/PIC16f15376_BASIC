@@ -3,7 +3,21 @@
 [d edition pro ]
 [d chip 16LF15376 ]
 [d frameptr 6 ]
-"67 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/examples/i2c1_master_example.c
+"34 C:\Users\ADMIN\Desktop\SENSOR_git\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/drivers/i2c_simple_master.c
+[e E360 . `uc
+I2C1_STOP 1
+I2C1_RESTART_READ 2
+I2C1_RESTART_WRITE 3
+I2C1_CONTINUE 4
+I2C1_RESET_LINK 5
+]
+"53
+[e E355 . `uc
+I2C1_NOERR 0
+I2C1_BUSY 1
+I2C1_FAIL 2
+]
+"67 C:\Users\ADMIN\Desktop\SENSOR_git\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/examples/i2c1_master_example.c
 [e E355 . `uc
 I2C1_NOERR 0
 I2C1_BUSY 1
@@ -17,7 +31,7 @@ I2C1_RESTART_WRITE 3
 I2C1_CONTINUE 4
 I2C1_RESET_LINK 5
 ]
-"146 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/i2c1_master.c
+"146 C:\Users\ADMIN\Desktop\SENSOR_git\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/i2c1_master.c
 [e E8119 . `uc
 I2C1_IDLE 0
 I2C1_SEND_ADR_READ 1
@@ -58,50 +72,89 @@ I2C1_DATA_NACK 3
 I2C1_TIMEOUT 4
 I2C1_NULL 5
 ]
-"179 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang/Lib/TEXTLCD.c
-[e E36 . `uc
-TEXTLCD0802 0
-TEXTLCD0804 1
-TEXTLCD1602 2
-TEXTLCD1604 3
-TEXTLCD2002 4
-TEXTLCD2004 5
-]
-"11
-[v _TextLCD_4Bits_Write TextLCD_4Bits_Write `(v  1 s 1 TextLCD_4Bits_Write ]
-"37
-[v _TextLCD_Enable TextLCD_Enable `(v  1 s 1 TextLCD_Enable ]
-"45
-[v _TextLCD_Put TextLCD_Put `(v  1 s 1 TextLCD_Put ]
-"52
-[v _TextLCD_CMD TextLCD_CMD `(v  1 s 1 TextLCD_CMD ]
-"58
-[v _TextLCD_PutChar TextLCD_PutChar `(v  1 e 1 0 ]
-"64
-[v _TextLCD_SetCursor TextLCD_SetCursor `(v  1 e 1 0 ]
-"79
-[v _TextLCD_Puts TextLCD_Puts `(v  1 e 1 0 ]
-"5 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\awdiv.c
-[v ___awdiv __awdiv `(i  1 e 2 0 ]
-"5 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\awmod.c
+"1 E:\microchip\xc8\pic\sources\c99\common\abs.c
+[v _abs abs `(i  1 e 2 0 ]
+"7 E:\microchip\xc8\pic\sources\c99\common\aodiv.c
+[v ___aodiv __aodiv `(o  1 e 8 0 ]
+"7 E:\microchip\xc8\pic\sources\c99\common\aomod.c
+[v ___aomod __aomod `(o  1 e 8 0 ]
+"5 E:\microchip\xc8\pic\sources\c99\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
-"10 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcadd.c
+"72 E:\microchip\xc8\pic\sources\c99\common\doprnt.c
+[v _pad pad `(i  1 s 2 pad ]
+"287
+[v _dtoa dtoa `(i  1 s 2 dtoa ]
+"645
+[v _xtoa xtoa `(i  1 s 2 xtoa ]
+"692
+[v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
+"1390
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+"5 E:\microchip\xc8\pic\sources\c99\common\isalpha.c
+[v _isalpha isalpha `(i  1 e 2 0 ]
+"5 E:\microchip\xc8\pic\sources\c99\common\islower.c
+[v _islower islower `(i  1 e 2 0 ]
+"5 E:\microchip\xc8\pic\sources\c99\common\isupper.c
+[v _isupper isupper `(i  1 e 2 0 ]
+"8 E:\microchip\xc8\pic\sources\c99\common\nf_fputs.c
+[v _fputs fputs `(i  1 e 2 0 ]
+"5 E:\microchip\xc8\pic\sources\c99\common\printf.c
+[v _printf printf `(i  1 e 2 0 ]
+"10 E:\microchip\xc8\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
-"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\Umul8_16.c
+"5 E:\microchip\xc8\pic\sources\c99\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+"4 E:\microchip\xc8\pic\sources\c99\common\toupper.c
+[v _toupper toupper `(i  1 e 2 0 ]
+"4 E:\microchip\xc8\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-"64 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\main.c
+"53 C:\Users\ADMIN\Desktop\SENSOR_git\EEPROM24AA128\EEPROM24AA128.X\main.c
+[v _fputc fputc `(i  1 e 2 0 ]
+"120
 [v _main main `(v  1 e 1 0 ]
-"142 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/examples/i2c1_master_example.c
-[v _rd1RegCompleteHandler rd1RegCompleteHandler `(E360  1 s 1 rd1RegCompleteHandler ]
-"149
-[v _rd2RegCompleteHandler rd2RegCompleteHandler `(E360  1 s 1 rd2RegCompleteHandler ]
-"156
+"38 C:\Users\ADMIN\Desktop\SENSOR_git\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/delay.c
+[v _DELAY_milliseconds DELAY_milliseconds `(v  1 e 1 0 ]
+"34 C:\Users\ADMIN\Desktop\SENSOR_git\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/drivers/i2c_simple_master.c
 [v _wr1RegCompleteHandler wr1RegCompleteHandler `(E360  1 s 1 wr1RegCompleteHandler ]
-"163
+"71
+[v _i2c_writeNBytes i2c_writeNBytes `(v  1 e 1 0 ]
+"81
+[v _rd1RegCompleteHandler rd1RegCompleteHandler `(E360  1 s 1 rd1RegCompleteHandler ]
+"119
+[v _rd2RegCompleteHandler rd2RegCompleteHandler `(E360  1 s 1 rd2RegCompleteHandler ]
+"151
 [v _wr2RegCompleteHandler wr2RegCompleteHandler `(E360  1 s 1 wr2RegCompleteHandler ]
-"170
+"185
 [v _rdBlkRegCompleteHandler rdBlkRegCompleteHandler `(E360  1 s 1 rdBlkRegCompleteHandler ]
-"167 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/i2c1_master.c
+"228
+[v _i2c_readNBytes i2c_readNBytes `(v  1 e 1 0 ]
+"66 C:\Users\ADMIN\Desktop\SENSOR_git\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/eusart1.c
+[v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
+"132
+[v _EUSART1_Write EUSART1_Write `(v  1 e 1 0 ]
+"144
+[v _EUSART1_DefaultFramingErrorHandler EUSART1_DefaultFramingErrorHandler `(v  1 e 1 0 ]
+"146
+[v _EUSART1_DefaultOverrunErrorHandler EUSART1_DefaultOverrunErrorHandler `(v  1 e 1 0 ]
+"154
+[v _EUSART1_DefaultErrorHandler EUSART1_DefaultErrorHandler `(v  1 e 1 0 ]
+"157
+[v _EUSART1_SetFramingErrorHandler EUSART1_SetFramingErrorHandler `(v  1 e 1 0 ]
+"161
+[v _EUSART1_SetOverrunErrorHandler EUSART1_SetOverrunErrorHandler `(v  1 e 1 0 ]
+"165
+[v _EUSART1_SetErrorHandler EUSART1_SetErrorHandler `(v  1 e 1 0 ]
+"142 C:\Users\ADMIN\Desktop\SENSOR_git\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/examples/i2c1_master_example.c
+[v _rd1RegCompleteHandler@i2c1_master_example$F143 rd1RegCompleteHandler `(E360  1 s 1 rd1RegCompleteHandler ]
+"149
+[v _rd2RegCompleteHandler@i2c1_master_example$F154 rd2RegCompleteHandler `(E360  1 s 1 rd2RegCompleteHandler ]
+"156
+[v _wr1RegCompleteHandler@i2c1_master_example$F160 wr1RegCompleteHandler `(E360  1 s 1 wr1RegCompleteHandler ]
+"163
+[v _wr2RegCompleteHandler@i2c1_master_example$F166 wr2RegCompleteHandler `(E360  1 s 1 wr2RegCompleteHandler ]
+"170
+[v _rdBlkRegCompleteHandler@i2c1_master_example$F177 rdBlkRegCompleteHandler `(E360  1 s 1 rdBlkRegCompleteHandler ]
+"167 C:\Users\ADMIN\Desktop\SENSOR_git\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/i2c1_master.c
 [v _I2C1_Initialize I2C1_Initialize `(v  1 e 1 0 ]
 "176
 [v _I2C1_Open I2C1_Open `(E355  1 e 1 0 ]
@@ -197,20 +250,14 @@ TEXTLCD2004 5
 [v _I2C1_MasterSetIrq I2C1_MasterSetIrq `T(v  1 s 1 I2C1_MasterSetIrq ]
 "650
 [v _I2C1_MasterWaitForEvent I2C1_MasterWaitForEvent `T(v  1 s 1 I2C1_MasterWaitForEvent ]
-"50 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/mcc.c
+"50 C:\Users\ADMIN\Desktop\SENSOR_git\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
-"58
+"59
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
-"74
+"75
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
-"55 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+"55 C:\Users\ADMIN\Desktop\SENSOR_git\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"7 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang/Lib/TEXTLCD.c
-[v _MaxLine MaxLine `uc  1 s 1 MaxLine ]
-"8
-[v _MaxRow MaxRow `uc  1 s 1 MaxRow ]
-"9
-[v _DDRAM_Start_Address DDRAM_Start_Address `DC[4]uc  1 s 4 DDRAM_Start_Address ]
 "733 C:/Users/ADMIN/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h
 [v _TRISA TRISA `VEuc  1 e 1 @18 ]
 "795
@@ -223,18 +270,6 @@ TEXTLCD2004 5
 [v _TRISE TRISE `VEuc  1 e 1 @22 ]
 "1019
 [v _LATA LATA `VEuc  1 e 1 @24 ]
-[s S1039 . 1 `uc 1 LATA0 1 0 :1:0 
-`uc 1 LATA1 1 0 :1:1 
-`uc 1 LATA2 1 0 :1:2 
-`uc 1 LATA3 1 0 :1:3 
-`uc 1 LATA4 1 0 :1:4 
-`uc 1 LATA5 1 0 :1:5 
-`uc 1 LATA6 1 0 :1:6 
-`uc 1 LATA7 1 0 :1:7 
-]
-"1036
-[u S1048 . 1 `S1039 1 . 1 0 ]
-[v _LATAbits LATAbits `VES1048  1 e 1 @24 ]
 "1081
 [v _LATB LATB `VEuc  1 e 1 @25 ]
 "1143
@@ -243,20 +278,51 @@ TEXTLCD2004 5
 [v _LATD LATD `VEuc  1 e 1 @27 ]
 "1267
 [v _LATE LATE `VEuc  1 e 1 @28 ]
-[s S1060 . 1 `uc 1 LATE0 1 0 :1:0 
-`uc 1 LATE1 1 0 :1:1 
-`uc 1 LATE2 1 0 :1:2 
+"1641
+[v _RC1REG RC1REG `VEuc  1 e 1 @281 ]
+"1695
+[v _TX1REG TX1REG `VEuc  1 e 1 @282 ]
+"1756
+[v _SP1BRGL SP1BRGL `VEuc  1 e 1 @283 ]
+"1826
+[v _SP1BRGH SP1BRGH `VEuc  1 e 1 @284 ]
+"1880
+[v _RC1STA RC1STA `VEuc  1 e 1 @285 ]
+[s S1215 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
 ]
-"1279
-[u S1064 . 1 `S1060 1 . 1 0 ]
-[v _LATEbits LATEbits `VES1064  1 e 1 @28 ]
+"1906
+[u S1224 . 1 `S1215 1 . 1 0 ]
+[v _RC1STAbits RC1STAbits `VES1224  1 e 1 @285 ]
+"2060
+[v _TX1STA TX1STA `VEuc  1 e 1 @286 ]
+[s S1194 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"2086
+[u S1203 . 1 `S1194 1 . 1 0 ]
+[v _TX1STAbits TX1STAbits `VES1203  1 e 1 @286 ]
+"2240
+[v _BAUD1CON BAUD1CON `VEuc  1 e 1 @287 ]
 "2486
 [v _SSP1BUF SSP1BUF `VEuc  1 e 1 @396 ]
 "2506
 [v _SSP1ADD SSP1ADD `VEuc  1 e 1 @397 ]
 "2696
 [v _SSP1STAT SSP1STAT `VEuc  1 e 1 @399 ]
-[s S554 . 1 `uc 1 BF 1 0 :1:0 
+[s S661 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -266,33 +332,33 @@ TEXTLCD2004 5
 `uc 1 SMP 1 0 :1:7 
 ]
 "2805
-[s S563 . 1 `uc 1 . 1 0 :2:0 
+[s S670 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A 1 0 :1:5 
 ]
-[s S568 . 1 `uc 1 . 1 0 :2:0 
+[s S675 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA 1 0 :1:5 
 ]
-[s S573 . 1 `uc 1 . 1 0 :2:0 
+[s S680 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS 1 0 :1:5 
 ]
-[s S578 . 1 `uc 1 . 1 0 :2:0 
+[s S685 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 DATA_ADDRESS 1 0 :1:5 
 ]
-[s S583 . 1 `uc 1 . 1 0 :2:0 
+[s S690 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ 1 0 :1:2 
 `uc 1 I2C_START 1 0 :1:3 
 `uc 1 I2C_STOP 1 0 :1:4 
 `uc 1 I2C_DAT 1 0 :1:5 
 ]
-[s S589 . 1 `uc 1 BF1 1 0 :1:0 
+[s S696 . 1 `uc 1 BF1 1 0 :1:0 
 `uc 1 UA1 1 0 :1:1 
 `uc 1 R 1 0 :1:2 
 `uc 1 START 1 0 :1:3 
@@ -301,66 +367,66 @@ TEXTLCD2004 5
 `uc 1 CKE1 1 0 :1:6 
 `uc 1 SMP1 1 0 :1:7 
 ]
-[s S598 . 1 `uc 1 . 1 0 :2:0 
+[s S705 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 RW 1 0 :1:2 
 `uc 1 START1 1 0 :1:3 
 `uc 1 STOP1 1 0 :1:4 
 `uc 1 DA 1 0 :1:5 
 ]
-[s S604 . 1 `uc 1 . 1 0 :2:0 
+[s S711 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 RW1 1 0 :1:2 
 `uc 1 I2C_START1 1 0 :1:3 
 `uc 1 I2C_STOP2 1 0 :1:4 
 `uc 1 DA1 1 0 :1:5 
 ]
-[s S610 . 1 `uc 1 . 1 0 :2:0 
+[s S717 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ1 1 0 :1:2 
 `uc 1 S2 1 0 :1:3 
 `uc 1 P2 1 0 :1:4 
 `uc 1 DATA_ADDRESS1 1 0 :1:5 
 ]
-[s S616 . 1 `uc 1 . 1 0 :2:0 
+[s S723 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A1 1 0 :1:5 
 ]
-[s S621 . 1 `uc 1 . 1 0 :2:0 
+[s S728 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_nA1 1 0 :1:5 
 ]
-[s S626 . 1 `uc 1 . 1 0 :2:0 
+[s S733 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_nW1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 I2C_DAT1 1 0 :1:5 
 ]
-[s S631 . 1 `uc 1 . 1 0 :2:0 
+[s S738 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW2 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA2 1 0 :1:5 
 ]
-[s S636 . 1 `uc 1 . 1 0 :2:0 
+[s S743 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS1 1 0 :1:5 
 ]
-[u S641 . 1 `S554 1 . 1 0 `S563 1 . 1 0 `S568 1 . 1 0 `S573 1 . 1 0 `S578 1 . 1 0 `S583 1 . 1 0 `S589 1 . 1 0 `S598 1 . 1 0 `S604 1 . 1 0 `S610 1 . 1 0 `S616 1 . 1 0 `S621 1 . 1 0 `S626 1 . 1 0 `S631 1 . 1 0 `S636 1 . 1 0 ]
-[v _SSP1STATbits SSP1STATbits `VES641  1 e 1 @399 ]
+[u S748 . 1 `S661 1 . 1 0 `S670 1 . 1 0 `S675 1 . 1 0 `S680 1 . 1 0 `S685 1 . 1 0 `S690 1 . 1 0 `S696 1 . 1 0 `S705 1 . 1 0 `S711 1 . 1 0 `S717 1 . 1 0 `S723 1 . 1 0 `S728 1 . 1 0 `S733 1 . 1 0 `S738 1 . 1 0 `S743 1 . 1 0 ]
+[v _SSP1STATbits SSP1STATbits `VES748  1 e 1 @399 ]
 "3060
 [v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @400 ]
-[s S272 . 1 `uc 1 SSPM 1 0 :4:0 
+[s S379 . 1 `uc 1 SSPM 1 0 :4:0 
 `uc 1 CKP 1 0 :1:4 
 `uc 1 SSPEN 1 0 :1:5 
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
 "3090
-[s S278 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S385 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
 ]
-[s S283 . 1 `uc 1 SSPM01 1 0 :1:0 
+[s S390 . 1 `uc 1 SSPM01 1 0 :1:0 
 `uc 1 SSPM11 1 0 :1:1 
 `uc 1 SSPM21 1 0 :1:2 
 `uc 1 SSPM31 1 0 :1:3 
@@ -369,11 +435,11 @@ TEXTLCD2004 5
 `uc 1 SSPOV1 1 0 :1:6 
 `uc 1 WCOL1 1 0 :1:7 
 ]
-[u S292 . 1 `S272 1 . 1 0 `S278 1 . 1 0 `S283 1 . 1 0 ]
-[v _SSP1CON1bits SSP1CON1bits `VES292  1 e 1 @400 ]
+[u S399 . 1 `S379 1 . 1 0 `S385 1 . 1 0 `S390 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES399  1 e 1 @400 ]
 "3180
 [v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @401 ]
-[s S456 . 1 `uc 1 SEN 1 0 :1:0 
+[s S563 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -383,17 +449,17 @@ TEXTLCD2004 5
 `uc 1 GCEN 1 0 :1:7 
 ]
 "3227
-[s S465 . 1 `uc 1 . 1 0 :1:0 
+[s S572 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADMSK 1 0 :5:1 
 ]
-[s S468 . 1 `uc 1 . 1 0 :1:0 
+[s S575 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADMSK1 1 0 :1:1 
 `uc 1 ADMSK2 1 0 :1:2 
 `uc 1 ADMSK3 1 0 :1:3 
 `uc 1 ADMSK4 1 0 :1:4 
 `uc 1 ADMSK5 1 0 :1:5 
 ]
-[s S475 . 1 `uc 1 SEN1 1 0 :1:0 
+[s S582 . 1 `uc 1 SEN1 1 0 :1:0 
 `uc 1 ADMSK11 1 0 :1:1 
 `uc 1 ADMSK21 1 0 :1:2 
 `uc 1 ADMSK31 1 0 :1:3 
@@ -402,16 +468,16 @@ TEXTLCD2004 5
 `uc 1 ACKSTAT1 1 0 :1:6 
 `uc 1 GCEN1 1 0 :1:7 
 ]
-[s S484 . 1 `uc 1 . 1 0 :1:0 
+[s S591 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RSEN1 1 0 :1:1 
 `uc 1 PEN1 1 0 :1:2 
 `uc 1 RCEN1 1 0 :1:3 
 `uc 1 ADMSK41 1 0 :1:4 
 `uc 1 ADMSK51 1 0 :1:5 
 ]
-[u S491 . 1 `S456 1 . 1 0 `S465 1 . 1 0 `S468 1 . 1 0 `S475 1 . 1 0 `S484 1 . 1 0 ]
-[v _SSP1CON2bits SSP1CON2bits `VES491  1 e 1 @401 ]
-[s S533 . 1 `uc 1 SSP1IF 1 0 :1:0 
+[u S598 . 1 `S563 1 . 1 0 `S572 1 . 1 0 `S575 1 . 1 0 `S582 1 . 1 0 `S591 1 . 1 0 ]
+[v _SSP1CON2bits SSP1CON2bits `VES598  1 e 1 @401 ]
+[s S640 . 1 `uc 1 SSP1IF 1 0 :1:0 
 `uc 1 BCL1IF 1 0 :1:1 
 `uc 1 SSP2IF 1 0 :1:2 
 `uc 1 BCL2IF 1 0 :1:3 
@@ -421,9 +487,9 @@ TEXTLCD2004 5
 `uc 1 RC2IF 1 0 :1:7 
 ]
 "9419
-[u S542 . 1 `S533 1 . 1 0 ]
-[v _PIR3bits PIR3bits `VES542  1 e 1 @1807 ]
-[s S745 . 1 `uc 1 SSP1IE 1 0 :1:0 
+[u S649 . 1 `S640 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES649  1 e 1 @1807 ]
+[s S852 . 1 `uc 1 SSP1IE 1 0 :1:0 
 `uc 1 BCL1IE 1 0 :1:1 
 `uc 1 SSP2IE 1 0 :1:2 
 `uc 1 BCL2IE 1 0 :1:3 
@@ -433,8 +499,8 @@ TEXTLCD2004 5
 `uc 1 RC2IE 1 0 :1:7 
 ]
 "9725
-[u S754 . 1 `S745 1 . 1 0 ]
-[v _PIE3bits PIE3bits `VES754  1 e 1 @1817 ]
+[u S861 . 1 `S852 1 . 1 0 ]
+[v _PIE3bits PIE3bits `VES861  1 e 1 @1817 ]
 "9909
 [v _PMD0 PMD0 `VEuc  1 e 1 @1942 ]
 "9954
@@ -463,10 +529,14 @@ TEXTLCD2004 5
 [v _SSP1CLKPPS SSP1CLKPPS `VEuc  1 e 1 @7877 ]
 "18176
 [v _SSP1DATPPS SSP1DATPPS `VEuc  1 e 1 @7878 ]
-"19138
-[v _RB2PPS RB2PPS `VEuc  1 e 1 @7962 ]
-"19666
-[v _RC6PPS RC6PPS `VEuc  1 e 1 @7974 ]
+"18466
+[v _RX1DTPPS RX1DTPPS `VEuc  1 e 1 @7883 ]
+"19490
+[v _RC2PPS RC2PPS `VEuc  1 e 1 @7970 ]
+"19534
+[v _RC3PPS RC3PPS `VEuc  1 e 1 @7971 ]
+"19578
+[v _RC4PPS RC4PPS `VEuc  1 e 1 @7972 ]
 "20238
 [v _ANSELA ANSELA `VEuc  1 e 1 @7992 ]
 "20300
@@ -517,42 +587,632 @@ TEXTLCD2004 5
 [v _SLRCONE SLRCONE `VEuc  1 e 1 @8039 ]
 "22170
 [v _INLVLE INLVLE `VEuc  1 e 1 @8040 ]
-"146 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/i2c1_master.c
+"55 E:\microchip\xc8\pic\sources\c99\common\doprnt.c
+[v _flags flags `i  1 s 2 flags ]
+[v _prec prec `i  1 s 2 prec ]
+[v _width width `i  1 s 2 width ]
+"66
+[v _dbuf dbuf `[32]uc  1 s 32 dbuf ]
+"69
+[v _nout nout `i  1 s 2 nout ]
+[s S1136 . 1 `uc 1 perr 1 0 :1:0 
+`uc 1 ferr 1 0 :1:1 
+`uc 1 oerr 1 0 :1:2 
+`uc 1 reserved 1 0 :5:3 
+]
+"52 C:\Users\ADMIN\Desktop\SENSOR_git\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/eusart1.c
+[u S1141 . 1 `S1136 1 . 1 0 `uc 1 status 1 0 ]
+[v _eusart1RxLastError eusart1RxLastError `VES1141  1 e 1 0 ]
+"58
+[v _EUSART1_FramingErrorHandler EUSART1_FramingErrorHandler `*.37(v  1 e 2 0 ]
+"59
+[v _EUSART1_OverrunErrorHandler EUSART1_OverrunErrorHandler `*.37(v  1 e 2 0 ]
+"60
+[v _EUSART1_ErrorHandler EUSART1_ErrorHandler `*.37(v  1 e 2 0 ]
+"146 C:\Users\ADMIN\Desktop\SENSOR_git\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/i2c1_master.c
 [v _i2c1_fsmStateTable i2c1_fsmStateTable `DC[16]*.37(E8119  1 e 32 0 ]
-[s S246 . 29 `[6]*.37(E360 1 callbackTable 12 0 `[6]*.1v 1 callbackPayload 6 12 `us 1 time_out 2 18 `us 1 time_out_value 2 20 `uc 1 address 1 22 `*.1uc 1 data_ptr 1 23 `ui 1 data_length 2 24 `E8119 1 state 1 26 `E355 1 error 1 27 `uc 1 addressNackCheck 1 28 :1:0 
+[s S353 . 29 `[6]*.37(E360 1 callbackTable 12 0 `[6]*.1v 1 callbackPayload 6 12 `us 1 time_out 2 18 `us 1 time_out_value 2 20 `uc 1 address 1 22 `*.4uc 1 data_ptr 1 23 `ui 1 data_length 2 24 `E8119 1 state 1 26 `E355 1 error 1 27 `uc 1 addressNackCheck 1 28 :1:0 
 `uc 1 busy 1 28 :1:1 
 `uc 1 inUse 1 28 :1:2 
 `uc 1 bufferFree 1 28 :1:3 
 ]
 "165
-[v _I2C1_Status I2C1_Status `S246  1 e 29 0 ]
-"64 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\main.c
+[v _I2C1_Status I2C1_Status `S353  1 e 29 0 ]
+"120 C:\Users\ADMIN\Desktop\SENSOR_git\EEPROM24AA128\EEPROM24AA128.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"88
+"154
+[v main@i i `uc  1 a 1 17 ]
+"141
+[v main@value value `[5]uc  1 a 5 12 ]
+"140
+[v main@data data `[5]uc  1 a 5 7 ]
+"123
+[v main@F8201 F8201 `[5]uc  1 s 5 F8201 ]
+"165
 } 0
-"50 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/mcc.c
+"5 E:\microchip\xc8\pic\sources\c99\common\printf.c
+[v _printf printf `(i  1 e 2 0 ]
+{
+"8
+[v printf@ap ap `[1]*.4v  1 a 1 4 ]
+"5
+[v printf@fmt fmt `*.25DCuc  1 p 2 0 ]
+"13
+} 0
+"1390 E:\microchip\xc8\pic\sources\c99\common\doprnt.c
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+{
+[s S1656 _IO_FILE 0 ]
+[v vfprintf@fp fp `*.1S1656  1 a 1 wreg ]
+"1393
+[v vfprintf@cfmt cfmt `*.25uc  1 a 2 77 ]
+"1390
+[v vfprintf@fp fp `*.1S1656  1 a 1 wreg ]
+[v vfprintf@fmt fmt `*.25DCuc  1 p 2 71 ]
+[v vfprintf@ap ap `*.4*.4v  1 p 1 73 ]
+"1395
+"1390
+[v vfprintf@fp fp `*.1S1656  1 a 1 76 ]
+"1404
+} 0
+"692
+[v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
+{
+[s S1656 _IO_FILE 0 ]
+[v vfpfcnvrt@fp fp `*.1S1656  1 a 1 wreg ]
+"697
+[v vfpfcnvrt@llu llu `uo  1 a 8 61 ]
+"696
+[v vfpfcnvrt@ll ll `o  1 a 8 53 ]
+"694
+[v vfpfcnvrt@c c `uc  1 a 1 69 ]
+"692
+[v vfpfcnvrt@fp fp `*.1S1656  1 a 1 wreg ]
+[v vfpfcnvrt@fmt fmt `*.4*.25uc  1 p 1 46 ]
+[v vfpfcnvrt@ap ap `*.4*.4v  1 p 1 47 ]
+"702
+"692
+[v vfpfcnvrt@fp fp `*.1S1656  1 a 1 70 ]
+"1387
+} 0
+"645
+[v _xtoa xtoa `(i  1 s 2 xtoa ]
+{
+[s S1656 _IO_FILE 0 ]
+[v xtoa@fp fp `*.1S1656  1 a 1 wreg ]
+"648
+[v xtoa@n n `uo  1 a 8 34 ]
+"647
+[v xtoa@c c `i  1 a 2 44 ]
+[v xtoa@i i `i  1 a 2 42 ]
+[v xtoa@w w `i  1 a 2 32 ]
+[v xtoa@p p `i  1 a 2 29 ]
+"645
+[v xtoa@fp fp `*.1S1656  1 a 1 wreg ]
+[v xtoa@d d `uo  1 p 8 8 ]
+[v xtoa@x x `uc  1 p 1 16 ]
+"651
+"645
+[v xtoa@fp fp `*.1S1656  1 a 1 31 ]
+"687
+} 0
+"4 E:\microchip\xc8\pic\sources\c99\common\toupper.c
+[v _toupper toupper `(i  1 e 2 0 ]
+{
+[v toupper@c c `i  1 p 2 6 ]
+"8
+} 0
+"5 E:\microchip\xc8\pic\sources\c99\common\islower.c
+[v _islower islower `(i  1 e 2 0 ]
+{
+[v islower@c c `i  1 p 2 0 ]
+"8
+} 0
+"5 E:\microchip\xc8\pic\sources\c99\common\isupper.c
+[v _isupper isupper `(i  1 e 2 0 ]
+{
+[v isupper@c c `i  1 p 2 0 ]
+"8
+} 0
+"5 E:\microchip\xc8\pic\sources\c99\common\isalpha.c
+[v _isalpha isalpha `(i  1 e 2 0 ]
+{
+[v isalpha@c c `i  1 p 2 0 ]
+"8
+} 0
+"287 E:\microchip\xc8\pic\sources\c99\common\doprnt.c
+[v _dtoa dtoa `(i  1 s 2 dtoa ]
+{
+[s S1656 _IO_FILE 0 ]
+[v dtoa@fp fp `*.1S1656  1 a 1 wreg ]
+"290
+[v dtoa@n n `o  1 a 8 36 ]
+"289
+[v dtoa@i i `i  1 a 2 44 ]
+[v dtoa@s s `i  1 a 2 34 ]
+[v dtoa@w w `i  1 a 2 32 ]
+[v dtoa@p p `i  1 a 2 29 ]
+"287
+[v dtoa@fp fp `*.1S1656  1 a 1 wreg ]
+[v dtoa@d d `o  1 p 8 16 ]
+"293
+"287
+[v dtoa@fp fp `*.1S1656  1 a 1 31 ]
+"328
+} 0
+"72
+[v _pad pad `(i  1 s 2 pad ]
+{
+[s S1656 _IO_FILE 0 ]
+[v pad@fp fp `*.1S1656  1 a 1 wreg ]
+"74
+[v pad@w w `i  1 a 2 5 ]
+[v pad@i i `i  1 a 2 3 ]
+"72
+[v pad@fp fp `*.1S1656  1 a 1 wreg ]
+[v pad@buf buf `*.5uc  1 p 1 0 ]
+[v pad@p p `i  1 p 2 1 ]
+"77
+"72
+[v pad@fp fp `*.1S1656  1 a 1 7 ]
+"95
+} 0
+"5 E:\microchip\xc8\pic\sources\c99\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+{
+[v strlen@s s `*.5DCuc  1 a 1 wreg ]
+"7
+[v strlen@a a `*.5DCuc  1 a 1 3 ]
+"5
+[v strlen@s s `*.5DCuc  1 a 1 wreg ]
+"7
+[v strlen@s s `*.5DCuc  1 a 1 4 ]
+"12
+} 0
+"8 E:\microchip\xc8\pic\sources\c99\common\nf_fputs.c
+[v _fputs fputs `(i  1 e 2 0 ]
+{
+[v fputs@s s `*.5DCuc  1 a 1 wreg ]
+"11
+[v fputs@i i `i  1 a 2 9 ]
+"10
+[v fputs@c c `uc  1 a 1 8 ]
+"8
+[v fputs@s s `*.5DCuc  1 a 1 wreg ]
+[s S1640 _IO_FILE 6 `*.1uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
+[v fputs@fp fp `*.1S1640  1 p 1 4 ]
+"13
+[v fputs@s s `*.5DCuc  1 a 1 11 ]
+"19
+} 0
+"53 C:\Users\ADMIN\Desktop\SENSOR_git\EEPROM24AA128\EEPROM24AA128.X\main.c
+[v _fputc fputc `(i  1 e 2 0 ]
+{
+[v fputc@ch ch `i  1 p 2 1 ]
+[s S1298 _IO_FILE 0 ]
+[v fputc@f f `*.1S1298  1 p 1 3 ]
+"58
+} 0
+"132 C:\Users\ADMIN\Desktop\SENSOR_git\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/eusart1.c
+[v _EUSART1_Write EUSART1_Write `(v  1 e 1 0 ]
+{
+[v EUSART1_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART1_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART1_Write@txData txData `uc  1 a 1 0 ]
+"139
+} 0
+"1 E:\microchip\xc8\pic\sources\c99\common\abs.c
+[v _abs abs `(i  1 e 2 0 ]
+{
+[v abs@a a `i  1 p 2 3 ]
+"4
+} 0
+"7 E:\microchip\xc8\pic\sources\c99\common\aomod.c
+[v ___aomod __aomod `(o  1 e 8 0 ]
+{
+"12
+[v ___aomod@sign sign `uc  1 a 1 2 ]
+[v ___aomod@counter counter `uc  1 a 1 1 ]
+"7
+[v ___aomod@divisor divisor `o  1 p 8 0 ]
+[v ___aomod@dividend dividend `o  1 p 8 8 ]
+"36
+} 0
+"7 E:\microchip\xc8\pic\sources\c99\common\aodiv.c
+[v ___aodiv __aodiv `(o  1 e 8 0 ]
+{
+"12
+[v ___aodiv@quotient quotient `o  1 a 8 3 ]
+"13
+[v ___aodiv@sign sign `uc  1 a 1 2 ]
+[v ___aodiv@counter counter `uc  1 a 1 1 ]
+"7
+[v ___aodiv@divisor divisor `o  1 p 8 0 ]
+[v ___aodiv@dividend dividend `o  1 p 8 8 ]
+"43
+} 0
+"71 C:\Users\ADMIN\Desktop\SENSOR_git\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/drivers/i2c_simple_master.c
+[v _i2c_writeNBytes i2c_writeNBytes `(v  1 e 1 0 ]
+{
+[v i2c_writeNBytes@address address `uc  1 a 1 wreg ]
+[v i2c_writeNBytes@address address `uc  1 a 1 wreg ]
+[v i2c_writeNBytes@data data `*.4v  1 p 1 5 ]
+[v i2c_writeNBytes@len len `ui  1 p 2 6 ]
+[v i2c_writeNBytes@address address `uc  1 a 1 8 ]
+"78
+} 0
+"283 C:\Users\ADMIN\Desktop\SENSOR_git\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/i2c1_master.c
+[v _I2C1_SetAddressNackCallback I2C1_SetAddressNackCallback `(v  1 e 1 0 ]
+{
+[v I2C1_SetAddressNackCallback@cb cb `*.37(E360  1 p 2 5 ]
+[v I2C1_SetAddressNackCallback@ptr ptr `*.1v  1 p 1 7 ]
+"286
+} 0
+"251
+[v _I2C1_MasterWrite I2C1_MasterWrite `(E355  1 e 1 0 ]
+{
+"254
+} 0
+"228 C:\Users\ADMIN\Desktop\SENSOR_git\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/drivers/i2c_simple_master.c
+[v _i2c_readNBytes i2c_readNBytes `(v  1 e 1 0 ]
+{
+[v i2c_readNBytes@address address `uc  1 a 1 wreg ]
+[v i2c_readNBytes@address address `uc  1 a 1 wreg ]
+[v i2c_readNBytes@data data `*.4v  1 p 1 5 ]
+[v i2c_readNBytes@len len `ui  1 p 2 6 ]
+[v i2c_readNBytes@address address `uc  1 a 1 8 ]
+"234
+} 0
+"176 C:\Users\ADMIN\Desktop\SENSOR_git\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/i2c1_master.c
+[v _I2C1_Open I2C1_Open `(E355  1 e 1 0 ]
+{
+[v I2C1_Open@address address `uc  1 a 1 wreg ]
+"178
+[v I2C1_Open@returnValue returnValue `E355  1 a 1 2 ]
+"176
+[v I2C1_Open@address address `uc  1 a 1 wreg ]
+"178
+[v I2C1_Open@address address `uc  1 a 1 1 ]
+"207
+} 0
+"543
+[v _I2C1_MasterOpen I2C1_MasterOpen `T(a  1 s 1 I2C1_MasterOpen ]
+{
+"555
+} 0
+"246
+[v _I2C1_MasterRead I2C1_MasterRead `(E355  1 e 1 0 ]
+{
+"249
+} 0
+"224
+[v _I2C1_MasterOperation I2C1_MasterOperation `(E355  1 e 1 0 ]
+{
+[v I2C1_MasterOperation@read read `a  1 a 1 wreg ]
+"226
+[v I2C1_MasterOperation@returnValue returnValue `E355  1 a 1 4 ]
+"224
+[v I2C1_MasterOperation@read read `a  1 a 1 wreg ]
+"226
+[v I2C1_MasterOperation@read read `a  1 a 1 3 ]
+"244
+} 0
+"312
+[v _I2C1_Poller I2C1_Poller `(v  1 s 1 I2C1_Poller ]
+{
+"319
+} 0
+"650
+[v _I2C1_MasterWaitForEvent I2C1_MasterWaitForEvent `T(v  1 s 1 I2C1_MasterWaitForEvent ]
+{
+"659
+} 0
+"321
+[v _I2C1_MasterFsm I2C1_MasterFsm `T(v  1 s 1 I2C1_MasterFsm ]
+{
+"330
+} 0
+"500
+[v _I2C1_DO_ADDRESS_NACK I2C1_DO_ADDRESS_NACK `(E8119  1 s 1 I2C1_DO_ADDRESS_NACK ]
+{
+"512
+} 0
+"494
+[v _I2C1_DO_RESET I2C1_DO_RESET `(E8119  1 s 1 I2C1_DO_RESET ]
+{
+"499
+} 0
+"488
+[v _I2C1_DO_RX_NACK_RESTART I2C1_DO_RX_NACK_RESTART `(E8119  1 s 1 I2C1_DO_RX_NACK_RESTART ]
+{
+"492
+} 0
+"482
+[v _I2C1_DO_RX_NACK_STOP I2C1_DO_RX_NACK_STOP `(E8119  1 s 1 I2C1_DO_RX_NACK_STOP ]
+{
+"486
+} 0
+"475
+[v _I2C1_DO_RX_ACK I2C1_DO_RX_ACK `(E8119  1 s 1 I2C1_DO_RX_ACK ]
+{
+"479
+} 0
+"469
+[v _I2C1_DO_SEND_STOP I2C1_DO_SEND_STOP `(E8119  1 s 1 I2C1_DO_SEND_STOP ]
+{
+"473
+} 0
+"463
+[v _I2C1_DO_SEND_RESTART I2C1_DO_SEND_RESTART `(E8119  1 s 1 I2C1_DO_SEND_RESTART ]
+{
+"467
+} 0
+"456
+[v _I2C1_DO_SEND_RESTART_WRITE I2C1_DO_SEND_RESTART_WRITE `(E8119  1 s 1 I2C1_DO_SEND_RESTART_WRITE ]
+{
+"460
+} 0
+"450
+[v _I2C1_DO_SEND_RESTART_READ I2C1_DO_SEND_RESTART_READ `(E8119  1 s 1 I2C1_DO_SEND_RESTART_READ ]
+{
+"454
+} 0
+"402
+[v _I2C1_DO_RCEN I2C1_DO_RCEN `(E8119  1 s 1 I2C1_DO_RCEN ]
+{
+"407
+} 0
+"378
+[v _I2C1_DO_RX I2C1_DO_RX `(E8119  1 s 1 I2C1_DO_RX ]
+{
+"400
+} 0
+"354
+[v _I2C1_DO_TX I2C1_DO_TX `(E8119  1 s 1 I2C1_DO_TX ]
+{
+"376
+} 0
+"347
+[v _I2C1_DO_SEND_ADR_WRITE I2C1_DO_SEND_ADR_WRITE `(E8119  1 s 1 I2C1_DO_SEND_ADR_WRITE ]
+{
+"352
+} 0
+"340
+[v _I2C1_DO_SEND_ADR_READ I2C1_DO_SEND_ADR_READ `(E8119  1 s 1 I2C1_DO_SEND_ADR_READ ]
+{
+"345
+} 0
+"333
+[v _I2C1_DO_IDLE I2C1_DO_IDLE `(E8119  1 s 1 I2C1_DO_IDLE ]
+{
+"338
+} 0
+"409
+[v _I2C1_DO_TX_EMPTY I2C1_DO_TX_EMPTY `(E8119  1 s 1 I2C1_DO_TX_EMPTY ]
+{
+"424
+} 0
+"645
+[v _I2C1_MasterSetIrq I2C1_MasterSetIrq `T(v  1 s 1 I2C1_MasterSetIrq ]
+{
+"648
+} 0
+"598
+[v _I2C1_MasterIsNack I2C1_MasterIsNack `T(a  1 s 1 I2C1_MasterIsNack ]
+{
+"601
+} 0
+"568
+[v _I2C1_MasterSendTxData I2C1_MasterSendTxData `T(v  1 s 1 I2C1_MasterSendTxData ]
+{
+[v I2C1_MasterSendTxData@data data `uc  1 a 1 wreg ]
+[v I2C1_MasterSendTxData@data data `uc  1 a 1 wreg ]
+"570
+[v I2C1_MasterSendTxData@data data `uc  1 a 1 0 ]
+"571
+} 0
+"603
+[v _I2C1_MasterSendAck I2C1_MasterSendAck `T(v  1 s 1 I2C1_MasterSendAck ]
+{
+"607
+} 0
+"563
+[v _I2C1_MasterGetRxData I2C1_MasterGetRxData `T(uc  1 s 1 I2C1_MasterGetRxData ]
+{
+"566
+} 0
+"609
+[v _I2C1_MasterSendNack I2C1_MasterSendNack `T(v  1 s 1 I2C1_MasterSendNack ]
+{
+"613
+} 0
+"583
+[v _I2C1_MasterStartRx I2C1_MasterStartRx `T(v  1 s 1 I2C1_MasterStartRx ]
+{
+"586
+} 0
+"525
+[v _I2C1_CallbackReturnReset I2C1_CallbackReturnReset `(E360  1 e 1 0 ]
+{
+[v I2C1_CallbackReturnReset@funPtr funPtr `*.1v  1 p 1 9 ]
+"528
+} 0
+"520
+[v _I2C1_CallbackReturnStop I2C1_CallbackReturnStop `(E360  1 e 1 0 ]
+{
+"523
+} 0
+"170 C:\Users\ADMIN\Desktop\SENSOR_git\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/examples/i2c1_master_example.c
+[v _rdBlkRegCompleteHandler@i2c1_master_example$F177 rdBlkRegCompleteHandler `(E360  1 s 1 rdBlkRegCompleteHandler ]
+{
+[v rdBlkRegCompleteHandler@i2c1_master_example$F177@ptr ptr `*.1v  1 p 1 9 ]
+"175
+} 0
+"156
+[v _wr1RegCompleteHandler@i2c1_master_example$F160 wr1RegCompleteHandler `(E360  1 s 1 wr1RegCompleteHandler ]
+{
+[v wr1RegCompleteHandler@i2c1_master_example$F160@ptr ptr `*.1v  1 p 1 9 ]
+"161
+} 0
+"149
+[v _rd2RegCompleteHandler@i2c1_master_example$F154 rd2RegCompleteHandler `(E360  1 s 1 rd2RegCompleteHandler ]
+{
+[v rd2RegCompleteHandler@i2c1_master_example$F154@ptr ptr `*.1v  1 p 1 9 ]
+"154
+} 0
+"142
+[v _rd1RegCompleteHandler@i2c1_master_example$F143 rd1RegCompleteHandler `(E360  1 s 1 rd1RegCompleteHandler ]
+{
+[v rd1RegCompleteHandler@i2c1_master_example$F143@ptr ptr `*.1v  1 p 1 9 ]
+"147
+} 0
+"185 C:\Users\ADMIN\Desktop\SENSOR_git\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/drivers/i2c_simple_master.c
+[v _rdBlkRegCompleteHandler rdBlkRegCompleteHandler `(E360  1 s 1 rdBlkRegCompleteHandler ]
+{
+[v rdBlkRegCompleteHandler@p p `*.1v  1 p 1 9 ]
+"190
+} 0
+"151
+[v _wr2RegCompleteHandler wr2RegCompleteHandler `(E360  1 s 1 wr2RegCompleteHandler ]
+{
+[v wr2RegCompleteHandler@p p `*.1v  1 p 1 9 ]
+"156
+} 0
+"119
+[v _rd2RegCompleteHandler rd2RegCompleteHandler `(E360  1 s 1 rd2RegCompleteHandler ]
+{
+[v rd2RegCompleteHandler@p p `*.1v  1 p 1 9 ]
+"124
+} 0
+"81
+[v _rd1RegCompleteHandler rd1RegCompleteHandler `(E360  1 s 1 rd1RegCompleteHandler ]
+{
+[v rd1RegCompleteHandler@p p `*.1v  1 p 1 9 ]
+"86
+} 0
+"34
+[v _wr1RegCompleteHandler wr1RegCompleteHandler `(E360  1 s 1 wr1RegCompleteHandler ]
+{
+[v wr1RegCompleteHandler@p p `*.1v  1 p 1 9 ]
+"39
+} 0
+"163 C:\Users\ADMIN\Desktop\SENSOR_git\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/examples/i2c1_master_example.c
+[v _wr2RegCompleteHandler@i2c1_master_example$F166 wr2RegCompleteHandler `(E360  1 s 1 wr2RegCompleteHandler ]
+{
+[v wr2RegCompleteHandler@i2c1_master_example$F166@ptr ptr `*.1v  1 p 1 9 ]
+"168
+} 0
+"273 C:\Users\ADMIN\Desktop\SENSOR_git\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/i2c1_master.c
+[v _I2C1_SetDataCompleteCallback I2C1_SetDataCompleteCallback `(v  1 e 1 0 ]
+{
+[v I2C1_SetDataCompleteCallback@cb cb `*.37(E360  1 p 2 5 ]
+[v I2C1_SetDataCompleteCallback@ptr ptr `*.1v  1 p 1 7 ]
+"276
+} 0
+"298
+[v _I2C1_SetCallback I2C1_SetCallback `(v  1 s 1 I2C1_SetCallback ]
+{
+[v I2C1_SetCallback@idx idx `E8137  1 a 1 wreg ]
+[v I2C1_SetCallback@idx idx `E8137  1 a 1 wreg ]
+[v I2C1_SetCallback@cb cb `*.37(E360  1 p 2 0 ]
+[v I2C1_SetCallback@ptr ptr `*.1v  1 p 1 2 ]
+"300
+[v I2C1_SetCallback@idx idx `E8137  1 a 1 4 ]
+"310
+} 0
+"263
+[v _I2C1_SetBuffer I2C1_SetBuffer `(v  1 e 1 0 ]
+{
+[v I2C1_SetBuffer@buffer buffer `*.4v  1 a 1 wreg ]
+[v I2C1_SetBuffer@buffer buffer `*.4v  1 a 1 wreg ]
+[v I2C1_SetBuffer@bufferSize bufferSize `ui  1 p 2 0 ]
+"265
+[v I2C1_SetBuffer@buffer buffer `*.4v  1 a 1 3 ]
+"271
+} 0
+"593
+[v _I2C1_MasterStop I2C1_MasterStop `T(v  1 s 1 I2C1_MasterStop ]
+{
+"596
+} 0
+"573
+[v _I2C1_MasterEnableRestart I2C1_MasterEnableRestart `T(v  1 s 1 I2C1_MasterEnableRestart ]
+{
+"576
+} 0
+"588
+[v _I2C1_MasterStart I2C1_MasterStart `T(v  1 s 1 I2C1_MasterStart ]
+{
+"591
+} 0
+"209
+[v _I2C1_Close I2C1_Close `(E355  1 e 1 0 ]
+{
+"211
+[v I2C1_Close@returnValue returnValue `E355  1 a 1 1 ]
+"222
+} 0
+"635
+[v _I2C1_MasterDisableIrq I2C1_MasterDisableIrq `T(v  1 s 1 I2C1_MasterDisableIrq ]
+{
+"638
+} 0
+"557
+[v _I2C1_MasterClose I2C1_MasterClose `T(v  1 s 1 I2C1_MasterClose ]
+{
+"561
+} 0
+"640
+[v _I2C1_MasterClearIrq I2C1_MasterClearIrq `T(v  1 s 1 I2C1_MasterClearIrq ]
+{
+"643
+} 0
+"50 C:\Users\ADMIN\Desktop\SENSOR_git\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
-"56
+"57
 } 0
-"74
+"75
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
 {
-"88
+"89
 } 0
-"55 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
+"55 C:\Users\ADMIN\Desktop\SENSOR_git\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
-"131
+"133
 } 0
-"58 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/mcc.c
+"59 C:\Users\ADMIN\Desktop\SENSOR_git\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
-"72
+"73
 } 0
-"167 C:\Users\ADMIN\Desktop\git\Hoc-tro-thay-Dang\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/i2c1_master.c
+"167 C:\Users\ADMIN\Desktop\SENSOR_git\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/i2c1_master.c
 [v _I2C1_Initialize I2C1_Initialize `(v  1 e 1 0 ]
 {
 "174
+} 0
+"66 C:\Users\ADMIN\Desktop\SENSOR_git\EEPROM24AA128\EEPROM24AA128.X\mcc_generated_files/eusart1.c
+[v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
+{
+"92
+} 0
+"161
+[v _EUSART1_SetOverrunErrorHandler EUSART1_SetOverrunErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART1_SetOverrunErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
+"163
+} 0
+"157
+[v _EUSART1_SetFramingErrorHandler EUSART1_SetFramingErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART1_SetFramingErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
+"159
+} 0
+"165
+[v _EUSART1_SetErrorHandler EUSART1_SetErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART1_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
+"167
 } 0
