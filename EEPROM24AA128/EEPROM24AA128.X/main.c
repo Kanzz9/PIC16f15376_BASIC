@@ -43,7 +43,6 @@
 
 #include "mcc_generated_files/mcc.h"
 #include "stdio.h"
-
 #include "i2c_simple_master.h"
 
 
@@ -117,6 +116,31 @@ int fputc(int ch, FILE *f){
 //	}
 //}
 
+void EE_Write(uint16_t addr, uint8_t data)
+{
+    uint8_t frame[3];
+
+    frame[0]=(uint8_t) (addr>>8); // high address
+    frame[1]=(uint8_t) addr; // low address
+    frame[2]=data; // data
+    //EE_WP_SetLow(); // disable write protect
+    i2c_writeNBytes(0b01010000, &frame[0], 3);
+    __delay_ms(5);
+    //EE_WP_SetHigh(); // enable write protect
+}
+
+uint8_t EE_Read(uint16_t addr)
+{
+    uint8_t frame[3];
+
+    frame[0]=(uint8_t) (addr>>8); // high address
+    frame[1]=(uint8_t) addr; // low address
+    i2c_writeNBytes(0b01010000, &frame[0], 2);
+    i2c_readNBytes(0b01010000, &frame[2], 1);
+
+    return frame[2];
+}
+
 void main(void)
 {
     // initialize the device
@@ -137,26 +161,29 @@ void main(void)
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
     //I2C_AddressScan();
-    uint8_t data[5]={1,2,3,4,5};
+    uint8_t data[5]={0,1,2,3,4};
     uint8_t value[5]={0};
+    uint8_t a=0;
+    //i2c_writeNBytes(0x50,data,5);
+    //i2c_readNBytes(0x50,value,5);
     
-    i2c_writeNBytes(0xA0,data,5);
-    i2c_readNBytes(0xA0,value,5);
-    
+    EE_Write(0x00,0xAA);
+    a=EE_Read(0x00);
+    printf("a: %d\n",a);
     while (1)
     {
         // Add your application code
 //        printf("abc\n");
-        __delay_ms(500);
-        //I2C1_fReadDataBlock(0x50, 0x01, data, 10);
-        printf("value:");
-        
-        for(uint8_t i=0; i<5; i++){
-            
-            printf("%d, ",value[i]);
-        }    
-        
-        printf("\n");
+//        __delay_ms(500);
+//        //I2C1_fReadDataBlock(0x50, 0x01, data, 10);
+//        printf("value:");
+//        
+//        for(uint8_t i=0; i<5; i++){
+//            
+//            printf("%d, ",value[i]);
+//        }    
+//        
+//        printf("\n");
         
         
         //printf("DATA: %x\n", data);
