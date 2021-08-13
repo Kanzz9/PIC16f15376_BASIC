@@ -1,0 +1,20 @@
+#
+# Generated - do not edit!
+#
+# NOCDDL
+#
+CND_BASEDIR=`pwd`
+# HwI2C configuration
+CND_ARTIFACT_DIR_HwI2C=dist/HwI2C/production
+CND_ARTIFACT_NAME_HwI2C=P15376_EE24AA128.X.production.hex
+CND_ARTIFACT_PATH_HwI2C=dist/HwI2C/production/P15376_EE24AA128.X.production.hex
+CND_PACKAGE_DIR_HwI2C=${CND_DISTDIR}/HwI2C/package
+CND_PACKAGE_NAME_HwI2C=p15376ee24aa128.x.tar
+CND_PACKAGE_PATH_HwI2C=${CND_DISTDIR}/HwI2C/package/p15376ee24aa128.x.tar
+# SoftI2C configuration
+CND_ARTIFACT_DIR_SoftI2C=dist/SoftI2C/production
+CND_ARTIFACT_NAME_SoftI2C=P15376_EE24AA128.X.production.hex
+CND_ARTIFACT_PATH_SoftI2C=dist/SoftI2C/production/P15376_EE24AA128.X.production.hex
+CND_PACKAGE_DIR_SoftI2C=${CND_DISTDIR}/SoftI2C/package
+CND_PACKAGE_NAME_SoftI2C=p15376ee24aa128.x.tar
+CND_PACKAGE_PATH_SoftI2C=${CND_DISTDIR}/SoftI2C/package/p15376ee24aa128.x.tar

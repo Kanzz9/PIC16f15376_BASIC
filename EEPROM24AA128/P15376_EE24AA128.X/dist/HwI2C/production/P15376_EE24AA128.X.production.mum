@@ -1,0 +1,8 @@
+
+Memory Summary:
+    Program space        used   EB0h (  3760) of  4000h words   ( 22.9%)
+    Data space           used   1DAh (   474) of   800h bytes   ( 23.1%)
+    EEPROM space         None available
+    Configuration bits   used     5h (     5) of     5h words   (100.0%)
+    ID Location space    used     0h (     0) of     4h bytes   (  0.0%)
+

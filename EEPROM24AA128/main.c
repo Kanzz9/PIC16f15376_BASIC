@@ -8,10 +8,10 @@ void EE_Write(uint16_t addr, uint8_t data)
     frame[0]=(uint8_t) (addr>>8); // high address
     frame[1]=(uint8_t) addr; // low address
     frame[2]=data; // data
-    EE_WP_SetLow(); // disable write protect
+    //EE_WP_SetLow(); // disable write protect
     i2c_writeNBytes(0b01010000, &frame[0], 3);
     __delay_ms(5);
-    EE_WP_SetHigh(); // enable write protect
+    //EE_WP_SetHigh(); // enable write protect
 }
 
 uint8_t EE_Read(uint16_t addr)
