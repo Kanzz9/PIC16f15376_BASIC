@@ -1,6 +1,6 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"97 mcc_generated_files/mcc.h
-[; ;mcc_generated_files/mcc.h: 97: void PMD_Initialize(void);
+"101 ../../Lib/BM1383/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h
+[; ;../../Lib/BM1383/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h: 101: void PMD_Initialize(void);
 [v _PMD_Initialize `(v ~T0 @X0 0 ef ]
 "89 mcc_generated_files/i2c1_master.h
 [; ;mcc_generated_files/i2c1_master.h: 89: void I2C1_Initialize(void);
@@ -8,8 +8,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "146 mcc_generated_files/pin_manager.h
 [; ;mcc_generated_files/pin_manager.h: 146: void PIN_MANAGER_Initialize (void);
 [v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
-"84 mcc_generated_files/mcc.h
-[; ;mcc_generated_files/mcc.h: 84: void OSCILLATOR_Initialize(void);
+"88 ../../Lib/BM1383/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h
+[; ;../../Lib/BM1383/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h: 88: void OSCILLATOR_Initialize(void);
 [v _OSCILLATOR_Initialize `(v ~T0 @X0 0 ef ]
 "111 mcc_generated_files/eusart1.h
 [; ;mcc_generated_files/eusart1.h: 111: void EUSART1_Initialize(void);

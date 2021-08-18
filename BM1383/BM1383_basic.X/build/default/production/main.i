@@ -13287,13 +13287,13 @@ extern __bank0 __bit __timeout;
 # 29 "D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\\pic\\include\\xc.h" 2 3
 # 49 "./mcc_generated_files/mcc.h" 2
 
-# 1 "./mcc_generated_files/device_config.h" 1
+# 1 "mcc_generated_files/device_config.h" 1
 # 50 "./mcc_generated_files/mcc.h" 2
 
-# 1 "./mcc_generated_files/pin_manager.h" 1
-# 146 "./mcc_generated_files/pin_manager.h"
+# 1 "mcc_generated_files/pin_manager.h" 1
+# 146 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 158 "./mcc_generated_files/pin_manager.h"
+# 158 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 51 "./mcc_generated_files/mcc.h" 2
 
@@ -13334,8 +13334,8 @@ extern char * cgets(char *);
 extern void cputs(const char *);
 # 54 "./mcc_generated_files/mcc.h" 2
 
-# 1 "./mcc_generated_files/i2c1_master.h" 1
-# 54 "./mcc_generated_files/i2c1_master.h"
+# 1 "mcc_generated_files/i2c1_master.h" 1
+# 54 "mcc_generated_files/i2c1_master.h"
 # 1 "D:\\program files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdio.h" 1 3
 # 24 "D:\\program files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdio.h" 3
 # 1 "D:\\program files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\bits/alltypes.h" 1 3
@@ -13474,7 +13474,7 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 54 "./mcc_generated_files/i2c1_master.h" 2
+# 54 "mcc_generated_files/i2c1_master.h" 2
 
 
 
@@ -13511,11 +13511,11 @@ i2c1_operations_t I2C1_CallbackRestartRead(void *funPtr);
 
 
 void I2C1_Initialize(void);
-# 101 "./mcc_generated_files/i2c1_master.h"
+# 101 "mcc_generated_files/i2c1_master.h"
 i2c1_error_t I2C1_Open(i2c1_address_t address);
-# 111 "./mcc_generated_files/i2c1_master.h"
+# 111 "mcc_generated_files/i2c1_master.h"
 i2c1_error_t I2C1_Close(void);
-# 123 "./mcc_generated_files/i2c1_master.h"
+# 123 "mcc_generated_files/i2c1_master.h"
 i2c1_error_t I2C1_MasterOperation(_Bool read);
 
 
@@ -13527,24 +13527,24 @@ i2c1_error_t I2C1_MasterWrite(void);
 
 
 i2c1_error_t I2C1_MasterRead(void);
-# 142 "./mcc_generated_files/i2c1_master.h"
+# 142 "mcc_generated_files/i2c1_master.h"
 void I2C1_SetTimeout(uint8_t timeOut);
-# 152 "./mcc_generated_files/i2c1_master.h"
+# 152 "mcc_generated_files/i2c1_master.h"
 void I2C1_SetBuffer(void *buffer, size_t bufferSize);
-# 164 "./mcc_generated_files/i2c1_master.h"
+# 164 "mcc_generated_files/i2c1_master.h"
 void I2C1_SetDataCompleteCallback(i2c1_callback_t cb, void *ptr);
-# 174 "./mcc_generated_files/i2c1_master.h"
+# 174 "mcc_generated_files/i2c1_master.h"
 void I2C1_SetWriteCollisionCallback(i2c1_callback_t cb, void *ptr);
-# 184 "./mcc_generated_files/i2c1_master.h"
+# 184 "mcc_generated_files/i2c1_master.h"
 void I2C1_SetAddressNackCallback(i2c1_callback_t cb, void *ptr);
-# 194 "./mcc_generated_files/i2c1_master.h"
+# 194 "mcc_generated_files/i2c1_master.h"
 void I2C1_SetDataNackCallback(i2c1_callback_t cb, void *ptr);
-# 204 "./mcc_generated_files/i2c1_master.h"
+# 204 "mcc_generated_files/i2c1_master.h"
 void I2C1_SetTimeoutCallback(i2c1_callback_t cb, void *ptr);
 # 55 "./mcc_generated_files/mcc.h" 2
 
-# 1 "./mcc_generated_files/eusart1.h" 1
-# 76 "./mcc_generated_files/eusart1.h"
+# 1 "mcc_generated_files/eusart1.h" 1
+# 76 "mcc_generated_files/eusart1.h"
 typedef union {
     struct {
         unsigned perr : 1;
@@ -13554,190 +13554,77 @@ typedef union {
     };
     uint8_t status;
 }eusart1_status_t;
-# 111 "./mcc_generated_files/eusart1.h"
+# 111 "mcc_generated_files/eusart1.h"
 void EUSART1_Initialize(void);
-# 159 "./mcc_generated_files/eusart1.h"
+# 159 "mcc_generated_files/eusart1.h"
 _Bool EUSART1_is_tx_ready(void);
-# 207 "./mcc_generated_files/eusart1.h"
+# 207 "mcc_generated_files/eusart1.h"
 _Bool EUSART1_is_rx_ready(void);
-# 254 "./mcc_generated_files/eusart1.h"
+# 254 "mcc_generated_files/eusart1.h"
 _Bool EUSART1_is_tx_done(void);
-# 302 "./mcc_generated_files/eusart1.h"
+# 302 "mcc_generated_files/eusart1.h"
 eusart1_status_t EUSART1_get_last_status(void);
-# 322 "./mcc_generated_files/eusart1.h"
+# 322 "mcc_generated_files/eusart1.h"
 uint8_t EUSART1_Read(void);
-# 342 "./mcc_generated_files/eusart1.h"
+# 342 "mcc_generated_files/eusart1.h"
 void EUSART1_Write(uint8_t txData);
-# 362 "./mcc_generated_files/eusart1.h"
+# 362 "mcc_generated_files/eusart1.h"
 void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
-# 380 "./mcc_generated_files/eusart1.h"
+# 380 "mcc_generated_files/eusart1.h"
 void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
-# 398 "./mcc_generated_files/eusart1.h"
+# 398 "mcc_generated_files/eusart1.h"
 void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 # 56 "./mcc_generated_files/mcc.h" 2
-# 71 "./mcc_generated_files/mcc.h"
+
+
+
+
+
+# 1 "../../Lib/I2C\\I2C.h" 1
+
+
+
+
+
+
+
+# 1 "../../Lib/I2C/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h" 1
+# 8 "../../Lib/I2C\\I2C.h" 2
+
+
+
+
+void Send_I2C_Data(uint8_t databyte);
+unsigned int Read_I2C_Data(void);
+void Send_I2C_ControlByte(uint8_t Dev_Add,uint8_t RW_bit);
+void Send_I2C_StartBit(void);
+void Send_I2C_StopBit(void);
+void Send_I2C_ACK(void);
+void Send_I2C_NAK(void);
+# 61 "../../Lib/I2C/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h" 2
+
+# 1 "../../Lib/BM1383\\BM1383.h" 1
+# 10 "../../Lib/BM1383\\BM1383.h"
+# 1 "../../Lib/BM1383/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h" 1
+# 10 "../../Lib/BM1383\\BM1383.h" 2
+# 62 "../../Lib/BM1383/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h" 2
+# 75 "../../Lib/BM1383/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 84 "./mcc_generated_files/mcc.h"
+# 88 "../../Lib/BM1383/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 97 "./mcc_generated_files/mcc.h"
+# 101 "../../Lib/BM1383/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h"
 void PMD_Initialize(void);
 # 44 "main.c" 2
-# 63 "main.c"
-void Send_I2C_Data(uint8_t databyte)
-{
-    PIR3bits.SSP1IF=0;
-    SSP1BUF = databyte;
-    while(!PIR3bits.SSP1IF);
-}
-
-
-
-
-
-unsigned int Read_I2C_Data(void)
-{
-    PIR3bits.SSP1IF=0;
-    SSP1CON2bits.RCEN=1;
-    while(!PIR3bits.SSP1IF);
-    return (SSP1BUF);
-}
-# 93 "main.c"
-void Send_I2C_ControlByte(uint8_t BlockAddress,uint8_t RW_bit)
-{
-    PIR3bits.SSP1IF=0;
-
-
-
-
-
-
-
-    SSP1BUF = ((0b1010 << 4) | (BlockAddress <<1)) + RW_bit;
-    while(!PIR3bits.SSP1IF);
-}
-
-
-
-
-void Send_I2C_StartBit(void)
-{
-    PIR3bits.SSP1IF=0;
-    SSP1CON2bits.SEN=1;
-    while(!PIR3bits.SSP1IF);
-}
-
-
-
-
-void Send_I2C_StopBit(void)
-{
-    PIR3bits.SSP1IF=0;
-    SSP1CON2bits.PEN=1;
-    while(!PIR3bits.SSP1IF);
-}
-
-
-
-
-
-void Send_I2C_ACK(void)
-{
-   PIR3bits.SSP1IF=0;
-   SSP1CON2bits.ACKDT=0;
-   SSP1CON2bits.ACKEN=1;
-   while(!PIR3bits.SSP1IF);
-}
-
-
-
-
-void Send_I2C_NAK(void)
-{
-    PIR3bits.SSP1IF=0;
-    SSP1CON2bits.ACKDT=1;
-    SSP1CON2bits.ACKEN=1;
-    while(!PIR3bits.SSP1IF);
-}
-
-void EepWriteByte(uint8_t dev_add, uint16_t reg_add, uint8_t byte){
-
-    _Bool ACK_bit = 1;
-    while(ACK_bit)
-    {
-        Send_I2C_StartBit();
-        Send_I2C_ControlByte(dev_add, 0);
-        ACK_bit = SSP1CON2bits.ACKSTAT;
-    }
-    Send_I2C_Data(reg_add>>8);
-
-    Send_I2C_Data(reg_add);
-
-    Send_I2C_Data(byte);
-
-    Send_I2C_StopBit();
-}
-
-uint8_t EepReadByte(uint8_t dev_add, uint16_t reg_add){
-
-    _Bool ACK_bit = 1;
-    uint8_t data=0;
-    while(ACK_bit)
-    {
-        Send_I2C_StartBit();
-        Send_I2C_ControlByte(dev_add, 0);
-        ACK_bit = SSP1CON2bits.ACKSTAT;
-    }
-    Send_I2C_Data(reg_add>>8);
-
-    Send_I2C_Data(reg_add);
-
-
-    ACK_bit = 1;
-    while(ACK_bit)
-    {
-        Send_I2C_StartBit();
-        Send_I2C_ControlByte(dev_add, 1);
-        ACK_bit = SSP1CON2bits.ACKSTAT;
-    }
-
-    data=Read_I2C_Data();
-    Send_I2C_NAK();
-    Send_I2C_StopBit();
-
-    return data;
-}
-
+# 110 "main.c"
 void main(void)
 {
 
     SYSTEM_Initialize();
-# 218 "main.c"
-    unsigned int eeprom_array[20];
-    unsigned int i;
-    volatile unsigned int eeprom_data,incoming_data;
-    volatile unsigned int block_address, word_address;
-    unsigned int ACK_bit;
-
-    SSP1CON1bits.SSPM=0x08;
-    SSP1CON1bits.SSPEN=1;
-    _delay((unsigned long)((10)*(4000000/4000.0)));
-# 250 "main.c"
-    EepWriteByte(0x00,1214,12);
-    uint8_t data=0;
-
+# 130 "main.c"
     while (1)
     {
 
 
-
-        data=EepReadByte(0x00,1214);
-
-
-
-
-
-
-        printf("value: %d\n", data);
         _delay((unsigned long)((500)*(4000000/4000.0)));
     }
 

@@ -1,4 +1,4 @@
-# 1 "mcc_generated_files/mcc.c"
+# 1 "../../Lib/I2C/I2C.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,10 +6,21 @@
 # 1 "<built-in>" 2
 # 1 "D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "mcc_generated_files/mcc.c" 2
-# 47 "mcc_generated_files/mcc.c"
-# 1 "mcc_generated_files/mcc.h" 1
-# 49 "mcc_generated_files/mcc.h"
+# 1 "../../Lib/I2C/I2C.c" 2
+
+
+
+
+# 1 "../../Lib/I2C/I2C.h" 1
+
+
+
+
+
+
+
+# 1 "../../Lib/I2C/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h" 1
+# 49 "../../Lib/I2C/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h"
 # 1 "D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\\pic\\include\\xc.h" 1 3
 # 18 "D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -13285,21 +13296,21 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\\pic\\include\\xc.h" 2 3
-# 49 "mcc_generated_files/mcc.h" 2
+# 49 "../../Lib/I2C/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/device_config.h" 1
-# 50 "mcc_generated_files/mcc.h" 2
+# 50 "../../Lib/I2C/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/pin_manager.h" 1
 # 146 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 # 158 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 51 "mcc_generated_files/mcc.h" 2
+# 51 "../../Lib/I2C/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h" 2
 
 
 # 1 "D:\\program files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\stdbool.h" 1 3
-# 53 "mcc_generated_files/mcc.h" 2
+# 53 "../../Lib/I2C/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h" 2
 
 # 1 "D:\\program files\\Microchip\\xc8\\v2.31\\pic\\include\\c99\\conio.h" 1 3
 
@@ -13332,7 +13343,7 @@ extern __bit kbhit(void);
 
 extern char * cgets(char *);
 extern void cputs(const char *);
-# 54 "mcc_generated_files/mcc.h" 2
+# 54 "../../Lib/I2C/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/i2c1_master.h" 1
 # 54 "mcc_generated_files/i2c1_master.h"
@@ -13541,7 +13552,7 @@ void I2C1_SetAddressNackCallback(i2c1_callback_t cb, void *ptr);
 void I2C1_SetDataNackCallback(i2c1_callback_t cb, void *ptr);
 # 204 "mcc_generated_files/i2c1_master.h"
 void I2C1_SetTimeoutCallback(i2c1_callback_t cb, void *ptr);
-# 55 "mcc_generated_files/mcc.h" 2
+# 55 "../../Lib/I2C/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/eusart1.h" 1
 # 76 "mcc_generated_files/eusart1.h"
@@ -13574,33 +13585,13 @@ void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
 void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
 # 398 "mcc_generated_files/eusart1.h"
 void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
-# 56 "mcc_generated_files/mcc.h" 2
+# 56 "../../Lib/I2C/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h" 2
 
 
 
 
 
 # 1 "../../Lib/I2C\\I2C.h" 1
-
-
-
-
-
-
-
-# 1 "../../Lib/I2C/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h" 1
-# 8 "../../Lib/I2C\\I2C.h" 2
-
-
-
-
-void Send_I2C_Data(uint8_t databyte);
-unsigned int Read_I2C_Data(void);
-void Send_I2C_ControlByte(uint8_t Dev_Add,uint8_t RW_bit);
-void Send_I2C_StartBit(void);
-void Send_I2C_StopBit(void);
-void Send_I2C_ACK(void);
-void Send_I2C_NAK(void);
 # 61 "../../Lib/I2C/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h" 2
 
 # 1 "../../Lib/BM1383\\BM1383.h" 1
@@ -13614,47 +13605,101 @@ void SYSTEM_Initialize(void);
 void OSCILLATOR_Initialize(void);
 # 101 "../../Lib/BM1383/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h"
 void PMD_Initialize(void);
-# 47 "mcc_generated_files/mcc.c" 2
+# 8 "../../Lib/I2C\\I2C.h" 2
 
 
 
-void SYSTEM_Initialize(void)
-{
-    PMD_Initialize();
-    I2C1_Initialize();
-    PIN_MANAGER_Initialize();
-    OSCILLATOR_Initialize();
-    EUSART1_Initialize();
+
+void Send_I2C_Data(uint8_t databyte);
+unsigned int Read_I2C_Data(void);
+void Send_I2C_ControlByte(uint8_t Dev_Add,uint8_t RW_bit);
+void Send_I2C_StartBit(void);
+void Send_I2C_StopBit(void);
+void Send_I2C_ACK(void);
+void Send_I2C_NAK(void);
+# 5 "../../Lib/I2C/I2C.c" 2
+
+
+
+
+void I2C_Init(void){
+
+    SSP1CON1bits.SSPM=0x08;
+    SSP1CON1bits.SSPEN=1;
 }
 
-void OSCILLATOR_Initialize(void)
+void Send_I2C_Data(uint8_t databyte)
 {
-
-    OSCCON1 = 0x60;
-
-    OSCCON3 = 0x00;
-
-    OSCEN = 0x00;
-
-    OSCFRQ = 0x02;
-
-    OSCSTAT = 0x00;
-
-    OSCTUNE = 0x00;
+    PIR3bits.SSP1IF=0;
+    SSP1BUF = databyte;
+    while(!PIR3bits.SSP1IF);
 }
 
-void PMD_Initialize(void)
+
+
+
+
+unsigned int Read_I2C_Data(void)
 {
+    PIR3bits.SSP1IF=0;
+    SSP1CON2bits.RCEN=1;
+    while(!PIR3bits.SSP1IF);
+    return (SSP1BUF);
+}
+# 45 "../../Lib/I2C/I2C.c"
+void Send_I2C_ControlByte(uint8_t Dev_Add, uint8_t RW_bit)
+{
+    PIR3bits.SSP1IF=0;
 
-    PMD0 = 0x00;
 
-    PMD1 = 0x00;
 
-    PMD2 = 0x00;
 
-    PMD3 = 0x00;
 
-    PMD4 = 0x00;
 
-    PMD5 = 0x00;
+
+    SSP1BUF = (Dev_Add <<1) + RW_bit;
+    while(!PIR3bits.SSP1IF);
+}
+
+
+
+
+void Send_I2C_StartBit(void)
+{
+    PIR3bits.SSP1IF=0;
+    SSP1CON2bits.SEN=1;
+    while(!PIR3bits.SSP1IF);
+}
+
+
+
+
+void Send_I2C_StopBit(void)
+{
+    PIR3bits.SSP1IF=0;
+    SSP1CON2bits.PEN=1;
+    while(!PIR3bits.SSP1IF);
+}
+
+
+
+
+
+void Send_I2C_ACK(void)
+{
+   PIR3bits.SSP1IF=0;
+   SSP1CON2bits.ACKDT=0;
+   SSP1CON2bits.ACKEN=1;
+   while(!PIR3bits.SSP1IF);
+}
+
+
+
+
+void Send_I2C_NAK(void)
+{
+    PIR3bits.SSP1IF=0;
+    SSP1CON2bits.ACKDT=1;
+    SSP1CON2bits.ACKEN=1;
+    while(!PIR3bits.SSP1IF);
 }

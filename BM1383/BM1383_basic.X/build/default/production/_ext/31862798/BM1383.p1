@@ -1,12 +1,4 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[p mainexit ]
-"75 ../../Lib/BM1383/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h
-[; ;../../Lib/BM1383/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h: 75: void SYSTEM_Initialize(void);
-[v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-[v F183 `(v ~T0 @X0 1 tf1`ul ]
-"12 D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\builtins.h
-[v __delay `JF183 ~T0 @X0 0 e ]
-[p i __delay ]
 "111 D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h
 [; ;D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h: 111: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1111,34 +1103,3 @@ Version 4.0 HI-TECH Software Intermediate Code
 "22554
 [; ;D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h: 22554: __asm("TOSH equ 01FEFh");
 [; <" TOSH equ 01FEFh ;# ">
-[v $root$_main `(v ~T0 @X0 0 e ]
-"110 main.c
-[; ;main.c: 110: void main(void)
-[v _main `(v ~T0 @X0 1 ef ]
-"111
-[; ;main.c: 111: {
-{
-[e :U _main ]
-[f ]
-"113
-[; ;main.c: 113:     SYSTEM_Initialize();
-[e ( _SYSTEM_Initialize ..  ]
-"130
-[; ;main.c: 130:     while (1)
-[e :U 1030 ]
-"131
-[; ;main.c: 131:     {
-{
-"134
-[; ;main.c: 134:         _delay((unsigned long)((500)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"135
-[; ;main.c: 135:     }
-}
-[e :U 1029 ]
-[e $U 1030  ]
-[e :U 1031 ]
-"137
-[; ;main.c: 137: }
-[e :UE 1028 ]
-}

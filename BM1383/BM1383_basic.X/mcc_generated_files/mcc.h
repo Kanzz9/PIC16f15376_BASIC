@@ -55,7 +55,11 @@
 #include "i2c1_master.h"
 #include "eusart1.h"
 
+#define I2C_Enable 1
+#define BM1383_ENABLE 1
 
+#include "I2C.h"
+#include "BM1383.h"
 
 /**
  * @Param
