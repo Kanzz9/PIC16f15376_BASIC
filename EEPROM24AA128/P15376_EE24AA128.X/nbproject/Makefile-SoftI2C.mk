@@ -86,7 +86,7 @@ FIXDEPS=fixDeps
 
 # The following macros may be used in the pre and post step lines
 Device=PIC16LF15376
-ProjectDir="C:\Users\ADMIN\Desktop\SENSOR_git\EEPROM24AA128\P15376_EE24AA128.X"
+ProjectDir="D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\EEPROM24AA128\P15376_EE24AA128.X"
 ProjectName=P15376_EE24AA128
 ConfName=SoftI2C
 ImagePath="dist\SoftI2C\${IMAGE_TYPE}\P15376_EE24AA128.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}"
@@ -301,7 +301,7 @@ dist/${CND_CONF}/${IMAGE_TYPE}/P15376_EE24AA128.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 	${MP_CC} $(MP_EXTRA_LD_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -Wl,-Map=dist/${CND_CONF}/${IMAGE_TYPE}/P15376_EE24AA128.X.${IMAGE_TYPE}.map  -DXPRJ_SoftI2C=$(CND_CONF)  -Wl,--defsym=__MPLAB_BUILD=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -DUSE_SOFT_I2C -xassembler-with-cpp -mwarn=0 -Wa,-a -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     $(COMPARISON_BUILD) -Wl,--memorysummary,dist/${CND_CONF}/${IMAGE_TYPE}/memoryfile.xml -o dist/${CND_CONF}/${IMAGE_TYPE}/P15376_EE24AA128.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}     
 	
 	@echo Normalizing hex file
-	@"E:/microchip/MPLAB X IDE/mplab_platform/platform/../mplab_ide/modules/../../bin/hexmate" --edf="E:/microchip/MPLAB X IDE/mplab_platform/platform/../mplab_ide/modules/../../dat/en_msgs.txt" dist/${CND_CONF}/${IMAGE_TYPE}/P15376_EE24AA128.X.${IMAGE_TYPE}.hex -odist/${CND_CONF}/${IMAGE_TYPE}/P15376_EE24AA128.X.${IMAGE_TYPE}.hex
+	@"D:/program files/Microchip/MPLABX/v5.45/mplab_platform/platform/../mplab_ide/modules/../../bin/hexmate" --edf="D:/program files/Microchip/MPLABX/v5.45/mplab_platform/platform/../mplab_ide/modules/../../dat/en_msgs.txt" dist/${CND_CONF}/${IMAGE_TYPE}/P15376_EE24AA128.X.${IMAGE_TYPE}.hex -odist/${CND_CONF}/${IMAGE_TYPE}/P15376_EE24AA128.X.${IMAGE_TYPE}.hex
 
 endif
 
