@@ -936,7 +936,7 @@ text57 18E0 18E7 CODE 18E0 0
 text56 6 7 CODE 6 0
 %locals
 dist/SoftI2C/production\P15376_EE24AA128.X.production.o
-C:\Users\ADMIN\AppData\Local\Temp\xcAsgjc.s
+C:\Users\ADMIN\AppData\Local\Temp\xcAs6uc.s
 5835 2D 0 CODE 0
 5838 2D 0 CODE 0
 5922 2D 0 CODE 0
@@ -1142,12 +1142,12 @@ main.c
 66 E02 0 CODE 0
 63 E04 0 CODE 0
 68 E0A 0 CODE 0
-C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\rand.c
+E:\microchip\xc8\pic\sources\c99\common\rand.c
 11 69A 0 CODE 0
 13 69A 0 CODE 0
 14 6BB 0 CODE 0
 15 6D5 0 CODE 0
-C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\Umul32.c
+E:\microchip\xc8\pic\sources\c99\common\Umul32.c
 15 70D 0 CODE 0
 119 70D 0 CODE 0
 121 716 0 CODE 0
@@ -1171,12 +1171,12 @@ main.c
 80 590 0 CODE 0
 82 594 0 CODE 0
 83 595 0 CODE 0
-C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\printf.c
+E:\microchip\xc8\pic\sources\c99\common\printf.c
 5 D45 0 CODE 0
 9 D45 0 CODE 0
 10 D4A 0 CODE 0
 13 D5B 0 CODE 0
-C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
+E:\microchip\xc8\pic\sources\c99\common\doprnt.c
 1390 743 0 CODE 0
 1395 745 0 CODE 0
 1396 74D 0 CODE 0
@@ -1297,19 +1297,19 @@ C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
 682 35F 0 CODE 0
 686 368 0 CODE 0
 687 37B 0 CODE 0
-C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\toupper.c
+E:\microchip\xc8\pic\sources\c99\common\toupper.c
 4 F5A 0 CODE 0
 6 F5A 0 CODE 0
 6 F64 0 CODE 0
 6 F66 0 CODE 0
 8 F7F 0 CODE 0
-C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\islower.c
+E:\microchip\xc8\pic\sources\c99\common\islower.c
 5 DA4 0 CODE 0
 7 DA4 0 CODE 0
 7 DAD 0 CODE 0
 7 DAF 0 CODE 0
 8 DBB 0 CODE 0
-C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
+E:\microchip\xc8\pic\sources\c99\common\doprnt.c
 72 4EC 0 CODE 0
 77 4EE 0 CODE 0
 78 4F3 0 CODE 0
@@ -1326,7 +1326,7 @@ C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
 92 538 0 CODE 0
 94 538 0 CODE 0
 95 544 0 CODE 0
-C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\strlen.c
+E:\microchip\xc8\pic\sources\c99\common\strlen.c
 5 DD6 0 CODE 0
 7 DD7 0 CODE 0
 8 DDB 0 CODE 0
@@ -1334,7 +1334,7 @@ C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\strlen.c
 8 DE0 0 CODE 0
 11 DE9 0 CODE 0
 12 DEF 0 CODE 0
-C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\nf_fputs.c
+E:\microchip\xc8\pic\sources\c99\common\nf_fputs.c
 8 F80 0 CODE 0
 13 F82 0 CODE 0
 14 F84 0 CODE 0
@@ -1342,7 +1342,7 @@ C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\nf_fputs.c
 16 F93 0 CODE 0
 14 F98 0 CODE 0
 19 FA8 0 CODE 0
-C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\nf_fputc.c
+E:\microchip\xc8\pic\sources\c99\common\nf_fputc.c
 8 65B 0 CODE 0
 12 65B 0 CODE 0
 13 665 0 CODE 0
@@ -1371,19 +1371,19 @@ mcc_generated_files/eusart1.c
 191 7FB 0 CODE 0
 193 7FD 0 CODE 0
 194 7FF 0 CODE 0
-C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\isupper.c
+E:\microchip\xc8\pic\sources\c99\common\isupper.c
 5 D8C 0 CODE 0
 7 D8C 0 CODE 0
 7 D95 0 CODE 0
 7 D97 0 CODE 0
 8 DA3 0 CODE 0
-C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\isalpha.c
+E:\microchip\xc8\pic\sources\c99\common\isalpha.c
 5 E28 0 CODE 0
 7 E28 0 CODE 0
 7 E37 0 CODE 0
 7 E39 0 CODE 0
 8 E45 0 CODE 0
-C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\atoi.c
+E:\microchip\xc8\pic\sources\c99\common\atoi.c
 4 43D 0 CODE 0
 6 43D 0 CODE 0
 7 442 0 CODE 0
@@ -1405,19 +1405,19 @@ C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\atoi.c
 15 4D5 0 CODE 0
 15 4E0 0 CODE 0
 16 4EB 0 CODE 0
-C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\isspace.c
+E:\microchip\xc8\pic\sources\c99\common\isspace.c
 5 E65 0 CODE 0
 7 E65 0 CODE 0
 7 E77 0 CODE 0
 7 E79 0 CODE 0
 8 E85 0 CODE 0
-C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\isdigit.c
+E:\microchip\xc8\pic\sources\c99\common\isdigit.c
 5 D74 0 CODE 0
 7 D74 0 CODE 0
 7 D7D 0 CODE 0
 7 D7F 0 CODE 0
 8 D8B 0 CODE 0
-C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\Umul16.c
+E:\microchip\xc8\pic\sources\c99\common\Umul16.c
 15 E46 0 CODE 0
 43 E46 0 CODE 0
 45 E48 0 CODE 0
@@ -1454,7 +1454,7 @@ main.c
 46 FF6 0 CODE 0
 47 FFD 0 CODE 0
 48 FFF 0 CODE 0
-C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\memcpy.c
+E:\microchip\xc8\pic\sources\c99\common\memcpy.c
 4 779 0 CODE 0
 11 77A 0 CODE 0
 12 77E 0 CODE 0
