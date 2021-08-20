@@ -12,7 +12,11 @@ void I2C_Init(void){
     SSP1CON1bits.SSPEN=1;         // enable MSSP port
 }
 
+<<<<<<< HEAD
 //void I2C_H
+=======
+//voi I2C_
+>>>>>>> fb4abf79d7fcf46a54f7c416c95af47903ded9b9
 
 void Send_I2C_Data(uint8_t databyte)
 {
