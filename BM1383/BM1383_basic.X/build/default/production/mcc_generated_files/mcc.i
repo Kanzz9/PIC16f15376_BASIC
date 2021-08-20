@@ -13594,6 +13594,7 @@ void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 
 
 
+void I2C_Init(void);
 void Send_I2C_Data(uint8_t databyte);
 unsigned int Read_I2C_Data(void);
 void Send_I2C_ControlByte(uint8_t Dev_Add,uint8_t RW_bit);
@@ -13607,6 +13608,18 @@ void Send_I2C_NAK(void);
 # 10 "../../Lib/BM1383\\BM1383.h"
 # 1 "../../Lib/BM1383/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h" 1
 # 10 "../../Lib/BM1383\\BM1383.h" 2
+
+
+
+
+typedef struct{
+    uint8_t BM1383_Add;
+}BM1383_t;
+
+
+
+void WriteByteBM1383(const BM1383_t *BM1383, uint8_t Reg_Add, uint8_t data);
+uint8_t ReadByteBM1383(const BM1383_t *BM1383, uint8_t Reg_Add);
 # 62 "../../Lib/BM1383/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h" 2
 # 75 "../../Lib/BM1383/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);

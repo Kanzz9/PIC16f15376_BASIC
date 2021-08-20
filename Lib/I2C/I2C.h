@@ -9,6 +9,7 @@
 
 #if(I2C_Enable)
 
+void I2C_Init(void);
 void Send_I2C_Data(uint8_t databyte);
 unsigned int Read_I2C_Data(void);
 void Send_I2C_ControlByte(uint8_t Dev_Add,uint8_t RW_bit);

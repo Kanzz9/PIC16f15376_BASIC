@@ -127,11 +127,47 @@ void main(void)
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();  
     
+    BM1383_t BM1383;
+    
+    BM1383.BM1383_Add = 0x5D;
+    I2C_Init();
+    
+    bool ACK_bit = 1;
+    uint8_t i=0;
+//    while(ACK_bit)          // loop as long as the ack bit is high
+//    {
+//        
+//        Send_I2C_StartBit();
+//        Send_I2C_ControlByte(add++, 0);
+//        ACK_bit = SSP1CON2bits.ACKSTAT;  // Ack bit will come back low when the write is complete
+//        Send_I2C_StopBit();
+//        __delay_ms(10);
+//    }
+    for(i=0; i<127; i++){
+        Send_I2C_StartBit();
+        Send_I2C_ControlByte(i, 0);
+        ACK_bit = SSP1CON2bits.ACKSTAT;  // Ack bit will come back low when the write is complete
+        //Send_I2C_NAK();
+        //Send_I2C_StopBit();
+        
+        if(ACK_bit==0){
+            printf("BM1383 ID1: %d\n", i);
+            break;
+        }
+        __delay_ms(10);
+    }
+    printf("BM1383 ID1: %d\n", i);
+    LED_SetHigh();
+    
     while (1)
     {
         // Add your application code
-
-        __delay_ms(500);
+//        uint8_t ID1_BM1383=0;
+//        ID1_BM1383 = ReadByteBM1383(&BM1383, 0x0F);
+//        printf("BM1383 ID1: %d\n", ID1_BM1383);
+//        LED_SetHigh();
+//        __delay_ms(500);
+        
     }
     
 }

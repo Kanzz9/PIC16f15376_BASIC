@@ -13594,6 +13594,7 @@ void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 
 
 
+void I2C_Init(void);
 void Send_I2C_Data(uint8_t databyte);
 unsigned int Read_I2C_Data(void);
 void Send_I2C_ControlByte(uint8_t Dev_Add,uint8_t RW_bit);
@@ -13607,6 +13608,18 @@ void Send_I2C_NAK(void);
 # 10 "../../Lib/BM1383\\BM1383.h"
 # 1 "../../Lib/BM1383/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h" 1
 # 10 "../../Lib/BM1383\\BM1383.h" 2
+
+
+
+
+typedef struct{
+    uint8_t BM1383_Add;
+}BM1383_t;
+
+
+
+void WriteByteBM1383(const BM1383_t *BM1383, uint8_t Reg_Add, uint8_t data);
+uint8_t ReadByteBM1383(const BM1383_t *BM1383, uint8_t Reg_Add);
 # 62 "../../Lib/BM1383/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h" 2
 # 75 "../../Lib/BM1383/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
@@ -13621,11 +13634,39 @@ void main(void)
 
     SYSTEM_Initialize();
 # 130 "main.c"
+    BM1383_t BM1383;
+
+    BM1383.BM1383_Add = 0x5D;
+    I2C_Init();
+
+    _Bool ACK_bit = 1;
+    uint8_t i=0;
+# 146 "main.c"
+    for(i=0; i<127; i++){
+        Send_I2C_StartBit();
+        Send_I2C_ControlByte(i, 0);
+        ACK_bit = SSP1CON2bits.ACKSTAT;
+
+
+
+        if(ACK_bit==0){
+            printf("BM1383 ID1: %d\n", i);
+            break;
+        }
+        _delay((unsigned long)((10)*(4000000/4000.0)));
+    }
+    printf("BM1383 ID1: %d\n", i);
+    do { LATCbits.LATC0 = 1; } while(0);
+
     while (1)
     {
 
 
-        _delay((unsigned long)((500)*(4000000/4000.0)));
+
+
+
+
+
     }
 
 }

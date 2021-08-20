@@ -1,4 +1,53 @@
 Version 4.0 HI-TECH Software Intermediate Code
+"14 ../../Lib/BM1383\BM1383.h
+[; ;../../Lib/BM1383\BM1383.h: 14: typedef struct{
+[s S1028 `uc 1 ]
+[n S1028 . BM1383_Add ]
+"16 ../../Lib/I2C\I2C.h
+[; ;../../Lib/I2C\I2C.h: 16: void Send_I2C_StartBit(void);
+[v _Send_I2C_StartBit `(v ~T0 @X0 0 ef ]
+"15
+[; ;../../Lib/I2C\I2C.h: 15: void Send_I2C_ControlByte(uint8_t Dev_Add,uint8_t RW_bit);
+[v _Send_I2C_ControlByte `(v ~T0 @X0 0 ef2`uc`uc ]
+"3186 D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h
+[; ;D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h: 3186:     struct {
+[s S155 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S155 . SEN RSEN PEN RCEN ACKEN ACKDT ACKSTAT GCEN ]
+"3196
+[; ;D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h: 3196:     struct {
+[s S156 :1 `uc 1 :5 `uc 1 ]
+[n S156 . . ADMSK ]
+"3200
+[; ;D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h: 3200:     struct {
+[s S157 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S157 . . ADMSK1 ADMSK2 ADMSK3 ADMSK4 ADMSK5 ]
+"3208
+[; ;D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h: 3208:     struct {
+[s S158 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S158 . SEN1 ADMSK11 ADMSK21 ADMSK31 ACKEN1 ACKDT1 ACKSTAT1 GCEN1 ]
+"3218
+[; ;D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h: 3218:     struct {
+[s S159 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S159 . . RSEN1 PEN1 RCEN1 ADMSK41 ADMSK51 ]
+"3185
+[; ;D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h: 3185: typedef union {
+[u S154 `S155 1 `S156 1 `S157 1 `S158 1 `S159 1 ]
+[n S154 . . . . . . ]
+"3227
+[; ;D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h: 3227: extern volatile SSP1CON2bits_t SSP1CON2bits __attribute__((address(0x191)));
+[v _SSP1CON2bits `VS154 ~T0 @X0 0 e@401 ]
+"13 ../../Lib/I2C\I2C.h
+[; ;../../Lib/I2C\I2C.h: 13: void Send_I2C_Data(uint8_t databyte);
+[v _Send_I2C_Data `(v ~T0 @X0 0 ef1`uc ]
+"17
+[; ;../../Lib/I2C\I2C.h: 17: void Send_I2C_StopBit(void);
+[v _Send_I2C_StopBit `(v ~T0 @X0 0 ef ]
+"14
+[; ;../../Lib/I2C\I2C.h: 14: unsigned int Read_I2C_Data(void);
+[v _Read_I2C_Data `(ui ~T0 @X0 0 ef ]
+"19
+[; ;../../Lib/I2C\I2C.h: 19: void Send_I2C_NAK(void);
+[v _Send_I2C_NAK `(v ~T0 @X0 0 ef ]
 "111 D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h
 [; ;D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h: 111: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1103,3 +1152,140 @@ Version 4.0 HI-TECH Software Intermediate Code
 "22554
 [; ;D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h: 22554: __asm("TOSH equ 01FEFh");
 [; <" TOSH equ 01FEFh ;# ">
+"16 ../../Lib/BM1383/BM1383.c
+[; ;../../Lib/BM1383/BM1383.c: 16: void WriteByteBM1383(const BM1383_t *BM1383, uint8_t Reg_Add, uint8_t data){
+[v _WriteByteBM1383 `(v ~T0 @X0 1 ef3`*CS1028`uc`uc ]
+{
+[e :U _WriteByteBM1383 ]
+[v _BM1383 `*CS1028 ~T0 @X0 1 r1 ]
+[v _Reg_Add `uc ~T0 @X0 1 r2 ]
+[v _data `uc ~T0 @X0 1 r3 ]
+[f ]
+"18
+[; ;../../Lib/BM1383/BM1383.c: 18:     _Bool ACK_bit = 1;
+[v _ACK_bit `a ~T0 @X0 1 a ]
+[e = _ACK_bit -> -> 1 `i `a ]
+"19
+[; ;../../Lib/BM1383/BM1383.c: 19:     while(ACK_bit)
+[e $U 1030  ]
+[e :U 1031 ]
+"20
+[; ;../../Lib/BM1383/BM1383.c: 20:     {
+{
+"21
+[; ;../../Lib/BM1383/BM1383.c: 21:         Send_I2C_StartBit();
+[e ( _Send_I2C_StartBit ..  ]
+"22
+[; ;../../Lib/BM1383/BM1383.c: 22:         Send_I2C_ControlByte(BM1383->BM1383_Add, 0);
+[e ( _Send_I2C_ControlByte (2 , . *U _BM1383 0 -> -> 0 `i `uc ]
+"23
+[; ;../../Lib/BM1383/BM1383.c: 23:         ACK_bit = SSP1CON2bits.ACKSTAT;
+[e = _ACK_bit -> . . _SSP1CON2bits 0 6 `a ]
+"24
+[; ;../../Lib/BM1383/BM1383.c: 24:     }
+}
+[e :U 1030 ]
+"19
+[; ;../../Lib/BM1383/BM1383.c: 19:     while(ACK_bit)
+[e $ != -> _ACK_bit `i -> 0 `i 1031  ]
+[e :U 1032 ]
+"25
+[; ;../../Lib/BM1383/BM1383.c: 25:     Send_I2C_Data(Reg_Add);
+[e ( _Send_I2C_Data (1 _Reg_Add ]
+"26
+[; ;../../Lib/BM1383/BM1383.c: 26:     Send_I2C_Data(data);
+[e ( _Send_I2C_Data (1 _data ]
+"27
+[; ;../../Lib/BM1383/BM1383.c: 27:     Send_I2C_StopBit();
+[e ( _Send_I2C_StopBit ..  ]
+"28
+[; ;../../Lib/BM1383/BM1383.c: 28: }
+[e :UE 1029 ]
+}
+"30
+[; ;../../Lib/BM1383/BM1383.c: 30: uint8_t ReadByteBM1383(const BM1383_t *BM1383, uint8_t Reg_Add){
+[v _ReadByteBM1383 `(uc ~T0 @X0 1 ef2`*CS1028`uc ]
+{
+[e :U _ReadByteBM1383 ]
+[v _BM1383 `*CS1028 ~T0 @X0 1 r1 ]
+[v _Reg_Add `uc ~T0 @X0 1 r2 ]
+[f ]
+"32
+[; ;../../Lib/BM1383/BM1383.c: 32:     _Bool ACK_bit = 1;
+[v _ACK_bit `a ~T0 @X0 1 a ]
+[e = _ACK_bit -> -> 1 `i `a ]
+"33
+[; ;../../Lib/BM1383/BM1383.c: 33:     uint8_t data=0;
+[v _data `uc ~T0 @X0 1 a ]
+[e = _data -> -> 0 `i `uc ]
+"34
+[; ;../../Lib/BM1383/BM1383.c: 34:     while(ACK_bit)
+[e $U 1034  ]
+[e :U 1035 ]
+"35
+[; ;../../Lib/BM1383/BM1383.c: 35:     {
+{
+"36
+[; ;../../Lib/BM1383/BM1383.c: 36:         Send_I2C_StartBit();
+[e ( _Send_I2C_StartBit ..  ]
+"37
+[; ;../../Lib/BM1383/BM1383.c: 37:         Send_I2C_ControlByte(BM1383->BM1383_Add, 0);
+[e ( _Send_I2C_ControlByte (2 , . *U _BM1383 0 -> -> 0 `i `uc ]
+"38
+[; ;../../Lib/BM1383/BM1383.c: 38:         ACK_bit = SSP1CON2bits.ACKSTAT;
+[e = _ACK_bit -> . . _SSP1CON2bits 0 6 `a ]
+"39
+[; ;../../Lib/BM1383/BM1383.c: 39:     }
+}
+[e :U 1034 ]
+"34
+[; ;../../Lib/BM1383/BM1383.c: 34:     while(ACK_bit)
+[e $ != -> _ACK_bit `i -> 0 `i 1035  ]
+[e :U 1036 ]
+"41
+[; ;../../Lib/BM1383/BM1383.c: 41:     Send_I2C_Data(Reg_Add);
+[e ( _Send_I2C_Data (1 _Reg_Add ]
+"44
+[; ;../../Lib/BM1383/BM1383.c: 44:     ACK_bit = 1;
+[e = _ACK_bit -> -> 1 `i `a ]
+"45
+[; ;../../Lib/BM1383/BM1383.c: 45:     while(ACK_bit)
+[e $U 1037  ]
+[e :U 1038 ]
+"46
+[; ;../../Lib/BM1383/BM1383.c: 46:     {
+{
+"47
+[; ;../../Lib/BM1383/BM1383.c: 47:         Send_I2C_StartBit();
+[e ( _Send_I2C_StartBit ..  ]
+"48
+[; ;../../Lib/BM1383/BM1383.c: 48:         Send_I2C_ControlByte(BM1383->BM1383_Add, 1);
+[e ( _Send_I2C_ControlByte (2 , . *U _BM1383 0 -> -> 1 `i `uc ]
+"49
+[; ;../../Lib/BM1383/BM1383.c: 49:         ACK_bit = SSP1CON2bits.ACKSTAT;
+[e = _ACK_bit -> . . _SSP1CON2bits 0 6 `a ]
+"50
+[; ;../../Lib/BM1383/BM1383.c: 50:     }
+}
+[e :U 1037 ]
+"45
+[; ;../../Lib/BM1383/BM1383.c: 45:     while(ACK_bit)
+[e $ != -> _ACK_bit `i -> 0 `i 1038  ]
+[e :U 1039 ]
+"51
+[; ;../../Lib/BM1383/BM1383.c: 51:     data=Read_I2C_Data();
+[e = _data -> ( _Read_I2C_Data ..  `uc ]
+"52
+[; ;../../Lib/BM1383/BM1383.c: 52:     Send_I2C_NAK();
+[e ( _Send_I2C_NAK ..  ]
+"53
+[; ;../../Lib/BM1383/BM1383.c: 53:     Send_I2C_StopBit();
+[e ( _Send_I2C_StopBit ..  ]
+"55
+[; ;../../Lib/BM1383/BM1383.c: 55:     return data;
+[e ) _data ]
+[e $UE 1033  ]
+"56
+[; ;../../Lib/BM1383/BM1383.c: 56: }
+[e :UE 1033 ]
+}

@@ -11,7 +11,14 @@
 
 #if(BM1383_ENABLE)
 
+typedef struct{
+    uint8_t BM1383_Add;
+}BM1383_t;
 
+
+
+void WriteByteBM1383(const BM1383_t *BM1383, uint8_t Reg_Add, uint8_t data);
+uint8_t ReadByteBM1383(const BM1383_t *BM1383, uint8_t Reg_Add);
 
 #endif
 

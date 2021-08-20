@@ -12,6 +12,8 @@ void I2C_Init(void){
     SSP1CON1bits.SSPEN=1;         // enable MSSP port
 }
 
+voi I2C_
+
 void Send_I2C_Data(uint8_t databyte)
 {
     PIR3bits.SSP1IF=0;          // clear SSP interrupt bit
@@ -52,7 +54,7 @@ void Send_I2C_ControlByte(uint8_t Dev_Add, uint8_t RW_bit)
     // 'BBB' is the block address
     // and 'R' is the Read/Write bit
 
-    SSP1BUF = (Dev_Add <<1) + RW_bit;  // send the control byte
+    SSP1BUF = (Dev_Add<<1) + RW_bit ;  // send the control byte
     while(!PIR3bits.SSP1IF);    // Wait for interrupt flag to go high indicating transmission is complete
 }
 

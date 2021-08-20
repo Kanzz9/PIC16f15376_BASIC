@@ -3,10 +3,63 @@ Version 4.0 HI-TECH Software Intermediate Code
 "75 ../../Lib/BM1383/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h
 [; ;../../Lib/BM1383/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h: 75: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
+"14 ../../Lib/BM1383\BM1383.h
+[; ;../../Lib/BM1383\BM1383.h: 14: typedef struct{
+[s S1028 `uc 1 ]
+[n S1028 . BM1383_Add ]
+"12 ../../Lib/I2C\I2C.h
+[; ;../../Lib/I2C\I2C.h: 12: void I2C_Init(void);
+[v _I2C_Init `(v ~T0 @X0 0 ef ]
+"16
+[; ;../../Lib/I2C\I2C.h: 16: void Send_I2C_StartBit(void);
+[v _Send_I2C_StartBit `(v ~T0 @X0 0 ef ]
+"15
+[; ;../../Lib/I2C\I2C.h: 15: void Send_I2C_ControlByte(uint8_t Dev_Add,uint8_t RW_bit);
+[v _Send_I2C_ControlByte `(v ~T0 @X0 0 ef2`uc`uc ]
+"3186 D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h
+[; ;D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h: 3186:     struct {
+[s S155 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S155 . SEN RSEN PEN RCEN ACKEN ACKDT ACKSTAT GCEN ]
+"3196
+[; ;D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h: 3196:     struct {
+[s S156 :1 `uc 1 :5 `uc 1 ]
+[n S156 . . ADMSK ]
+"3200
+[; ;D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h: 3200:     struct {
+[s S157 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S157 . . ADMSK1 ADMSK2 ADMSK3 ADMSK4 ADMSK5 ]
+"3208
+[; ;D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h: 3208:     struct {
+[s S158 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S158 . SEN1 ADMSK11 ADMSK21 ADMSK31 ACKEN1 ACKDT1 ACKSTAT1 GCEN1 ]
+"3218
+[; ;D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h: 3218:     struct {
+[s S159 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S159 . . RSEN1 PEN1 RCEN1 ADMSK41 ADMSK51 ]
+"3185
+[; ;D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h: 3185: typedef union {
+[u S154 `S155 1 `S156 1 `S157 1 `S158 1 `S159 1 ]
+[n S154 . . . . . . ]
+"3227
+[; ;D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h: 3227: extern volatile SSP1CON2bits_t SSP1CON2bits __attribute__((address(0x191)));
+[v _SSP1CON2bits `VS154 ~T0 @X0 0 e@401 ]
+"111 D:\program files\Microchip\xc8\v2.31\pic\include\c99\stdio.h
+[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
 [v F183 `(v ~T0 @X0 1 tf1`ul ]
 "12 D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\builtins.h
 [v __delay `JF183 ~T0 @X0 0 e ]
 [p i __delay ]
+"1149 D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h
+[; ;D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h: 1149:     struct {
+[s S57 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S57 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
+"1148
+[; ;D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h: 1148: typedef union {
+[u S56 `S57 1 ]
+[n S56 . . ]
+"1160
+[; ;D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h: 1160: extern volatile LATCbits_t LATCbits __attribute__((address(0x01A)));
+[v _LATCbits `VS56 ~T0 @X0 0 e@26 ]
 "111 D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h
 [; ;D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h: 111: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1124,21 +1177,89 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 113:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
 "130
-[; ;main.c: 130:     while (1)
-[e :U 1030 ]
-"131
-[; ;main.c: 131:     {
-{
-"134
-[; ;main.c: 134:         _delay((unsigned long)((500)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 130:     BM1383_t BM1383;
+[v _BM1383 `S1028 ~T0 @X0 1 a ]
+"132
+[; ;main.c: 132:     BM1383.BM1383_Add = 0x5D;
+[e = . _BM1383 0 -> -> 93 `i `uc ]
+"133
+[; ;main.c: 133:     I2C_Init();
+[e ( _I2C_Init ..  ]
 "135
-[; ;main.c: 135:     }
+[; ;main.c: 135:     _Bool ACK_bit = 1;
+[v _ACK_bit `a ~T0 @X0 1 a ]
+[e = _ACK_bit -> -> 1 `i `a ]
+"136
+[; ;main.c: 136:     uint8_t i=0;
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+"146
+[; ;main.c: 146:     for(i=0; i<127; i++){
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 127 `i 1030  ]
+[e $U 1031  ]
+[e :U 1030 ]
+{
+"147
+[; ;main.c: 147:         Send_I2C_StartBit();
+[e ( _Send_I2C_StartBit ..  ]
+"148
+[; ;main.c: 148:         Send_I2C_ControlByte(i, 0);
+[e ( _Send_I2C_ControlByte (2 , _i -> -> 0 `i `uc ]
+"149
+[; ;main.c: 149:         ACK_bit = SSP1CON2bits.ACKSTAT;
+[e = _ACK_bit -> . . _SSP1CON2bits 0 6 `a ]
+"153
+[; ;main.c: 153:         if(ACK_bit==0){
+[e $ ! == -> _ACK_bit `i -> 0 `i 1033  ]
+{
+"154
+[; ;main.c: 154:             printf("BM1383 ID1: %d\n", i);
+[e ( _printf , (. :s 1C -> _i `i ]
+"155
+[; ;main.c: 155:             break;
+[e $U 1031  ]
+"156
+[; ;main.c: 156:         }
 }
-[e :U 1029 ]
-[e $U 1030  ]
+[e :U 1033 ]
+"157
+[; ;main.c: 157:         _delay((unsigned long)((10)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"158
+[; ;main.c: 158:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 127 `i 1030  ]
 [e :U 1031 ]
-"137
-[; ;main.c: 137: }
-[e :UE 1028 ]
 }
+"159
+[; ;main.c: 159:     printf("BM1383 ID1: %d\n", i);
+[e ( _printf , (. :s 2C -> _i `i ]
+"160
+[; ;main.c: 160:     do { LATCbits.LATC0 = 1; } while(0);
+[e :U 1036 ]
+{
+[e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
+}
+[e :U 1035 ]
+"162
+[; ;main.c: 162:     while (1)
+[e :U 1038 ]
+"163
+[; ;main.c: 163:     {
+{
+"171
+[; ;main.c: 171:     }
+}
+[e :U 1037 ]
+[e $U 1038  ]
+[e :U 1039 ]
+"173
+[; ;main.c: 173: }
+[e :UE 1029 ]
+}
+[p f _printf 8388736 ]
+[a 1C 66 77 49 51 56 51 32 73 68 49 58 32 37 100 10 0 ]
+[a 2C 66 77 49 51 56 51 32 73 68 49 58 32 37 100 10 0 ]

@@ -1286,14 +1286,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/pin_manager.c: 88:     WPUE = 0x00;
 [e = _WPUE -> -> 0 `i `uc ]
 "89
-[; ;mcc_generated_files/pin_manager.c: 89:     WPUB = 0x00;
-[e = _WPUB -> -> 0 `i `uc ]
+[; ;mcc_generated_files/pin_manager.c: 89:     WPUB = 0x04;
+[e = _WPUB -> -> 4 `i `uc ]
 "90
 [; ;mcc_generated_files/pin_manager.c: 90:     WPUA = 0x00;
 [e = _WPUA -> -> 0 `i `uc ]
 "91
-[; ;mcc_generated_files/pin_manager.c: 91:     WPUC = 0x58;
-[e = _WPUC -> -> 88 `i `uc ]
+[; ;mcc_generated_files/pin_manager.c: 91:     WPUC = 0xD8;
+[e = _WPUC -> -> 216 `i `uc ]
 "96
 [; ;mcc_generated_files/pin_manager.c: 96:     ODCONE = 0x00;
 [e = _ODCONE -> -> 0 `i `uc ]

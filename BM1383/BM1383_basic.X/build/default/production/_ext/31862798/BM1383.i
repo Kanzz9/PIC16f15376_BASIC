@@ -13600,6 +13600,7 @@ void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 
 
 
+void I2C_Init(void);
 void Send_I2C_Data(uint8_t databyte);
 unsigned int Read_I2C_Data(void);
 void Send_I2C_ControlByte(uint8_t Dev_Add,uint8_t RW_bit);
@@ -13618,5 +13619,58 @@ void OSCILLATOR_Initialize(void);
 # 101 "../../Lib/I2C/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h"
 void PMD_Initialize(void);
 # 10 "../../Lib/BM1383\\BM1383.h" 2
-# 6 "../../Lib/BM1383/BM1383.c" 2
 
+
+
+
+typedef struct{
+    uint8_t BM1383_Add;
+}BM1383_t;
+
+
+
+void WriteByteBM1383(const BM1383_t *BM1383, uint8_t Reg_Add, uint8_t data);
+uint8_t ReadByteBM1383(const BM1383_t *BM1383, uint8_t Reg_Add);
+# 6 "../../Lib/BM1383/BM1383.c" 2
+# 16 "../../Lib/BM1383/BM1383.c"
+void WriteByteBM1383(const BM1383_t *BM1383, uint8_t Reg_Add, uint8_t data){
+
+    _Bool ACK_bit = 1;
+    while(ACK_bit)
+    {
+        Send_I2C_StartBit();
+        Send_I2C_ControlByte(BM1383->BM1383_Add, 0);
+        ACK_bit = SSP1CON2bits.ACKSTAT;
+    }
+    Send_I2C_Data(Reg_Add);
+    Send_I2C_Data(data);
+    Send_I2C_StopBit();
+}
+
+uint8_t ReadByteBM1383(const BM1383_t *BM1383, uint8_t Reg_Add){
+
+    _Bool ACK_bit = 1;
+    uint8_t data=0;
+    while(ACK_bit)
+    {
+        Send_I2C_StartBit();
+        Send_I2C_ControlByte(BM1383->BM1383_Add, 0);
+        ACK_bit = SSP1CON2bits.ACKSTAT;
+    }
+
+    Send_I2C_Data(Reg_Add);
+
+
+    ACK_bit = 1;
+    while(ACK_bit)
+    {
+        Send_I2C_StartBit();
+        Send_I2C_ControlByte(BM1383->BM1383_Add, 1);
+        ACK_bit = SSP1CON2bits.ACKSTAT;
+    }
+    data=Read_I2C_Data();
+    Send_I2C_NAK();
+    Send_I2C_StopBit();
+
+    return data;
+}

@@ -1177,7 +1177,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _SSP1CON1bits 0 2 -> -> 1 `i `uc ]
 "13
 [; ;../../Lib/I2C/I2C.c: 13: }
-[e :UE 1028 ]
+[e :UE 1029 ]
 }
 "15
 [; ;../../Lib/I2C/I2C.c: 15: void Send_I2C_Data(uint8_t databyte)
@@ -1200,14 +1200,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _SSP1BUF _databyte ]
 "19
 [; ;../../Lib/I2C/I2C.c: 19:     while(!PIR3bits.SSP1IF);
-[e $U 1030  ]
-[e :U 1031 ]
-[e :U 1030 ]
-[e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1031  ]
+[e $U 1031  ]
 [e :U 1032 ]
+[e :U 1031 ]
+[e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1032  ]
+[e :U 1033 ]
 "20
 [; ;../../Lib/I2C/I2C.c: 20: }
-[e :UE 1029 ]
+[e :UE 1030 ]
 }
 "26
 [; ;../../Lib/I2C/I2C.c: 26: unsigned int Read_I2C_Data(void)
@@ -1225,18 +1225,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _SSP1CON2bits 0 3 -> -> 1 `i `uc ]
 "30
 [; ;../../Lib/I2C/I2C.c: 30:     while(!PIR3bits.SSP1IF);
-[e $U 1034  ]
-[e :U 1035 ]
-[e :U 1034 ]
-[e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1035  ]
+[e $U 1035  ]
 [e :U 1036 ]
+[e :U 1035 ]
+[e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1036  ]
+[e :U 1037 ]
 "31
 [; ;../../Lib/I2C/I2C.c: 31:     return (SSP1BUF);
 [e ) -> _SSP1BUF `ui ]
-[e $UE 1033  ]
+[e $UE 1034  ]
 "32
 [; ;../../Lib/I2C/I2C.c: 32: }
-[e :UE 1033 ]
+[e :UE 1034 ]
 }
 "45
 [; ;../../Lib/I2C/I2C.c: 45: void Send_I2C_ControlByte(uint8_t Dev_Add, uint8_t RW_bit)
@@ -1256,18 +1256,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;../../Lib/I2C/I2C.c: 47:     PIR3bits.SSP1IF=0;
 [e = . . _PIR3bits 0 0 -> -> 0 `i `uc ]
 "55
-[; ;../../Lib/I2C/I2C.c: 55:     SSP1BUF = (Dev_Add <<1) + RW_bit;
+[; ;../../Lib/I2C/I2C.c: 55:     SSP1BUF = (Dev_Add<<1) + RW_bit ;
 [e = _SSP1BUF -> + << -> _Dev_Add `i -> 1 `i -> _RW_bit `i `uc ]
 "56
 [; ;../../Lib/I2C/I2C.c: 56:     while(!PIR3bits.SSP1IF);
-[e $U 1038  ]
-[e :U 1039 ]
-[e :U 1038 ]
-[e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1039  ]
+[e $U 1039  ]
 [e :U 1040 ]
+[e :U 1039 ]
+[e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1040  ]
+[e :U 1041 ]
 "57
 [; ;../../Lib/I2C/I2C.c: 57: }
-[e :UE 1037 ]
+[e :UE 1038 ]
 }
 "62
 [; ;../../Lib/I2C/I2C.c: 62: void Send_I2C_StartBit(void)
@@ -1285,14 +1285,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _SSP1CON2bits 0 0 -> -> 1 `i `uc ]
 "66
 [; ;../../Lib/I2C/I2C.c: 66:     while(!PIR3bits.SSP1IF);
-[e $U 1042  ]
-[e :U 1043 ]
-[e :U 1042 ]
-[e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1043  ]
+[e $U 1043  ]
 [e :U 1044 ]
+[e :U 1043 ]
+[e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1044  ]
+[e :U 1045 ]
 "67
 [; ;../../Lib/I2C/I2C.c: 67: }
-[e :UE 1041 ]
+[e :UE 1042 ]
 }
 "72
 [; ;../../Lib/I2C/I2C.c: 72: void Send_I2C_StopBit(void)
@@ -1310,14 +1310,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _SSP1CON2bits 0 2 -> -> 1 `i `uc ]
 "76
 [; ;../../Lib/I2C/I2C.c: 76:     while(!PIR3bits.SSP1IF);
-[e $U 1046  ]
-[e :U 1047 ]
-[e :U 1046 ]
-[e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1047  ]
+[e $U 1047  ]
 [e :U 1048 ]
+[e :U 1047 ]
+[e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1048  ]
+[e :U 1049 ]
 "77
 [; ;../../Lib/I2C/I2C.c: 77: }
-[e :UE 1045 ]
+[e :UE 1046 ]
 }
 "83
 [; ;../../Lib/I2C/I2C.c: 83: void Send_I2C_ACK(void)
@@ -1338,14 +1338,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _SSP1CON2bits 0 4 -> -> 1 `i `uc ]
 "88
 [; ;../../Lib/I2C/I2C.c: 88:    while(!PIR3bits.SSP1IF);
-[e $U 1050  ]
-[e :U 1051 ]
-[e :U 1050 ]
-[e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1051  ]
+[e $U 1051  ]
 [e :U 1052 ]
+[e :U 1051 ]
+[e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1052  ]
+[e :U 1053 ]
 "89
 [; ;../../Lib/I2C/I2C.c: 89: }
-[e :UE 1049 ]
+[e :UE 1050 ]
 }
 "94
 [; ;../../Lib/I2C/I2C.c: 94: void Send_I2C_NAK(void)
@@ -1366,12 +1366,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _SSP1CON2bits 0 4 -> -> 1 `i `uc ]
 "99
 [; ;../../Lib/I2C/I2C.c: 99:     while(!PIR3bits.SSP1IF);
-[e $U 1054  ]
-[e :U 1055 ]
-[e :U 1054 ]
-[e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1055  ]
+[e $U 1055  ]
 [e :U 1056 ]
+[e :U 1055 ]
+[e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1056  ]
+[e :U 1057 ]
 "100
 [; ;../../Lib/I2C/I2C.c: 100: }
-[e :UE 1053 ]
+[e :UE 1054 ]
 }
