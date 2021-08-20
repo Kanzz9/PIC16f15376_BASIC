@@ -13641,6 +13641,8 @@ void I2C_Init(void){
     SSP1CON1bits.SSPEN=1;
 }
 
+
+
 void Send_I2C_Data(uint8_t databyte)
 {
     PIR3bits.SSP1IF=0;
@@ -13659,7 +13661,7 @@ unsigned int Read_I2C_Data(void)
     while(!PIR3bits.SSP1IF);
     return (SSP1BUF);
 }
-# 45 "../../Lib/I2C/I2C.c"
+# 47 "../../Lib/I2C/I2C.c"
 void Send_I2C_ControlByte(uint8_t Dev_Add, uint8_t RW_bit)
 {
     PIR3bits.SSP1IF=0;

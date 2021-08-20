@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.31 build 20201012212115 
-                                                                                               Thu Aug 19 23:45:55 2021
+                                                                                               Fri Aug 20 11:33:03 2021
 
 Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1 
      1                           	processor	16LF15376
@@ -5913,7 +5913,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   5766  0194                     __ptext14:	
   5767 ;; *************** function _Send_I2C_StartBit *****************
   5768 ;; Defined at:
-  5769 ;;		line 62 in file "../../Lib/I2C/I2C.c"
+  5769 ;;		line 64 in file "../../Lib/I2C/I2C.c"
   5770 ;; Parameters:    Size  Location     Type
   5771 ;;		None
   5772 ;; Auto vars:     Size  Location     Type
@@ -5955,15 +5955,15 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   5803                           ; Regs used in _Send_I2C_StartBit: []
   5804                           
   5805                           
-  5806                           ;../../Lib/I2C/I2C.c: 64:     PIR3bits.SSP1IF=0;
+  5806                           ;../../Lib/I2C/I2C.c: 66:     PIR3bits.SSP1IF=0;
   5807  0194  014E               	movlb	14	; select bank14
   5808  0195  100F               	bcf	15,0	;volatile
   5809                           
-  5810                           ;../../Lib/I2C/I2C.c: 65:     SSP1CON2bits.SEN=1;
+  5810                           ;../../Lib/I2C/I2C.c: 67:     SSP1CON2bits.SEN=1;
   5811  0196  0143               	movlb	3	; select bank3
   5812  0197  1411               	bsf	17,0	;volatile
   5813  0198                     l32:	
-  5814                           ;../../Lib/I2C/I2C.c: 66:     while(!PIR3bits.SSP1IF);
+  5814                           ;../../Lib/I2C/I2C.c: 68:     while(!PIR3bits.SSP1IF);
   5815                           
   5816  0198  014E               	movlb	14	; select bank14
   5817  0199  1C0F               	btfss	15,0	;volatile
@@ -5980,7 +5980,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   5828  01A8                     __ptext15:	
   5829 ;; *************** function _Send_I2C_ControlByte *****************
   5830 ;; Defined at:
-  5831 ;;		line 45 in file "../../Lib/I2C/I2C.c"
+  5831 ;;		line 47 in file "../../Lib/I2C/I2C.c"
   5832 ;; Parameters:    Size  Location     Type
   5833 ;;  Dev_Add         1    wreg     unsigned char 
   5834 ;;  RW_bit          1    0[COMMON] unsigned char 
@@ -6025,19 +6025,19 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   5868  01A8  00F1               	movwf	Send_I2C_ControlByte@Dev_Add
   5869  01A9                     l2825:
   5870                           
-  5871                           ;../../Lib/I2C/I2C.c: 45: void Send_I2C_ControlByte(uint8_t Dev_Add, uint8_t RW_bit);../
-      +                          ../Lib/I2C/I2C.c: 46: {;../../Lib/I2C/I2C.c: 47:     PIR3bits.SSP1IF=0;
+  5871                           ;../../Lib/I2C/I2C.c: 47: void Send_I2C_ControlByte(uint8_t Dev_Add, uint8_t RW_bit);../
+      +                          ../Lib/I2C/I2C.c: 48: {;../../Lib/I2C/I2C.c: 49:     PIR3bits.SSP1IF=0;
   5872  01A9  014E               	movlb	14	; select bank14
   5873  01AA  100F               	bcf	15,0	;volatile
   5874  01AB                     l2827:
   5875                           
-  5876                           ;../../Lib/I2C/I2C.c: 55:     SSP1BUF = (Dev_Add<<1) + RW_bit ;
+  5876                           ;../../Lib/I2C/I2C.c: 57:     SSP1BUF = (Dev_Add<<1) + RW_bit ;
   5877  01AB  3571               	lslf	Send_I2C_ControlByte@Dev_Add,w
   5878  01AC  0770               	addwf	Send_I2C_ControlByte@RW_bit,w
   5879  01AD  0143               	movlb	3	; select bank3
   5880  01AE  008C               	movwf	12	;volatile
   5881  01AF                     l26:	
-  5882                           ;../../Lib/I2C/I2C.c: 56:     while(!PIR3bits.SSP1IF);
+  5882                           ;../../Lib/I2C/I2C.c: 58:     while(!PIR3bits.SSP1IF);
   5883                           
   5884  01AF  014E               	movlb	14	; select bank14
   5885  01B0  1C0F               	btfss	15,0	;volatile
@@ -7607,7 +7607,7 @@ SFR63                0      0       0      64        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.31 build 20201012212115 
-Symbol Table                                                                                   Thu Aug 19 23:45:55 2021
+Symbol Table                                                                                   Fri Aug 20 11:33:03 2021
 
                                             l11 0178                                              l32 0198  
                                             l26 01AF                                              l35 019D  

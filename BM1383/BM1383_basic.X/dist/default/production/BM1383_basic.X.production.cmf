@@ -11,10 +11,6 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\hoang\AppData\Local\Temp\s1euo.o
-reset_vec CODE 0 0 0 2 2
-end_init CODE 0 2 2 2 2
-config CONFIG 4 8007 8007 5 2
 $dist/default/production\BM1383_basic.X.production.o
 cinit CODE 0 7F5 7F5 B 2
 text1 CODE 0 1C5 1C5 12 2
@@ -51,6 +47,10 @@ stringtext1 STRCODE 0 800 800 20 2
 stringtext2 STRCODE 0 820 820 10 2
 bssBANK1 BANK1 1 A0 A0 46 1
 clrtext CODE 0 16C 16C 6 2
+config CONFIG 4 8007 8007 5 2
+$C:\Users\hoang\AppData\Local\Temp\semg.o
+reset_vec CODE 0 0 0 2 2
+end_init CODE 0 2 2 2 2
 config CONFIG 4 8007 8007 5 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -199,17 +199,17 @@ STRING 830-3FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\BM1383_basic.X.production.o
-7F5 cinit CODE >5639:C:\Users\hoang\AppData\Local\Temp\s1euo.s
-7F5 cinit CODE >5642:C:\Users\hoang\AppData\Local\Temp\s1euo.s
-7F5 cinit CODE >5684:C:\Users\hoang\AppData\Local\Temp\s1euo.s
-7F6 cinit CODE >5685:C:\Users\hoang\AppData\Local\Temp\s1euo.s
-7F7 cinit CODE >5686:C:\Users\hoang\AppData\Local\Temp\s1euo.s
-7F8 cinit CODE >5687:C:\Users\hoang\AppData\Local\Temp\s1euo.s
-7F9 cinit CODE >5688:C:\Users\hoang\AppData\Local\Temp\s1euo.s
-7FA cinit CODE >5689:C:\Users\hoang\AppData\Local\Temp\s1euo.s
-7FD cinit CODE >5695:C:\Users\hoang\AppData\Local\Temp\s1euo.s
-7FD cinit CODE >5697:C:\Users\hoang\AppData\Local\Temp\s1euo.s
-7FE cinit CODE >5698:C:\Users\hoang\AppData\Local\Temp\s1euo.s
+7F5 cinit CODE >5639:C:\Users\hoang\AppData\Local\Temp\semg.s
+7F5 cinit CODE >5642:C:\Users\hoang\AppData\Local\Temp\semg.s
+7F5 cinit CODE >5684:C:\Users\hoang\AppData\Local\Temp\semg.s
+7F6 cinit CODE >5685:C:\Users\hoang\AppData\Local\Temp\semg.s
+7F7 cinit CODE >5686:C:\Users\hoang\AppData\Local\Temp\semg.s
+7F8 cinit CODE >5687:C:\Users\hoang\AppData\Local\Temp\semg.s
+7F9 cinit CODE >5688:C:\Users\hoang\AppData\Local\Temp\semg.s
+7FA cinit CODE >5689:C:\Users\hoang\AppData\Local\Temp\semg.s
+7FD cinit CODE >5695:C:\Users\hoang\AppData\Local\Temp\semg.s
+7FD cinit CODE >5697:C:\Users\hoang\AppData\Local\Temp\semg.s
+7FE cinit CODE >5698:C:\Users\hoang\AppData\Local\Temp\semg.s
 172 text25 CODE >9:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
 172 text25 CODE >11:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
 177 text25 CODE >12:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
@@ -307,16 +307,16 @@ $dist/default/production\BM1383_basic.X.production.o
 1BE text16 CODE >55:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
 1C1 text16 CODE >56:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
 1C4 text16 CODE >57:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
-1A8 text15 CODE >45:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
-1A9 text15 CODE >47:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
-1AB text15 CODE >55:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
-1AF text15 CODE >56:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
-1B4 text15 CODE >57:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
-194 text14 CODE >62:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
+1A8 text15 CODE >47:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
+1A9 text15 CODE >49:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
+1AB text15 CODE >57:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
+1AF text15 CODE >58:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
+1B4 text15 CODE >59:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
 194 text14 CODE >64:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
-196 text14 CODE >65:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
-198 text14 CODE >66:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
-19D text14 CODE >67:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
+194 text14 CODE >66:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
+196 text14 CODE >67:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
+198 text14 CODE >68:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
+19D text14 CODE >69:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
 586 text13 CODE >7:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
 586 text13 CODE >15:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
 587 text13 CODE >16:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
@@ -486,14 +486,14 @@ $dist/default/production\BM1383_basic.X.production.o
 3AB maintext CODE >159:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\main.c
 3BC maintext CODE >160:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\main.c
 3BE maintext CODE >162:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\main.c
-16C clrtext CODE >5673:C:\Users\hoang\AppData\Local\Temp\s1euo.s
-16C clrtext CODE >5674:C:\Users\hoang\AppData\Local\Temp\s1euo.s
-16D clrtext CODE >5675:C:\Users\hoang\AppData\Local\Temp\s1euo.s
-16D clrtext CODE >5676:C:\Users\hoang\AppData\Local\Temp\s1euo.s
-16E clrtext CODE >5677:C:\Users\hoang\AppData\Local\Temp\s1euo.s
-16F clrtext CODE >5678:C:\Users\hoang\AppData\Local\Temp\s1euo.s
-170 clrtext CODE >5679:C:\Users\hoang\AppData\Local\Temp\s1euo.s
-171 clrtext CODE >5680:C:\Users\hoang\AppData\Local\Temp\s1euo.s
+16C clrtext CODE >5673:C:\Users\hoang\AppData\Local\Temp\semg.s
+16C clrtext CODE >5674:C:\Users\hoang\AppData\Local\Temp\semg.s
+16D clrtext CODE >5675:C:\Users\hoang\AppData\Local\Temp\semg.s
+16D clrtext CODE >5676:C:\Users\hoang\AppData\Local\Temp\semg.s
+16E clrtext CODE >5677:C:\Users\hoang\AppData\Local\Temp\semg.s
+16F clrtext CODE >5678:C:\Users\hoang\AppData\Local\Temp\semg.s
+170 clrtext CODE >5679:C:\Users\hoang\AppData\Local\Temp\semg.s
+171 clrtext CODE >5680:C:\Users\hoang\AppData\Local\Temp\semg.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -539,7 +539,7 @@ _WPUB 1F44 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _WPUC 1F4F 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _WPUD 1F5A 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _WPUE 1F65 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\hoang\AppData\Local\Temp\s1euo.o
+___sp 0 0 STACK 2 stack C:\Users\hoang\AppData\Local\Temp\semg.o
 _dbuf C6 0 BANK1 1 bssBANK1 dist/default/production\BM1383_basic.X.production.o
 _dtoa D0E 0 CODE 0 text4 dist/default/production\BM1383_basic.X.production.o
 _main 6D0 0 CODE 0 maintext dist/default/production\BM1383_basic.X.production.o
@@ -550,7 +550,7 @@ btemp 7E 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 pad@i 28 0 BANK0 1 cstackBANK0 dist/default/production\BM1383_basic.X.production.o
 pad@p 25 0 BANK0 1 cstackBANK0 dist/default/production\BM1383_basic.X.production.o
 pad@w 2A 0 BANK0 1 cstackBANK0 dist/default/production\BM1383_basic.X.production.o
-start 4 0 CODE 0 init C:\Users\hoang\AppData\Local\Temp\s1euo.o
+start 4 0 CODE 0 init C:\Users\hoang\AppData\Local\Temp\semg.o
 ___aomod@counter 71 0 COMMON 1 cstackCOMMON dist/default/production\BM1383_basic.X.production.o
 __size_of___aodiv 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 __size_of___aomod 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
@@ -565,12 +565,12 @@ _I2C1_CallbackReturnReset 0 0 ABS 0 - dist/default/production\BM1383_basic.X.pro
 __end_of_vfpfcnvrt 938 0 CODE 0 text3 dist/default/production\BM1383_basic.X.production.o
 __size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 __size_of_vfpfcnvrt 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\hoang\AppData\Local\Temp\s1euo.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\hoang\AppData\Local\Temp\s1euo.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\hoang\AppData\Local\Temp\s1euo.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\hoang\AppData\Local\Temp\s1euo.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\hoang\AppData\Local\Temp\s1euo.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\hoang\AppData\Local\Temp\s1euo.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\hoang\AppData\Local\Temp\semg.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\hoang\AppData\Local\Temp\semg.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\hoang\AppData\Local\Temp\semg.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\hoang\AppData\Local\Temp\semg.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\hoang\AppData\Local\Temp\semg.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\hoang\AppData\Local\Temp\semg.o
 __size_of_EUSART1_SetErrorHandler 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
@@ -607,8 +607,8 @@ _INLVLC 1F52 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _INLVLD 1F5D 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _INLVLE 1F68 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 ?_strlen 70 0 COMMON 1 cstackCOMMON dist/default/production\BM1383_basic.X.production.o
-___stackhi 27EF 0 ABS 0 - C:\Users\hoang\AppData\Local\Temp\s1euo.o
-___stacklo 209F 0 ABS 0 - C:\Users\hoang\AppData\Local\Temp\s1euo.o
+___stackhi 27EF 0 ABS 0 - C:\Users\hoang\AppData\Local\Temp\semg.o
+___stacklo 209F 0 ABS 0 - C:\Users\hoang\AppData\Local\Temp\semg.o
 ___aomod@dividend 28 0 BANK0 1 cstackBANK0 dist/default/production\BM1383_basic.X.production.o
 __size_of_fputc 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 __size_of_fputs 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
@@ -645,7 +645,7 @@ __size_of_EUSART1_Initialize 0 0 ABS 0 - dist/default/production\BM1383_basic.X.
 _I2C1_Status A0 0 BANK1 1 bssBANK1 dist/default/production\BM1383_basic.X.production.o
 fputc@fp 74 0 COMMON 1 cstackCOMMON dist/default/production\BM1383_basic.X.production.o
 fputs@fp 7A 0 COMMON 1 cstackCOMMON dist/default/production\BM1383_basic.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\hoang\AppData\Local\Temp\s1euo.o
+___int_sp 0 0 STACK 2 stack C:\Users\hoang\AppData\Local\Temp\semg.o
 _EUSART1_Write 33C 0 CODE 0 text10 dist/default/production\BM1383_basic.X.production.o
 _rd2RegCompleteHandler 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 __Hbank0 0 0 ABS 0 bank0 -
@@ -902,7 +902,7 @@ __end_of_abs 414 0 CODE 0 text11 dist/default/production\BM1383_basic.X.producti
 __end_of_pad 6D0 0 CODE 0 text5 dist/default/production\BM1383_basic.X.production.o
 __HnvBANK1 0 0 ABS 0 nvBANK1 -
 __Lintentry 4 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\hoang\AppData\Local\Temp\s1euo.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\hoang\AppData\Local\Temp\semg.o
 strlen@a 73 0 COMMON 1 cstackCOMMON dist/default/production\BM1383_basic.X.production.o
 strlen@s 74 0 COMMON 1 cstackCOMMON dist/default/production\BM1383_basic.X.production.o
 __LbssBANK1 0 0 ABS 0 bssBANK1 -
