@@ -13580,6 +13580,7 @@ void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 
 
 
+
 # 1 "../../Lib/I2C\\I2C.h" 1
 
 
@@ -13595,6 +13596,7 @@ void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 
 
 void I2C_Init(void);
+uint8_t I2C_Scan(void);
 void Send_I2C_Data(uint8_t databyte);
 unsigned int Read_I2C_Data(void);
 void Send_I2C_ControlByte(uint8_t Dev_Add,uint8_t RW_bit);
@@ -13602,7 +13604,7 @@ void Send_I2C_StartBit(void);
 void Send_I2C_StopBit(void);
 void Send_I2C_ACK(void);
 void Send_I2C_NAK(void);
-# 61 "../../Lib/I2C/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h" 2
+# 62 "../../Lib/I2C/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h" 2
 
 # 1 "../../Lib/BM1383\\BM1383.h" 1
 # 10 "../../Lib/BM1383\\BM1383.h"
@@ -13620,12 +13622,12 @@ typedef struct{
 
 void WriteByteBM1383(const BM1383_t *BM1383, uint8_t Reg_Add, uint8_t data);
 uint8_t ReadByteBM1383(const BM1383_t *BM1383, uint8_t Reg_Add);
-# 62 "../../Lib/BM1383/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h" 2
-# 75 "../../Lib/BM1383/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h"
+# 63 "../../Lib/BM1383/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h" 2
+# 76 "../../Lib/BM1383/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 88 "../../Lib/BM1383/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h"
+# 89 "../../Lib/BM1383/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 101 "../../Lib/BM1383/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h"
+# 102 "../../Lib/BM1383/../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h"
 void PMD_Initialize(void);
 # 44 "main.c" 2
 # 110 "main.c"
@@ -13638,24 +13640,10 @@ void main(void)
 
     BM1383.BM1383_Add = 0x5D;
     I2C_Init();
+    I2C_Scan();
 
-    _Bool ACK_bit = 1;
     uint8_t i=0;
-# 146 "main.c"
-    for(i=0; i<127; i++){
-        Send_I2C_StartBit();
-        Send_I2C_ControlByte(i, 0);
-        ACK_bit = SSP1CON2bits.ACKSTAT;
 
-
-
-        if(ACK_bit==0){
-            printf("BM1383 ID1: %d\n", i);
-            break;
-        }
-        _delay((unsigned long)((10)*(4000000/4000.0)));
-    }
-    printf("BM1383 ID1: %d\n", i);
     do { LATCbits.LATC0 = 1; } while(0);
 
     while (1)

@@ -13,42 +13,44 @@
 %PSECTS
 $dist/default/production\BM1383_basic.X.production.o
 cinit CODE 0 7F5 7F5 B 2
-text1 CODE 0 1C5 1C5 12 2
-text2 CODE 0 254 254 31 2
-text3 CODE 0 3C1 3C1 DB 2
-text4 CODE 0 687 687 16E 2
-text5 CODE 0 30F 30F 59 2
-text6 CODE 0 1D7 1D7 19 2
-text7 CODE 0 22C 22C 28 2
-text8 CODE 0 285 285 3F 2
-text9 CODE 0 166 166 6 2
-text10 CODE 0 19E 19E A 2
-text11 CODE 0 1F0 1F0 1A 2
-text12 CODE 0 49C 49C EA 2
-text13 CODE 0 586 586 101 2
-text14 CODE 0 194 194 A 2
-text15 CODE 0 1A8 1A8 D 2
-text16 CODE 0 1B5 1B5 10 2
-text17 CODE 0 179 179 8 2
-text18 CODE 0 2C4 2C4 4B 2
-text19 CODE 0 18A 18A A 2
-text20 CODE 0 181 181 9 2
-text21 CODE 0 20A 20A 22 2
-text22 CODE 0 160 160 6 2
-text23 CODE 0 15A 15A 6 2
-text24 CODE 0 154 154 6 2
-text25 CODE 0 172 172 7 2
+text1 CODE 0 1CD 1CD 10 2
+text2 CODE 0 183 183 8 2
+text3 CODE 0 31D 31D 4B 2
+text4 CODE 0 1A8 1A8 A 2
+text5 CODE 0 18B 18B 9 2
+text6 CODE 0 222 222 22 2
+text7 CODE 0 170 170 6 2
+text8 CODE 0 16A 16A 6 2
+text9 CODE 0 164 164 6 2
+text10 CODE 0 2DC 2DC 41 2
+text11 CODE 0 1DD 1DD 12 2
+text12 CODE 0 26C 26C 31 2
+text13 CODE 0 3C1 3C1 DB 2
+text14 CODE 0 687 687 16E 2
+text15 CODE 0 368 368 59 2
+text16 CODE 0 1EF 1EF 19 2
+text17 CODE 0 244 244 28 2
+text18 CODE 0 29D 29D 3F 2
+text19 CODE 0 15E 15E 6 2
+text20 CODE 0 19E 19E A 2
+text21 CODE 0 208 208 1A 2
+text22 CODE 0 49C 49C EA 2
+text23 CODE 0 586 586 101 2
+text24 CODE 0 194 194 A 2
+text25 CODE 0 1B2 1B2 D 2
+text26 CODE 0 17C 17C 7 2
 nvBANK1 BANK1 1 E6 E6 6 1
-maintext CODE 0 368 368 59 2
+maintext CODE 0 1BF 1BF E 2
 cstackCOMMON COMMON 1 70 70 E 1
 cstackBANK0 BANK0 1 20 20 50 1
-cstackBANK1 BANK1 1 EC EC 3 1
+cstackBANK1 BANK1 1 EC EC 2 1
 stringtext1 STRCODE 0 800 800 20 2
-stringtext2 STRCODE 0 820 820 10 2
+stringtext2 STRCODE 0 820 820 1A 2
+stringtext3 STRCODE 0 83A 83A 14 2
 bssBANK1 BANK1 1 A0 A0 46 1
-clrtext CODE 0 16C 16C 6 2
+clrtext CODE 0 176 176 6 2
 config CONFIG 4 8007 8007 5 2
-$C:\Users\hoang\AppData\Local\Temp\semg.o
+$C:\Users\hoang\AppData\Local\Temp\sf20.o
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 2 2 2 2
 config CONFIG 4 8007 8007 5 2
@@ -58,7 +60,7 @@ config CONFIG 4 8007 8007 5 2
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM EF-EF 1
+RAM EE-EF 1
 RAM 120-16F 1
 RAM 1A0-1EF 1
 RAM 220-26F 1
@@ -83,7 +85,7 @@ RAM B20-B6F 1
 RAM BA0-BEF 1
 RAM C20-C6F 1
 RAM CA0-CBF 1
-BANK1 EF-EF 1
+BANK1 EE-EF 1
 BANK2 120-16F 1
 BANK3 1A0-1EF 1
 BANK4 220-26F 1
@@ -92,10 +94,10 @@ BANK6 320-36F 1
 BANK7 3A0-3EF 1
 BANK8 420-46F 1
 BANK9 4A0-4EF 1
-CONST 4-153 2
-CONST 830-3FFF 2
-ENTRY 4-153 2
-ENTRY 830-3FFF 2
+CONST 4-15D 2
+CONST 84E-3FFF 2
+ENTRY 4-15D 2
+ENTRY 84E-3FFF 2
 IDLOC 8000-8003 2
 SFR10 500-51F 1
 SFR11 580-59F 1
@@ -151,9 +153,9 @@ SFR60 1E00-1E6F 1
 SFR61 1E80-1EEF 1
 SFR62 1F00-1F6F 1
 SFR63 1F80-1FEF 1
-STACK 209F-27EF 1
-CODE 4-153 2
-CODE 830-3FFF 2
+STACK 209E-27EF 1
+CODE 4-15D 2
+CODE 84E-3FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-11F 1
@@ -181,10 +183,10 @@ BANK23 BA0-BEF 1
 BANK24 C20-C6F 1
 BANK25 CA0-CBF 1
 BIGRAM 2000-27EF 1
-STRCODE 4-153 2
-STRCODE 830-3FFF 2
-STRING 4-153 2
-STRING 830-3FFF 2
+STRCODE 4-15D 2
+STRCODE 84E-3FFF 2
+STRING 4-15D 2
+STRING 84E-3FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -199,301 +201,303 @@ STRING 830-3FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\BM1383_basic.X.production.o
-7F5 cinit CODE >5639:C:\Users\hoang\AppData\Local\Temp\semg.s
-7F5 cinit CODE >5642:C:\Users\hoang\AppData\Local\Temp\semg.s
-7F5 cinit CODE >5684:C:\Users\hoang\AppData\Local\Temp\semg.s
-7F6 cinit CODE >5685:C:\Users\hoang\AppData\Local\Temp\semg.s
-7F7 cinit CODE >5686:C:\Users\hoang\AppData\Local\Temp\semg.s
-7F8 cinit CODE >5687:C:\Users\hoang\AppData\Local\Temp\semg.s
-7F9 cinit CODE >5688:C:\Users\hoang\AppData\Local\Temp\semg.s
-7FA cinit CODE >5689:C:\Users\hoang\AppData\Local\Temp\semg.s
-7FD cinit CODE >5695:C:\Users\hoang\AppData\Local\Temp\semg.s
-7FD cinit CODE >5697:C:\Users\hoang\AppData\Local\Temp\semg.s
-7FE cinit CODE >5698:C:\Users\hoang\AppData\Local\Temp\semg.s
-172 text25 CODE >9:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
-172 text25 CODE >11:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
-177 text25 CODE >12:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
-178 text25 CODE >13:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
-154 text24 CODE >174:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
-154 text24 CODE >175:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
-159 text24 CODE >176:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
-15A text23 CODE >166:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
-15A text23 CODE >167:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
-15F text23 CODE >168:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
-160 text22 CODE >170:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
-160 text22 CODE >171:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
-165 text22 CODE >172:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
-20A text21 CODE >66:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
-20A text21 CODE >71:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
-20D text21 CODE >74:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
-20F text21 CODE >77:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
-211 text21 CODE >80:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
-213 text21 CODE >83:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
-214 text21 CODE >86:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
-21B text21 CODE >87:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
-222 text21 CODE >88:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
-229 text21 CODE >90:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
-22B text21 CODE >92:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
-181 text20 CODE >167:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/i2c1_master.c
-181 text20 CODE >169:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/i2c1_master.c
-183 text20 CODE >170:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/i2c1_master.c
-185 text20 CODE >171:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/i2c1_master.c
-186 text20 CODE >172:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/i2c1_master.c
-188 text20 CODE >173:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/i2c1_master.c
-189 text20 CODE >174:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/i2c1_master.c
-18A text19 CODE >59:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
-18A text19 CODE >62:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
-18D text19 CODE >64:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
-18E text19 CODE >66:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
-18F text19 CODE >68:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
-191 text19 CODE >70:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
-192 text19 CODE >72:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
-193 text19 CODE >73:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
-2C4 text18 CODE >55:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2C4 text18 CODE >60:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2C6 text18 CODE >61:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2C7 text18 CODE >62:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2C8 text18 CODE >63:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2C9 text18 CODE >64:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2CA text18 CODE >69:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2CC text18 CODE >70:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2CE text18 CODE >71:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2D0 text18 CODE >72:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2D2 text18 CODE >73:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2D4 text18 CODE >78:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2D7 text18 CODE >79:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2D9 text18 CODE >80:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2DB text18 CODE >81:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2DD text18 CODE >82:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2DF text18 CODE >87:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2E0 text18 CODE >88:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2E1 text18 CODE >89:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2E3 text18 CODE >90:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2E4 text18 CODE >91:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2E6 text18 CODE >96:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2E7 text18 CODE >97:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2E8 text18 CODE >98:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2E9 text18 CODE >99:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2EA text18 CODE >100:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2EB text18 CODE >105:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2ED text18 CODE >106:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2EF text18 CODE >107:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2F1 text18 CODE >108:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2F3 text18 CODE >109:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2F5 text18 CODE >114:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2F7 text18 CODE >115:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2F9 text18 CODE >116:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2FB text18 CODE >117:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2FD text18 CODE >118:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-2FF text18 CODE >127:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-302 text18 CODE >128:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-305 text18 CODE >129:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-307 text18 CODE >130:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-309 text18 CODE >131:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-30C text18 CODE >132:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-30E text18 CODE >133:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
-179 text17 CODE >75:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
-179 text17 CODE >78:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
-17B text17 CODE >80:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
-17C text17 CODE >82:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
-17D text17 CODE >84:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
-17E text17 CODE >86:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
-17F text17 CODE >88:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
-180 text17 CODE >89:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
-1B5 text16 CODE >50:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
-1B5 text16 CODE >52:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
-1B8 text16 CODE >53:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
-1BB text16 CODE >54:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
-1BE text16 CODE >55:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
-1C1 text16 CODE >56:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
-1C4 text16 CODE >57:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
-1A8 text15 CODE >47:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
-1A9 text15 CODE >49:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
-1AB text15 CODE >57:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
-1AF text15 CODE >58:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
-1B4 text15 CODE >59:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
-194 text14 CODE >64:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
-194 text14 CODE >66:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
-196 text14 CODE >67:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
-198 text14 CODE >68:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
-19D text14 CODE >69:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
-586 text13 CODE >7:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
-586 text13 CODE >15:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
-587 text13 CODE >16:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
-591 text13 CODE >17:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
-5B0 text13 CODE >18:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
-5B2 text13 CODE >20:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
-5BC text13 CODE >21:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
-5DB text13 CODE >22:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
-5DF text13 CODE >24:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
-5E9 text13 CODE >25:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
-5F6 text13 CODE >26:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
-5F8 text13 CODE >27:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
-5F9 text13 CODE >28:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
-601 text13 CODE >29:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
-605 text13 CODE >27:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
-609 text13 CODE >32:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
-611 text13 CODE >33:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
-633 text13 CODE >34:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
-643 text13 CODE >35:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
-644 text13 CODE >37:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
-64C text13 CODE >38:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
-652 text13 CODE >40:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
-657 text13 CODE >41:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
-675 text13 CODE >42:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
-686 text13 CODE >43:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
-49C text12 CODE >7:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
-49C text12 CODE >14:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
-49D text12 CODE >15:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
-4A7 text12 CODE >16:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
-4C6 text12 CODE >17:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
-4C8 text12 CODE >19:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
-4D2 text12 CODE >20:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
-4F1 text12 CODE >21:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
-4FE text12 CODE >22:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
-500 text12 CODE >23:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
-501 text12 CODE >24:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
-509 text12 CODE >25:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
-50D text12 CODE >23:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
-511 text12 CODE >28:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
-533 text12 CODE >29:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
-543 text12 CODE >30:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
-54B text12 CODE >31:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
-551 text12 CODE >33:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
-556 text12 CODE >34:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
-574 text12 CODE >35:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
-585 text12 CODE >36:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
-1F0 text11 CODE >1:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\abs.c
-1F0 text11 CODE >3:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\abs.c
-209 text11 CODE >4:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\abs.c
-19E text10 CODE >132:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
-19F text10 CODE >134:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
-19F text10 CODE >136:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
-1A4 text10 CODE >138:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
-1A7 text10 CODE >139:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
-166 text9 CODE >146:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
-167 text9 CODE >148:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
-16B text9 CODE >149:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
-285 text8 CODE >8:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
-285 text8 CODE >12:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
-28F text8 CODE >13:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
-293 text8 CODE >14:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
-294 text8 CODE >15:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
-2BB text8 CODE >20:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
-2C3 text8 CODE >24:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
-22C text7 CODE >8:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputs.c
-22E text7 CODE >13:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputs.c
-230 text7 CODE >14:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputs.c
-231 text7 CODE >15:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputs.c
-23F text7 CODE >16:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputs.c
-244 text7 CODE >14:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputs.c
-253 text7 CODE >19:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputs.c
-1D7 text6 CODE >5:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
-1D8 text6 CODE >7:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
-1DC text6 CODE >8:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
-1DD text6 CODE >9:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
-1E1 text6 CODE >8:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
-1E9 text6 CODE >11:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
-1EF text6 CODE >12:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
-30F text5 CODE >72:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-311 text5 CODE >77:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-316 text5 CODE >78:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-31F text5 CODE >82:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-32B text5 CODE >83:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-32D text5 CODE >84:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-32E text5 CODE >85:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-33A text5 CODE >86:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-33F text5 CODE >84:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-34D text5 CODE >90:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-352 text5 CODE >91:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-35B text5 CODE >92:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-35B text5 CODE >94:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-367 text5 CODE >95:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-687 text4 CODE >287:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-689 text4 CODE >293:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-699 text4 CODE >294:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-6AC text4 CODE >295:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-6B2 text4 CODE >296:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-6D0 text4 CODE >297:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-6D0 text4 CODE >300:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-6D5 text4 CODE >301:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-6D9 text4 CODE >302:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-6D9 text4 CODE >303:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-6F6 text4 CODE >304:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-6FE text4 CODE >305:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-709 text4 CODE >306:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-70E text4 CODE >307:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-70E text4 CODE >310:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-713 text4 CODE >311:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-715 text4 CODE >312:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-716 text4 CODE >313:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-71B text4 CODE >314:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-749 text4 CODE >315:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-74D text4 CODE >316:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-751 text4 CODE >317:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-77E text4 CODE >312:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-77E text4 CODE >318:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-7B9 text4 CODE >321:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-7C5 text4 CODE >322:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-7CA text4 CODE >323:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-7E1 text4 CODE >327:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-7F4 text4 CODE >328:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-3C1 text3 CODE >692:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-3C3 text3 CODE >702:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-3D4 text3 CODE >703:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-3DC text3 CODE >705:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-3E1 text3 CODE >706:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-3E5 text3 CODE >847:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-408 text3 CODE >849:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-410 text3 CODE >850:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-429 text3 CODE >852:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-443 text3 CODE >1372:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-454 text3 CODE >1373:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-45C text3 CODE >1374:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-467 text3 CODE >1375:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-46D text3 CODE >1379:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-475 text3 CODE >1380:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-478 text3 CODE >1384:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-491 text3 CODE >1385:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-49B text3 CODE >1387:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-254 text2 CODE >1390:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-256 text2 CODE >1395:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-25A text2 CODE >1396:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-25D text2 CODE >1397:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-25E text2 CODE >1398:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-272 text2 CODE >1397:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-27C text2 CODE >1400:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-284 text2 CODE >1404:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
-1C5 text1 CODE >5:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\printf.c
-1C5 text1 CODE >9:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\printf.c
-1CA text1 CODE >10:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\printf.c
-1D6 text1 CODE >13:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\printf.c
-368 maintext CODE >110:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\main.c
-368 maintext CODE >113:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\main.c
-36B maintext CODE >132:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\main.c
-36B maintext CODE >133:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\main.c
-36E maintext CODE >135:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\main.c
-36E maintext CODE >136:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\main.c
-36E maintext CODE >146:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\main.c
-370 maintext CODE >147:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\main.c
-373 maintext CODE >148:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\main.c
-379 maintext CODE >149:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\main.c
-37F maintext CODE >153:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\main.c
-384 maintext CODE >154:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\main.c
-395 maintext CODE >155:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\main.c
-396 maintext CODE >157:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\main.c
-39F maintext CODE >158:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\main.c
-3AB maintext CODE >159:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\main.c
-3BC maintext CODE >160:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\main.c
-3BE maintext CODE >162:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\main.c
-16C clrtext CODE >5673:C:\Users\hoang\AppData\Local\Temp\semg.s
-16C clrtext CODE >5674:C:\Users\hoang\AppData\Local\Temp\semg.s
-16D clrtext CODE >5675:C:\Users\hoang\AppData\Local\Temp\semg.s
-16D clrtext CODE >5676:C:\Users\hoang\AppData\Local\Temp\semg.s
-16E clrtext CODE >5677:C:\Users\hoang\AppData\Local\Temp\semg.s
-16F clrtext CODE >5678:C:\Users\hoang\AppData\Local\Temp\semg.s
-170 clrtext CODE >5679:C:\Users\hoang\AppData\Local\Temp\semg.s
-171 clrtext CODE >5680:C:\Users\hoang\AppData\Local\Temp\semg.s
+7F5 cinit CODE >5674:C:\Users\hoang\AppData\Local\Temp\sf20.s
+7F5 cinit CODE >5677:C:\Users\hoang\AppData\Local\Temp\sf20.s
+7F5 cinit CODE >5719:C:\Users\hoang\AppData\Local\Temp\sf20.s
+7F6 cinit CODE >5720:C:\Users\hoang\AppData\Local\Temp\sf20.s
+7F7 cinit CODE >5721:C:\Users\hoang\AppData\Local\Temp\sf20.s
+7F8 cinit CODE >5722:C:\Users\hoang\AppData\Local\Temp\sf20.s
+7F9 cinit CODE >5723:C:\Users\hoang\AppData\Local\Temp\sf20.s
+7FA cinit CODE >5724:C:\Users\hoang\AppData\Local\Temp\sf20.s
+7FD cinit CODE >5730:C:\Users\hoang\AppData\Local\Temp\sf20.s
+7FD cinit CODE >5732:C:\Users\hoang\AppData\Local\Temp\sf20.s
+7FE cinit CODE >5733:C:\Users\hoang\AppData\Local\Temp\sf20.s
+17C text26 CODE >9:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
+17C text26 CODE >11:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
+181 text26 CODE >12:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
+182 text26 CODE >13:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
+1B2 text25 CODE >68:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
+1B3 text25 CODE >70:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
+1B5 text25 CODE >78:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
+1B9 text25 CODE >79:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
+1BE text25 CODE >80:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
+194 text24 CODE >85:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
+194 text24 CODE >87:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
+196 text24 CODE >88:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
+198 text24 CODE >89:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
+19D text24 CODE >90:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
+586 text23 CODE >7:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+586 text23 CODE >15:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+587 text23 CODE >16:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+591 text23 CODE >17:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+5B0 text23 CODE >18:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+5B2 text23 CODE >20:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+5BC text23 CODE >21:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+5DB text23 CODE >22:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+5DF text23 CODE >24:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+5E9 text23 CODE >25:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+5F6 text23 CODE >26:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+5F8 text23 CODE >27:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+5F9 text23 CODE >28:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+601 text23 CODE >29:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+605 text23 CODE >27:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+609 text23 CODE >32:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+611 text23 CODE >33:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+633 text23 CODE >34:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+643 text23 CODE >35:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+644 text23 CODE >37:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+64C text23 CODE >38:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+652 text23 CODE >40:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+657 text23 CODE >41:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+675 text23 CODE >42:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+686 text23 CODE >43:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aodiv.c
+49C text22 CODE >7:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+49C text22 CODE >14:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+49D text22 CODE >15:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+4A7 text22 CODE >16:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+4C6 text22 CODE >17:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+4C8 text22 CODE >19:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+4D2 text22 CODE >20:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+4F1 text22 CODE >21:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+4FE text22 CODE >22:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+500 text22 CODE >23:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+501 text22 CODE >24:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+509 text22 CODE >25:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+50D text22 CODE >23:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+511 text22 CODE >28:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+533 text22 CODE >29:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+543 text22 CODE >30:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+54B text22 CODE >31:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+551 text22 CODE >33:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+556 text22 CODE >34:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+574 text22 CODE >35:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+585 text22 CODE >36:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\aomod.c
+208 text21 CODE >1:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\abs.c
+208 text21 CODE >3:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\abs.c
+221 text21 CODE >4:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\abs.c
+19E text20 CODE >132:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
+19F text20 CODE >134:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
+19F text20 CODE >136:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
+1A4 text20 CODE >138:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
+1A7 text20 CODE >139:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
+15E text19 CODE >146:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
+15F text19 CODE >148:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
+163 text19 CODE >149:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
+29D text18 CODE >8:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
+29D text18 CODE >12:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
+2A7 text18 CODE >13:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
+2AB text18 CODE >14:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
+2AC text18 CODE >15:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
+2D3 text18 CODE >20:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
+2DB text18 CODE >24:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputc.c
+244 text17 CODE >8:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputs.c
+246 text17 CODE >13:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputs.c
+248 text17 CODE >14:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputs.c
+249 text17 CODE >15:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputs.c
+257 text17 CODE >16:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputs.c
+25C text17 CODE >14:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputs.c
+26B text17 CODE >19:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\nf_fputs.c
+1EF text16 CODE >5:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
+1F0 text16 CODE >7:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
+1F4 text16 CODE >8:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
+1F5 text16 CODE >9:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
+1F9 text16 CODE >8:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
+201 text16 CODE >11:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
+207 text16 CODE >12:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\strlen.c
+368 text15 CODE >72:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+36A text15 CODE >77:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+36F text15 CODE >78:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+378 text15 CODE >82:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+384 text15 CODE >83:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+386 text15 CODE >84:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+387 text15 CODE >85:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+393 text15 CODE >86:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+398 text15 CODE >84:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+3A6 text15 CODE >90:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+3AB text15 CODE >91:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+3B4 text15 CODE >92:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+3B4 text15 CODE >94:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+3C0 text15 CODE >95:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+687 text14 CODE >287:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+689 text14 CODE >293:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+699 text14 CODE >294:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+6AC text14 CODE >295:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+6B2 text14 CODE >296:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+6D0 text14 CODE >297:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+6D0 text14 CODE >300:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+6D5 text14 CODE >301:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+6D9 text14 CODE >302:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+6D9 text14 CODE >303:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+6F6 text14 CODE >304:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+6FE text14 CODE >305:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+709 text14 CODE >306:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+70E text14 CODE >307:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+70E text14 CODE >310:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+713 text14 CODE >311:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+715 text14 CODE >312:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+716 text14 CODE >313:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+71B text14 CODE >314:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+749 text14 CODE >315:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+74D text14 CODE >316:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+751 text14 CODE >317:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+77E text14 CODE >312:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+77E text14 CODE >318:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+7B9 text14 CODE >321:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+7C5 text14 CODE >322:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+7CA text14 CODE >323:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+7E1 text14 CODE >327:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+7F4 text14 CODE >328:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+3C1 text13 CODE >692:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+3C3 text13 CODE >702:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+3D4 text13 CODE >703:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+3DC text13 CODE >705:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+3E1 text13 CODE >706:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+3E5 text13 CODE >847:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+408 text13 CODE >849:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+410 text13 CODE >850:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+429 text13 CODE >852:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+443 text13 CODE >1372:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+454 text13 CODE >1373:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+45C text13 CODE >1374:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+467 text13 CODE >1375:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+46D text13 CODE >1379:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+475 text13 CODE >1380:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+478 text13 CODE >1384:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+491 text13 CODE >1385:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+49B text13 CODE >1387:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+26C text12 CODE >1390:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+26E text12 CODE >1395:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+272 text12 CODE >1396:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+275 text12 CODE >1397:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+276 text12 CODE >1398:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+28A text12 CODE >1397:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+294 text12 CODE >1400:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+29C text12 CODE >1404:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\doprnt.c
+1DD text11 CODE >5:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\printf.c
+1DD text11 CODE >9:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\printf.c
+1E2 text11 CODE >10:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\printf.c
+1EE text11 CODE >13:D:\program files\Microchip\xc8\v2.31\pic\sources\c99\common\printf.c
+2DC text10 CODE >15:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
+2DC text10 CODE >17:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
+2DC text10 CODE >19:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
+2DE text10 CODE >20:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
+2E1 text10 CODE >21:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
+2E7 text10 CODE >22:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
+2ED text10 CODE >24:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
+2F2 text10 CODE >26:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
+304 text10 CODE >30:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
+308 text10 CODE >31:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
+314 text10 CODE >33:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
+31C text10 CODE >36:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC/Lib/I2C/I2C.c
+164 text9 CODE >174:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
+164 text9 CODE >175:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
+169 text9 CODE >176:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
+16A text8 CODE >166:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
+16A text8 CODE >167:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
+16F text8 CODE >168:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
+170 text7 CODE >170:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
+170 text7 CODE >171:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
+175 text7 CODE >172:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
+222 text6 CODE >66:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
+222 text6 CODE >71:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
+225 text6 CODE >74:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
+227 text6 CODE >77:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
+229 text6 CODE >80:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
+22B text6 CODE >83:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
+22C text6 CODE >86:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
+233 text6 CODE >87:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
+23A text6 CODE >88:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
+241 text6 CODE >90:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
+243 text6 CODE >92:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/eusart1.c
+18B text5 CODE >167:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/i2c1_master.c
+18B text5 CODE >169:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/i2c1_master.c
+18D text5 CODE >170:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/i2c1_master.c
+18F text5 CODE >171:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/i2c1_master.c
+190 text5 CODE >172:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/i2c1_master.c
+192 text5 CODE >173:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/i2c1_master.c
+193 text5 CODE >174:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/i2c1_master.c
+1A8 text4 CODE >59:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
+1A8 text4 CODE >62:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
+1AB text4 CODE >64:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
+1AC text4 CODE >66:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
+1AD text4 CODE >68:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
+1AF text4 CODE >70:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
+1B0 text4 CODE >72:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
+1B1 text4 CODE >73:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
+31D text3 CODE >55:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+31D text3 CODE >60:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+31F text3 CODE >61:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+320 text3 CODE >62:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+321 text3 CODE >63:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+322 text3 CODE >64:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+323 text3 CODE >69:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+325 text3 CODE >70:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+327 text3 CODE >71:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+329 text3 CODE >72:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+32B text3 CODE >73:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+32D text3 CODE >78:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+330 text3 CODE >79:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+332 text3 CODE >80:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+334 text3 CODE >81:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+336 text3 CODE >82:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+338 text3 CODE >87:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+339 text3 CODE >88:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+33A text3 CODE >89:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+33C text3 CODE >90:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+33D text3 CODE >91:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+33F text3 CODE >96:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+340 text3 CODE >97:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+341 text3 CODE >98:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+342 text3 CODE >99:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+343 text3 CODE >100:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+344 text3 CODE >105:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+346 text3 CODE >106:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+348 text3 CODE >107:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+34A text3 CODE >108:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+34C text3 CODE >109:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+34E text3 CODE >114:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+350 text3 CODE >115:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+352 text3 CODE >116:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+354 text3 CODE >117:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+356 text3 CODE >118:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+358 text3 CODE >127:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+35B text3 CODE >128:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+35E text3 CODE >129:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+360 text3 CODE >130:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+362 text3 CODE >131:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+365 text3 CODE >132:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+367 text3 CODE >133:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/pin_manager.c
+183 text2 CODE >75:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
+183 text2 CODE >78:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
+185 text2 CODE >80:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
+186 text2 CODE >82:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
+187 text2 CODE >84:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
+188 text2 CODE >86:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
+189 text2 CODE >88:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
+18A text2 CODE >89:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
+1CD text1 CODE >50:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
+1CD text1 CODE >52:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
+1D0 text1 CODE >53:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
+1D3 text1 CODE >54:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
+1D6 text1 CODE >55:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
+1D9 text1 CODE >56:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
+1DC text1 CODE >57:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\mcc_generated_files/mcc.c
+1BF maintext CODE >110:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\main.c
+1BF maintext CODE >113:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\main.c
+1C2 maintext CODE >132:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\main.c
+1C2 maintext CODE >133:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\main.c
+1C5 maintext CODE >134:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\main.c
+1C8 maintext CODE >136:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\main.c
+1C8 maintext CODE >138:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\main.c
+1CA maintext CODE >140:D:\work\pic_mplab\pic16lf15376\PIC16f15376_BASIC\BM1383\BM1383_basic.X\main.c
+176 clrtext CODE >5708:C:\Users\hoang\AppData\Local\Temp\sf20.s
+176 clrtext CODE >5709:C:\Users\hoang\AppData\Local\Temp\sf20.s
+177 clrtext CODE >5710:C:\Users\hoang\AppData\Local\Temp\sf20.s
+177 clrtext CODE >5711:C:\Users\hoang\AppData\Local\Temp\sf20.s
+178 clrtext CODE >5712:C:\Users\hoang\AppData\Local\Temp\sf20.s
+179 clrtext CODE >5713:C:\Users\hoang\AppData\Local\Temp\sf20.s
+17A clrtext CODE >5714:C:\Users\hoang\AppData\Local\Temp\sf20.s
+17B clrtext CODE >5715:C:\Users\hoang\AppData\Local\Temp\sf20.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -507,20 +511,19 @@ $dist/default/production\BM1383_basic.X.production.o
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 ___latbits 3 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
-_I2C1_Initialize 302 0 CODE 0 text20 dist/default/production\BM1383_basic.X.production.o
-__Hspace_0 830 0 ABS 0 - -
-__Hspace_1 EF 0 ABS 0 - -
+_I2C1_Initialize 316 0 CODE 0 text5 dist/default/production\BM1383_basic.X.production.o
+__Hspace_0 84E 0 ABS 0 - -
+__Hspace_1 EE 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 10013 0 ABS 0 - -
 _SSP1STATbits 18F 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 EUSART1_SetErrorHandler@interruptHandler 70 0 COMMON 1 cstackCOMMON dist/default/production\BM1383_basic.X.production.o
-_EUSART1_Initialize 414 0 CODE 0 text21 dist/default/production\BM1383_basic.X.production.o
+_EUSART1_Initialize 444 0 CODE 0 text6 dist/default/production\BM1383_basic.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-_PMD_Initialize 2F2 0 CODE 0 text17 dist/default/production\BM1383_basic.X.production.o
+_PMD_Initialize 306 0 CODE 0 text2 dist/default/production\BM1383_basic.X.production.o
 ?_abs 73 0 COMMON 1 cstackCOMMON dist/default/production\BM1383_basic.X.production.o
 ?_pad 24 0 BANK0 1 cstackBANK0 dist/default/production\BM1383_basic.X.production.o
-main@i EE 0 BANK1 1 cstackBANK1 dist/default/production\BM1383_basic.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 ?_vfprintf 5E 0 BANK0 1 cstackBANK0 dist/default/production\BM1383_basic.X.production.o
 _LATA 18 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
@@ -539,10 +542,10 @@ _WPUB 1F44 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _WPUC 1F4F 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _WPUD 1F5A 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _WPUE 1F65 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\hoang\AppData\Local\Temp\semg.o
+___sp 0 0 STACK 2 stack C:\Users\hoang\AppData\Local\Temp\sf20.o
 _dbuf C6 0 BANK1 1 bssBANK1 dist/default/production\BM1383_basic.X.production.o
-_dtoa D0E 0 CODE 0 text4 dist/default/production\BM1383_basic.X.production.o
-_main 6D0 0 CODE 0 maintext dist/default/production\BM1383_basic.X.production.o
+_dtoa D0E 0 CODE 0 text14 dist/default/production\BM1383_basic.X.production.o
+_main 37E 0 CODE 0 maintext dist/default/production\BM1383_basic.X.production.o
 _nout BD 0 BANK1 1 bssBANK1 dist/default/production\BM1383_basic.X.production.o
 _prec C1 0 BANK1 1 bssBANK1 dist/default/production\BM1383_basic.X.production.o
 abs@a 73 0 COMMON 1 cstackCOMMON dist/default/production\BM1383_basic.X.production.o
@@ -550,7 +553,7 @@ btemp 7E 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 pad@i 28 0 BANK0 1 cstackBANK0 dist/default/production\BM1383_basic.X.production.o
 pad@p 25 0 BANK0 1 cstackBANK0 dist/default/production\BM1383_basic.X.production.o
 pad@w 2A 0 BANK0 1 cstackBANK0 dist/default/production\BM1383_basic.X.production.o
-start 4 0 CODE 0 init C:\Users\hoang\AppData\Local\Temp\semg.o
+start 4 0 CODE 0 init C:\Users\hoang\AppData\Local\Temp\sf20.o
 ___aomod@counter 71 0 COMMON 1 cstackCOMMON dist/default/production\BM1383_basic.X.production.o
 __size_of___aodiv 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 __size_of___aomod 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
@@ -558,29 +561,30 @@ __size_of_dtoa 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 pad@fp 2C 0 BANK0 1 cstackBANK0 dist/default/production\BM1383_basic.X.production.o
 __size_of_I2C_Init 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
+__size_of_I2C_Scan 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
 _I2C1_DO_IDLE 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _I2C1_DO_RCEN 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _I2C1_CallbackReturnReset 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
-__end_of_vfpfcnvrt 938 0 CODE 0 text3 dist/default/production\BM1383_basic.X.production.o
+__end_of_vfpfcnvrt 938 0 CODE 0 text13 dist/default/production\BM1383_basic.X.production.o
 __size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 __size_of_vfpfcnvrt 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\hoang\AppData\Local\Temp\semg.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\hoang\AppData\Local\Temp\semg.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\hoang\AppData\Local\Temp\semg.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\hoang\AppData\Local\Temp\semg.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\hoang\AppData\Local\Temp\semg.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\hoang\AppData\Local\Temp\semg.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\hoang\AppData\Local\Temp\sf20.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\hoang\AppData\Local\Temp\sf20.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\hoang\AppData\Local\Temp\sf20.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\hoang\AppData\Local\Temp\sf20.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\hoang\AppData\Local\Temp\sf20.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\hoang\AppData\Local\Temp\sf20.o
 __size_of_EUSART1_SetErrorHandler 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 _RC1STAbits 11D 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _wr2RegCompleteHandler 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
-__end_of_PMD_Initialize 302 0 CODE 0 text17 dist/default/production\BM1383_basic.X.production.o
+__end_of_PMD_Initialize 316 0 CODE 0 text2 dist/default/production\BM1383_basic.X.production.o
 EUSART1_Write@txData 70 0 COMMON 1 cstackCOMMON dist/default/production\BM1383_basic.X.production.o
 Send_I2C_ControlByte@Dev_Add 71 0 COMMON 1 cstackCOMMON dist/default/production\BM1383_basic.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
-_vfpfcnvrt 782 0 CODE 0 text3 dist/default/production\BM1383_basic.X.production.o
+_vfpfcnvrt 782 0 CODE 0 text13 dist/default/production\BM1383_basic.X.production.o
 dtoa@fp 3F 0 BANK0 1 cstackBANK0 dist/default/production\BM1383_basic.X.production.o
 __size_of_Send_I2C_StartBit 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _rdBlkRegCompleteHandler 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
@@ -590,15 +594,17 @@ _ANSELC 1F4E 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _ANSELD 1F59 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _ANSELE 1F64 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 __size_of_I2C1_Initialize 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
-_I2C_Init 2E4 0 CODE 0 text25 dist/default/production\BM1383_basic.X.production.o
+_I2C_Init 2F8 0 CODE 0 text26 dist/default/production\BM1383_basic.X.production.o
+_I2C_Scan 5B8 0 CODE 0 text10 dist/default/production\BM1383_basic.X.production.o
 _I2C1_DO_SEND_RESTART 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
 ?_printf 66 0 BANK0 1 cstackBANK0 dist/default/production\BM1383_basic.X.production.o
-__end_of_I2C_Init 2F2 0 CODE 0 text25 dist/default/production\BM1383_basic.X.production.o
+__end_of_I2C_Init 306 0 CODE 0 text26 dist/default/production\BM1383_basic.X.production.o
+__end_of_I2C_Scan 63A 0 CODE 0 text10 dist/default/production\BM1383_basic.X.production.o
 __LnvBANK1 0 0 ABS 0 nvBANK1 -
 _I2C1_DO_SEND_RESTART_WRITE 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
-__end_of___aodiv D0E 0 CODE 0 text13 dist/default/production\BM1383_basic.X.production.o
-__end_of___aomod B0C 0 CODE 0 text12 dist/default/production\BM1383_basic.X.production.o
+__end_of___aodiv D0E 0 CODE 0 text23 dist/default/production\BM1383_basic.X.production.o
+__end_of___aomod B0C 0 CODE 0 text22 dist/default/production\BM1383_basic.X.production.o
 EUSART1_SetFramingErrorHandler@interruptHandler 70 0 COMMON 1 cstackCOMMON dist/default/production\BM1383_basic.X.production.o
 ___aodiv@quotient 73 0 COMMON 1 cstackCOMMON dist/default/production\BM1383_basic.X.production.o
 _INLVLA 1F3C 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
@@ -607,15 +613,16 @@ _INLVLC 1F52 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _INLVLD 1F5D 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _INLVLE 1F68 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 ?_strlen 70 0 COMMON 1 cstackCOMMON dist/default/production\BM1383_basic.X.production.o
-___stackhi 27EF 0 ABS 0 - C:\Users\hoang\AppData\Local\Temp\semg.o
-___stacklo 209F 0 ABS 0 - C:\Users\hoang\AppData\Local\Temp\semg.o
+___stackhi 27EF 0 ABS 0 - C:\Users\hoang\AppData\Local\Temp\sf20.o
+___stacklo 209E 0 ABS 0 - C:\Users\hoang\AppData\Local\Temp\sf20.o
 ___aomod@dividend 28 0 BANK0 1 cstackBANK0 dist/default/production\BM1383_basic.X.production.o
 __size_of_fputc 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 __size_of_fputs 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 __size_of_Send_I2C_ControlByte 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 __size_of_putch 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
+I2C_Scan@i ED 0 BANK1 1 cstackBANK1 dist/default/production\BM1383_basic.X.production.o
 _I2C1_DO_SEND_RESTART_READ 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
-_PIN_MANAGER_Initialize 588 0 CODE 0 text18 dist/default/production\BM1383_basic.X.production.o
+_PIN_MANAGER_Initialize 63A 0 CODE 0 text3 dist/default/production\BM1383_basic.X.production.o
 ___aomod@divisor 20 0 BANK0 1 cstackBANK0 dist/default/production\BM1383_basic.X.production.o
 start_initialization FEA 0 CODE 0 cinit dist/default/production\BM1383_basic.X.production.o
 _eusart1RxLastError C5 0 BANK1 1 bssBANK1 dist/default/production\BM1383_basic.X.production.o
@@ -625,28 +632,29 @@ _ODCONC 1F50 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _ODCOND 1F5B 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _ODCONE 1F66 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _OSCFRQ 893 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
-__end_of_Send_I2C_ControlByte 36A 0 CODE 0 text15 dist/default/production\BM1383_basic.X.production.o
+__end_of_Send_I2C_ControlByte 37E 0 CODE 0 text25 dist/default/production\BM1383_basic.X.production.o
 _I2C1_DO_SEND_ADR_WRITE 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
+I2C_Scan@ACK_bit EC 0 BANK1 1 cstackBANK1 dist/default/production\BM1383_basic.X.production.o
 _RC1REG 119 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _RC1STA 11D 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _RC2PPS 1F22 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _RC4PPS 1F24 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _RC6PPS 1F26 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
-__end_of_SYSTEM_Initialize 38A 0 CODE 0 text16 dist/default/production\BM1383_basic.X.production.o
-clear_ram0 2D8 0 CODE 0 clrtext dist/default/production\BM1383_basic.X.production.o
+__end_of_SYSTEM_Initialize 3BA 0 CODE 0 text1 dist/default/production\BM1383_basic.X.production.o
+clear_ram0 2EC 0 CODE 0 clrtext dist/default/production\BM1383_basic.X.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\BM1383_basic.X.production.o
 __pcstackBANK1 EC 0 BANK1 1 cstackBANK1 dist/default/production\BM1383_basic.X.production.o
 _TX1REG 11A 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _TX1STA 11E 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
-__end_of_printf 3AE 0 CODE 0 text1 dist/default/production\BM1383_basic.X.production.o
+__end_of_printf 3DE 0 CODE 0 text11 dist/default/production\BM1383_basic.X.production.o
 _EUSART1_DefaultFramingErrorHandler 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _EUSART1_DefaultOverrunErrorHandler 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 __size_of_EUSART1_Initialize 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _I2C1_Status A0 0 BANK1 1 bssBANK1 dist/default/production\BM1383_basic.X.production.o
 fputc@fp 74 0 COMMON 1 cstackCOMMON dist/default/production\BM1383_basic.X.production.o
 fputs@fp 7A 0 COMMON 1 cstackCOMMON dist/default/production\BM1383_basic.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\hoang\AppData\Local\Temp\semg.o
-_EUSART1_Write 33C 0 CODE 0 text10 dist/default/production\BM1383_basic.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\hoang\AppData\Local\Temp\sf20.o
+_EUSART1_Write 33C 0 CODE 0 text20 dist/default/production\BM1383_basic.X.production.o
 _rd2RegCompleteHandler 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
@@ -659,8 +667,8 @@ __Hbank7 0 0 ABS 0 bank7 -
 __Hbank8 0 0 ABS 0 bank8 -
 __Hbank9 0 0 ABS 0 bank9 -
 __Hcinit 1000 0 CODE 0 cinit -
-__end_of_strlen 3E0 0 CODE 0 text6 dist/default/production\BM1383_basic.X.production.o
-__end_of_Send_I2C_StartBit 33C 0 CODE 0 text14 dist/default/production\BM1383_basic.X.production.o
+__end_of_strlen 410 0 CODE 0 text16 dist/default/production\BM1383_basic.X.production.o
+__end_of_Send_I2C_StartBit 33C 0 CODE 0 text24 dist/default/production\BM1383_basic.X.production.o
 __size_of_OSCILLATOR_Initialize 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 __Hsfr10 0 0 ABS 0 sfr10 -
 __Hsfr11 0 0 ABS 0 sfr11 -
@@ -877,7 +885,8 @@ __Lsfr9 0 0 ABS 0 sfr9 -
 __Ltext 0 0 ABS 0 text -
 __pstringtext1 1000 0 STRCODE 0 stringtext1 dist/default/production\BM1383_basic.X.production.o
 __pstringtext2 1040 0 STRCODE 0 stringtext2 dist/default/production\BM1383_basic.X.production.o
-__pstringtext3 0 0 STRCODE 0 stringtext3 dist/default/production\BM1383_basic.X.production.o
+__pstringtext3 1074 0 STRCODE 0 stringtext3 dist/default/production\BM1383_basic.X.production.o
+__pstringtext4 0 0 STRCODE 0 stringtext4 dist/default/production\BM1383_basic.X.production.o
 __pnvBANK1 E6 0 BANK1 1 nvBANK1 dist/default/production\BM1383_basic.X.production.o
 ___aodiv@counter 71 0 COMMON 1 cstackCOMMON dist/default/production\BM1383_basic.X.production.o
 _SSP1CON1 190 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
@@ -887,54 +896,56 @@ ___aomod@sign 72 0 COMMON 1 cstackCOMMON dist/default/production\BM1383_basic.X.
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __LcstackBANK1 0 0 ABS 0 cstackBANK1 -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-__S0 830 0 ABS 0 - -
-__S1 EF 0 ABS 0 - -
+__S0 84E 0 ABS 0 - -
+__S1 EE 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
-_abs 3E0 0 CODE 0 text11 dist/default/production\BM1383_basic.X.production.o
-_pad 61E 0 CODE 0 text5 dist/default/production\BM1383_basic.X.production.o
+_abs 410 0 CODE 0 text21 dist/default/production\BM1383_basic.X.production.o
+_pad 6D0 0 CODE 0 text15 dist/default/production\BM1383_basic.X.production.o
 _EUSART1_DefaultErrorHandler 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _I2C1_CallbackReturnStop 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 ___aodiv@sign 72 0 COMMON 1 cstackCOMMON dist/default/production\BM1383_basic.X.production.o
 _I2C1_DO_RESET 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
-_SYSTEM_Initialize 36A 0 CODE 0 text16 dist/default/production\BM1383_basic.X.production.o
-_dtoa$1829 3B 0 BANK0 1 cstackBANK0 dist/default/production\BM1383_basic.X.production.o
-__end_of_abs 414 0 CODE 0 text11 dist/default/production\BM1383_basic.X.production.o
-__end_of_pad 6D0 0 CODE 0 text5 dist/default/production\BM1383_basic.X.production.o
+_SYSTEM_Initialize 39A 0 CODE 0 text1 dist/default/production\BM1383_basic.X.production.o
+_dtoa$1797 3B 0 BANK0 1 cstackBANK0 dist/default/production\BM1383_basic.X.production.o
+__end_of_abs 444 0 CODE 0 text21 dist/default/production\BM1383_basic.X.production.o
+__end_of_pad 782 0 CODE 0 text15 dist/default/production\BM1383_basic.X.production.o
 __HnvBANK1 0 0 ABS 0 nvBANK1 -
 __Lintentry 4 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\hoang\AppData\Local\Temp\semg.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\hoang\AppData\Local\Temp\sf20.o
 strlen@a 73 0 COMMON 1 cstackCOMMON dist/default/production\BM1383_basic.X.production.o
 strlen@s 74 0 COMMON 1 cstackCOMMON dist/default/production\BM1383_basic.X.production.o
 __LbssBANK1 0 0 ABS 0 bssBANK1 -
 __Lstringtext1 0 0 ABS 0 stringtext1 -
 __Lstringtext2 0 0 ABS 0 stringtext2 -
 __Lstringtext3 0 0 ABS 0 stringtext3 -
+__Lstringtext4 0 0 ABS 0 stringtext4 -
 vfpfcnvrt@fmt 4E 0 BANK0 1 cstackBANK0 dist/default/production\BM1383_basic.X.production.o
-_Send_I2C_StartBit 328 0 CODE 0 text14 dist/default/production\BM1383_basic.X.production.o
+_Send_I2C_StartBit 328 0 CODE 0 text24 dist/default/production\BM1383_basic.X.production.o
 __size_of_PMD_Initialize 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _PIE3bits 719 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 __size_of_EUSART1_Write 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 pad@buf 24 0 BANK0 1 cstackBANK0 dist/default/production\BM1383_basic.X.production.o
-__ptext10 33C 0 CODE 0 text10 dist/default/production\BM1383_basic.X.production.o
-__ptext11 3E0 0 CODE 0 text11 dist/default/production\BM1383_basic.X.production.o
-__ptext12 938 0 CODE 0 text12 dist/default/production\BM1383_basic.X.production.o
-__ptext13 B0C 0 CODE 0 text13 dist/default/production\BM1383_basic.X.production.o
-__ptext14 328 0 CODE 0 text14 dist/default/production\BM1383_basic.X.production.o
-__ptext15 350 0 CODE 0 text15 dist/default/production\BM1383_basic.X.production.o
-__ptext16 36A 0 CODE 0 text16 dist/default/production\BM1383_basic.X.production.o
-__ptext17 2F2 0 CODE 0 text17 dist/default/production\BM1383_basic.X.production.o
-__ptext18 588 0 CODE 0 text18 dist/default/production\BM1383_basic.X.production.o
-__ptext19 314 0 CODE 0 text19 dist/default/production\BM1383_basic.X.production.o
-__ptext20 302 0 CODE 0 text20 dist/default/production\BM1383_basic.X.production.o
-__ptext21 414 0 CODE 0 text21 dist/default/production\BM1383_basic.X.production.o
-__ptext22 2C0 0 CODE 0 text22 dist/default/production\BM1383_basic.X.production.o
-__ptext23 2B4 0 CODE 0 text23 dist/default/production\BM1383_basic.X.production.o
-__ptext24 2A8 0 CODE 0 text24 dist/default/production\BM1383_basic.X.production.o
-__ptext25 2E4 0 CODE 0 text25 dist/default/production\BM1383_basic.X.production.o
+__ptext10 5B8 0 CODE 0 text10 dist/default/production\BM1383_basic.X.production.o
+__ptext11 3BA 0 CODE 0 text11 dist/default/production\BM1383_basic.X.production.o
+__ptext12 4D8 0 CODE 0 text12 dist/default/production\BM1383_basic.X.production.o
+__ptext13 782 0 CODE 0 text13 dist/default/production\BM1383_basic.X.production.o
+__ptext14 D0E 0 CODE 0 text14 dist/default/production\BM1383_basic.X.production.o
+__ptext15 6D0 0 CODE 0 text15 dist/default/production\BM1383_basic.X.production.o
+__ptext16 3DE 0 CODE 0 text16 dist/default/production\BM1383_basic.X.production.o
+__ptext17 488 0 CODE 0 text17 dist/default/production\BM1383_basic.X.production.o
+__ptext18 53A 0 CODE 0 text18 dist/default/production\BM1383_basic.X.production.o
+__ptext19 2BC 0 CODE 0 text19 dist/default/production\BM1383_basic.X.production.o
+__ptext20 33C 0 CODE 0 text20 dist/default/production\BM1383_basic.X.production.o
+__ptext21 410 0 CODE 0 text21 dist/default/production\BM1383_basic.X.production.o
+__ptext22 938 0 CODE 0 text22 dist/default/production\BM1383_basic.X.production.o
+__ptext23 B0C 0 CODE 0 text23 dist/default/production\BM1383_basic.X.production.o
+__ptext24 328 0 CODE 0 text24 dist/default/production\BM1383_basic.X.production.o
+__ptext25 364 0 CODE 0 text25 dist/default/production\BM1383_basic.X.production.o
+__ptext26 2F8 0 CODE 0 text26 dist/default/production\BM1383_basic.X.production.o
 _I2C1_DO_RX_ACK 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
-__end_of_PIN_MANAGER_Initialize 61E 0 CODE 0 text18 dist/default/production\BM1383_basic.X.production.o
-___aodiv B0C 0 CODE 0 text13 dist/default/production\BM1383_basic.X.production.o
-___aomod 938 0 CODE 0 text12 dist/default/production\BM1383_basic.X.production.o
+__end_of_PIN_MANAGER_Initialize 6D0 0 CODE 0 text3 dist/default/production\BM1383_basic.X.production.o
+___aodiv B0C 0 CODE 0 text23 dist/default/production\BM1383_basic.X.production.o
+___aomod 938 0 CODE 0 text22 dist/default/production\BM1383_basic.X.production.o
 _EUSART1_ErrorHandler E6 0 BANK1 1 nvBANK1 dist/default/production\BM1383_basic.X.production.o
 __Lbank10 0 0 ABS 0 bank10 -
 __Lbank11 0 0 ABS 0 bank11 -
@@ -990,22 +1001,21 @@ __Lbank60 0 0 BANK60 1 bank60 -
 __Lbank61 0 0 BANK61 1 bank61 -
 __Lbank62 0 0 BANK62 1 bank62 -
 __Lbank63 0 0 BANK63 1 bank63 -
-__pmaintext 6D0 0 CODE 0 maintext dist/default/production\BM1383_basic.X.production.o
+__pmaintext 37E 0 CODE 0 maintext dist/default/production\BM1383_basic.X.production.o
 __Lbigram 0 0 ABS 0 bigram -
 _I2C1_DO_RX_NACK_STOP 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 ?_dtoa 30 0 BANK0 1 cstackBANK0 dist/default/production\BM1383_basic.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
-_printf 38A 0 CODE 0 text1 dist/default/production\BM1383_basic.X.production.o
+_printf 3BA 0 CODE 0 text11 dist/default/production\BM1383_basic.X.production.o
 _LATCbits 1A 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
-_EUSART1_SetErrorHandler 2A8 0 CODE 0 text24 dist/default/production\BM1383_basic.X.production.o
-__end_of_EUSART1_SetErrorHandler 2B4 0 CODE 0 text24 dist/default/production\BM1383_basic.X.production.o
-_strlen 3AE 0 CODE 0 text6 dist/default/production\BM1383_basic.X.production.o
-main@ACK_bit ED 0 BANK1 1 cstackBANK1 dist/default/production\BM1383_basic.X.production.o
+_EUSART1_SetErrorHandler 2C8 0 CODE 0 text9 dist/default/production\BM1383_basic.X.production.o
+__end_of_EUSART1_SetErrorHandler 2D4 0 CODE 0 text9 dist/default/production\BM1383_basic.X.production.o
+_strlen 3DE 0 CODE 0 text16 dist/default/production\BM1383_basic.X.production.o
 __size_of_vfprintf 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
-__end_of_EUSART1_SetFramingErrorHandler 2C0 0 CODE 0 text23 dist/default/production\BM1383_basic.X.production.o
-__end_of_EUSART1_SetOverrunErrorHandler 2CC 0 CODE 0 text22 dist/default/production\BM1383_basic.X.production.o
-__end_of_EUSART1_Write 350 0 CODE 0 text10 dist/default/production\BM1383_basic.X.production.o
+__end_of_EUSART1_SetFramingErrorHandler 2E0 0 CODE 0 text8 dist/default/production\BM1383_basic.X.production.o
+__end_of_EUSART1_SetOverrunErrorHandler 2EC 0 CODE 0 text7 dist/default/production\BM1383_basic.X.production.o
+__end_of_EUSART1_Write 350 0 CODE 0 text20 dist/default/production\BM1383_basic.X.production.o
 _SSP1CLKPPS 1EC5 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _OSCCON1 88D 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _OSCCON3 88F 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
@@ -1045,32 +1055,33 @@ __Hreset_vec 4 0 CODE 0 reset_vec -
 __HbssBANK1 0 0 ABS 0 bssBANK1 -
 _I2C1_DO_RX 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _I2C1_DO_TX 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
-_Send_I2C_ControlByte 350 0 CODE 0 text15 dist/default/production\BM1383_basic.X.production.o
+_Send_I2C_ControlByte 364 0 CODE 0 text25 dist/default/production\BM1383_basic.X.production.o
 __size_of_strlen 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 vfpfcnvrt@ap 4F 0 BANK0 1 cstackBANK0 dist/default/production\BM1383_basic.X.production.o
 vfpfcnvrt@fp 5D 0 BANK0 1 cstackBANK0 dist/default/production\BM1383_basic.X.production.o
 vfpfcnvrt@ll 55 0 BANK0 1 cstackBANK0 dist/default/production\BM1383_basic.X.production.o
-__ptext1 38A 0 CODE 0 text1 dist/default/production\BM1383_basic.X.production.o
-__ptext2 4A8 0 CODE 0 text2 dist/default/production\BM1383_basic.X.production.o
-__ptext3 782 0 CODE 0 text3 dist/default/production\BM1383_basic.X.production.o
-__ptext4 D0E 0 CODE 0 text4 dist/default/production\BM1383_basic.X.production.o
-__ptext5 61E 0 CODE 0 text5 dist/default/production\BM1383_basic.X.production.o
-__ptext6 3AE 0 CODE 0 text6 dist/default/production\BM1383_basic.X.production.o
-__ptext7 458 0 CODE 0 text7 dist/default/production\BM1383_basic.X.production.o
-__ptext8 50A 0 CODE 0 text8 dist/default/production\BM1383_basic.X.production.o
-__ptext9 2CC 0 CODE 0 text9 dist/default/production\BM1383_basic.X.production.o
+__ptext1 39A 0 CODE 0 text1 dist/default/production\BM1383_basic.X.production.o
+__ptext2 306 0 CODE 0 text2 dist/default/production\BM1383_basic.X.production.o
+__ptext3 63A 0 CODE 0 text3 dist/default/production\BM1383_basic.X.production.o
+__ptext4 350 0 CODE 0 text4 dist/default/production\BM1383_basic.X.production.o
+__ptext5 316 0 CODE 0 text5 dist/default/production\BM1383_basic.X.production.o
+__ptext6 444 0 CODE 0 text6 dist/default/production\BM1383_basic.X.production.o
+__ptext7 2E0 0 CODE 0 text7 dist/default/production\BM1383_basic.X.production.o
+__ptext8 2D4 0 CODE 0 text8 dist/default/production\BM1383_basic.X.production.o
+__ptext9 2C8 0 CODE 0 text9 dist/default/production\BM1383_basic.X.production.o
 _RX1DTPPS 1ECB 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 vfprintf@ap 60 0 BANK0 1 cstackBANK0 dist/default/production\BM1383_basic.X.production.o
 vfprintf@fp 63 0 BANK0 1 cstackBANK0 dist/default/production\BM1383_basic.X.production.o
 vfprintf@cfmt 64 0 BANK0 1 cstackBANK0 dist/default/production\BM1383_basic.X.production.o
-_vfprintf 4A8 0 CODE 0 text2 dist/default/production\BM1383_basic.X.production.o
+_vfprintf 4D8 0 CODE 0 text12 dist/default/production\BM1383_basic.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
 __Hstringtext1 0 0 ABS 0 stringtext1 -
 __Hstringtext2 0 0 ABS 0 stringtext2 -
 __Hstringtext3 0 0 ABS 0 stringtext3 -
-__end_of_vfprintf 50A 0 CODE 0 text2 dist/default/production\BM1383_basic.X.production.o
+__Hstringtext4 0 0 ABS 0 stringtext4 -
+__end_of_vfprintf 53A 0 CODE 0 text12 dist/default/production\BM1383_basic.X.production.o
 _SLRCONA 1F3B 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _SLRCONB 1F46 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _SLRCONC 1F51 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
@@ -1087,38 +1098,38 @@ __end_of_i2c1_fsmStateTable 1040 0 STRCODE 0 stringtext1 dist/default/production
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\BM1383_basic.X.production.o
 Send_I2C_ControlByte@RW_bit 70 0 COMMON 1 cstackCOMMON dist/default/production\BM1383_basic.X.production.o
 _I2C1_DO_SEND_ADR_READ 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
-__end_of_I2C1_Initialize 314 0 CODE 0 text20 dist/default/production\BM1383_basic.X.production.o
+__end_of_I2C1_Initialize 328 0 CODE 0 text5 dist/default/production\BM1383_basic.X.production.o
 _SSP1ADD 18D 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _SSP1BUF 18C 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 __Hend_init 8 0 CODE 0 end_init -
-_EUSART1_SetFramingErrorHandler 2B4 0 CODE 0 text23 dist/default/production\BM1383_basic.X.production.o
-_EUSART1_SetOverrunErrorHandler 2C0 0 CODE 0 text22 dist/default/production\BM1383_basic.X.production.o
+_EUSART1_SetFramingErrorHandler 2D4 0 CODE 0 text8 dist/default/production\BM1383_basic.X.production.o
+_EUSART1_SetOverrunErrorHandler 2E0 0 CODE 0 text7 dist/default/production\BM1383_basic.X.production.o
 putch@txData 71 0 COMMON 1 cstackCOMMON dist/default/production\BM1383_basic.X.production.o
-__end_of_dtoa FEA 0 CODE 0 text4 dist/default/production\BM1383_basic.X.production.o
-__end_of_main 782 0 CODE 0 maintext dist/default/production\BM1383_basic.X.production.o
+__end_of_dtoa FEA 0 CODE 0 text14 dist/default/production\BM1383_basic.X.production.o
+__end_of_main 39A 0 CODE 0 maintext dist/default/production\BM1383_basic.X.production.o
 printf@fmt 66 0 BANK0 1 cstackBANK0 dist/default/production\BM1383_basic.X.production.o
-__end_of_fputc 588 0 CODE 0 text8 dist/default/production\BM1383_basic.X.production.o
-__end_of_fputs 4A8 0 CODE 0 text7 dist/default/production\BM1383_basic.X.production.o
+__end_of_fputc 5B8 0 CODE 0 text18 dist/default/production\BM1383_basic.X.production.o
+__end_of_fputs 4D8 0 CODE 0 text17 dist/default/production\BM1383_basic.X.production.o
 _OSCEN 891 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _TRISA 12 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _TRISB 13 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _TRISC 14 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _TRISD 15 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _TRISE 16 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
-__end_of_putch 2D8 0 CODE 0 text9 dist/default/production\BM1383_basic.X.production.o
+__end_of_putch 2C8 0 CODE 0 text19 dist/default/production\BM1383_basic.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 _I2C1_DO_ADDRESS_NACK 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 _flags C3 0 BANK1 1 bssBANK1 dist/default/production\BM1383_basic.X.production.o
-_fputc 50A 0 CODE 0 text8 dist/default/production\BM1383_basic.X.production.o
-_fputs 458 0 CODE 0 text7 dist/default/production\BM1383_basic.X.production.o
-_putch 2CC 0 CODE 0 text9 dist/default/production\BM1383_basic.X.production.o
+_fputc 53A 0 CODE 0 text18 dist/default/production\BM1383_basic.X.production.o
+_fputs 488 0 CODE 0 text17 dist/default/production\BM1383_basic.X.production.o
+_putch 2BC 0 CODE 0 text19 dist/default/production\BM1383_basic.X.production.o
 _width BF 0 BANK1 1 bssBANK1 dist/default/production\BM1383_basic.X.production.o
 __size_of_PIN_MANAGER_Initialize 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 __size_of_abs 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
 __size_of_pad 0 0 ABS 0 - dist/default/production\BM1383_basic.X.production.o
-__end_of_EUSART1_Initialize 458 0 CODE 0 text21 dist/default/production\BM1383_basic.X.production.o
-__end_of_OSCILLATOR_Initialize 328 0 CODE 0 text19 dist/default/production\BM1383_basic.X.production.o
+__end_of_EUSART1_Initialize 488 0 CODE 0 text6 dist/default/production\BM1383_basic.X.production.o
+__end_of_OSCILLATOR_Initialize 364 0 CODE 0 text4 dist/default/production\BM1383_basic.X.production.o
 __initialization FEA 0 CODE 0 cinit dist/default/production\BM1383_basic.X.production.o
 __pbssBANK1 A0 0 BANK1 1 bssBANK1 dist/default/production\BM1383_basic.X.production.o
 _i2c1_fsmStateTable 1000 0 STRCODE 0 stringtext1 dist/default/production\BM1383_basic.X.production.o
@@ -1130,7 +1141,7 @@ dtoa@p 3D 0 BANK0 1 cstackBANK0 dist/default/production\BM1383_basic.X.productio
 dtoa@s 42 0 BANK0 1 cstackBANK0 dist/default/production\BM1383_basic.X.production.o
 dtoa@w 40 0 BANK0 1 cstackBANK0 dist/default/production\BM1383_basic.X.production.o
 EUSART1_SetOverrunErrorHandler@interruptHandler 70 0 COMMON 1 cstackCOMMON dist/default/production\BM1383_basic.X.production.o
-_OSCILLATOR_Initialize 314 0 CODE 0 text19 dist/default/production\BM1383_basic.X.production.o
+_OSCILLATOR_Initialize 350 0 CODE 0 text4 dist/default/production\BM1383_basic.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -1157,38 +1168,39 @@ _OSCILLATOR_Initialize 314 0 CODE 0 text19 dist/default/production\BM1383_basic.
 # All other numeric quantities are in decimal.
 %SEGMENTS
 cinit 0 7F5 FEA B 2
-text1 0 1C5 38A 12 2
-text2 0 254 4A8 31 2
-text3 0 3C1 782 DB 2
-text4 0 687 D0E 16E 2
-text5 0 30F 61E 59 2
-text6 0 1D7 3AE 19 2
-text7 0 22C 458 28 2
-text8 0 285 50A 3F 2
-text9 0 166 2CC 6 2
-text10 0 19E 33C A 2
-text11 0 1F0 3E0 1A 2
-text12 0 49C 938 EA 2
-text13 0 586 B0C 101 2
-text14 0 194 328 A 2
-text15 0 1A8 350 D 2
-text16 0 1B5 36A 10 2
-text17 0 179 2F2 8 2
-text18 0 2C4 588 4B 2
-text19 0 18A 314 A 2
-text20 0 181 302 9 2
-text21 0 20A 414 22 2
-text22 0 160 2C0 6 2
-text23 0 15A 2B4 6 2
-text24 0 154 2A8 6 2
-text25 0 172 2E4 7 2
-maintext 0 368 6D0 59 2
+text1 0 1CD 39A 10 2
+text2 0 183 306 8 2
+text3 0 31D 63A 4B 2
+text4 0 1A8 350 A 2
+text5 0 18B 316 9 2
+text6 0 222 444 22 2
+text7 0 170 2E0 6 2
+text8 0 16A 2D4 6 2
+text9 0 164 2C8 6 2
+text10 0 2DC 5B8 41 2
+text11 0 1DD 3BA 12 2
+text12 0 26C 4D8 31 2
+text13 0 3C1 782 DB 2
+text14 0 687 D0E 16E 2
+text15 0 368 6D0 59 2
+text16 0 1EF 3DE 19 2
+text17 0 244 488 28 2
+text18 0 29D 53A 3F 2
+text19 0 15E 2BC 6 2
+text20 0 19E 33C A 2
+text21 0 208 410 1A 2
+text22 0 49C 938 EA 2
+text23 0 586 B0C 101 2
+text24 0 194 328 A 2
+text25 0 1B2 364 D 2
+text26 0 17C 2F8 7 2
+maintext 0 1BF 37E E 2
 cstackCOMMON 1 70 70 E 1
 cstackBANK0 1 20 20 50 1
-stringtext1 0 800 1000 30 2
+stringtext1 0 800 1000 4E 2
 reset_vec 0 0 0 4 2
-bssBANK1 1 A0 A0 4F 1
-clrtext 0 16C 2D8 6 2
+bssBANK1 1 A0 A0 4E 1
+clrtext 0 176 2EC 6 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal

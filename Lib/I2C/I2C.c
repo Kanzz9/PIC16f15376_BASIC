@@ -12,7 +12,28 @@ void I2C_Init(void){
     SSP1CON1bits.SSPEN=1;         // enable MSSP port
 }
 
-//voi I2C_
+uint8_t I2C_Scan(void){
+    
+    bool ACK_bit = 1;
+    
+    for(uint8_t i=0; i<=127; i++){
+        Send_I2C_StartBit();
+        Send_I2C_ControlByte(i, 0);
+        ACK_bit = SSP1CON2bits.ACKSTAT;  // Ack bit will come back low when the write is complete
+        
+        if(ACK_bit==0){
+            #if(UART_ENABLE)
+                printf("Device Address: %d\n", i);
+            #endif
+                return i;
+        }
+        __delay_ms(1);
+    }
+    #if(UART_ENABLE)
+        printf("Device Address not found\n");
+    #endif
+    return 255;
+}
 
 void Send_I2C_Data(uint8_t databyte)
 {

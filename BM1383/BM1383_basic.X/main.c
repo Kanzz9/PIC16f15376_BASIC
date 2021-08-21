@@ -131,32 +131,10 @@ void main(void)
     
     BM1383.BM1383_Add = 0x5D;
     I2C_Init();
+    I2C_Scan();
     
-    bool ACK_bit = 1;
     uint8_t i=0;
-//    while(ACK_bit)          // loop as long as the ack bit is high
-//    {
-//        
-//        Send_I2C_StartBit();
-//        Send_I2C_ControlByte(add++, 0);
-//        ACK_bit = SSP1CON2bits.ACKSTAT;  // Ack bit will come back low when the write is complete
-//        Send_I2C_StopBit();
-//        __delay_ms(10);
-//    }
-    for(i=0; i<127; i++){
-        Send_I2C_StartBit();
-        Send_I2C_ControlByte(i, 0);
-        ACK_bit = SSP1CON2bits.ACKSTAT;  // Ack bit will come back low when the write is complete
-        //Send_I2C_NAK();
-        //Send_I2C_StopBit();
-        
-        if(ACK_bit==0){
-            printf("BM1383 ID1: %d\n", i);
-            break;
-        }
-        __delay_ms(10);
-    }
-    printf("BM1383 ID1: %d\n", i);
+
     LED_SetHigh();
     
     while (1)

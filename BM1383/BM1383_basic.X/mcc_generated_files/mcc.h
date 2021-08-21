@@ -57,6 +57,7 @@
 
 #define I2C_Enable 1
 #define BM1383_ENABLE 1
+#define UART_ENABLE 1
 
 #include "I2C.h"
 #include "BM1383.h"
