@@ -13,10 +13,35 @@ void I2C_Init(void){
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //void I2C_H
 =======
 //voi I2C_
 >>>>>>> fb4abf79d7fcf46a54f7c416c95af47903ded9b9
+=======
+uint8_t I2C_Scan(void){
+    
+    bool ACK_bit = 1;
+    
+    for(uint8_t i=0; i<=127; i++){
+        Send_I2C_StartBit();
+        Send_I2C_ControlByte(i, 0);
+        ACK_bit = SSP1CON2bits.ACKSTAT;  // Ack bit will come back low when the write is complete
+        
+        if(ACK_bit==0){
+            #if(UART_ENABLE)
+                printf("Device Address: %d\n", i);
+            #endif
+                return i;
+        }
+        __delay_ms(1);
+    }
+    #if(UART_ENABLE)
+        printf("Device Address not found\n");
+    #endif
+    return 255;
+}
+>>>>>>> kanzz9
 
 void Send_I2C_Data(uint8_t databyte)
 {
