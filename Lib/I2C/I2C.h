@@ -5,7 +5,7 @@
 #ifndef I2C_H
 #define I2C_H
 
-#include "../../BM1383/BM1383_basic.X/mcc_generated_files/mcc.h" 
+#include "../../BM1383+BMP180/BM1383_BMP180_basic.X/mcc_generated_files/mcc.h"
 
 #if(I2C_Enable)
 
