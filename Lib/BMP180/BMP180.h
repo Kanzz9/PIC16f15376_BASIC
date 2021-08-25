@@ -8,7 +8,7 @@
 #ifndef BMP180_H
 #define	BMP180_H
 //#include"stdio.h"
-#include "../../BM1383+BMP180/BM1383_BMP180_basic.X/mcc_generated_files/mcc.h"
+#include "../../BMP180/BMP180_basic.X/mcc_generated_files/mcc.h"
 
 #if(BMP180_ENABLE)
 
