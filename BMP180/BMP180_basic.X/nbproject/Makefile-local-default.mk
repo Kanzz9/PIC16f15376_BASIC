@@ -15,24 +15,24 @@
 # $ makeMP_CC="/opt/microchip/mplabc30/v3.30c/bin/pic30-gcc" ...  
 #
 SHELL=cmd.exe
-PATH_TO_IDE_BIN=E:/microchip/MPLAB X IDE/mplab_platform/platform/../mplab_ide/modules/../../bin/
+PATH_TO_IDE_BIN=D:/program files/Microchip/MPLABX/v5.45/mplab_platform/platform/../mplab_ide/modules/../../bin/
 # Adding MPLAB X bin directory to path.
-PATH:=E:/microchip/MPLAB X IDE/mplab_platform/platform/../mplab_ide/modules/../../bin/:$(PATH)
+PATH:=D:/program files/Microchip/MPLABX/v5.45/mplab_platform/platform/../mplab_ide/modules/../../bin/:$(PATH)
 # Path to java used to run MPLAB X when this makefile was created
-MP_JAVA_PATH="E:\microchip\MPLAB X IDE\sys\java\zulu8.40.0.25-ca-fx-jre8.0.222-win_x64/bin/"
+MP_JAVA_PATH="D:\program files\Microchip\MPLABX\v5.45\sys\java\zulu8.40.0.25-ca-fx-jre8.0.222-win_x64/bin/"
 OS_CURRENT="$(shell uname -s)"
-MP_CC="E:\microchip\xc8\bin\xc8-cc.exe"
+MP_CC="D:\program files\Microchip\xc8\v2.31\bin\xc8-cc.exe"
 # MP_CPPC is not defined
 # MP_BC is not defined
-MP_AS="E:\microchip\xc8\bin\xc8-cc.exe"
-MP_LD="E:\microchip\xc8\bin\xc8-cc.exe"
-MP_AR="E:\microchip\xc8\bin\xc8-ar.exe"
-DEP_GEN=${MP_JAVA_PATH}java -jar "E:/microchip/MPLAB X IDE/mplab_platform/platform/../mplab_ide/modules/../../bin/extractobjectdependencies.jar"
-MP_CC_DIR="E:\microchip\xc8\bin"
+MP_AS="D:\program files\Microchip\xc8\v2.31\bin\xc8-cc.exe"
+MP_LD="D:\program files\Microchip\xc8\v2.31\bin\xc8-cc.exe"
+MP_AR="D:\program files\Microchip\xc8\v2.31\bin\xc8-ar.exe"
+DEP_GEN=${MP_JAVA_PATH}java -jar "D:/program files/Microchip/MPLABX/v5.45/mplab_platform/platform/../mplab_ide/modules/../../bin/extractobjectdependencies.jar"
+MP_CC_DIR="D:\program files\Microchip\xc8\v2.31\bin"
 # MP_CPPC_DIR is not defined
 # MP_BC_DIR is not defined
-MP_AS_DIR="E:\microchip\xc8\bin"
-MP_LD_DIR="E:\microchip\xc8\bin"
-MP_AR_DIR="E:\microchip\xc8\bin"
+MP_AS_DIR="D:\program files\Microchip\xc8\v2.31\bin"
+MP_LD_DIR="D:\program files\Microchip\xc8\v2.31\bin"
+MP_AR_DIR="D:\program files\Microchip\xc8\v2.31\bin"
 # MP_BC_DIR is not defined
-DFP_DIR=C:/Users/ADMIN/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133
+DFP_DIR=D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133

@@ -57,56 +57,8 @@
 
 
 
-/*
- 
-void EepWriteByte(uint8_t dev_add, uint16_t reg_add, uint8_t byte){
-    
-    bool ACK_bit = 1;            // init the Ack bit high
-    while(ACK_bit)          // loop as long as the ack bit is high
-    {
-        Send_I2C_StartBit();
-        Send_I2C_ControlByte(dev_add, 0);
-        ACK_bit = SSP1CON2bits.ACKSTAT;  // Ack bit will come back low when the write is complete
-    }
-    Send_I2C_Data(reg_add>>8);
-    //Send_I2C_ACK();
-    Send_I2C_Data(reg_add);
-    //Send_I2C_ACK();
-    Send_I2C_Data(byte);
-    //Send_I2C_ACK();
-    Send_I2C_StopBit();   
-}
 
-uint8_t EepReadByte(uint8_t dev_add, uint16_t reg_add){
-    
-    bool ACK_bit = 1;            // init the Ack bit high
-    uint8_t data=0;
-    while(ACK_bit)          // loop as long as the ack bit is high
-    {
-        Send_I2C_StartBit();
-        Send_I2C_ControlByte(dev_add, 0);
-        ACK_bit = SSP1CON2bits.ACKSTAT;  // Ack bit will come back low when the write is complete
-    }
-    Send_I2C_Data(reg_add>>8);
-    //Send_I2C_ACK();
-    Send_I2C_Data(reg_add);
-    //Send_I2C_ACK();
-    
-    ACK_bit = 1;            // init the Ack bit high
-    while(ACK_bit)          // loop as long as the ack bit is high
-    {
-        Send_I2C_StartBit();
-        Send_I2C_ControlByte(dev_add, 1);
-        ACK_bit = SSP1CON2bits.ACKSTAT;  // Ack bit will come back low when the write is complete
-    }
-    
-    data=Read_I2C_Data();
-    Send_I2C_NAK();
-    Send_I2C_StopBit();
-    
-    return data;
-}
-*/
+
 
 void main(void)
 {
@@ -127,26 +79,33 @@ void main(void)
 
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();  
-    
-    BM1383_t BM1383;
+    //uint8_t data[27]={0};
+    float temp;
     BMP180_t BMP180;
-    BM1383.BM1383_Add = 0x5D;
     BMP180.BMP180_Add = 0x77;
+    BMP180.BMP180_OSS = 0;
     I2C_Init();
-    I2C_Scan();
+    //I2C_Scan();
+    BMP180_Init(&BMP180);
     
-    uint8_t i=0;
-
+//    BMP180ReadMultiByte(&BMP180, 0xAA, data, 22);
+//    
+//    for(uint8_t i=0; i<22; i++)
+//        printf("BMP180_ID: %d\n", data[i]);
+    BMP180ReadData(&BMP180, &temp);
+    printf("BM1383 temp: %0.2f\n", temp);
+    
     LED_SetHigh();
     
     while (1)
     {
         // Add your application code
-//        uint8_t ID1_BM1383=0;
-//        ID1_BM1383 = ReadByteBM1383(&BM1383, 0x0F);
-//        printf("BM1383 ID1: %d\n", ID1_BM1383);
-//        LED_SetHigh();
-//        __delay_ms(500);
+//        BMP180ReadData(&BMP180, &temp);
+//        printf("BM1383 temp: %0.2f\n", temp);
+//        LED_Toggle();
+        BMP180ReadData(&BMP180, &temp);
+        printf("BM1383 temp: %0.2f\n", temp);
+        __delay_ms(1000);
         
     }
     

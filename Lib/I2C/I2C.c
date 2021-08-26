@@ -46,7 +46,7 @@ void Send_I2C_Data(uint8_t databyte)
 //**************************************************************************************
 // Read one byte from SEE
 //**************************************************************************************
-unsigned int Read_I2C_Data(void)
+uint8_t Read_I2C_Data(void)
 {
     PIR3bits.SSP1IF=0;          // clear SSP interrupt bit
     SSP1CON2bits.RCEN=1;         // set the receive enable bit to initiate a read of 8 bits from the serial eeprom
