@@ -1,8 +1,8 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"15 ../../Lib/BMP180\BMP180.h
-[; ;../../Lib/BMP180\BMP180.h: 15: typedef struct {
-[s S1029 `uc 1 ]
-[n S1029 . BMP180_Add ]
+"22 ../../Lib/BMP180\BMP180.h
+[; ;../../Lib/BMP180\BMP180.h: 22: typedef struct {
+[s S1028 `uc 1 `uc 1 `uc 1 `s 1 `s 1 `s 1 `us 1 `us 1 `us 1 `s 1 `s 1 `s 1 `s 1 `s 1 ]
+[n S1028 . BMP180_Add BMP180_Id BMP180_OSS AC1 AC2 AC3 AC4 AC5 AC6 B1 B2 MB MC MD ]
 "17 ../../Lib/I2C\I2C.h
 [; ;../../Lib/I2C\I2C.h: 17: void Send_I2C_StartBit(void);
 [v _Send_I2C_StartBit `(v ~T0 @X0 0 ef ]
@@ -43,11 +43,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;../../Lib/I2C\I2C.h: 18: void Send_I2C_StopBit(void);
 [v _Send_I2C_StopBit `(v ~T0 @X0 0 ef ]
 "15
-[; ;../../Lib/I2C\I2C.h: 15: unsigned int Read_I2C_Data(void);
-[v _Read_I2C_Data `(ui ~T0 @X0 0 ef ]
+[; ;../../Lib/I2C\I2C.h: 15: uint8_t Read_I2C_Data(void);
+[v _Read_I2C_Data `(uc ~T0 @X0 0 ef ]
 "20
 [; ;../../Lib/I2C\I2C.h: 20: void Send_I2C_NAK(void);
 [v _Send_I2C_NAK `(v ~T0 @X0 0 ef ]
+"19
+[; ;../../Lib/I2C\I2C.h: 19: void Send_I2C_ACK(void);
+[v _Send_I2C_ACK `(v ~T0 @X0 0 ef ]
+"94 ../../Lib/BMP180\BMP180.h
+[; ;../../Lib/BMP180\BMP180.h: 94: uint8_t BMP180_ID_Request(BMP180_t *BMP180);
+[v _BMP180_ID_Request `(uc ~T0 @X0 0 ef1`*S1028 ]
+[v F183 `(v ~T0 @X0 1 tf1`ul ]
+"12 C:/Users/ADMIN/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\builtins.h
+[v __delay `JF183 ~T0 @X0 0 e ]
+[p i __delay ]
+"111 E:\microchip\xc8\pic\include\c99\stdio.h
+[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
 "111 C:/Users/ADMIN/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h
 [; ;C:/Users/ADMIN/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h: 111: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1153,11 +1165,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Users/ADMIN/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h: 22554: __asm("TOSH equ 01FEFh");
 [; <" TOSH equ 01FEFh ;# ">
 "13 ../../Lib/BMP180/BMP180.c
-[; ;../../Lib/BMP180/BMP180.c: 13: void WriteByteBMP180(const BMP180_t *BMP180, uint8_t Reg_Add, uint8_t data){
-[v _WriteByteBMP180 `(v ~T0 @X0 1 ef3`*CS1029`uc`uc ]
+[; ;../../Lib/BMP180/BMP180.c: 13: void BMP180WriteByte(const BMP180_t *BMP180, uint8_t Reg_Add, uint8_t data){
+[v _BMP180WriteByte `(v ~T0 @X0 1 ef3`*CS1028`uc`uc ]
 {
-[e :U _WriteByteBMP180 ]
-[v _BMP180 `*CS1029 ~T0 @X0 1 r1 ]
+[e :U _BMP180WriteByte ]
+[v _BMP180 `*CS1028 ~T0 @X0 1 r1 ]
 [v _Reg_Add `uc ~T0 @X0 1 r2 ]
 [v _data `uc ~T0 @X0 1 r3 ]
 [f ]
@@ -1167,8 +1179,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _ACK_bit -> -> 1 `i `a ]
 "16
 [; ;../../Lib/BMP180/BMP180.c: 16:     while(ACK_bit)
-[e $U 1031  ]
-[e :U 1032 ]
+[e $U 1030  ]
+[e :U 1031 ]
 "17
 [; ;../../Lib/BMP180/BMP180.c: 17:     {
 {
@@ -1184,11 +1196,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "21
 [; ;../../Lib/BMP180/BMP180.c: 21:     }
 }
-[e :U 1031 ]
+[e :U 1030 ]
 "16
 [; ;../../Lib/BMP180/BMP180.c: 16:     while(ACK_bit)
-[e $ != -> _ACK_bit `i -> 0 `i 1032  ]
-[e :U 1033 ]
+[e $ != -> _ACK_bit `i -> 0 `i 1031  ]
+[e :U 1032 ]
 "22
 [; ;../../Lib/BMP180/BMP180.c: 22:     Send_I2C_Data(Reg_Add);
 [e ( _Send_I2C_Data (1 _Reg_Add ]
@@ -1200,285 +1212,508 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _Send_I2C_StopBit ..  ]
 "25
 [; ;../../Lib/BMP180/BMP180.c: 25: }
-[e :UE 1030 ]
+[e :UE 1029 ]
 }
-"27
-[; ;../../Lib/BMP180/BMP180.c: 27: uint8_t ReadByteBMP180(const BMP180_t *BMP180, uint8_t Reg_Add){
-[v _ReadByteBMP180 `(uc ~T0 @X0 1 ef2`*CS1029`uc ]
+"31
+[; ;../../Lib/BMP180/BMP180.c: 31: uint8_t BMP180ReadByte(const BMP180_t *BMP180, uint8_t Reg_Add){
+[v _BMP180ReadByte `(uc ~T0 @X0 1 ef2`*CS1028`uc ]
 {
-[e :U _ReadByteBMP180 ]
-[v _BMP180 `*CS1029 ~T0 @X0 1 r1 ]
+[e :U _BMP180ReadByte ]
+[v _BMP180 `*CS1028 ~T0 @X0 1 r1 ]
 [v _Reg_Add `uc ~T0 @X0 1 r2 ]
 [f ]
-"29
-[; ;../../Lib/BMP180/BMP180.c: 29:     _Bool ACK_bit = 1;
+"33
+[; ;../../Lib/BMP180/BMP180.c: 33:     _Bool ACK_bit = 1;
 [v _ACK_bit `a ~T0 @X0 1 a ]
 [e = _ACK_bit -> -> 1 `i `a ]
-"30
-[; ;../../Lib/BMP180/BMP180.c: 30:     uint8_t data=0;
+"34
+[; ;../../Lib/BMP180/BMP180.c: 34:     uint8_t data=0;
 [v _data `uc ~T0 @X0 1 a ]
 [e = _data -> -> 0 `i `uc ]
-"31
-[; ;../../Lib/BMP180/BMP180.c: 31:     while(ACK_bit)
-[e $U 1035  ]
-[e :U 1036 ]
-"32
-[; ;../../Lib/BMP180/BMP180.c: 32:     {
-{
-"33
-[; ;../../Lib/BMP180/BMP180.c: 33:         Send_I2C_StartBit();
-[e ( _Send_I2C_StartBit ..  ]
-"34
-[; ;../../Lib/BMP180/BMP180.c: 34:         Send_I2C_ControlByte(BMP180->BMP180_Add, 0);
-[e ( _Send_I2C_ControlByte (2 , . *U _BMP180 0 -> -> 0 `i `uc ]
 "35
-[; ;../../Lib/BMP180/BMP180.c: 35:         ACK_bit = SSP1CON2bits.ACKSTAT;
-[e = _ACK_bit -> . . _SSP1CON2bits 0 6 `a ]
-"36
-[; ;../../Lib/BMP180/BMP180.c: 36:     }
-}
+[; ;../../Lib/BMP180/BMP180.c: 35:     while(ACK_bit)
+[e $U 1034  ]
 [e :U 1035 ]
-"31
-[; ;../../Lib/BMP180/BMP180.c: 31:     while(ACK_bit)
-[e $ != -> _ACK_bit `i -> 0 `i 1036  ]
-[e :U 1037 ]
-"38
-[; ;../../Lib/BMP180/BMP180.c: 38:     Send_I2C_Data(Reg_Add);
-[e ( _Send_I2C_Data (1 _Reg_Add ]
-"41
-[; ;../../Lib/BMP180/BMP180.c: 41:     ACK_bit = 1;
-[e = _ACK_bit -> -> 1 `i `a ]
-"42
-[; ;../../Lib/BMP180/BMP180.c: 42:     while(ACK_bit)
-[e $U 1038  ]
-[e :U 1039 ]
-"43
-[; ;../../Lib/BMP180/BMP180.c: 43:     {
+"36
+[; ;../../Lib/BMP180/BMP180.c: 36:     {
 {
-"44
-[; ;../../Lib/BMP180/BMP180.c: 44:         Send_I2C_StartBit();
+"37
+[; ;../../Lib/BMP180/BMP180.c: 37:         Send_I2C_StartBit();
 [e ( _Send_I2C_StartBit ..  ]
-"45
-[; ;../../Lib/BMP180/BMP180.c: 45:         Send_I2C_ControlByte(BMP180->BMP180_Add, 1);
-[e ( _Send_I2C_ControlByte (2 , . *U _BMP180 0 -> -> 1 `i `uc ]
-"46
-[; ;../../Lib/BMP180/BMP180.c: 46:         ACK_bit = SSP1CON2bits.ACKSTAT;
+"38
+[; ;../../Lib/BMP180/BMP180.c: 38:         Send_I2C_ControlByte(BMP180->BMP180_Add, 0);
+[e ( _Send_I2C_ControlByte (2 , . *U _BMP180 0 -> -> 0 `i `uc ]
+"39
+[; ;../../Lib/BMP180/BMP180.c: 39:         ACK_bit = SSP1CON2bits.ACKSTAT;
 [e = _ACK_bit -> . . _SSP1CON2bits 0 6 `a ]
-"47
-[; ;../../Lib/BMP180/BMP180.c: 47:     }
+"40
+[; ;../../Lib/BMP180/BMP180.c: 40:     }
 }
-[e :U 1038 ]
+[e :U 1034 ]
+"35
+[; ;../../Lib/BMP180/BMP180.c: 35:     while(ACK_bit)
+[e $ != -> _ACK_bit `i -> 0 `i 1035  ]
+[e :U 1036 ]
 "42
-[; ;../../Lib/BMP180/BMP180.c: 42:     while(ACK_bit)
-[e $ != -> _ACK_bit `i -> 0 `i 1039  ]
-[e :U 1040 ]
-"48
-[; ;../../Lib/BMP180/BMP180.c: 48:     data=Read_I2C_Data();
-[e = _data -> ( _Read_I2C_Data ..  `uc ]
-"49
-[; ;../../Lib/BMP180/BMP180.c: 49:     Send_I2C_NAK();
-[e ( _Send_I2C_NAK ..  ]
-"50
-[; ;../../Lib/BMP180/BMP180.c: 50:     Send_I2C_StopBit();
-[e ( _Send_I2C_StopBit ..  ]
-"52
-[; ;../../Lib/BMP180/BMP180.c: 52:     return data;
-[e ) _data ]
-[e $UE 1034  ]
-"53
-[; ;../../Lib/BMP180/BMP180.c: 53: }
-[e :UE 1034 ]
-}
-"54
-[; ;../../Lib/BMP180/BMP180.c: 54: uint8_t ReadADC_BMP180(const BMP180_t *BMP180, uint8_t Reg_Add, uint8_t len){
-[v _ReadADC_BMP180 `(uc ~T0 @X0 1 ef3`*CS1029`uc`uc ]
+[; ;../../Lib/BMP180/BMP180.c: 42:     Send_I2C_Data(Reg_Add);
+[e ( _Send_I2C_Data (1 _Reg_Add ]
+"45
+[; ;../../Lib/BMP180/BMP180.c: 45:     ACK_bit = 1;
+[e = _ACK_bit -> -> 1 `i `a ]
+"46
+[; ;../../Lib/BMP180/BMP180.c: 46:     while(ACK_bit)
+[e $U 1037  ]
+[e :U 1038 ]
+"47
+[; ;../../Lib/BMP180/BMP180.c: 47:     {
 {
-[e :U _ReadADC_BMP180 ]
-[v _BMP180 `*CS1029 ~T0 @X0 1 r1 ]
-[v _Reg_Add `uc ~T0 @X0 1 r2 ]
-[v _len `uc ~T0 @X0 1 r3 ]
-[f ]
+"48
+[; ;../../Lib/BMP180/BMP180.c: 48:         Send_I2C_StartBit();
+[e ( _Send_I2C_StartBit ..  ]
+"49
+[; ;../../Lib/BMP180/BMP180.c: 49:         Send_I2C_ControlByte(BMP180->BMP180_Add, 1);
+[e ( _Send_I2C_ControlByte (2 , . *U _BMP180 0 -> -> 1 `i `uc ]
+"50
+[; ;../../Lib/BMP180/BMP180.c: 50:         ACK_bit = SSP1CON2bits.ACKSTAT;
+[e = _ACK_bit -> . . _SSP1CON2bits 0 6 `a ]
+"51
+[; ;../../Lib/BMP180/BMP180.c: 51:     }
+}
+[e :U 1037 ]
+"46
+[; ;../../Lib/BMP180/BMP180.c: 46:     while(ACK_bit)
+[e $ != -> _ACK_bit `i -> 0 `i 1038  ]
+[e :U 1039 ]
+"52
+[; ;../../Lib/BMP180/BMP180.c: 52:     data=Read_I2C_Data();
+[e = _data ( _Read_I2C_Data ..  ]
+"53
+[; ;../../Lib/BMP180/BMP180.c: 53:     Send_I2C_NAK();
+[e ( _Send_I2C_NAK ..  ]
+"54
+[; ;../../Lib/BMP180/BMP180.c: 54:     Send_I2C_StopBit();
+[e ( _Send_I2C_StopBit ..  ]
 "56
-[; ;../../Lib/BMP180/BMP180.c: 56:     _Bool ACK_bit = 1;
+[; ;../../Lib/BMP180/BMP180.c: 56:     return data;
+[e ) _data ]
+[e $UE 1033  ]
+"57
+[; ;../../Lib/BMP180/BMP180.c: 57: }
+[e :UE 1033 ]
+}
+"63
+[; ;../../Lib/BMP180/BMP180.c: 63: void BMP180ReadMultiByte(const BMP180_t *BMP180, uint8_t Reg_Add, uint8_t *data, uint8_t length){
+[v _BMP180ReadMultiByte `(v ~T0 @X0 1 ef4`*CS1028`uc`*uc`uc ]
+{
+[e :U _BMP180ReadMultiByte ]
+[v _BMP180 `*CS1028 ~T0 @X0 1 r1 ]
+[v _Reg_Add `uc ~T0 @X0 1 r2 ]
+[v _data `*uc ~T0 @X0 1 r3 ]
+[v _length `uc ~T0 @X0 1 r4 ]
+[f ]
+"65
+[; ;../../Lib/BMP180/BMP180.c: 65:     _Bool ACK_bit = 1;
 [v _ACK_bit `a ~T0 @X0 1 a ]
 [e = _ACK_bit -> -> 1 `i `a ]
-"57
-[; ;../../Lib/BMP180/BMP180.c: 57:     uint8_t *data=0;
-[v _data `*uc ~T0 @X0 1 a ]
-[e = _data -> -> 0 `i `*uc ]
-"58
-[; ;../../Lib/BMP180/BMP180.c: 58:     while(ACK_bit)
-[e $U 1042  ]
-[e :U 1043 ]
-"59
-[; ;../../Lib/BMP180/BMP180.c: 59:     {
-{
-"60
-[; ;../../Lib/BMP180/BMP180.c: 60:         Send_I2C_StartBit();
-[e ( _Send_I2C_StartBit ..  ]
-"61
-[; ;../../Lib/BMP180/BMP180.c: 61:         Send_I2C_ControlByte(BMP180->BMP180_Add, 0);
-[e ( _Send_I2C_ControlByte (2 , . *U _BMP180 0 -> -> 0 `i `uc ]
-"62
-[; ;../../Lib/BMP180/BMP180.c: 62:         ACK_bit = SSP1CON2bits.ACKSTAT;
-[e = _ACK_bit -> . . _SSP1CON2bits 0 6 `a ]
-"63
-[; ;../../Lib/BMP180/BMP180.c: 63:     }
-}
+"66
+[; ;../../Lib/BMP180/BMP180.c: 66:     while(ACK_bit)
+[e $U 1041  ]
 [e :U 1042 ]
-"58
-[; ;../../Lib/BMP180/BMP180.c: 58:     while(ACK_bit)
-[e $ != -> _ACK_bit `i -> 0 `i 1043  ]
-[e :U 1044 ]
-"65
-[; ;../../Lib/BMP180/BMP180.c: 65:     Send_I2C_Data(Reg_Add);
-[e ( _Send_I2C_Data (1 _Reg_Add ]
+"67
+[; ;../../Lib/BMP180/BMP180.c: 67:     {
+{
 "68
-[; ;../../Lib/BMP180/BMP180.c: 68:     ACK_bit = 1;
-[e = _ACK_bit -> -> 1 `i `a ]
-"69
-[; ;../../Lib/BMP180/BMP180.c: 69:     while(ACK_bit)
-[e $U 1045  ]
-[e :U 1046 ]
-"70
-[; ;../../Lib/BMP180/BMP180.c: 70:     {
-{
-"71
-[; ;../../Lib/BMP180/BMP180.c: 71:         Send_I2C_StartBit();
+[; ;../../Lib/BMP180/BMP180.c: 68:         Send_I2C_StartBit();
 [e ( _Send_I2C_StartBit ..  ]
-"72
-[; ;../../Lib/BMP180/BMP180.c: 72:         Send_I2C_ControlByte(BMP180->BMP180_Add, 1);
-[e ( _Send_I2C_ControlByte (2 , . *U _BMP180 0 -> -> 1 `i `uc ]
-"73
-[; ;../../Lib/BMP180/BMP180.c: 73:         ACK_bit = SSP1CON2bits.ACKSTAT;
-[e = _ACK_bit -> . . _SSP1CON2bits 0 6 `a ]
-"74
-[; ;../../Lib/BMP180/BMP180.c: 74:     }
-}
-[e :U 1045 ]
 "69
-[; ;../../Lib/BMP180/BMP180.c: 69:     while(ACK_bit)
-[e $ != -> _ACK_bit `i -> 0 `i 1046  ]
-[e :U 1047 ]
-"75
-[; ;../../Lib/BMP180/BMP180.c: 75:     for(uint8_t x ; x < len ;x++)
-{
-[v _x `uc ~T0 @X0 1 a ]
-[e $U 1051  ]
-[e :U 1048 ]
+[; ;../../Lib/BMP180/BMP180.c: 69:         Send_I2C_ControlByte(BMP180->BMP180_Add, 0);
+[e ( _Send_I2C_ControlByte (2 , . *U _BMP180 0 -> -> 0 `i `uc ]
+"70
+[; ;../../Lib/BMP180/BMP180.c: 70:         ACK_bit = SSP1CON2bits.ACKSTAT;
+[e = _ACK_bit -> . . _SSP1CON2bits 0 6 `a ]
+"71
+[; ;../../Lib/BMP180/BMP180.c: 71:     }
+}
+[e :U 1041 ]
+"66
+[; ;../../Lib/BMP180/BMP180.c: 66:     while(ACK_bit)
+[e $ != -> _ACK_bit `i -> 0 `i 1042  ]
+[e :U 1043 ]
+"73
+[; ;../../Lib/BMP180/BMP180.c: 73:     Send_I2C_Data(Reg_Add);
+[e ( _Send_I2C_Data (1 _Reg_Add ]
 "76
-[; ;../../Lib/BMP180/BMP180.c: 76:     {
-{
+[; ;../../Lib/BMP180/BMP180.c: 76:     ACK_bit = 1;
+[e = _ACK_bit -> -> 1 `i `a ]
 "77
-[; ;../../Lib/BMP180/BMP180.c: 77:         data[x] = Read_I2C_Data();
-[e = *U + _data * -> _x `ux -> -> # *U _data `ui `ux -> ( _Read_I2C_Data ..  `uc ]
+[; ;../../Lib/BMP180/BMP180.c: 77:     while(ACK_bit)
+[e $U 1044  ]
+[e :U 1045 ]
 "78
-[; ;../../Lib/BMP180/BMP180.c: 78:     }
-}
-[e ++ _x -> -> 1 `i `uc ]
-[e :U 1051 ]
-[e $ < -> _x `i -> _len `i 1048  ]
-[e :U 1049 ]
-}
-"79
-[; ;../../Lib/BMP180/BMP180.c: 79:     Send_I2C_NAK();
-[e ( _Send_I2C_NAK ..  ]
-"80
-[; ;../../Lib/BMP180/BMP180.c: 80:     Send_I2C_StopBit();
-[e ( _Send_I2C_StopBit ..  ]
-"82
-[; ;../../Lib/BMP180/BMP180.c: 82:     return data;
-[e ) -> _data `uc ]
-[e $UE 1041  ]
-"83
-[; ;../../Lib/BMP180/BMP180.c: 83: }
-[e :UE 1041 ]
-}
-"84
-[; ;../../Lib/BMP180/BMP180.c: 84: uint8_t startTemperature(void)
-[v _startTemperature `(uc ~T0 @X0 1 ef ]
-"87
-[; ;../../Lib/BMP180/BMP180.c: 87: {
+[; ;../../Lib/BMP180/BMP180.c: 78:     {
 {
-[e :U _startTemperature ]
-[f ]
+"79
+[; ;../../Lib/BMP180/BMP180.c: 79:         Send_I2C_StartBit();
+[e ( _Send_I2C_StartBit ..  ]
+"80
+[; ;../../Lib/BMP180/BMP180.c: 80:         Send_I2C_ControlByte(BMP180->BMP180_Add, 1);
+[e ( _Send_I2C_ControlByte (2 , . *U _BMP180 0 -> -> 1 `i `uc ]
+"81
+[; ;../../Lib/BMP180/BMP180.c: 81:         ACK_bit = SSP1CON2bits.ACKSTAT;
+[e = _ACK_bit -> . . _SSP1CON2bits 0 6 `a ]
+"82
+[; ;../../Lib/BMP180/BMP180.c: 82:     }
+}
+[e :U 1044 ]
+"77
+[; ;../../Lib/BMP180/BMP180.c: 77:     while(ACK_bit)
+[e $ != -> _ACK_bit `i -> 0 `i 1045  ]
+[e :U 1046 ]
+"84
+[; ;../../Lib/BMP180/BMP180.c: 84:     for(uint8_t i=0; i<(length-1); i++){
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $U 1050  ]
+[e :U 1047 ]
+{
+"86
+[; ;../../Lib/BMP180/BMP180.c: 86:         *(data+i)=Read_I2C_Data();
+[e = *U + _data * -> -> _i `i `x -> -> # *U _data `i `x ( _Read_I2C_Data ..  ]
 "88
-[; ;../../Lib/BMP180/BMP180.c: 88:  uint8_t data[2], result;
-[v _data `uc ~T0 @X0 -> 2 `i a ]
-[v _result `uc ~T0 @X0 1 a ]
+[; ;../../Lib/BMP180/BMP180.c: 88:         Send_I2C_ACK();
+[e ( _Send_I2C_ACK ..  ]
+"89
+[; ;../../Lib/BMP180/BMP180.c: 89:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e :U 1050 ]
+[e $ < -> _i `i - -> _length `i -> 1 `i 1047  ]
+[e :U 1048 ]
+}
 "90
-[; ;../../Lib/BMP180/BMP180.c: 90:  data[0] = 0xF4;
-[e = *U + &U _data * -> -> -> 0 `i `ui `ux -> -> # *U &U _data `ui `ux -> -> 244 `i `uc ]
+[; ;../../Lib/BMP180/BMP180.c: 90:     *(data+(length-1))=Read_I2C_Data();
+[e = *U + _data * -> - -> _length `i -> 1 `i `x -> -> # *U _data `i `x ( _Read_I2C_Data ..  ]
 "91
-[; ;../../Lib/BMP180/BMP180.c: 91:  data[1] = 0x2E;
-[e = *U + &U _data * -> -> -> 1 `i `ui `ux -> -> # *U &U _data `ui `ux -> -> 46 `i `uc ]
+[; ;../../Lib/BMP180/BMP180.c: 91:     Send_I2C_NAK();
+[e ( _Send_I2C_NAK ..  ]
 "92
-[; ;../../Lib/BMP180/BMP180.c: 92:   WriteByteBMP180(0x77,result,data);
-[e ( _WriteByteBMP180 (3 , , -> -> 119 `i `*CS1029 _result -> &U _data `uc ]
+[; ;../../Lib/BMP180/BMP180.c: 92:     Send_I2C_StopBit();
+[e ( _Send_I2C_StopBit ..  ]
 "93
-[; ;../../Lib/BMP180/BMP180.c: 93:  if (result)
-[e $ ! != -> _result `i -> 0 `i 1053  ]
-"94
-[; ;../../Lib/BMP180/BMP180.c: 94:   return(5);
-[e ) -> -> 5 `i `uc ]
-[e $UE 1052  ]
-[e $U 1054  ]
-"95
-[; ;../../Lib/BMP180/BMP180.c: 95:  else
-[e :U 1053 ]
-"96
-[; ;../../Lib/BMP180/BMP180.c: 96:   return(0);
-[e ) -> -> 0 `i `uc ]
-[e $UE 1052  ]
-[e :U 1054 ]
-"97
-[; ;../../Lib/BMP180/BMP180.c: 97: }
+[; ;../../Lib/BMP180/BMP180.c: 93: }
+[e :UE 1040 ]
+}
+"99
+[; ;../../Lib/BMP180/BMP180.c: 99: void BMP180Reset(const BMP180_t *BMP180){
+[v _BMP180Reset `(v ~T0 @X0 1 ef1`*CS1028 ]
+{
+[e :U _BMP180Reset ]
+[v _BMP180 `*CS1028 ~T0 @X0 1 r1 ]
+[f ]
+"101
+[; ;../../Lib/BMP180/BMP180.c: 101:     BMP180WriteByte(BMP180, 0xE0, 0xB6);
+[e ( _BMP180WriteByte (3 , , _BMP180 -> -> 224 `i `uc -> -> 182 `i `uc ]
+"102
+[; ;../../Lib/BMP180/BMP180.c: 102: }
+[e :UE 1051 ]
+}
+"108
+[; ;../../Lib/BMP180/BMP180.c: 108: void BMP180ReadEeprom(BMP180_t *BMP180){
+[v _BMP180ReadEeprom `(v ~T0 @X0 1 ef1`*S1028 ]
+{
+[e :U _BMP180ReadEeprom ]
+[v _BMP180 `*S1028 ~T0 @X0 1 r1 ]
+[f ]
+[v F8249 `uc ~T0 @X0 -> 22 `i s ]
+[i F8249
+:U ..
+"110
+[; ;../../Lib/BMP180/BMP180.c: 110:     uint8_t data[22]={0};
+-> -> 0 `i `uc
+..
+]
+[v _data `uc ~T0 @X0 -> 22 `i a ]
+[e = _data F8249 ]
+"112
+[; ;../../Lib/BMP180/BMP180.c: 112:     BMP180ReadMultiByte(BMP180, 0xAA, data, 22);
+[e ( _BMP180ReadMultiByte (4 , , , -> _BMP180 `*CS1028 -> -> 170 `i `uc &U _data -> -> 22 `i `uc ]
+"114
+[; ;../../Lib/BMP180/BMP180.c: 114:     BMP180->AC1 = (data[0] << 8) + data[1];
+[e = . *U _BMP180 3 -> + << -> *U + &U _data * -> -> -> 0 `i `ui `ux -> -> # *U &U _data `ui `ux `i -> 8 `i -> *U + &U _data * -> -> -> 1 `i `ui `ux -> -> # *U &U _data `ui `ux `i `s ]
+"115
+[; ;../../Lib/BMP180/BMP180.c: 115:     BMP180->AC2 = (data[2] << 8) + data[3];
+[e = . *U _BMP180 4 -> + << -> *U + &U _data * -> -> -> 2 `i `ui `ux -> -> # *U &U _data `ui `ux `i -> 8 `i -> *U + &U _data * -> -> -> 3 `i `ui `ux -> -> # *U &U _data `ui `ux `i `s ]
+"116
+[; ;../../Lib/BMP180/BMP180.c: 116:     BMP180->AC3 = (data[4] << 8) + data[5];
+[e = . *U _BMP180 5 -> + << -> *U + &U _data * -> -> -> 4 `i `ui `ux -> -> # *U &U _data `ui `ux `i -> 8 `i -> *U + &U _data * -> -> -> 5 `i `ui `ux -> -> # *U &U _data `ui `ux `i `s ]
+"117
+[; ;../../Lib/BMP180/BMP180.c: 117:     BMP180->AC4 = (data[6] << 8) + data[7];
+[e = . *U _BMP180 6 -> + << -> *U + &U _data * -> -> -> 6 `i `ui `ux -> -> # *U &U _data `ui `ux `i -> 8 `i -> *U + &U _data * -> -> -> 7 `i `ui `ux -> -> # *U &U _data `ui `ux `i `us ]
+"118
+[; ;../../Lib/BMP180/BMP180.c: 118:     BMP180->AC5 = (data[8] << 8) + data[9];
+[e = . *U _BMP180 7 -> + << -> *U + &U _data * -> -> -> 8 `i `ui `ux -> -> # *U &U _data `ui `ux `i -> 8 `i -> *U + &U _data * -> -> -> 9 `i `ui `ux -> -> # *U &U _data `ui `ux `i `us ]
+"119
+[; ;../../Lib/BMP180/BMP180.c: 119:     BMP180->AC6 = (data[10] << 8) + data[11];
+[e = . *U _BMP180 8 -> + << -> *U + &U _data * -> -> -> 10 `i `ui `ux -> -> # *U &U _data `ui `ux `i -> 8 `i -> *U + &U _data * -> -> -> 11 `i `ui `ux -> -> # *U &U _data `ui `ux `i `us ]
+"120
+[; ;../../Lib/BMP180/BMP180.c: 120:     BMP180->B1 = (data[12] << 8) + data[13];
+[e = . *U _BMP180 9 -> + << -> *U + &U _data * -> -> -> 12 `i `ui `ux -> -> # *U &U _data `ui `ux `i -> 8 `i -> *U + &U _data * -> -> -> 13 `i `ui `ux -> -> # *U &U _data `ui `ux `i `s ]
+"121
+[; ;../../Lib/BMP180/BMP180.c: 121:     BMP180->B2 = (data[14] << 8) + data[15];
+[e = . *U _BMP180 10 -> + << -> *U + &U _data * -> -> -> 14 `i `ui `ux -> -> # *U &U _data `ui `ux `i -> 8 `i -> *U + &U _data * -> -> -> 15 `i `ui `ux -> -> # *U &U _data `ui `ux `i `s ]
+"122
+[; ;../../Lib/BMP180/BMP180.c: 122:     BMP180->MB = (data[16] << 8) + data[17];
+[e = . *U _BMP180 11 -> + << -> *U + &U _data * -> -> -> 16 `i `ui `ux -> -> # *U &U _data `ui `ux `i -> 8 `i -> *U + &U _data * -> -> -> 17 `i `ui `ux -> -> # *U &U _data `ui `ux `i `s ]
+"123
+[; ;../../Lib/BMP180/BMP180.c: 123:     BMP180->MC = (data[18] << 8) + data[19];
+[e = . *U _BMP180 12 -> + << -> *U + &U _data * -> -> -> 18 `i `ui `ux -> -> # *U &U _data `ui `ux `i -> 8 `i -> *U + &U _data * -> -> -> 19 `i `ui `ux -> -> # *U &U _data `ui `ux `i `s ]
+"124
+[; ;../../Lib/BMP180/BMP180.c: 124:     BMP180->MD = (data[20] << 8) + data[21];
+[e = . *U _BMP180 13 -> + << -> *U + &U _data * -> -> -> 20 `i `ui `ux -> -> # *U &U _data `ui `ux `i -> 8 `i -> *U + &U _data * -> -> -> 21 `i `ui `ux -> -> # *U &U _data `ui `ux `i `s ]
+"125
+[; ;../../Lib/BMP180/BMP180.c: 125: }
 [e :UE 1052 ]
 }
-"98
-[; ;../../Lib/BMP180/BMP180.c: 98: uint8_t getTemperature(uint8_t *T)
-[v _getTemperature `(uc ~T0 @X0 1 ef1`*uc ]
-"104
-[; ;../../Lib/BMP180/BMP180.c: 104: {
+"131
+[; ;../../Lib/BMP180/BMP180.c: 131: void BMP180_Init(BMP180_t *BMP180){
+[v _BMP180_Init `(v ~T0 @X0 1 ef1`*S1028 ]
 {
-[e :U _getTemperature ]
-"98
-[; ;../../Lib/BMP180/BMP180.c: 98: uint8_t getTemperature(uint8_t *T)
-[v _T `*uc ~T0 @X0 1 r1 ]
-"104
-[; ;../../Lib/BMP180/BMP180.c: 104: {
+[e :U _BMP180_Init ]
+[v _BMP180 `*S1028 ~T0 @X0 1 r1 ]
 [f ]
-"105
-[; ;../../Lib/BMP180/BMP180.c: 105:  unsigned char data[2];
-[v _data `uc ~T0 @X0 -> 2 `i a ]
-"106
-[; ;../../Lib/BMP180/BMP180.c: 106:  uint8_t result;
-[v _result `uc ~T0 @X0 1 a ]
-"107
-[; ;../../Lib/BMP180/BMP180.c: 107:  double tu, a;
-[v _tu `d ~T0 @X0 1 a ]
-[v _a `d ~T0 @X0 1 a ]
-"109
-[; ;../../Lib/BMP180/BMP180.c: 109:  data[0] = 0xF6;
-[e = *U + &U _data * -> -> -> 0 `i `ui `ux -> -> # *U &U _data `ui `ux -> -> 246 `i `uc ]
-"111
-[; ;../../Lib/BMP180/BMP180.c: 111:  result = ReadADC_BMP180(0X77, 0xF6, 2);
-[e = _result ( _ReadADC_BMP180 (3 , , -> -> 119 `i `*CS1029 -> -> 246 `i `uc -> -> 2 `i `uc ]
-"112
-[; ;../../Lib/BMP180/BMP180.c: 112:  if (result)
-[e $ ! != -> _result `i -> 0 `i 1056  ]
-"113
-[; ;../../Lib/BMP180/BMP180.c: 113:  {
-{
-"116
-[; ;../../Lib/BMP180/BMP180.c: 116:  }
+"133
+[; ;../../Lib/BMP180/BMP180.c: 133:     BMP180Reset(BMP180);
+[e ( _BMP180Reset (1 -> _BMP180 `*CS1028 ]
+"134
+[; ;../../Lib/BMP180/BMP180.c: 134:     BMP180_ID_Request(BMP180);
+[e ( _BMP180_ID_Request (1 _BMP180 ]
+"135
+[; ;../../Lib/BMP180/BMP180.c: 135:     BMP180ReadEeprom(BMP180);
+[e ( _BMP180ReadEeprom (1 _BMP180 ]
+"136
+[; ;../../Lib/BMP180/BMP180.c: 136: }
+[e :UE 1053 ]
 }
-[e :U 1056 ]
-"117
-[; ;../../Lib/BMP180/BMP180.c: 117:  return(result);
-[e ) _result ]
+"143
+[; ;../../Lib/BMP180/BMP180.c: 143: int32_t BMP180ReadTeamUT(BMP180_t *BMP180){
+[v _BMP180ReadTeamUT `(l ~T0 @X0 1 ef1`*S1028 ]
+{
+[e :U _BMP180ReadTeamUT ]
+[v _BMP180 `*S1028 ~T0 @X0 1 r1 ]
+[f ]
+[v F8255 `uc ~T0 @X0 -> 2 `i s ]
+[i F8255
+:U ..
+"145
+[; ;../../Lib/BMP180/BMP180.c: 145:     uint8_t data[2]={0};
+-> -> 0 `i `uc
+..
+]
+[v _data `uc ~T0 @X0 -> 2 `i a ]
+[e = _data F8255 ]
+"147
+[; ;../../Lib/BMP180/BMP180.c: 147:     BMP180WriteByte(BMP180, 0xF4, 0x2E);
+[e ( _BMP180WriteByte (3 , , -> _BMP180 `*CS1028 -> -> 244 `i `uc -> -> 46 `i `uc ]
+"148
+[; ;../../Lib/BMP180/BMP180.c: 148:     _delay((unsigned long)((5)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"149
+[; ;../../Lib/BMP180/BMP180.c: 149:     BMP180ReadMultiByte(BMP180, 0xF6, data, 2);
+[e ( _BMP180ReadMultiByte (4 , , , -> _BMP180 `*CS1028 -> -> 246 `i `uc &U _data -> -> 2 `i `uc ]
+"151
+[; ;../../Lib/BMP180/BMP180.c: 151:     return ((data[0] << 8) + data[1]);
+[e ) -> + << -> *U + &U _data * -> -> -> 0 `i `ui `ux -> -> # *U &U _data `ui `ux `i -> 8 `i -> *U + &U _data * -> -> -> 1 `i `ui `ux -> -> # *U &U _data `ui `ux `i `l ]
+[e $UE 1054  ]
+"152
+[; ;../../Lib/BMP180/BMP180.c: 152: }
+[e :UE 1054 ]
+}
+"158
+[; ;../../Lib/BMP180/BMP180.c: 158: int32_t BMP180ReadPressUP(BMP180_t *BMP180){
+[v _BMP180ReadPressUP `(l ~T0 @X0 1 ef1`*S1028 ]
+{
+[e :U _BMP180ReadPressUP ]
+[v _BMP180 `*S1028 ~T0 @X0 1 r1 ]
+[f ]
+[v F8259 `uc ~T0 @X0 -> 3 `i s ]
+[i F8259
+:U ..
+"160
+[; ;../../Lib/BMP180/BMP180.c: 160:     uint8_t data[3]={0};
+-> -> 0 `i `uc
+..
+]
+[v _data `uc ~T0 @X0 -> 3 `i a ]
+[e = _data F8259 ]
+"161
+[; ;../../Lib/BMP180/BMP180.c: 161:     int32_t press;
+[v _press `l ~T0 @X0 1 a ]
+"162
+[; ;../../Lib/BMP180/BMP180.c: 162:     BMP180WriteByte(BMP180, 0xF4, 0x34);
+[e ( _BMP180WriteByte (3 , , -> _BMP180 `*CS1028 -> -> 244 `i `uc -> -> 52 `i `uc ]
+"163
+[; ;../../Lib/BMP180/BMP180.c: 163:     _delay((unsigned long)((4.5)*(4000000/4000.0)));
+[e ( __delay (1 -> * .4.5 / -> -> 4000000 `l `d .4000.0 `ul ]
+"164
+[; ;../../Lib/BMP180/BMP180.c: 164:     BMP180ReadMultiByte(BMP180, 0xF6, data, 3);
+[e ( _BMP180ReadMultiByte (4 , , , -> _BMP180 `*CS1028 -> -> 246 `i `uc &U _data -> -> 3 `i `uc ]
+"167
+[; ;../../Lib/BMP180/BMP180.c: 167:     press = (data[0]<<16) + (data[1]<<8) + data[2];
+[e = _press -> + + << -> *U + &U _data * -> -> -> 0 `i `ui `ux -> -> # *U &U _data `ui `ux `i -> 16 `i << -> *U + &U _data * -> -> -> 1 `i `ui `ux -> -> # *U &U _data `ui `ux `i -> 8 `i -> *U + &U _data * -> -> -> 2 `i `ui `ux -> -> # *U &U _data `ui `ux `i `l ]
+"168
+[; ;../../Lib/BMP180/BMP180.c: 168:     press = press>>6;
+[e = _press >> _press -> 6 `i ]
+"169
+[; ;../../Lib/BMP180/BMP180.c: 169:     return press;
+[e ) _press ]
 [e $UE 1055  ]
-"118
-[; ;../../Lib/BMP180/BMP180.c: 118: }
+"170
+[; ;../../Lib/BMP180/BMP180.c: 170: }
 [e :UE 1055 ]
 }
+"176
+[; ;../../Lib/BMP180/BMP180.c: 176: void BMP180ReadData(const BMP180_t *BMP180, float *temp, float *press){
+[v _BMP180ReadData `(v ~T0 @X0 1 ef3`*CS1028`*f`*f ]
+{
+[e :U _BMP180ReadData ]
+[v _BMP180 `*CS1028 ~T0 @X0 1 r1 ]
+[v _temp `*f ~T0 @X0 1 r2 ]
+[v _press `*f ~T0 @X0 1 r3 ]
+[f ]
+"178
+[; ;../../Lib/BMP180/BMP180.c: 178:     int32_t X1, X2, B5, UT;
+[v _X1 `l ~T0 @X0 1 a ]
+[v _X2 `l ~T0 @X0 1 a ]
+[v _B5 `l ~T0 @X0 1 a ]
+[v _UT `l ~T0 @X0 1 a ]
+"179
+[; ;../../Lib/BMP180/BMP180.c: 179:     int32_t X3, B3, B4, B6, B7, UP;
+[v _X3 `l ~T0 @X0 1 a ]
+[v _B3 `l ~T0 @X0 1 a ]
+[v _B4 `l ~T0 @X0 1 a ]
+[v _B6 `l ~T0 @X0 1 a ]
+[v _B7 `l ~T0 @X0 1 a ]
+[v _UP `l ~T0 @X0 1 a ]
+"181
+[; ;../../Lib/BMP180/BMP180.c: 181:     printf("\nBMP180_AC1: %d\n", BMP180->AC1);
+[e ( _printf , (. :s 1C -> . *U _BMP180 3 `i ]
+"182
+[; ;../../Lib/BMP180/BMP180.c: 182:     printf("BMP180_AC2: %d\n", BMP180->AC2);
+[e ( _printf , (. :s 2C -> . *U _BMP180 4 `i ]
+"183
+[; ;../../Lib/BMP180/BMP180.c: 183:     printf("BMP180_AC3: %d\n", BMP180->AC3);
+[e ( _printf , (. :s 3C -> . *U _BMP180 5 `i ]
+"184
+[; ;../../Lib/BMP180/BMP180.c: 184:     printf("BMP180_AC4: %d\n", BMP180->AC4);
+[e ( _printf , (. :s 4C -> . *U _BMP180 6 `ui ]
+"185
+[; ;../../Lib/BMP180/BMP180.c: 185:     printf("BMP180_AC5: %d\n", BMP180->AC5);
+[e ( _printf , (. :s 5C -> . *U _BMP180 7 `ui ]
+"186
+[; ;../../Lib/BMP180/BMP180.c: 186:     printf("BMP180_AC6: %d\n", BMP180->AC6);
+[e ( _printf , (. :s 6C -> . *U _BMP180 8 `ui ]
+"187
+[; ;../../Lib/BMP180/BMP180.c: 187:     printf("BMP180_B1: %d\n", BMP180->B1);
+[e ( _printf , (. :s 7C -> . *U _BMP180 9 `i ]
+"188
+[; ;../../Lib/BMP180/BMP180.c: 188:     printf("BMP180_B2: %d\n", BMP180->B2);
+[e ( _printf , (. :s 8C -> . *U _BMP180 10 `i ]
+"189
+[; ;../../Lib/BMP180/BMP180.c: 189:     printf("BMP180_MB: %d\n", BMP180->MB);
+[e ( _printf , (. :s 9C -> . *U _BMP180 11 `i ]
+"190
+[; ;../../Lib/BMP180/BMP180.c: 190:     printf("BMP180_MC: %d\n", BMP180->MC);
+[e ( _printf , (. :s 10C -> . *U _BMP180 12 `i ]
+"191
+[; ;../../Lib/BMP180/BMP180.c: 191:     printf("BMP180_MD: %d\n", BMP180->MD);
+[e ( _printf , (. :s 11C -> . *U _BMP180 13 `i ]
+"193
+[; ;../../Lib/BMP180/BMP180.c: 193:     UT = BMP180ReadTeamUT(BMP180);
+[e = _UT ( _BMP180ReadTeamUT (1 -> _BMP180 `*S1028 ]
+"194
+[; ;../../Lib/BMP180/BMP180.c: 194:     printf("BMP180_UT: %d\n", UT);
+[e ( _printf , (. :s 12C _UT ]
+"196
+[; ;../../Lib/BMP180/BMP180.c: 196:     X1 = (int32_t)UT-BMP180->AC6;
+[e = _X1 - _UT -> . *U _BMP180 8 `l ]
+"197
+[; ;../../Lib/BMP180/BMP180.c: 197:     X1 = X1*BMP180->AC5/32768;
+[e = _X1 / * _X1 -> . *U _BMP180 7 `l -> 32768 `l ]
+"198
+[; ;../../Lib/BMP180/BMP180.c: 198:     printf("BMP180_X1: %ld\n", X1);
+[e ( _printf , (. :s 13C _X1 ]
+"199
+[; ;../../Lib/BMP180/BMP180.c: 199:     X2 = (int32_t)BMP180->MC*2048;
+[e = _X2 * -> . *U _BMP180 12 `l -> -> 2048 `i `l ]
+"200
+[; ;../../Lib/BMP180/BMP180.c: 200:     X2 = X2/(X1+BMP180->MD);
+[e = _X2 / _X2 + _X1 -> . *U _BMP180 13 `l ]
+"201
+[; ;../../Lib/BMP180/BMP180.c: 201:     printf("BMP180_X2: %ld\n", X2);
+[e ( _printf , (. :s 14C _X2 ]
+"202
+[; ;../../Lib/BMP180/BMP180.c: 202:     B5 = X1 + X2;
+[e = _B5 + _X1 _X2 ]
+"203
+[; ;../../Lib/BMP180/BMP180.c: 203:     printf("BMP180_B5: %d\n", B5);
+[e ( _printf , (. :s 15C _B5 ]
+"204
+[; ;../../Lib/BMP180/BMP180.c: 204:     *temp = (float)(B5 + 8)/160.0;
+[e = *U _temp -> / -> -> + _B5 -> -> 8 `i `l `f `d .160.0 `f ]
+"206
+[; ;../../Lib/BMP180/BMP180.c: 206:     UP = BMP180ReadPressUP(BMP180);
+[e = _UP ( _BMP180ReadPressUP (1 -> _BMP180 `*S1028 ]
+"207
+[; ;../../Lib/BMP180/BMP180.c: 207:     printf("BMP180_UP: %ld\n", UP);
+[e ( _printf , (. :s 16C _UP ]
+"224
+[; ;../../Lib/BMP180/BMP180.c: 224: }
+[e :UE 1056 ]
+}
+"230
+[; ;../../Lib/BMP180/BMP180.c: 230: uint8_t BMP180_ID_Request(BMP180_t *BMP180){
+[v _BMP180_ID_Request `(uc ~T0 @X0 1 ef1`*S1028 ]
+{
+[e :U _BMP180_ID_Request ]
+[v _BMP180 `*S1028 ~T0 @X0 1 r1 ]
+[f ]
+"232
+[; ;../../Lib/BMP180/BMP180.c: 232:     uint8_t BMP180_ID = 0;
+[v _BMP180_ID `uc ~T0 @X0 1 a ]
+[e = _BMP180_ID -> -> 0 `i `uc ]
+"234
+[; ;../../Lib/BMP180/BMP180.c: 234:     BMP180_ID = BMP180ReadByte(BMP180, 0xD0);
+[e = _BMP180_ID ( _BMP180ReadByte (2 , -> _BMP180 `*CS1028 -> -> 208 `i `uc ]
+"235
+[; ;../../Lib/BMP180/BMP180.c: 235:     BMP180->BMP180_Id = BMP180_ID;
+[e = . *U _BMP180 1 _BMP180_ID ]
+"238
+[; ;../../Lib/BMP180/BMP180.c: 238:         printf("BMP180 ID: %d\n", BMP180_ID);
+[e ( _printf , (. :s 17C -> _BMP180_ID `i ]
+"241
+[; ;../../Lib/BMP180/BMP180.c: 241:     return BMP180_ID;
+[e ) _BMP180_ID ]
+[e $UE 1057  ]
+"242
+[; ;../../Lib/BMP180/BMP180.c: 242: }
+[e :UE 1057 ]
+}
+[p f _printf 8388752 ]
+[a 16C 66 77 80 49 56 48 95 85 80 58 32 37 108 100 10 0 ]
+[a 14C 66 77 80 49 56 48 95 88 50 58 32 37 108 100 10 0 ]
+[a 13C 66 77 80 49 56 48 95 88 49 58 32 37 108 100 10 0 ]
+[a 12C 66 77 80 49 56 48 95 85 84 58 32 37 100 10 0 ]
+[a 11C 66 77 80 49 56 48 95 77 68 58 32 37 100 10 0 ]
+[a 17C 66 77 80 49 56 48 32 73 68 58 32 37 100 10 0 ]
+[a 10C 66 77 80 49 56 48 95 77 67 58 32 37 100 10 0 ]
+[a 9C 66 77 80 49 56 48 95 77 66 58 32 37 100 10 0 ]
+[a 6C 66 77 80 49 56 48 95 65 67 54 58 32 37 100 10 0 ]
+[a 5C 66 77 80 49 56 48 95 65 67 53 58 32 37 100 10 0 ]
+[a 15C 66 77 80 49 56 48 95 66 53 58 32 37 100 10 0 ]
+[a 4C 66 77 80 49 56 48 95 65 67 52 58 32 37 100 10 0 ]
+[a 3C 66 77 80 49 56 48 95 65 67 51 58 32 37 100 10 0 ]
+[a 2C 66 77 80 49 56 48 95 65 67 50 58 32 37 100 10 0 ]
+[a 8C 66 77 80 49 56 48 95 66 50 58 32 37 100 10 0 ]
+[a 1C 10 66 77 80 49 56 48 95 65 67 49 58 32 37 100 10 0 ]
+[a 7C 66 77 80 49 56 48 95 66 49 58 32 37 100 10 0 ]

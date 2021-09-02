@@ -1189,7 +1189,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _SSP1CON1bits 0 2 -> -> 1 `i `uc ]
 "13
 [; ;../../Lib/I2C/I2C.c: 13: }
-[e :UE 1030 ]
+[e :UE 1029 ]
 }
 "15
 [; ;../../Lib/I2C/I2C.c: 15: uint8_t I2C_Scan(void){
@@ -1206,9 +1206,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ <= -> _i `i -> 127 `i 1032  ]
-[e $U 1033  ]
-[e :U 1032 ]
+[e $ <= -> _i `i -> 127 `i 1031  ]
+[e $U 1032  ]
+[e :U 1031 ]
 {
 "20
 [; ;../../Lib/I2C/I2C.c: 20:         Send_I2C_StartBit();
@@ -1221,7 +1221,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _ACK_bit -> . . _SSP1CON2bits 0 6 `a ]
 "24
 [; ;../../Lib/I2C/I2C.c: 24:         if(ACK_bit==0){
-[e $ ! == -> _ACK_bit `i -> 0 `i 1035  ]
+[e $ ! == -> _ACK_bit `i -> 0 `i 1034  ]
 {
 "26
 [; ;../../Lib/I2C/I2C.c: 26:                 printf("Device Address: %d\n", i);
@@ -1229,11 +1229,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "28
 [; ;../../Lib/I2C/I2C.c: 28:                 return i;
 [e ) _i ]
-[e $UE 1031  ]
+[e $UE 1030  ]
 "29
 [; ;../../Lib/I2C/I2C.c: 29:         }
 }
-[e :U 1035 ]
+[e :U 1034 ]
 "30
 [; ;../../Lib/I2C/I2C.c: 30:         _delay((unsigned long)((1)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
@@ -1241,8 +1241,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;../../Lib/I2C/I2C.c: 31:     }
 }
 [e ++ _i -> -> 1 `i `uc ]
-[e $ <= -> _i `i -> 127 `i 1032  ]
-[e :U 1033 ]
+[e $ <= -> _i `i -> 127 `i 1031  ]
+[e :U 1032 ]
 }
 "33
 [; ;../../Lib/I2C/I2C.c: 33:         printf("Device Address not found\n");
@@ -1250,10 +1250,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "35
 [; ;../../Lib/I2C/I2C.c: 35:     return 255;
 [e ) -> -> 255 `i `uc ]
-[e $UE 1031  ]
+[e $UE 1030  ]
 "36
 [; ;../../Lib/I2C/I2C.c: 36: }
-[e :UE 1031 ]
+[e :UE 1030 ]
 }
 "38
 [; ;../../Lib/I2C/I2C.c: 38: void Send_I2C_Data(uint8_t databyte)
@@ -1276,18 +1276,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _SSP1BUF _databyte ]
 "42
 [; ;../../Lib/I2C/I2C.c: 42:     while(!PIR3bits.SSP1IF);
-[e $U 1037  ]
-[e :U 1038 ]
+[e $U 1036  ]
 [e :U 1037 ]
-[e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1038  ]
-[e :U 1039 ]
+[e :U 1036 ]
+[e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1037  ]
+[e :U 1038 ]
 "43
 [; ;../../Lib/I2C/I2C.c: 43: }
-[e :UE 1036 ]
+[e :UE 1035 ]
 }
 "49
-[; ;../../Lib/I2C/I2C.c: 49: unsigned int Read_I2C_Data(void)
-[v _Read_I2C_Data `(ui ~T0 @X0 1 ef ]
+[; ;../../Lib/I2C/I2C.c: 49: uint8_t Read_I2C_Data(void)
+[v _Read_I2C_Data `(uc ~T0 @X0 1 ef ]
 "50
 [; ;../../Lib/I2C/I2C.c: 50: {
 {
@@ -1301,18 +1301,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _SSP1CON2bits 0 3 -> -> 1 `i `uc ]
 "53
 [; ;../../Lib/I2C/I2C.c: 53:     while(!PIR3bits.SSP1IF);
-[e $U 1041  ]
-[e :U 1042 ]
+[e $U 1040  ]
 [e :U 1041 ]
-[e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1042  ]
-[e :U 1043 ]
+[e :U 1040 ]
+[e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1041  ]
+[e :U 1042 ]
 "54
 [; ;../../Lib/I2C/I2C.c: 54:     return (SSP1BUF);
-[e ) -> _SSP1BUF `ui ]
-[e $UE 1040  ]
+[e ) _SSP1BUF ]
+[e $UE 1039  ]
 "55
 [; ;../../Lib/I2C/I2C.c: 55: }
-[e :UE 1040 ]
+[e :UE 1039 ]
 }
 "68
 [; ;../../Lib/I2C/I2C.c: 68: void Send_I2C_ControlByte(uint8_t Dev_Add, uint8_t RW_bit)
@@ -1336,14 +1336,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _SSP1BUF -> + << -> _Dev_Add `i -> 1 `i -> _RW_bit `i `uc ]
 "79
 [; ;../../Lib/I2C/I2C.c: 79:     while(!PIR3bits.SSP1IF);
-[e $U 1045  ]
-[e :U 1046 ]
+[e $U 1044  ]
 [e :U 1045 ]
-[e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1046  ]
-[e :U 1047 ]
+[e :U 1044 ]
+[e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1045  ]
+[e :U 1046 ]
 "80
 [; ;../../Lib/I2C/I2C.c: 80: }
-[e :UE 1044 ]
+[e :UE 1043 ]
 }
 "85
 [; ;../../Lib/I2C/I2C.c: 85: void Send_I2C_StartBit(void)
@@ -1361,14 +1361,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _SSP1CON2bits 0 0 -> -> 1 `i `uc ]
 "89
 [; ;../../Lib/I2C/I2C.c: 89:     while(!PIR3bits.SSP1IF);
-[e $U 1049  ]
-[e :U 1050 ]
+[e $U 1048  ]
 [e :U 1049 ]
-[e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1050  ]
-[e :U 1051 ]
+[e :U 1048 ]
+[e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1049  ]
+[e :U 1050 ]
 "90
 [; ;../../Lib/I2C/I2C.c: 90: }
-[e :UE 1048 ]
+[e :UE 1047 ]
 }
 "95
 [; ;../../Lib/I2C/I2C.c: 95: void Send_I2C_StopBit(void)
@@ -1386,14 +1386,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _SSP1CON2bits 0 2 -> -> 1 `i `uc ]
 "99
 [; ;../../Lib/I2C/I2C.c: 99:     while(!PIR3bits.SSP1IF);
-[e $U 1053  ]
-[e :U 1054 ]
+[e $U 1052  ]
 [e :U 1053 ]
-[e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1054  ]
-[e :U 1055 ]
+[e :U 1052 ]
+[e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1053  ]
+[e :U 1054 ]
 "100
 [; ;../../Lib/I2C/I2C.c: 100: }
-[e :UE 1052 ]
+[e :UE 1051 ]
 }
 "106
 [; ;../../Lib/I2C/I2C.c: 106: void Send_I2C_ACK(void)
@@ -1414,14 +1414,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _SSP1CON2bits 0 4 -> -> 1 `i `uc ]
 "111
 [; ;../../Lib/I2C/I2C.c: 111:    while(!PIR3bits.SSP1IF);
-[e $U 1057  ]
-[e :U 1058 ]
+[e $U 1056  ]
 [e :U 1057 ]
-[e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1058  ]
-[e :U 1059 ]
+[e :U 1056 ]
+[e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1057  ]
+[e :U 1058 ]
 "112
 [; ;../../Lib/I2C/I2C.c: 112: }
-[e :UE 1056 ]
+[e :UE 1055 ]
 }
 "117
 [; ;../../Lib/I2C/I2C.c: 117: void Send_I2C_NAK(void)
@@ -1442,14 +1442,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _SSP1CON2bits 0 4 -> -> 1 `i `uc ]
 "122
 [; ;../../Lib/I2C/I2C.c: 122:     while(!PIR3bits.SSP1IF);
-[e $U 1061  ]
-[e :U 1062 ]
+[e $U 1060  ]
 [e :U 1061 ]
-[e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1062  ]
-[e :U 1063 ]
+[e :U 1060 ]
+[e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1061  ]
+[e :U 1062 ]
 "123
 [; ;../../Lib/I2C/I2C.c: 123: }
-[e :UE 1060 ]
+[e :UE 1059 ]
 }
 [p f _printf 8388736 ]
 [a 2C 68 101 118 105 99 101 32 65 100 100 114 101 115 115 32 110 111 116 32 102 111 117 110 100 10 0 ]
