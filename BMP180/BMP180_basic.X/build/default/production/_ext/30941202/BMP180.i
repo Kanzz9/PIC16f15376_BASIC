@@ -13604,7 +13604,7 @@ void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 void I2C_Init(void);
 uint8_t I2C_Scan(void);
 void Send_I2C_Data(uint8_t databyte);
-unsigned int Read_I2C_Data(void);
+uint8_t Read_I2C_Data(void);
 void Send_I2C_ControlByte(uint8_t Dev_Add,uint8_t RW_bit);
 void Send_I2C_StartBit(void);
 void Send_I2C_StopBit(void);
@@ -13612,40 +13612,84 @@ void Send_I2C_ACK(void);
 void Send_I2C_NAK(void);
 # 62 "../../Lib/I2C/../../BMP180/BMP180_basic.X/mcc_generated_files/mcc.h" 2
 
-# 1 "../../Lib/BM1383\\BM1383.h" 1
-# 10 "../../Lib/BM1383\\BM1383.h"
-# 1 "../../Lib/BM1383/../../BMP180/BMP180_basic.X/mcc_generated_files/mcc.h" 1
-# 10 "../../Lib/BM1383\\BM1383.h" 2
-
-
-
-
-typedef struct{
-    uint8_t BM1383_Add;
-}BM1383_t;
-
-
-
-void WriteByteBM1383(const BM1383_t *BM1383, uint8_t Reg_Add, uint8_t data);
-uint8_t ReadByteBM1383(const BM1383_t *BM1383, uint8_t Reg_Add);
-# 63 "../../Lib/BM1383/../../BMP180/BMP180_basic.X/mcc_generated_files/mcc.h" 2
-
 # 1 "../../Lib/BMP180\\BMP180.h" 1
-# 64 "../../Lib/BM1383/../../BMP180/BMP180_basic.X/mcc_generated_files/mcc.h" 2
-# 77 "../../Lib/BM1383/../../BMP180/BMP180_basic.X/mcc_generated_files/mcc.h"
+# 63 "../../Lib/I2C/../../BMP180/BMP180_basic.X/mcc_generated_files/mcc.h" 2
+# 76 "../../Lib/I2C/../../BMP180/BMP180_basic.X/mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 90 "../../Lib/BM1383/../../BMP180/BMP180_basic.X/mcc_generated_files/mcc.h"
+# 89 "../../Lib/I2C/../../BMP180/BMP180_basic.X/mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 103 "../../Lib/BM1383/../../BMP180/BMP180_basic.X/mcc_generated_files/mcc.h"
+# 102 "../../Lib/I2C/../../BMP180/BMP180_basic.X/mcc_generated_files/mcc.h"
 void PMD_Initialize(void);
 # 11 "../../Lib/BMP180\\BMP180.h" 2
 
 
 
 
+typedef enum{
+   TIME_1 = 0,
+   TIMES_2,
+   TIMES_4,
+   TIMES_8
+}Oversampling_Pressure_t;
+
 typedef struct {
-    uint8_t BMP180_Add;
+   uint8_t BMP180_Add;
+   uint8_t BMP180_Id;
+   uint8_t BMP180_OSS;
+   int16_t AC1;
+   int16_t AC2;
+   int16_t AC3;
+   uint16_t AC4;
+   uint16_t AC5;
+   uint16_t AC6;
+   int16_t B1;
+   int16_t B2;
+   int16_t MB;
+   int16_t MC;
+   int16_t MD;
 }BMP180_t;
+# 54 "../../Lib/BMP180\\BMP180.h"
+void BMP180WriteByte(const BMP180_t *BMP180, uint8_t Reg_Add, uint8_t data);
+uint8_t BMP180ReadByte(const BMP180_t *BMP180, uint8_t Reg_Add);
+void BMP180ReadMultiByte(const BMP180_t *BMP180, uint8_t Reg_Add, uint8_t *data, uint8_t length);
+
+
+
+
+
+void BMP180_Init(BMP180_t *BMP180);
+
+
+
+
+
+void BMP180Reset(const BMP180_t *BMP180);
+
+
+
+
+
+void BMP180ReadEeprom(BMP180_t *BMP180);
+
+
+
+
+
+int32_t BMP180ReadTeamUT(BMP180_t *BMP180);
+
+
+
+
+
+int32_t BMP180ReadPressUP(BMP180_t *BMP180);
+
+
+
+
+
+void BMP180ReadData(const BMP180_t *BMP180, float *temp, float *press);
+
+uint8_t BMP180_ID_Request(BMP180_t *BMP180);
 # 6 "../../Lib/BMP180/BMP180.c" 2
 
 
@@ -13654,7 +13698,7 @@ typedef struct {
 
 
 
-void WriteByteBMP180(const BMP180_t *BMP180, uint8_t Reg_Add, uint8_t data){
+void BMP180WriteByte(const BMP180_t *BMP180, uint8_t Reg_Add, uint8_t data){
 
     _Bool ACK_bit = 1;
     while(ACK_bit)
@@ -13668,7 +13712,11 @@ void WriteByteBMP180(const BMP180_t *BMP180, uint8_t Reg_Add, uint8_t data){
     Send_I2C_StopBit();
 }
 
-uint8_t ReadByteBMP180(const BMP180_t *BMP180, uint8_t Reg_Add){
+
+
+
+
+uint8_t BMP180ReadByte(const BMP180_t *BMP180, uint8_t Reg_Add){
 
     _Bool ACK_bit = 1;
     uint8_t data=0;
@@ -13695,10 +13743,14 @@ uint8_t ReadByteBMP180(const BMP180_t *BMP180, uint8_t Reg_Add){
 
     return data;
 }
-uint8_t ReadADC_BMP180(const BMP180_t *BMP180, uint8_t Reg_Add, uint8_t len){
+
+
+
+
+
+void BMP180ReadMultiByte(const BMP180_t *BMP180, uint8_t Reg_Add, uint8_t *data, uint8_t length){
 
     _Bool ACK_bit = 1;
-    uint8_t *data=0;
     while(ACK_bit)
     {
         Send_I2C_StartBit();
@@ -13716,47 +13768,148 @@ uint8_t ReadADC_BMP180(const BMP180_t *BMP180, uint8_t Reg_Add, uint8_t len){
         Send_I2C_ControlByte(BMP180->BMP180_Add, 1);
         ACK_bit = SSP1CON2bits.ACKSTAT;
     }
-    for(uint8_t x ; x < len ;x++)
-    {
-        data[x] = Read_I2C_Data();
+
+    for(uint8_t i=0; i<(length-1); i++){
+
+        *(data+i)=Read_I2C_Data();
+
+        Send_I2C_ACK();
     }
+    *(data+(length-1))=Read_I2C_Data();
     Send_I2C_NAK();
     Send_I2C_StopBit();
-
-    return data;
 }
-uint8_t startTemperature(void)
 
 
-{
- uint8_t data[2], result;
 
- data[0] = 0xF4;
- data[1] = 0x2E;
-  WriteByteBMP180(0x77,result,data);
- if (result)
-  return(5);
- else
-  return(0);
+
+
+void BMP180Reset(const BMP180_t *BMP180){
+
+    BMP180WriteByte(BMP180, 0xE0, 0xB6);
 }
-uint8_t getTemperature(uint8_t *T)
 
 
 
 
 
-{
- unsigned char data[2];
- uint8_t result;
- double tu, a;
+void BMP180ReadEeprom(BMP180_t *BMP180){
 
- data[0] = 0xF6;
+    uint8_t data[22]={0};
 
- result = ReadADC_BMP180(0X77, 0xF6, 2);
- if (result)
- {
+    BMP180ReadMultiByte(BMP180, 0xAA, data, 22);
+
+    BMP180->AC1 = (data[0] << 8) + data[1];
+    BMP180->AC2 = (data[2] << 8) + data[3];
+    BMP180->AC3 = (data[4] << 8) + data[5];
+    BMP180->AC4 = (data[6] << 8) + data[7];
+    BMP180->AC5 = (data[8] << 8) + data[9];
+    BMP180->AC6 = (data[10] << 8) + data[11];
+    BMP180->B1 = (data[12] << 8) + data[13];
+    BMP180->B2 = (data[14] << 8) + data[15];
+    BMP180->MB = (data[16] << 8) + data[17];
+    BMP180->MC = (data[18] << 8) + data[19];
+    BMP180->MD = (data[20] << 8) + data[21];
+}
 
 
- }
- return(result);
+
+
+
+void BMP180_Init(BMP180_t *BMP180){
+
+    BMP180Reset(BMP180);
+    BMP180_ID_Request(BMP180);
+    BMP180ReadEeprom(BMP180);
+}
+
+
+
+
+
+
+int32_t BMP180ReadTeamUT(BMP180_t *BMP180){
+
+    uint8_t data[2]={0};
+
+    BMP180WriteByte(BMP180, 0xF4, 0x2E);
+    _delay((unsigned long)((5)*(4000000/4000.0)));
+    BMP180ReadMultiByte(BMP180, 0xF6, data, 2);
+
+    return ((data[0] << 8) + data[1]);
+}
+
+
+
+
+
+int32_t BMP180ReadPressUP(BMP180_t *BMP180){
+
+    uint8_t data[3]={0};
+    int32_t press;
+    BMP180WriteByte(BMP180, 0xF4, 0x34);
+    _delay((unsigned long)((4.5)*(4000000/4000.0)));
+    BMP180ReadMultiByte(BMP180, 0xF6, data, 3);
+
+
+    press = (data[0]<<16) + (data[1]<<8) + data[2];
+    press = press>>6;
+    return press;
+}
+
+
+
+
+
+void BMP180ReadData(const BMP180_t *BMP180, float *temp, float *press){
+
+    int32_t X1, X2, B5, UT;
+    int32_t X3, B3, B4, B6, B7, UP;
+
+    printf("\nBMP180_AC1: %d\n", BMP180->AC1);
+    printf("BMP180_AC2: %d\n", BMP180->AC2);
+    printf("BMP180_AC3: %d\n", BMP180->AC3);
+    printf("BMP180_AC4: %d\n", BMP180->AC4);
+    printf("BMP180_AC5: %d\n", BMP180->AC5);
+    printf("BMP180_AC6: %d\n", BMP180->AC6);
+    printf("BMP180_B1: %d\n", BMP180->B1);
+    printf("BMP180_B2: %d\n", BMP180->B2);
+    printf("BMP180_MB: %d\n", BMP180->MB);
+    printf("BMP180_MC: %d\n", BMP180->MC);
+    printf("BMP180_MD: %d\n", BMP180->MD);
+
+    UT = BMP180ReadTeamUT(BMP180);
+    printf("BMP180_UT: %d\n", UT);
+
+    X1 = (int32_t)UT-BMP180->AC6;
+    X1 = X1*BMP180->AC5/32768;
+    printf("BMP180_X1: %ld\n", X1);
+    X2 = (int32_t)BMP180->MC*2048;
+    X2 = X2/(X1+BMP180->MD);
+    printf("BMP180_X2: %ld\n", X2);
+    B5 = X1 + X2;
+    printf("BMP180_B5: %d\n", B5);
+    *temp = (float)(B5 + 8)/160.0;
+
+    UP = BMP180ReadPressUP(BMP180);
+    printf("BMP180_UP: %ld\n", UP);
+# 224 "../../Lib/BMP180/BMP180.c"
+}
+
+
+
+
+
+uint8_t BMP180_ID_Request(BMP180_t *BMP180){
+
+    uint8_t BMP180_ID = 0;
+
+    BMP180_ID = BMP180ReadByte(BMP180, 0xD0);
+    BMP180->BMP180_Id = BMP180_ID;
+
+
+        printf("BMP180 ID: %d\n", BMP180_ID);
+
+
+    return BMP180_ID;
 }

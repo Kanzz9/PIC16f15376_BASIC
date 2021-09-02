@@ -1,22 +1,23 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-"77 ../../Lib/BMP180/../../BMP180/BMP180_basic.X/mcc_generated_files/mcc.h
-[; ;../../Lib/BMP180/../../BMP180/BMP180_basic.X/mcc_generated_files/mcc.h: 77: void SYSTEM_Initialize(void);
+"76 ../../Lib/BMP180/../../BMP180/BMP180_basic.X/mcc_generated_files/mcc.h
+[; ;../../Lib/BMP180/../../BMP180/BMP180_basic.X/mcc_generated_files/mcc.h: 76: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-"14 ../../Lib/BM1383\BM1383.h
-[; ;../../Lib/BM1383\BM1383.h: 14: typedef struct{
-[s S1028 `uc 1 ]
-[n S1028 . BM1383_Add ]
-"15 ../../Lib/BMP180\BMP180.h
-[; ;../../Lib/BMP180\BMP180.h: 15: typedef struct {
-[s S1029 `uc 1 ]
-[n S1029 . BMP180_Add ]
+"22 ../../Lib/BMP180\BMP180.h
+[; ;../../Lib/BMP180\BMP180.h: 22: typedef struct {
+[s S1028 `uc 1 `uc 1 `uc 1 `s 1 `s 1 `s 1 `us 1 `us 1 `us 1 `s 1 `s 1 `s 1 `s 1 `s 1 ]
+[n S1028 . BMP180_Add BMP180_Id BMP180_OSS AC1 AC2 AC3 AC4 AC5 AC6 B1 B2 MB MC MD ]
 "12 ../../Lib/I2C\I2C.h
 [; ;../../Lib/I2C\I2C.h: 12: void I2C_Init(void);
 [v _I2C_Init `(v ~T0 @X0 0 ef ]
-"13
-[; ;../../Lib/I2C\I2C.h: 13: uint8_t I2C_Scan(void);
-[v _I2C_Scan `(uc ~T0 @X0 0 ef ]
+"62 ../../Lib/BMP180\BMP180.h
+[; ;../../Lib/BMP180\BMP180.h: 62: void BMP180_Init(BMP180_t *BMP180);
+[v _BMP180_Init `(v ~T0 @X0 0 ef1`*S1028 ]
+"92
+[; ;../../Lib/BMP180\BMP180.h: 92: void BMP180ReadData(const BMP180_t *BMP180, float *temp, float *press);
+[v _BMP180ReadData `(v ~T0 @X0 0 ef3`*CS1028`*f`*f ]
+"111 E:\microchip\xc8\pic\include\c99\stdio.h
+[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
 "1149 C:/Users/ADMIN/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h
 [; ;C:/Users/ADMIN/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h: 1149:     struct {
 [s S57 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -28,6 +29,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1160
 [; ;C:/Users/ADMIN/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h: 1160: extern volatile LATCbits_t LATCbits __attribute__((address(0x01A)));
 [v _LATCbits `VS56 ~T0 @X0 0 e@26 ]
+[v F183 `(v ~T0 @X0 1 tf1`ul ]
+"12 C:/Users/ADMIN/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\builtins.h
+[v __delay `JF183 ~T0 @X0 0 e ]
+[p i __delay ]
 "111 C:/Users/ADMIN/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h
 [; ;C:/Users/ADMIN/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h: 111: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1133,59 +1138,81 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Users/ADMIN/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16lf15376.h: 22554: __asm("TOSH equ 01FEFh");
 [; <" TOSH equ 01FEFh ;# ">
 [v $root$_main `(v ~T0 @X0 0 e ]
-"111 main.c
-[; ;main.c: 111: void main(void)
+"63 main.c
+[; ;main.c: 63: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"112
-[; ;main.c: 112: {
+"64
+[; ;main.c: 64: {
 {
 [e :U _main ]
 [f ]
-"114
-[; ;main.c: 114:     SYSTEM_Initialize();
+"66
+[; ;main.c: 66:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"131
-[; ;main.c: 131:     BM1383_t BM1383;
-[v _BM1383 `S1028 ~T0 @X0 1 a ]
-"132
-[; ;main.c: 132:     BMP180_t BMP180;
-[v _BMP180 `S1029 ~T0 @X0 1 a ]
-"133
-[; ;main.c: 133:     BM1383.BM1383_Add = 0x5D;
-[e = . _BM1383 0 -> -> 93 `i `uc ]
-"134
-[; ;main.c: 134:     BMP180.BMP180_Add = 0x77;
+"83
+[; ;main.c: 83:     float temp, press;
+[v _temp `f ~T0 @X0 1 a ]
+[v _press `f ~T0 @X0 1 a ]
+"84
+[; ;main.c: 84:     BMP180_t BMP180;
+[v _BMP180 `S1028 ~T0 @X0 1 a ]
+"85
+[; ;main.c: 85:     BMP180.BMP180_Add = 0x77;
 [e = . _BMP180 0 -> -> 119 `i `uc ]
-"135
-[; ;main.c: 135:     I2C_Init();
+"86
+[; ;main.c: 86:     BMP180.BMP180_OSS = 0;
+[e = . _BMP180 2 -> -> 0 `i `uc ]
+"87
+[; ;main.c: 87:     I2C_Init();
 [e ( _I2C_Init ..  ]
-"136
-[; ;main.c: 136:     I2C_Scan();
-[e ( _I2C_Scan ..  ]
-"138
-[; ;main.c: 138:     uint8_t i=0;
-[v _i `uc ~T0 @X0 1 a ]
-[e = _i -> -> 0 `i `uc ]
-"140
-[; ;main.c: 140:     do { LATCbits.LATC0 = 1; } while(0);
-[e :U 1033 ]
+"89
+[; ;main.c: 89:     BMP180_Init(&BMP180);
+[e ( _BMP180_Init (1 &U _BMP180 ]
+"95
+[; ;main.c: 95:     BMP180ReadData(&BMP180, &temp, &press);
+[e ( _BMP180ReadData (3 , , -> &U _BMP180 `*CS1028 &U _temp &U _press ]
+"96
+[; ;main.c: 96:     printf("BM1383 temp: %0.2f\n", temp);
+[e ( _printf , (. :s 1C -> _temp `d ]
+"98
+[; ;main.c: 98:     do { LATCbits.LATC0 = 1; } while(0);
+[e :U 1032 ]
 {
 [e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
 }
-[e :U 1032 ]
-"142
-[; ;main.c: 142:     while (1)
-[e :U 1035 ]
-"143
-[; ;main.c: 143:     {
-{
-"151
-[; ;main.c: 151:     }
-}
+[e :U 1031 ]
+"100
+[; ;main.c: 100:     while (1)
 [e :U 1034 ]
-[e $U 1035  ]
-[e :U 1036 ]
-"153
-[; ;main.c: 153: }
-[e :UE 1030 ]
+"101
+[; ;main.c: 101:     {
+{
+"106
+[; ;main.c: 106:         BMP180ReadData(&BMP180, &temp, &press);
+[e ( _BMP180ReadData (3 , , -> &U _BMP180 `*CS1028 &U _temp &U _press ]
+"107
+[; ;main.c: 107:         printf("BM1383 temp: %0.2f\n", temp);
+[e ( _printf , (. :s 2C -> _temp `d ]
+"108
+[; ;main.c: 108:         _delay((unsigned long)((1000)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"109
+[; ;main.c: 109:          printf("BM1383 press: %0.2f\n", press);
+[e ( _printf , (. :s 3C -> _press `d ]
+"110
+[; ;main.c: 110:         _delay((unsigned long)((1000)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"112
+[; ;main.c: 112:     }
 }
+[e :U 1033 ]
+[e $U 1034  ]
+[e :U 1035 ]
+"114
+[; ;main.c: 114: }
+[e :UE 1029 ]
+}
+[p f _printf 8462340 ]
+[a 3C 66 77 49 51 56 51 32 112 114 101 115 115 58 32 37 48 46 50 102 10 0 ]
+[a 1C 66 77 49 51 56 51 32 116 101 109 112 58 32 37 48 46 50 102 10 0 ]
+[a 2C 66 77 49 51 56 51 32 116 101 109 112 58 32 37 48 46 50 102 10 0 ]

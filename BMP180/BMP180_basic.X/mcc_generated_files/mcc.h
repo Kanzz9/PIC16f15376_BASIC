@@ -60,7 +60,6 @@
 #define UART_ENABLE 1
 #define BMP180_ENABLE 1
 #include "I2C.h"
-#include "BM1383.h"
 #include "BMP180.h"
 
 /**
