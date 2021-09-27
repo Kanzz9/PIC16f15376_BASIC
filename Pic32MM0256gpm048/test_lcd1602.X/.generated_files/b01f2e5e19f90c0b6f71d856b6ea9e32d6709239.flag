@@ -1,0 +1,1 @@
+ $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../Lib" -I"mcc_generated_files"   -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)    D:\work\pic_mplab\pic32mm0256gpm048\Lib\Buttons.c

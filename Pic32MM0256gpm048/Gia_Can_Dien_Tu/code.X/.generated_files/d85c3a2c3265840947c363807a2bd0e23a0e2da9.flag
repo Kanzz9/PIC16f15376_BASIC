@@ -1,0 +1,1 @@
+ $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)    -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  D:\work\pic_mplab\pic32mm0256gpm048\Gia_Can_Dien_Tu\code.X\mcc_generated_files\exceptions.c
