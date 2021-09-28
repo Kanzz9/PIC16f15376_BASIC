@@ -105,68 +105,69 @@ int main(void)
 //        DELAY_milliseconds(1000);
 //        LED_1_SetLow();
           
-          printf("sdsdksd");
-          UART2_Write('b');
-          DELAY_microseconds(1000);
-//        for (counter = 0; counter < nCount; counter++)
-//        {
-//
-//            // build the write buffer first
-//            // starting address of the EEPROM memory
-//            writeBuffer[0] = (dataAddress >> 8);                // high address
-//            writeBuffer[1] = (uint8_t)(dataAddress);            // low low address
-//
-//            // data to be written
-//            writeBuffer[2] = *pD++;
-//
-//            // Now it is possible that the slave device will be slow.
-//            // As a work around on these slaves, the application can
-//            // retry sending the transaction
-//            timeOut = 0;
-//            slaveTimeOut = 0;
-// 
-//            while( status != I2C1_MESSAGE_FAIL)
-//            {
-//                // write one byte to EEPROM (3 is the number of bytes to write)
-//                I2C1_MasterWrite( writeBuffer, 3, 0x80, &status);
-//                DELAY_milliseconds(5);
-//                // wait for the message to be sent or status has changed.
-//                while( status == I2C1_MESSAGE_PENDING)
-//                {
-//                    // add some delay here
-//
-//                    // timeout checking
-//                    // check for max retry and skip this byte
-//                    if (slaveTimeOut == SLAVE_I2C_GENERIC_DEVICE_TIMEOUT)
-//                        break;
-//                    else
-//                        slaveTimeOut++;
-//                } 
-//                if ((slaveTimeOut == SLAVE_I2C_GENERIC_DEVICE_TIMEOUT) || 
-//                    (status == I2C1_MESSAGE_COMPLETE))
-//                    break;
-//
-//                // if status is  I2C1_MESSAGE_ADDRESS_NO_ACK,
-//                //               or I2C1_DATA_NO_ACK,
-//                // The device may be busy and needs more time for the last
-//                // write so we can retry writing the data, this is why we
-//                // use a while loop here
-//
-//                // check for max retry and skip this byte
-//                if (timeOut == SLAVE_I2C_GENERIC_RETRY_MAX)
-//                    break;
-//                else
-//                    timeOut++;
-//            }
-//
-//            if (status == I2C1_MESSAGE_FAIL)
-//            {
-//                break;
-//            }
-//            dataAddress++;
-//
-//        }
-        
+          
+        for (counter = 0; counter < nCount; counter++)
+        {
+
+            // build the write buffer first
+            // starting address of the EEPROM memory
+            writeBuffer[0] = (dataAddress >> 8);                // high address
+            writeBuffer[1] = (uint8_t)(dataAddress);            // low low address
+
+            // data to be written
+            writeBuffer[2] = *pD++;
+
+            // Now it is possible that the slave device will be slow.
+            // As a work around on these slaves, the application can
+            // retry sending the transaction
+            timeOut = 0;
+            slaveTimeOut = 0;
+ 
+            while( status != I2C1_MESSAGE_FAIL)
+            {
+                // write one byte to EEPROM (3 is the number of bytes to write)
+                I2C1_MasterWrite( writeBuffer, 3, 0x80, &status);
+                DELAY_milliseconds(5);
+                // wait for the message to be sent or status has changed.
+                while( status == I2C1_MESSAGE_PENDING)
+                {
+                    // add some delay here
+
+                    // timeout checking
+                    // check for max retry and skip this byte
+                    if (slaveTimeOut == SLAVE_I2C_GENERIC_DEVICE_TIMEOUT)
+                        break;
+                    else
+                        slaveTimeOut++;
+                } 
+                if ((slaveTimeOut == SLAVE_I2C_GENERIC_DEVICE_TIMEOUT) || 
+                    (status == I2C1_MESSAGE_COMPLETE))
+                    break;
+
+                // if status is  I2C1_MESSAGE_ADDRESS_NO_ACK,
+                //               or I2C1_DATA_NO_ACK,
+               // The device may be busy and needs more time for the last
+                // write so we can retry writing the data, this is why we
+                // use a while loop here
+
+                // check for max retry and skip this byte
+                if (timeOut == SLAVE_I2C_GENERIC_RETRY_MAX)
+                    break;
+                else
+                    timeOut++;
+            }
+
+            if (status == I2C1_MESSAGE_FAIL)
+            {
+                break;
+              }
+           dataAddress++;
+
+        }
+            //printf("hahaha\n");
+            I2C_Scan();
+//            printf("dataAddress:%d \n",dataAddress);
+            DELAY_milliseconds(500);
     }
     return 0; 
 }
