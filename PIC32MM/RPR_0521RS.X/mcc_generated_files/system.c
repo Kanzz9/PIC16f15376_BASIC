@@ -70,11 +70,11 @@
 // FOSCSEL
 #pragma config FNOSC = FRCDIV    //Oscillator Selection bits->Fast RC oscillator (FRC) with divide-by-N
 #pragma config PLLSRC = FRC    //System PLL Input Clock Selection bit->FRC oscillator is selected as PLL reference input on device reset
-#pragma config SOSCEN = ON    //Secondary Oscillator Enable bit->Secondary oscillator is enabled
+#pragma config SOSCEN = OFF    //Secondary Oscillator Enable bit->Secondary oscillator is disabled
 #pragma config IESO = ON    //Two Speed Startup Enable bit->Two speed startup is enabled
 #pragma config POSCMOD = OFF    //Primary Oscillator Selection bit->Primary oscillator is disabled
 #pragma config OSCIOFNC = OFF    //System Clock on CLKO Pin Enable bit->OSCO pin operates as a normal I/O
-#pragma config SOSCSEL = OFF    //Secondary Oscillator External Clock Enable bit->SOSC pins configured for Crystal mode
+#pragma config SOSCSEL = ON    //Secondary Oscillator External Clock Enable bit->SCLKI pin configured for Digital mode
 #pragma config FCKSM = CSECME    //Clock Switching and Fail-Safe Clock Monitor Enable bits->Clock switching is enabled; Fail-safe clock monitor is enabled
 
 // FSEC
@@ -83,17 +83,17 @@
 #include "pin_manager.h"
 #include "clock.h"
 #include "system.h"
-#include "delay.h"
 #include "uart2.h"
+#include "i2c1.h"
 #include "interrupt_manager.h"
 #include "exceptions.h"
-#include "i2c1.h"
+#include "delay.h"
 
 void SYSTEM_Initialize(void)
 {
     PIN_MANAGER_Initialize();
-    CLOCK_Initialize();
     INTERRUPT_Initialize();
+    CLOCK_Initialize();
     UART2_Initialize();
     I2C1_Initialize();
     INTERRUPT_GlobalEnable();

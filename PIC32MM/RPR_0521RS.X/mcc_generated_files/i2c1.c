@@ -44,7 +44,7 @@
 */
 
 #include "i2c1.h"
-
+#include "stdio.h"
 /**
  Section: Data Types
 */
