@@ -58,7 +58,7 @@
 #include "watchdog.h"
 #include "delay.h"
 
-#warning "This file will be removed in future MCC releases. Use system.h instead."
+//#warning "This file will be removed in future MCC releases. Use system.h instead."
 
 #endif	/* MCC_H */
 /**

@@ -43,8 +43,13 @@
     TERMS.
 */
 
+#include <stdint.h>
+
 #include "i2c1.h"
 #include "stdio.h"
+#include "system.h"
+#include "delay.h"
+#include "mcc.h"
 /**
  Section: Data Types
 */
@@ -755,7 +760,40 @@ bool I2C1_MasterQueueIsFull(void)
 {
     return((bool)i2c1_object.trStatus.s.full);
 }
+void Send_I2C_ControlByte(uint8_t Dev_Add, uint8_t RW_bit)
+{
+    static  I2C1_TRANSACTION_REQUEST_BLOCK block;
+    
+    IFS2bits.I2C1MIF = 0;          // clear SSP interrupt bit
 
+    // Assemble the control byte from device code, block address bits and R/W bit
+    // so it looks like this: CCCCBBBR
+    // where 'CCCC' is the device control code
+    // 'BBB' is the block address
+    // and 'R' is the Read/Write bit
+
+    block.pbuffer = (Dev_Add<<1) + RW_bit ;  // send the control byte
+    while(!IFS2bits.I2C1MIF);    // Wait for interrupt flag to go high indicating transmission is complete
+}
+  uint8_t I2C_Scan(void){
+    
+    bool ACK_bit = 1;
+    
+    for(uint8_t i=0; i<=127; i++){
+         I2C1STATbits.S = 1;
+//        I2C1_MasterWrite(i, 100,i,&S_MASTER_SEND_DATA);
+        Send_I2C_ControlByte(i,0);
+        ACK_bit = I2C1_ACKNOWLEDGE_DATA_BIT;  // Ack bit will come back low when the write is complete
+        
+        if(ACK_bit==0){
+                printf("Device Address: %d\n", i);
+                return i;
+        }
+        DELAY_milliseconds(1);
+    }
+        printf("Device Address not found\n");
+    return 255;
+}
 /**
  End of File
 */

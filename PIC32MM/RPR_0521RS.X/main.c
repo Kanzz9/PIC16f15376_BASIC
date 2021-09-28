@@ -73,28 +73,7 @@ void I2C1_MasterWrite(
                                 uint16_t address,
                                 I2C1_MESSAGE_STATUS *pstatus);
 
-uint8_t I2C_Scan(void){
-    
-    bool ACK_bit = 1;
-    
-    for(uint8_t i=0; i<=127; i++){
-      // I2C1_START_CONDITION_ENABLE_BIT;
-//        I2C1_MasterWrite(i, 100,i,&S_MASTER_SEND_DATA);
-      //  ACK_bit = I2C1_ACKNOWLEDGE_DATA_BIT;  // Ack bit will come back low when the write is complete
-        
-        if(ACK_bit==0){
-            #if(UART_ENABLE)
-                printf("Device Address: %d\n", i);
-            #endif
-                return i;
-        }
-        DELAY_milliseconds(1);
-    }
-    #if(UART_ENABLE)
-        printf("Device Address not found\n");
-    #endif
-    return 255;
-}
+
 int main(void)
 {
     // initialize the device
@@ -186,8 +165,8 @@ int main(void)
 
         }
             //printf("hahaha\n");
-            
-            printf("dataAddress:%d \n",dataAddress);
+            I2C_Scan();
+//            printf("dataAddress:%d \n",dataAddress);
             DELAY_milliseconds(500);
     }
     return 0; 
