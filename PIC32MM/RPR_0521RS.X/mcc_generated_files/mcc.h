@@ -50,15 +50,15 @@
 #include "pin_manager.h"
 #include <stdint.h>
 #include <stdbool.h>
-#define  UART_ENABLE 1
+
 #include "uart2.h"
 #include "i2c1.h"
 #include "interrupt_manager.h"
 #include "exceptions.h"
-#include "watchdog.h"
 #include "delay.h"
+#include "watchdog.h"
 
-//#warning "This file will be removed in future MCC releases. Use system.h instead."
+#warning "This file will be removed in future MCC releases. Use system.h instead."
 
 #endif	/* MCC_H */
 /**

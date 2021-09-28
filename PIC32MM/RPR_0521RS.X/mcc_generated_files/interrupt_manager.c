@@ -60,9 +60,4 @@ void INTERRUPT_Initialize (void)
         IPC16bits.I2C1MIP = 1;
     //    Sub Priority: 0
         IPC16bits.I2C1MIS = 0;
-    //    SICI: I2C 1 Slave
-    //    Priority: 1
-        IPC16bits.I2C1SIP = 1;
-    //    Sub Priority: 0
-        IPC16bits.I2C1SIS = 0;
 }
