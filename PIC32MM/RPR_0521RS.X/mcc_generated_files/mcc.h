@@ -52,13 +52,13 @@
 #include <stdbool.h>
 
 #include "uart2.h"
+#include "watchdog.h"
 #include "i2c1.h"
+#include "delay.h"
 #include "interrupt_manager.h"
 #include "exceptions.h"
-#include "delay.h"
-#include "watchdog.h"
 
-#warning "This file will be removed in future MCC releases. Use system.h instead."
+//#warning "This file will be removed in future MCC releases. Use system.h instead."
 
 #endif	/* MCC_H */
 /**

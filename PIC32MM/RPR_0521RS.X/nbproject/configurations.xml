@@ -14,10 +14,13 @@
         <itemPath>mcc_generated_files/exceptions.h</itemPath>
         <itemPath>mcc_generated_files/mcc.h</itemPath>
         <itemPath>mcc_generated_files/clock.h</itemPath>
-        <itemPath>mcc_generated_files/delay.h</itemPath>
-        <itemPath>mcc_generated_files/i2c1.h</itemPath>
         <itemPath>mcc_generated_files/uart2.h</itemPath>
+        <itemPath>mcc_generated_files/i2c1.h</itemPath>
+        <itemPath>mcc_generated_files/delay.h</itemPath>
       </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="lib" displayName="lib" projectFiles="true">
+      <itemPath>../lib/RPR0521RS.c</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -38,9 +41,9 @@
         <itemPath>mcc_generated_files/pin_manager.c</itemPath>
         <itemPath>mcc_generated_files/system.c</itemPath>
         <itemPath>mcc_generated_files/interrupt_manager.c</itemPath>
-        <itemPath>mcc_generated_files/delay.c</itemPath>
-        <itemPath>mcc_generated_files/i2c1.c</itemPath>
         <itemPath>mcc_generated_files/uart2.c</itemPath>
+        <itemPath>mcc_generated_files/i2c1.c</itemPath>
+        <itemPath>mcc_generated_files/delay.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
     </logicalFolder>
@@ -64,7 +67,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>2.50</languageToolchainVersion>
+        <languageToolchainVersion>3.01</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -132,8 +135,9 @@
         <property key="exclude-floating-point-library" value="false"/>
         <property key="expand-macros" value="false"/>
         <property key="extra-include-directories-for-assembler"
-                  value="mcc_generated_files"/>
-        <property key="extra-include-directories-for-preprocessor" value=""/>
+                  value="mcc_generated_files;..\lib"/>
+        <property key="extra-include-directories-for-preprocessor"
+                  value="mcc_generated_files;..\lib"/>
         <property key="false-conditionals" value="false"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>

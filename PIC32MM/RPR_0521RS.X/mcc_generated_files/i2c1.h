@@ -80,7 +80,7 @@
 
  */
 
-typedef enum 
+typedef enum
 {
     I2C1_MESSAGE_FAIL,
     I2C1_MESSAGE_PENDING,
