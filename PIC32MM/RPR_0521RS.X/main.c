@@ -51,6 +51,7 @@
 #include "mcc_generated_files/pin_manager.h"
 #include "mcc_generated_files/i2c1.h"
 #include "mcc_generated_files/delay.h"
+#include "RPR0521RS.h"
 /*
                          Main application
  */
@@ -61,7 +62,7 @@ int main(void)
 {
     // initialize the device
     SYSTEM_Initialize();
-
+    uint8_t data;
 
 
     while (1)
@@ -70,7 +71,8 @@ int main(void)
 //        LED_2_Toggle();
 //        DELAY_milliseconds(1000);
 //        LED_1_SetLow();
-        I2C_Scan();
+        I2C_Read(0x38, 0x92, &data, 1);
+        printf("MANUFACT_ID %d\n",data);
         DELAY_milliseconds(500);
          
     }

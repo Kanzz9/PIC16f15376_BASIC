@@ -4,7 +4,8 @@
  */
 #include "RPR0521RS.h"
 
-#include "../../PIC32MM/RPR_0521RS.X/mcc_generated_files/i2c1.h"
+
+
 uint8_t RPR0521RS_WriteByte(const RPR0521RS_t *RPR0251RS, uint8_t Reg_Add, uint8_t data)
 {
     I2C1_MESSAGE_STATUS status;
@@ -15,3 +16,5 @@ uint8_t RPR0521RS_WriteByte(const RPR0521RS_t *RPR0251RS, uint8_t Reg_Add, uint8
     }
 
 }
+
+

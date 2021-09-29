@@ -1,0 +1,1 @@
+ $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../../Lib" -I"mcc_generated_files"   -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  D:\work\pic_mplab\Pic_Toan_RP\Pic32MM0256gpm048\Gia_Can_Dien_Tu\can_dien_tu.X\ssd1306.c

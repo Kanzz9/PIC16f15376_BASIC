@@ -7,10 +7,10 @@
 
 
 #ifndef RPR0521RS_H
-#define	RPR0521RS_H
+#define RPR0521RS_H
 //
-#include "../../PIC32MM/RPR_0521RS.X/mcc_generated_files/mcc.h"
-//#include "mcc.h"
+#include "mcc.h"
+
 typedef struct {
    uint8_t RPR0521RS_Add;
  

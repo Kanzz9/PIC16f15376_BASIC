@@ -1,1 +1,0 @@
- $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION) -I"../../Lib" -I"mcc_generated_files"   -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  D:\work\pic_mplab\pic32mm0256gpm048\Gia_Can_Dien_Tu\can_dien_tu.X\mcc_generated_files\uart1.c
