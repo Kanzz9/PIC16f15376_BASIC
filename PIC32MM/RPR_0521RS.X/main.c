@@ -62,18 +62,22 @@ int main(void)
 {
     // initialize the device
     SYSTEM_Initialize();
-    uint8_t data;
-
-
+    I2C1_MESSAGE_STATUS status;
+    uint8_t data=0;
+    uint8_t data_w = 0xaa;
+   
     while (1)
     {
         // Add your application code
 //        LED_2_Toggle();
 //        DELAY_milliseconds(1000);
 //        LED_1_SetLow();
-        I2C_Read(0x38, 0x92, &data, 1);
-        printf("MANUFACT_ID %d\n",data);
+        I2C_Read(0x38, 0x41, &data, 1);
+        printf("MANUFACT_ID %x\n",data);
         DELAY_milliseconds(500);
+        //I2C1_MasterWrite(data_w, 2, 0x38, &status);
+        I2C_Write(0x38, 0x41, &data_w, 1);
+//        printf("status_ID %d\n",status);
          
     }
     return 0; 
