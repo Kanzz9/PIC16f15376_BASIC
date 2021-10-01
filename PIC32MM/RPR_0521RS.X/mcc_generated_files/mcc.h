@@ -51,6 +51,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+#include "stdio.h"
 #include "uart2.h"
 #include "watchdog.h"
 #include "i2c1.h"

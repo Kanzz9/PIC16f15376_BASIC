@@ -57,7 +57,7 @@
  */
 
 uint8_t I2C_Scan(void);
-
+I2C1_MESSAGE_STATUS I2C_Read(uint8_t Dev_add, uint8_t Reg_add, uint8_t *data, uint8_t len);
 int main(void)
 {
     // initialize the device
@@ -71,7 +71,7 @@ int main(void)
 //        LED_2_Toggle();
 //        DELAY_milliseconds(1000);
 //        LED_1_SetLow();
-        I2C_Read(0x38, 0x92, &data, 1);
+        I2C_Read(0x38,RPR0521RS_MANUFACT_ID , &data, 1);//
         printf("MANUFACT_ID %d\n",data);
         DELAY_milliseconds(500);
          
