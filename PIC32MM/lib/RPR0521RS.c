@@ -119,21 +119,28 @@ int RPR0521RS_convert_lx(uint16_t *data)
   float lx;
   float d0, d1, d1_d0;
 
-  if (_als_data0_gain == 0) {
+  if (_als_data0_gain == 0) 
+  {
     return (RPR0521RS_ERROR);
   }
 
-  if (_als_data1_gain == 0) {
+  if (_als_data1_gain == 0) 
+  {
     return (RPR0521RS_ERROR);
   }
 
-  if (_als_measure_time == 0) {
+  if (_als_measure_time == 0) 
+  {
     return (RPR0521RS_ERROR);
-  } else if (_als_measure_time == 50) {
-    if ((data[0] & 0x8000) == 0x8000) {
+  }  
+  if (_als_measure_time == 50) 
+  {
+    if ((data[0] & 0x8000) == 0x8000) 
+    {
       data[0] = 0x7FFF;
     }
-    if ((data[1] & 0x8000) == 0x8000) {
+    if ((data[1] & 0x8000) == 0x8000) 
+    {
       data[1] = 0x7FFF;
     }
   }
@@ -141,22 +148,32 @@ int RPR0521RS_convert_lx(uint16_t *data)
   d0 = (float)data[0] * (100 / _als_measure_time) / _als_data0_gain;
   d1 = (float)data[1] * (100 / _als_measure_time) / _als_data1_gain;
 
-  if (d0 == 0) {
+  if (d0 == 0) 
+  {
     lx = 0;
     return (lx);
   }
 
   d1_d0 = d1 / d0;
 
-  if (d1_d0 < 0.595) {
+  if (d1_d0 < 0.595) 
+  {
     lx = (1.682 * d0 - 1.877 * d1);
-  } else if (d1_d0 < 1.015) {
+  }  
+  if (d1_d0 < 1.015) 
+  {
     lx = (0.644 * d0 - 0.132 * d1);
-  } else if (d1_d0 < 1.352) {
+  } 
+  if (d1_d0 < 1.352) 
+  {
     lx = (0.756 * d0 - 0.243 * d1);
-  } else if (d1_d0 < 3.053) {
+  }
+  if (d1_d0 < 3.053) 
+  {
     lx = (0.766 * d0 - 0.25 * d1);
-  } else {
+  } 
+  else 
+  {
     lx = 0;
   }
 
@@ -165,9 +182,12 @@ int RPR0521RS_convert_lx(uint16_t *data)
 
 uint16_t RPR0521RS_check_near_far(uint16_t data)
 {
-  if (data >= RPR0521RS_NEAR_THRESH) {
+  if (data >= RPR0521RS_NEAR_THRESH) 
+  {
     return (RPR0521RS_NEAR_VAL);
-  } else {
+  } 
+  else 
+  {
     return (RPR0521RS_FAR_VAL);
   }
 }
