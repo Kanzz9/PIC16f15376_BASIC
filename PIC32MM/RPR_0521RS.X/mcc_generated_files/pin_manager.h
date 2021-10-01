@@ -238,6 +238,188 @@ inline static void LED_2_SetValue(bool value)
 #define LED_2_SetDigitalOutput()   ( TRISACLR = (1 << 15) )
 /**
   @Summary
+    Sets the GPIO pin, RA6, high using LATA6.
+
+  @Description
+    Sets the GPIO pin, RA6, high using LATA6.
+
+  @Preconditions
+    The RA6 must be set to an output.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Set RA6 high (1)
+    LIGHT_INT_SetHigh();
+    </code>
+
+*/
+#define LIGHT_INT_SetHigh()          ( LATASET = (1 << 6) )
+/**
+  @Summary
+    Sets the GPIO pin, RA6, low using LATA6.
+
+  @Description
+    Sets the GPIO pin, RA6, low using LATA6.
+
+  @Preconditions
+    The RA6 must be set to an output.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Set RA6 low (0)
+    LIGHT_INT_SetLow();
+    </code>
+
+*/
+#define LIGHT_INT_SetLow()           ( LATACLR = (1 << 6) )
+
+/**
+  @Summary
+    Sets a value to the GPIO pin.
+
+  @Description
+    Sets or Resets the GPIO pin, RA6, low or high using LATA6.
+
+  @Preconditions
+    The RA6 must be set to an output.
+
+  @Returns
+    None.
+
+  @Param
+    bool value; : value to be set to the GPIO pin.
+
+  @Example
+    <code>
+    // Set RA6 to low.
+    LIGHT_INT_SetValue(false);
+    </code>
+
+*/
+inline static void LIGHT_INT_SetValue(bool value)
+{
+  if(value)
+  {
+    LIGHT_INT_SetHigh();
+  }
+  else
+  {
+    LIGHT_INT_SetLow();
+  }
+}
+
+/**
+  @Summary
+    Toggles the GPIO pin, RA6, using LATA6.
+
+  @Description
+    Toggles the GPIO pin, RA6, using LATA6.
+
+  @Preconditions
+    The RA6 must be set to an output.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Toggle RA6
+    LIGHT_INT_Toggle();
+    </code>
+
+*/
+#define LIGHT_INT_Toggle()           ( LATAINV = (1 << 6) )
+/**
+  @Summary
+    Reads the value of the GPIO pin, RA6.
+
+  @Description
+    Reads the value of the GPIO pin, RA6.
+
+  @Preconditions
+    None.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    uint16_t portValue;
+
+    // Read RA6
+    postValue = LIGHT_INT_GetValue();
+    </code>
+
+*/
+#define LIGHT_INT_GetValue()         PORTAbits.RA6
+/**
+  @Summary
+    Configures the GPIO pin, RA6, as an input.
+
+  @Description
+    Configures the GPIO pin, RA6, as an input.
+
+  @Preconditions
+    None.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Sets the RA6 as an input
+    LIGHT_INT_SetDigitalInput();
+    </code>
+
+*/
+#define LIGHT_INT_SetDigitalInput()   ( TRISASET = (1 << 6) )
+/**
+  @Summary
+    Configures the GPIO pin, RA6, as an output.
+
+  @Description
+    Configures the GPIO pin, RA6, as an output.
+
+  @Preconditions
+    None.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Sets the RA6 as an output
+    LIGHT_INT_SetDigitalOutput();
+    </code>
+
+*/
+#define LIGHT_INT_SetDigitalOutput()   ( TRISACLR = (1 << 6) )
+/**
+  @Summary
     Sets the GPIO pin, RA7, high using LATA7.
 
   @Description

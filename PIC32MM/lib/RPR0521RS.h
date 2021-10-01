@@ -15,9 +15,9 @@
 
 #define I2C_TIMEOUT 5
 
-I2C1_MESSAGE_STATUS I2C_Write(uint8_t Dev_add, uint8_t Reg_add, uint8_t data);   
+//I2C1_MESSAGE_STATUS I2C_Write(uint8_t Dev_add, uint8_t Reg_add, uint8_t data);   
 
-I2C1_MESSAGE_STATUS I2C_Read(uint8_t Dev_add, uint8_t Reg_add, uint8_t *data, uint8_t len);
+//I2C1_MESSAGE_STATUS I2C_Read(uint8_t Dev_add, uint8_t Reg_add, uint8_t *data, uint8_t len);
 
 
 #define RPR0521RS_SYMTEM_CONTROL 0X40
@@ -45,9 +45,9 @@ I2C1_MESSAGE_STATUS I2C_Read(uint8_t Dev_add, uint8_t Reg_add, uint8_t *data, ui
 
 
 
-#define RPR0521RS_DEVICE_ADDRESS                   (0x38)    // 7bit Addrss
-#define RPR0521RS_PART_ID_VAL                      (0x0A)
-#define RPR0521RS_MANUFACT_ID_VAL                  (0xE0)
+#define RPR0521RS_DEVICE_ADDRESS                   0x38    // 7bit Addrss
+#define RPR0521RS_PART_ID_VAL                      0x0A
+#define RPR0521RS_MANUFACT_ID_VAL                  0xE0
 
 #define RPR0521RS_MODE_CONTROL_MEASTIME_100_100MS  (6 << 0)
 #define RPR0521RS_MODE_CONTROL_PS_EN               (1 << 6)
@@ -68,6 +68,17 @@ I2C1_MESSAGE_STATUS I2C_Read(uint8_t Dev_add, uint8_t Reg_add, uint8_t *data, ui
 #define RPR0521RS_NEAR_VAL                         (1)
 
 #define RPR0521RS_ERROR                            (-1)
+
+
+    
+    uint8_t RPR0521RS_init(void);
+    uint8_t RPR0521RS_get_rawpsalsval(uint8_t *data);
+    uint8_t RPR0521RS_get_psalsval(uint16_t *ps, float *als);
+    int RPR0521RS_convert_lx(uint16_t *data);
+    uint16_t RPR0521RS_check_near_far(uint16_t data);
+    unsigned char _als_data0_gain;
+    unsigned char _als_data1_gain;
+    unsigned char _als_measure_time;
 
 
 #endif
