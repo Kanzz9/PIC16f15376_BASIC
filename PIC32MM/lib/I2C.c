@@ -1,6 +1,5 @@
 #include "I2C.h"
 
-<<<<<<< HEAD
 //I2C1_MESSAGE_STATUS I2C_Write(uint8_t Dev_add, uint8_t Reg_add, uint8_t data){
 //        
 //    I2C1_MESSAGE_STATUS status;
@@ -61,7 +60,7 @@
 //    return  I2C1_MESSAGE_COMPLETE;       
 ////        }
 //}
-=======
+
 I2C1_MESSAGE_STATUS I2C_Write(uint16_t slaveDeviceAddress, uint8_t dataAddress, uint8_t *pData, uint16_t nCount){
         
     I2C1_MESSAGE_STATUS status;
@@ -146,4 +145,4 @@ uint8_t I2C_Read(uint16_t slaveDeviceAddress, uint8_t dataAddress, uint8_t *pDat
     }
     return (1);
 } 
->>>>>>> origin/master
+

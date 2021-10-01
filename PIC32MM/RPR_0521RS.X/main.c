@@ -72,13 +72,13 @@ int main(void)
 //        LED_2_Toggle();
 //        DELAY_milliseconds(1000);
 //        LED_1_SetLow();
-<<<<<<< HEAD
-        I2C_Read(0x38,RPR0521RS_MANUFACT_ID , &data, 1);//
-        printf("MANUFACT_ID %d\n",data);
-=======
+
+//        I2C_Read(0x38,RPR0521RS_MANUFACT_ID , &data, 1);//
+//        printf("MANUFACT_ID %d\n",data);
+
         I2C_Read(0x38, 0x41, &data, 1);
         printf("MANUFACT_ID %x\n",data);
->>>>>>> origin/master
+
         DELAY_milliseconds(500);
         //I2C1_MasterWrite(data_w, 2, 0x38, &status);
         I2C_Write(0x38, 0x41, &data_w, 1);

@@ -6,11 +6,11 @@
 #include <stdint.h>
 
 
-void RPR0521RS_Control(){
-    
-    uint8_t data;
-    I2C_Write(0X40, 0X0A, data);
-}
+//void RPR0521RS_Control(){
+//    
+//    uint8_t data;
+//    I2C_Write(0X40, 0X0A, data);
+//}
 I2C1_MESSAGE_STATUS I2C_Write(uint8_t Dev_add, uint8_t Reg_add, uint8_t data){
         
     I2C1_MESSAGE_STATUS status;
