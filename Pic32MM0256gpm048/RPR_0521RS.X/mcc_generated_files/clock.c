@@ -13,11 +13,11 @@
   @Description:
     This header file provides implementations for driver APIs for all modules selected in the GUI.
     Generation Information :
-        Product Revision  :  PIC24 / dsPIC33 / PIC32MM MCUs - 1.169.0
+        Product Revision  :  PIC24 / dsPIC33 / PIC32MM MCUs - 1.170.0
         Device            :  PIC32MM0256GPM048
     The generated drivers are tested against the following:
-        Compiler          :  XC16 v1.50
-        MPLAB             :  MPLAB X v5.40
+        Compiler          :  XC16 v1.61
+        MPLAB             :  MPLAB X v5.45
 */
 
 /*
@@ -52,12 +52,10 @@ void CLOCK_Initialize(void)
     SYSTEM_RegUnlock();
     // ORPOL disabled; SIDL disabled; SRC SOSC; TUN Center frequency; POL disabled; ON disabled; 
     OSCTUN = 0x00;
-    // PLLODIV 1:8; PLLMULT 3x; PLLICLK POSC; 
-    SPLLCON = 0x3010000;
     // SBOREN disabled; VREGS disabled; RETEN disabled; 
     PWRCON = 0x00;
-    //CF No Clock Failure has been detected;; FRCDIV FRC/1; SLPEN Device will enter Idle mode when a WAIT instruction is issued; NOSC FRCDIV; SOSCEN enabled; CLKLOCK Clock and PLL selections are not locked and may be modified; OSWEN Switch is Complete; 
-    OSCCON = (0x02);
+    //CF No Clock Failure has been detected;; FRCDIV FRC/1; SLPEN Device will enter Idle mode when a WAIT instruction is issued; NOSC FRCDIV; SOSCEN disabled; CLKLOCK Clock and PLL selections are not locked and may be modified; OSWEN Switch is Complete; 
+    OSCCON = (0x00);
     SYSTEM_RegLock();
     // ON disabled; DIVSWEN disabled; RSLP disabled; ROSEL SYSCLK; OE disabled; SIDL disabled; RODIV 0; 
     REFO1CON = 0x00;

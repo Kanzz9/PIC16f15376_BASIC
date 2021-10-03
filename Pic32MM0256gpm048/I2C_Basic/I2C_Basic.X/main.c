@@ -71,7 +71,7 @@ int main(void)
     {
         // Add your application code
         //dev_add = I2C_Scan();
-        I2C_Scan_Multi(dev_add_multi, &num_dev);
+        //I2C_Scan_Multi(dev_add_multi, &num_dev);
         printf("Num of device: %d\n",num_dev);
         for(i=0; i<num_dev; i++){
             printf("device_add: %x\n",dev_add_multi[i]);
@@ -103,27 +103,7 @@ uint8_t I2C_Scan(void){
     return 0;
 }
 
-void I2C_Scan_Multi(uint8_t* dev_add, uint8_t* num_dev){
-    
-    I2C1_MESSAGE_STATUS status;
-    uint8_t reg_index = 0x00;
-    uint8_t add = 0;
-    uint8_t num = 0;
 
-    for(add=0; add<255; add++){    
-        
-        I2C1_MasterWrite(&reg_index, 1, add, &status);
-        DELAY_milliseconds(5);
-        if(status == I2C1_MESSAGE_COMPLETE){
-            
-            *(dev_add++) = add;
-            num++;
-            status = I2C1_MESSAGE_ADDRESS_NO_ACK;
-        }
-    }
-    *num_dev = num;
-
-}
 /**
  End of File
 */

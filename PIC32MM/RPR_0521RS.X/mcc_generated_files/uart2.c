@@ -8,20 +8,20 @@
     uart2.c
 
   @Summary
-    This is the generated driver implementation file for the UART2 driver using Foundation Services Library
+    This is the generated driver implementation file for the UART2 driver using PIC24 / dsPIC33 / PIC32MM MCUs
 
   @Description
     This header file provides implementations for driver APIs for UART2.
     Generation Information :
-        Product Revision  :  Foundation Services Library - pic24-dspic-pic32mm : v1.26
+        Product Revision  :  PIC24 / dsPIC33 / PIC32MM MCUs - 1.169.0
         Device            :  PIC32MM0256GPM048
     The generated drivers are tested against the following:
-        Compiler          :  XC32 1.42
-        MPLAB             :  MPLAB X 3.45
+        Compiler          :  XC32 v2.40
+        MPLAB             :  MPLAB X v5.40
 */
 
 /*
-    (c) 2016 Microchip Technology Inc. and its subsidiaries. You may use this
+    (c) 2020 Microchip Technology Inc. and its subsidiaries. You may use this
     software and any derivatives exclusively with Microchip products.
 
     THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER
@@ -57,29 +57,31 @@ void UART2_Initialize(void)
     // Set the UART2 module to the options selected in the user interface.
 
     // STSEL 1; PDSEL 8N; RTSMD disabled; OVFDIS disabled; ACTIVE disabled; RXINV disabled; WAKE disabled; BRGH enabled; IREN disabled; ON enabled; SLPEN disabled; SIDL disabled; ABAUD disabled; LPBACK disabled; UEN TX_RX; CLKSEL PBCLK; 
-    U2MODE = (0x8008 & ~(1<<15)); // disabling UART ON bit  
+    // Data Bits = 8; Parity = None; Stop Bits = 1;
+    U2MODE = (0x8008 & ~(1<<15));  // disabling UARTEN bit
     // UTXISEL TX_ONE_CHAR; UTXINV disabled; ADDR 0; MASK 0; URXEN disabled; OERR disabled; URXISEL RX_ONE_CHAR; UTXBRK disabled; UTXEN disabled; ADDEN disabled; 
-    U2STA = 0x0;
+    U2STA = 0x00;
     // BaudRate = 9600; Frequency = 8000000 Hz; BRG 207; 
     U2BRG = 0xCF;
-     
+    
     //Make sure to set LAT bit corresponding to TxPin as high before UART initialization
     U2STASET = _U2STA_UTXEN_MASK;
-    U2MODESET = _U2MODE_ON_MASK;  // enabling UART ON bit
-    U2STASET = _U2STA_URXEN_MASK; 
+    U2MODESET = _U2MODE_ON_MASK;   // enabling UART ON bit
+    U2STASET = _U2STA_URXEN_MASK;
 }
 
 uint8_t UART2_Read(void)
 {
     while(!(U2STAbits.URXDA == 1))
     {
+        
     }
 
     if ((U2STAbits.OERR == 1))
     {
         U2STACLR = _U2STA_OERR_MASK;
     }
-
+    
     return U2RXREG;
 }
 
@@ -87,6 +89,7 @@ void UART2_Write(uint8_t txData)
 {
     while(U2STAbits.UTXBF == 1)
     {
+        
     }
 
     U2TXREG = txData;    // Write the data byte to the USART.
@@ -99,7 +102,7 @@ bool UART2_IsRxReady(void)
 
 bool UART2_IsTxReady(void)
 {
-    return (U2STAbits.TRMT && U2STAbits.UTXEN );
+    return ((!U2STAbits.UTXBF) && U2STAbits.UTXEN );
 }
 
 bool UART2_IsTxDone(void)
@@ -107,36 +110,35 @@ bool UART2_IsTxDone(void)
     return U2STAbits.TRMT;
 }
 
-/* !!! Deprecated API - This function may not be supported in a future release !!! */
-UART2_STATUS __attribute__((deprecated)) UART2_StatusGet (void)
+void _mon_putc(char c) 
+{
+    UART2_Write(c);
+}
+
+/*******************************************************************************
+
+  !!! Deprecated API !!!
+  !!! These functions will not be supported in future releases !!!
+
+*******************************************************************************/
+
+uint32_t __attribute__((deprecated)) UART2_StatusGet (void)
 {
     return U2STA;
 }
 
-/* !!! Deprecated API - This function may not be supported in a future release !!! */
-bool __attribute__((deprecated)) UART2_DataReady(void)
+void __attribute__((deprecated)) UART2_Enable(void)
 {
-    return UART2_IsRxReady();
+    U2STASET = _U2STA_UTXEN_MASK;
+    U2STASET = _U2STA_URXEN_MASK;
+    U2MODESET = _U2MODE_ON_MASK;
 }
 
-/* !!! Deprecated API - This function may not be supported in a future release !!! */
-bool __attribute__((deprecated)) UART2_is_tx_ready(void)
+void __attribute__((deprecated)) UART2_Disable(void)
 {
-    return UART2_IsTxReady();
+    U2STACLR = _U2STA_UTXEN_MASK;
+    U2STACLR = _U2STA_URXEN_MASK;
+    U2MODECLR = _U2MODE_ON_MASK;
 }
 
-/* !!! Deprecated API - This function may not be supported in a future release !!! */
-bool __attribute__((deprecated)) UART2_is_rx_ready(void)
-{
-    return UART2_IsRxReady();
-}
 
-/* !!! Deprecated API - This function may not be supported in a future release !!! */
-bool __attribute__((deprecated)) UART2_is_tx_done(void)
-{
-    return UART2_IsTxDone();
-}
-
-void _mon_putc(char c) {
-    UART2_Write(c);
-}

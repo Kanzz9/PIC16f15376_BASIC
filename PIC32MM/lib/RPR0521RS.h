@@ -11,7 +11,7 @@
 //
 #include "mcc.h"
 
-
+#if(RPR0521RS_Enable)
 
 #define I2C_TIMEOUT 5
 
@@ -80,5 +80,6 @@
     uint8_t _als_data1_gain;
     uint8_t _als_measure_time;
 
-
+#endif
+    
 #endif

@@ -57,12 +57,11 @@
                          Main application
  */
 
-uint8_t I2C_Scan(void);
-
 int main(void)
 {
     // initialize the device
     SYSTEM_Initialize();
+<<<<<<< HEAD
     RPR0521RS_init();
     //I2C1_MESSAGE_STATUS status;
     //uint8_t data=0;
@@ -117,29 +116,23 @@ int main(void)
            }
          //}
      DELAY_milliseconds(1000);
+=======
+    
+//    RPR0521RS_init();
+  
+    while (1)
+    {
+        // Add your application code
+        //I2C_Scan_Multi();
+        printf("hello\n");
+        //UART2_Write('A');
+        LED_1_Toggle();
+        DELAY_milliseconds(1000);
+>>>>>>> origin/master
     }
     return 0; 
 }
-uint8_t I2C_Scan(void)
-{
-    I2C1_MESSAGE_STATUS status;
-    uint8_t Dev_Add = 0;
-    uint8_t data = 0x00;
-    while (status != I2C1_MESSAGE_FAIL) 
-    {
-        I2C1_MasterWrite(&data, 1, Dev_Add, &status);
-        DELAY_milliseconds(5);
-        if(status == I2C1_MESSAGE_COMPLETE)
-        {
-            printf("dia chia la %x\n",Dev_Add);
-            return Dev_Add;
-        }
-        else
-            Dev_Add++;
-        if(Dev_Add == 255)
-            return 0;
-    }
-}
+
 /**
  End of File
 */
