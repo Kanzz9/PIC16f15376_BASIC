@@ -17,81 +17,53 @@ uint8_t RPR0521RS_init(void)
     // MODE CONTROL
     uint8_t als_gain_table[] = {1, 2, 64, 128};
     uint16_t als_meas_time_table[] = {0,0,0,0,0,100,100,100,100,100,400,400,50,0,0,0};
-
-    rc = I2C_Read(0x38, 0x41,&data,1);
-    if (rc != 0) {
-      printf("Can't access RPR0521RS\n");
-      return (rc);
-    }
+     I2C_Read(0x38, 0x41,&data,1);
     //data &= 0x3F;
     printf("RPR0521RS Part ID Register Value = %x\n",data);
 
 
-    if (data = RPR0521RS_PART_ID_VAL) {
-      printf("Can't find RPR0521RS\n");
-      return (rc);
-    }
+//    if (data = RPR0521RS_PART_ID_VAL) 
+//    {
+//      printf("Can't find RPR0521RS\n");
+//      return data;
+//    }
 
-    rc = I2C_Read(0x38,RPR0521RS_MANUFACT_ID, &data_m, 1);
-    if (rc != 0) {
-      printf("Can't access RPR0521RS\n");
-      return (rc);
-    }
+    I2C_Read(0x38,RPR0521RS_MANUFACT_ID, &data_m, 1);
+        
     printf("RPR0521RS MANUFACT_ID Register Value = %x\n",data_m);
 
-    if (data_m != RPR0521RS_MANUFACT_ID_VAL) {
-      printf("Can't find RPR0521RS\n");
-      return (rc);
-    }
-
+//    if (data_m != RPR0521RS_MANUFACT_ID_VAL) {
+//      printf("Can't find RPR0521RS\n");
+//      return data_m;
+//    }
+//
     data = RPR0521RS_ALS_PS_CONTROL_VAL;
-    rc = I2C_Write(0x38,RPR0521RS_ALS_PS_CONTROL, &data, 1);
-    if (rc != 0) {
-      printf("Can't write RPR0521RS ALS_PS_CONTROL register\n");
-      return (rc);
-    }
-
-    rc = I2C_Read(0x38,RPR0521RS_PS_CONTROL, &data, 1);
-    if (rc != 0) {
-      printf("Can't read RPR0521RS PS_CONTROL register\n");
-      return (rc);
-    }
-
+    I2C_Write(0x38,RPR0521RS_ALS_PS_CONTROL, &data, 1);
+    I2C_Read(0x38,RPR0521RS_PS_CONTROL, &data, 1);
     data |= RPR0521RS_PS_CONTROL_VAL;
-    rc = I2C_Write(0x38,RPR0521RS_PS_CONTROL, &data, 1);
-    if (rc != 0) {
-      printf("Can't write RPR0521RS PS_CONTROL register\n");
-    }
-
+    I2C_Write(0x38,RPR0521RS_PS_CONTROL, &data, 1);
+//    
+//
     data = RPR0521RS_MODE_CONTROL_VAL;
-    rc = I2C_Write(0x38,RPR0521RS_MODE_CONTROL, &data, 1);
-    if (rc != 0) {
-      printf("Can't write RPR0521RS MODE CONTROL register\n");
-      return (rc);
-    }
-
+    I2C_Write(0x38,RPR0521RS_MODE_CONTROL, &data, 1);
+//
     data = RPR0521RS_ALS_PS_CONTROL_VAL;
-    index = (data >> 4) & 0x03;
+        index = (data >> 4) & 0x03;
     _als_data0_gain = als_gain_table[index];
-
+//
     index = (data >> 2) & 0x03;
     _als_data1_gain = als_gain_table[index];
-
+//
     index = RPR0521RS_MODE_CONTROL_VAL & 0x0F;
     _als_measure_time = als_meas_time_table[index];
-
-    return (rc);
+//
+//    return data;
 }
 uint8_t RPR0521RS_get_rawpsalsval(uint8_t *data)
 {
-  uint8_t rc;
-
-  rc = I2C_Read(0x38,RPR0521RS_PS_DATA_LSBs, data, 6);
-  if (rc != 0) {
-    printf("Can't get RPR0521RS PS/ALS_DATA value\n");
-  }
-
-  return (rc);
+  
+    I2C_Read(0x38,RPR0521RS_PS_DATA_LSBs, data, sizeof(data));
+    return (*data);
 }
 uint8_t RPR0521RS_get_psalsval(uint16_t *ps, float *als)
 {
@@ -101,9 +73,10 @@ uint8_t RPR0521RS_get_psalsval(uint16_t *ps, float *als)
   uint16_t rawals[2];
 
   rc = RPR0521RS_get_rawpsalsval(val);
-  if (rc != 0) {
-    return (rc);
-  }
+//  if (rc != 0) 
+//  {
+//    return (rc);
+//  }
 
   rawps     = (val[1] << 8) | val[0];
   rawals[0] = (val[3] << 8) | val[2];

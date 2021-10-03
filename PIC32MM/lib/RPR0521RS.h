@@ -76,9 +76,9 @@
     uint8_t RPR0521RS_get_psalsval(uint16_t *ps, float *als);
     int RPR0521RS_convert_lx(uint16_t *data);
     uint16_t RPR0521RS_check_near_far(uint16_t data);
-    unsigned char _als_data0_gain;
-    unsigned char _als_data1_gain;
-    unsigned char _als_measure_time;
+    uint8_t _als_data0_gain;
+    uint8_t _als_data1_gain;
+    uint8_t _als_measure_time;
 
 
 #endif
