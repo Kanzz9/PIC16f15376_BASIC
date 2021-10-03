@@ -13,11 +13,11 @@
   @Description:
     This file will be removed in future MCC releases. Use system.h instead.
     Generation Information :
-        Product Revision  :  PIC24 / dsPIC33 / PIC32MM MCUs - 1.169.0
+        Product Revision  :  PIC24 / dsPIC33 / PIC32MM MCUs - 1.170.0
         Device            :  PIC32MM0256GPM048
     The generated drivers are tested against the following:
-        Compiler          :  XC16 v1.50
-        MPLAB             :  MPLAB X v5.40
+        Compiler          :  XC16 v1.61
+        MPLAB             :  MPLAB X v5.45
 */
 
 /*
@@ -50,15 +50,21 @@
 #include "pin_manager.h"
 #include <stdint.h>
 #include <stdbool.h>
+#include "stdio.h"
 
-#include "i2c1.h"
 #include "delay.h"
-#include "watchdog.h"
 #include "interrupt_manager.h"
 #include "exceptions.h"
+#include "uart2.h"
+#include "i2c1.h"
+#include "watchdog.h"
 
-#warning "This file will be removed in future MCC releases. Use system.h instead."
 
+#include "I2C.h"
+#include "RPR0521RS.h"
+#define I2C_Enable 1
+#define UART_Enable 1
+#define RPR0521RS_Enable 1
 #endif	/* MCC_H */
 /**
  End of File

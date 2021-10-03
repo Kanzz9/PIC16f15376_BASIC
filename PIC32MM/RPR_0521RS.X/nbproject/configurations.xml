@@ -14,12 +14,13 @@
         <itemPath>mcc_generated_files/exceptions.h</itemPath>
         <itemPath>mcc_generated_files/mcc.h</itemPath>
         <itemPath>mcc_generated_files/clock.h</itemPath>
-        <itemPath>mcc_generated_files/uart2.h</itemPath>
         <itemPath>mcc_generated_files/i2c1.h</itemPath>
         <itemPath>mcc_generated_files/delay.h</itemPath>
+        <itemPath>mcc_generated_files/uart2.h</itemPath>
       </logicalFolder>
       <itemPath>../lib/RPR0521RS.h</itemPath>
       <itemPath>../lib/I2C.h</itemPath>
+      <itemPath>../lib/UART.h</itemPath>
     </logicalFolder>
     <logicalFolder name="lib" displayName="lib" projectFiles="true">
       <itemPath>../lib/RPR0521RS.c</itemPath>
@@ -43,12 +44,13 @@
         <itemPath>mcc_generated_files/pin_manager.c</itemPath>
         <itemPath>mcc_generated_files/system.c</itemPath>
         <itemPath>mcc_generated_files/interrupt_manager.c</itemPath>
-        <itemPath>mcc_generated_files/uart2.c</itemPath>
         <itemPath>mcc_generated_files/i2c1.c</itemPath>
         <itemPath>mcc_generated_files/delay.c</itemPath>
+        <itemPath>mcc_generated_files/uart2.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
       <itemPath>../lib/I2C.c</itemPath>
+      <itemPath>../lib/UART.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -70,11 +72,11 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>3.01</languageToolchainVersion>
+        <languageToolchainVersion>2.50</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC32MM-GPM-0XX_DFP" vendor="Microchip" version="1.2.31"/>
+        <pack name="PIC32MM-GPM-0XX_DFP" vendor="Microchip" version="1.1.26"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -227,7 +229,7 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="common-include-directories" value="mcc_generated_files;..\lib"/>
+        <property key="common-include-directories" value=""/>
         <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="true"/>
         <property key="mdtcm" value=""/>
@@ -275,7 +277,6 @@
         <property key="UART2" value="true"/>
         <property key="UART3" value="true"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
-        <property key="firmware.download.all" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>

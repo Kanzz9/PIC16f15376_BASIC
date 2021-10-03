@@ -57,105 +57,25 @@
                          Main application
  */
 
-uint8_t I2C_Scan(void);
-
 int main(void)
 {
     // initialize the device
     SYSTEM_Initialize();
-   RPR0521RS_init();
-    I2C1_MESSAGE_STATUS status;
-    uint8_t data=0;
-    uint8_t data_w = 0xaa;
-    uint8_t rc;
-    uint16_t ps_val;
-    float als_val;
-    uint8_t near_far;
+    
+//    RPR0521RS_init();
   
-    rc = RPR0521RS_get_psalsval(&ps_val, &als_val);
-     if (rc == 0) {
-            printf("RPR-0521RS (Proximity)= %.2d \n",ps_val);
-           // printf(ps_val);
-            printf(" [count]\n");
-            DELAY_milliseconds(1000);
-            near_far = RPR0521RS_check_near_far(ps_val);
-           if (near_far == RPR0521RS_NEAR_VAL) {
-             printf(" Near");
-           } else {
-             printf(" Far");
-             
-           }
-            DELAY_milliseconds(1000);
-           if (als_val != RPR0521RS_ERROR) {
-             printf("RPR-0521RS (Ambient Light) = %.2d\n ",als_val);
-             //printf(als_val);
-             printf(" [lx]");
-             printf("\n");
-             DELAY_milliseconds(1000);
-           }
-         }
     while (1)
     {
         // Add your application code
-//        LED_2_Toggle();
-//        DELAY_milliseconds(1000);
-//        LED_1_SetLow();
-
-//        I2C_Read(0x38,RPR0521RS_MANUFACT_ID , &data, 1);//
-//        printf("MANUFACT_ID %d\n",data);
-
-//        I2C_Read(0x38, 0x41, &data, 1);
-//        printf("MANUFACT_ID %x\n",data);
-//
-//        DELAY_milliseconds(500);
-//        //I2C1_MasterWrite(data_w, 2, 0x38, &status);
-//        I2C_Write(0x38, 0x41, &data_w, 1);
-//        printf("status_ID %d\n",status);
-         //.........................................
-//           if (rc == 0) {
-//            printf("RPR-0521RS (Proximity)= %.2d ",ps_val);
-//           // printf(ps_val);
-//            printf(" [count]");
-//            DELAY_milliseconds(1000);
-//            near_far = RPR0521RS_check_near_far(ps_val);
-//           if (near_far == RPR0521RS_NEAR_VAL) {
-//             printf(" Near");
-//           } else {
-//             printf(" Far");
-//             
-//           }
-//            DELAY_milliseconds(1000);
-//           if (als_val != RPR0521RS_ERROR) {
-//             printf("RPR-0521RS (Ambient Light) = %.2d ",als_val);
-//             //printf(als_val);
-//             printf(" [lx]");
-//             printf("\n");
-//             DELAY_milliseconds(1000);
-//           }
-//         }
+        //I2C_Scan_Multi();
+        printf("hello\n");
+        //UART2_Write('A');
+        LED_1_Toggle();
+        DELAY_milliseconds(1000);
     }
     return 0; 
 }
-uint8_t I2C_Scan(void)
-{
-    I2C1_MESSAGE_STATUS status;
-    uint8_t Dev_Add = 0;
-    uint8_t data = 0x00;
-    while (status != I2C1_MESSAGE_FAIL) 
-    {
-        I2C1_MasterWrite(&data, 1, Dev_Add, &status);
-        DELAY_milliseconds(5);
-        if(status == I2C1_MESSAGE_COMPLETE)
-        {
-            printf("dia chia la %x\n",Dev_Add);
-            return Dev_Add;
-        }
-        else
-            Dev_Add++;
-        if(Dev_Add == 255)
-            return 0;
-    }
-}
+
 /**
  End of File
 */

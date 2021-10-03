@@ -7,6 +7,7 @@
 #include <stdint.h>
 #include "mcc.h"
 
+#if(RPR0521RS_Enable)
 
 uint8_t RPR0521RS_init(void)
 {
@@ -192,3 +193,4 @@ uint16_t RPR0521RS_check_near_far(uint16_t data)
   }
 }
 
+#endif

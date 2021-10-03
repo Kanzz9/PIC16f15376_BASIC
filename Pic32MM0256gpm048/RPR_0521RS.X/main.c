@@ -13,11 +13,11 @@
   @Description
     This source file provides main entry point for system initialization and application code development.
     Generation Information :
-        Product Revision  :  PIC24 / dsPIC33 / PIC32MM MCUs - 1.169.0
+        Product Revision  :  PIC24 / dsPIC33 / PIC32MM MCUs - 1.170.0
         Device            :  PIC32MM0256GPM048
     The generated drivers are tested against the following:
-        Compiler          :  XC16 v1.50
-        MPLAB 	          :  MPLAB X v5.40
+        Compiler          :  XC16 v1.61
+        MPLAB 	          :  MPLAB X v5.45
 */
 
 /*
@@ -45,127 +45,40 @@
 /**
   Section: Included Files
 */
-#include <stdint.h>
-
-#include "mcc_generated_files/system.h"
-#include "mcc_generated_files/pin_manager.h"
-#include "mcc_generated_files/delay.h"
+#include "mcc.h"
 /*
                          Main application
  */
- #define SLAVE_I2C_GENERIC_RETRY_MAX           100//
- #define SLAVE_I2C_GENERIC_DEVICE_TIMEOUT      50 //
-
-typedef enum 
-{
-    I2C1_MESSAGE_FAIL,
-    I2C1_MESSAGE_PENDING,
-    I2C1_MESSAGE_COMPLETE,
-    I2C1_STUCK_START,
-    I2C1_MESSAGE_ADDRESS_NO_ACK,
-    I2C1_DATA_NO_ACK,
-    I2C1_LOST_STATE
-} I2C1_MESSAGE_STATUS;
-
-void I2C1_MasterWrite(
-                                uint8_t *pdata,
-                                uint8_t length,
-                                uint16_t address,
-                                I2C1_MESSAGE_STATUS *pstatus);
-
-
 int main(void)
 {
     // initialize the device
     SYSTEM_Initialize();
-
-    uint16_t        dataAddress;
-    uint8_t         sourceData[16] = {  0xA0, 0xA1, 0xA2, 0xA3, 
-                                        0xA4, 0xA5, 0xA6, 0xA7, 
-                                        0xA8, 0xA9, 0xAA, 0xAB, 
-                                        0xAC, 0xAD, 0xAE, 0xAF }; 
-    uint8_t   *pData;
-    uint16_t nCount;
-
-    uint8_t  writeBuffer[3];
-    uint8_t  *pD;
-    uint16_t counter, timeOut, slaveTimeOut;
-    //uint16_t status;
     
-     I2C1_MESSAGE_STATUS  status = I2C1_MESSAGE_PENDING;
-
-    dataAddress = 0x10;             // starting EEPROM address 
-    pD = sourceData;                // initialize the source of the data
-    nCount = 16;                    // number of bytes to write
-
+    RPR0521RS_t RPR0521RS;
+    uint16_t PS_Data, PS_TH;
+    uint16_t ALS_DATA_0, ALS_DATA_1;
+    
+    RPR0521RS.RPR0521RS_ALS_EN = ALS_Standby;
+    RPR0521RS.RPR0521RS_PS_EN  = PS_Enable;
+         
+    I2C_Scan_Multi(); 
+    RPR0521RS_ReadID();
+        
+    RPR0521RS_Mode_Config(RPR0521RS);
     while (1)
     {
         // Add your application code
-//        LED_2_Toggle();
-//        DELAY_milliseconds(1000);
-//        LED_1_SetLow();
-        
-        for (counter = 0; counter < nCount; counter++)
-        {
-
-            // build the write buffer first
-            // starting address of the EEPROM memory
-            writeBuffer[0] = (dataAddress >> 8);                // high address
-            writeBuffer[1] = (uint8_t)(dataAddress);            // low low address
-
-            // data to be written
-            writeBuffer[2] = *pD++;
-
-            // Now it is possible that the slave device will be slow.
-            // As a work around on these slaves, the application can
-            // retry sending the transaction
-            timeOut = 0;
-            slaveTimeOut = 0;
- 
-            while( status != I2C1_MESSAGE_FAIL)
-            {
-                // write one byte to EEPROM (3 is the number of bytes to write)
-                I2C1_MasterWrite( writeBuffer, 3, 0x80, &status);
-                DELAY_milliseconds(5);
-                // wait for the message to be sent or status has changed.
-                while( status == I2C1_MESSAGE_PENDING)
-                {
-                    // add some delay here
-
-                    // timeout checking
-                    // check for max retry and skip this byte
-                    if (slaveTimeOut == SLAVE_I2C_GENERIC_DEVICE_TIMEOUT)
-                        break;
-                    else
-                        slaveTimeOut++;
-                } 
-                if ((slaveTimeOut == SLAVE_I2C_GENERIC_DEVICE_TIMEOUT) || 
-                    (status == I2C1_MESSAGE_COMPLETE))
-                    break;
-
-                // if status is  I2C1_MESSAGE_ADDRESS_NO_ACK,
-                //               or I2C1_DATA_NO_ACK,
-                // The device may be busy and needs more time for the last
-                // write so we can retry writing the data, this is why we
-                // use a while loop here
-
-                // check for max retry and skip this byte
-                if (timeOut == SLAVE_I2C_GENERIC_RETRY_MAX)
-                    break;
-                else
-                    timeOut++;
-            }
-
-            if (status == I2C1_MESSAGE_FAIL)
-            {
-                break;
-            }
-            dataAddress++;
-
-        }
-        
+                
+        PS_Data = RPR0521RS_Read_PS_DATA();
+        RPR0521RS_Read_ALS_DATA(&ALS_DATA_0, &ALS_DATA_1);
+        PS_TH = RPR0521RS_Read_PS_TH();
+        printf("PS_Data: %d\n", PS_Data);
+        printf("ALS_DATA_0: %d\n", ALS_DATA_0);
+        printf("ALS_DATA_1: %d\n", ALS_DATA_1);
+        printf("PS_TH: %d\n", PS_TH);
+        DELAY_milliseconds(1000);
     }
-    return 0; 
+    return 1; 
 }
 /**
  End of File
