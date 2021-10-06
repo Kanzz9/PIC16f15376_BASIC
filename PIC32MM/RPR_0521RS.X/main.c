@@ -13,11 +13,11 @@
   @Description
     This source file provides main entry point for system initialization and application code development.
     Generation Information :
-        Product Revision  :  PIC24 / dsPIC33 / PIC32MM MCUs - 1.169.0
+        Product Revision  :  PIC24 / dsPIC33 / PIC32MM MCUs - 1.170.0
         Device            :  PIC32MM0256GPM048
     The generated drivers are tested against the following:
-        Compiler          :  XC16 v1.50
-        MPLAB 	          :  MPLAB X v5.40
+        Compiler          :  XC16 v1.61
+        MPLAB 	          :  MPLAB X v5.45
 */
 
 /*
@@ -45,94 +45,55 @@
 /**
   Section: Included Files
 */
-#include <stdint.h>
-#include "stdio.h"
-#include "mcc_generated_files/system.h"
-#include "mcc_generated_files/pin_manager.h"
-#include "mcc_generated_files/i2c1.h"
-#include "mcc_generated_files/delay.h"
-#include "RPR0521RS.h"
-#include "I2C.h"
+#include "mcc.h"
+
 /*
                          Main application
  */
-
 int main(void)
 {
     // initialize the device
     SYSTEM_Initialize();
-<<<<<<< HEAD
-    RPR0521RS_init();
-    //I2C1_MESSAGE_STATUS status;
-    //uint8_t data=0;
-    //uint8_t data_w = 0xaa;
-    uint8_t rc;
-    uint16_t ps_val;
-    float als_val;
-    uint8_t near_far;
-  
-     RPR0521RS_get_psalsval(&ps_val, &als_val);
     
+    RPR0521RS_t RPR0521RS;
+    uint16_t PS_Data, PS_TH,PS_TL, data0;
+    uint16_t ALS_DATA_0=0, ALS_DATA_1=0;
+    
+    //RPR0521RS.RPR0521RS_ALS_EN = ALS_Standby;
+    //RPR0521RS.RPR0521RS_PS_EN  = PS_Enable;
+         
+    I2C_Scan_Multi(); 
+    RPR0521RS_ReadID();
+        
+   // RPR0521RS_Mode_Config(RPR0521RS);
+    RPR0521RS_Init(RPR0521RS);
     while (1)
     {
         // Add your application code
-//        LED_2_Toggle();
-//        DELAY_milliseconds(1000);
-//        LED_1_SetLow();
-
-//        I2C_Read(0x38,RPR0521RS_MANUFACT_ID , &data, 1);//
-//        printf("MANUFACT_ID %d\n",data);
-
-//        I2C_Read(0x38, 0x41, &data, 1);
-//        printf("MANUFACT_ID %x\n",data);
-        //RPR0521RS_init();
-        //DELAY_milliseconds(500);
-//        //I2C1_MasterWrite(data_w, 2, 0x38, &status);
-//        I2C_Write(0x38, 0x41, &data_w, 1);
-//        printf("status_ID %d\n",status);
-         //.........................................
-           //if (rc == 0) 
-           //{
-                printf("RPR-0521RS (Proximity)= %.2d \n",ps_val);
-               // printf(ps_val);
-                //printf(" [count]");
-           near_far = RPR0521RS_check_near_far(ps_val);
-           if (near_far == RPR0521RS_NEAR_VAL) 
-           {
-                printf(" Near\n");
-           } 
-           else 
-           {
-                printf(" Far\n");
-           }
-            //DELAY_milliseconds(1000);
-           if (als_val != RPR0521RS_ERROR) 
-           {
-                printf("RPR-0521RS (Ambient Light) = %.2d \n",als_val);
-                //printf(als_val);
-               // printf(" [lx]");
-               // printf("\n");
                 
-           }
-         //}
-     DELAY_milliseconds(1000);
-=======
-    
-//    RPR0521RS_init();
-  
-    while (1)
-    {
-        // Add your application code
-        //I2C_Scan_Multi();
-        printf("hello\n");
-        //UART2_Write('A');
-        LED_1_Toggle();
-        DELAY_milliseconds(1000);
->>>>>>> origin/master
+        PS_Data = RPR0521RS_Read_PS_DATA();
+        RPR0521RS_Read_ALS_DATA(&ALS_DATA_0, &ALS_DATA_1);
+        PS_TH = RPR0521RS_Read_PS_TH();
+        PS_TL = RPR0521RS_Read_PS_TL();
+//        data0 = RPR0521RS_Read_ALS_DATA0_TH;
+        printf("ALS_DATA_0: %d\n", ALS_DATA_0);
+        printf("ALS_DATA_1: %d\n", ALS_DATA_1);
+        printf("PS_TH: %d\n", PS_TH);
+       //printf("DATA: %d\n", data0
+         printf("PS_Data: %d\n", PS_Data);
+             if(PS_Data <= 0)
+                printf("Unknown\n");
+            if(1 <= PS_Data && PS_Data <30)
+                printf("far\n");
+            if(PS_Data >= 30)
+                printf("near\n");
+       
+        
+        DELAY_milliseconds(2000);
+        
     }
-    return 0; 
+    return 1; 
 }
-
 /**
  End of File
 */

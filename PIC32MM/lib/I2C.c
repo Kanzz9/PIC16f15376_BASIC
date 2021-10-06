@@ -1,5 +1,4 @@
 #include "I2C.h"
-
 #if(I2C_Enable)
 
 /* @Summary
@@ -28,10 +27,9 @@ void I2C_Scan_Multi(void){
         DELAY_milliseconds(5);
         if(status == I2C1_MESSAGE_COMPLETE){
             
-            num++;
             status = I2C1_MESSAGE_ADDRESS_NO_ACK;
             #if(UART_Enable)
-                printf("Device: %d Address: %x\n", num++, add);
+                printf("Device: %d Address: %x\n", ++num, add);
             #endif
         }
     }

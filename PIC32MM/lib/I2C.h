@@ -24,7 +24,7 @@ extern "C" {
 #include "mcc.h"
 #include <stdint.h>
 #include "stdlib.h"
-   
+#include "stdio.h"   
 #if(I2C_Enable)   
 
 #define SLAVE_I2C_GENERIC_RETRY_MAX       5  
