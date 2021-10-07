@@ -76,25 +76,25 @@ int main(void)
         
         // Add your application code
         __delay_ms(200);
-//                
-//        if(strcmp(str,str1)!=0){
-//            
-//            strcpy(str,str1);
-//            if(strstr(str,"batden1")!=NULL){
-//                
-//                printf("\nbatden1: OK\n");
-//                LED_SetHigh();
-//            }
-//            else
-//                if(strstr(str,"tatden1")!=NULL){
-//
-//                    printf("\ntatden1: OK\n");
-//                    LED_SetLow();
-//                }
-//                else
-//                    printf("\ncommand fail\n");
-//        }
-//        else
+                
+        if(strcmp(str,str1)!=0){
+            
+            strcpy(str,str1);
+            if(strstr(str,"batden1")!=NULL){
+                
+                printf("\nbatden1: OK\n");
+                LED_SetHigh();
+            }
+            else
+                if(strstr(str,"tatden1")!=NULL){
+
+                    printf("\ntatden1: OK\n");
+                    LED_SetLow();
+                }
+                else
+                    printf("\ncommand fail\n");
+        }
+        else
             UART2_ReadBuffer(str1,100);
        
         printf("\ncommand fail\n");
