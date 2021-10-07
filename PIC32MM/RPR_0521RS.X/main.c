@@ -62,7 +62,7 @@ int main(void)
     //RPR0521RS.RPR0521RS_ALS_EN = ALS_Standby;
     //RPR0521RS.RPR0521RS_PS_EN  = PS_Enable;
          
-    I2C_Scan_Multi(); 
+    //I2C_Scan_Multi(); 
     RPR0521RS_ReadID();
         
    // RPR0521RS_Mode_Config(RPR0521RS);

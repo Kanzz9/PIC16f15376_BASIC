@@ -83,19 +83,20 @@
 #include "pin_manager.h"
 #include "clock.h"
 #include "system.h"
+#include "drivers/i2c_master.h"
 #include "delay.h"
 #include "interrupt_manager.h"
 #include "exceptions.h"
+#include "drivers/i2c_simple_master.h"
+#include "i2c1_driver.h"
 #include "uart2.h"
-#include "i2c1.h"
 
 void SYSTEM_Initialize(void)
 {
     PIN_MANAGER_Initialize();
-    INTERRUPT_Initialize();
     CLOCK_Initialize();
+    INTERRUPT_Initialize();
     UART2_Initialize();
-    I2C1_Initialize();
     INTERRUPT_GlobalEnable();
 }
 
