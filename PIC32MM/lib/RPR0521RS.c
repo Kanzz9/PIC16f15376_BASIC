@@ -443,7 +443,7 @@ void RPR0521RS_Mode_Config(RPR0521RS_t RPR0521RS){
           break;
     }
     /////////////////////////////END Config Measurement time///////////////////
-    data |= 0x09;
+    //data |= 0x09;
     I2C_Write(RPR0521RS_DEVICE_ADDRESS, RPR0521RS_MODE_CONTROL, &data, 1);
     DELAY_milliseconds(5);
     I2C_Read(RPR0521RS_DEVICE_ADDRESS, RPR0521RS_MODE_CONTROL, &data, 1);

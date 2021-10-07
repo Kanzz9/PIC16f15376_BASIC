@@ -54,13 +54,20 @@ int main(void)
 {
     // initialize the device
     SYSTEM_Initialize();
-       
+    
+    uint16_t ps_data;
+    RPR0521RS_t RPR0521RS;
+    RPR0521RS.Mesu_time = ALS_STB_PS_10ms;
+        
+    
+    RPR0521RS_Init(RPR0521RS);
     while (1)
     {
         // Add your application code
 
-       I2C_Scan_Multi();
-        
+       RPR0521RS_ReadID();
+       ps_data = RPR0521RS_Read_PS_DATA();
+       printf("ps: %d", ps_data);
        DELAY_milliseconds(1000);
         
     }
