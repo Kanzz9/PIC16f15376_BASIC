@@ -60,22 +60,42 @@
 
 void I2C_Scan_Multi(void);
 
-//i2c_writeNBytes(i2c_address_t address, void* data, size_t len);
+
 int main(void)
 {
     // initialize the device
     SYSTEM_Initialize();
     printf("Hello\n");
-    
-    
+    uint8_t data[2];
+    uint8_t reg=0x00;
+    int32_t tmp;
+    float temp;
     while (1)
     {
-        // Add your application code
-         //I2C_Scan_Multi();
-        //printf("MAMAMAMA \n");
-        I2C_Scan_Multi();
-        DELAY_milliseconds(1000);
-      
+         
+            DELAY_milliseconds(1000);
+            //WATCHDOG_TimerClear();
+            i2c_writeNBytes(0x48, &reg, 1);
+            i2c_readNBytes(0x48, &data[0], 2);
+            tmp= data[0]<<8| data[1];
+
+
+            if(tmp&0x8000) // Temperature<0
+            {
+                tmp>>=7;// 9bit mode
+                tmp-=512;
+                temp=tmp;
+                temp*=0.5f;
+            }
+            else // Temperature>0
+            {
+                tmp>>=7;
+                temp=tmp;
+                temp*=0.5f;
+            }
+
+            printf("\nT=%.1f%cC\n", temp, 0xB0);
+            DELAY_milliseconds(1000);
     }
     return 0; 
 }
