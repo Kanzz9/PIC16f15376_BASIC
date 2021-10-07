@@ -6,8 +6,7 @@ build/default/production/_ext/1360930230/RPR0521RS.o: ../lib/RPR0521RS.c \
  mcc_generated_files/uart2.h mcc_generated_files/i2c1_driver.h \
  mcc_generated_files/watchdog.h ../lib/RPR0521RS.h \
  mcc_generated_files/drivers/i2c_simple_master.h \
- mcc_generated_files/drivers/../drivers/i2c_types.h \
- mcc_generated_files/drivers/i2c_simple_master.h
+ mcc_generated_files/drivers/../drivers/i2c_types.h
 
 ../lib/RPR0521RS.h:
 
@@ -36,5 +35,3 @@ mcc_generated_files/watchdog.h:
 mcc_generated_files/drivers/i2c_simple_master.h:
 
 mcc_generated_files/drivers/../drivers/i2c_types.h:
-
-mcc_generated_files/drivers/i2c_simple_master.h:
