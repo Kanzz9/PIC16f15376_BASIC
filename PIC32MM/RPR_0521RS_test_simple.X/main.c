@@ -59,7 +59,8 @@ int main(void)
     RPR0521RS_Init(RPR0521RS);
     uint16_t PS_Data, PS_TH,PS_TL, data0;
     uint16_t ALS_DATA_0=0, ALS_DATA_1=0;
-    
+    //thay Dang yeu qui <3......
+    //nnn
     //RPR0521RS.RPR0521RS_ALS_EN = ALS_Standby;
     //RPR0521RS.RPR0521RS_PS_EN  = PS_Enable;
          
