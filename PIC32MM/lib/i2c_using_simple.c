@@ -14,7 +14,7 @@ void I2C_Scan_Multi(void){
     i2c_error_t I2C_Status = I2C_FAIL;
     uint8_t num, add = 0;
 
-    for(add=0; add<127; add++){
+    for(add=0; add<=127; add++){
         I2C_Status = i2c_open(add);
         DELAY_milliseconds(5);
         if(I2C_Status == I2C_NOERR){
@@ -22,8 +22,11 @@ void I2C_Scan_Multi(void){
             I2C_Status = I2C_FAIL;
             #if(UART_Enable)
                 printf("Device: %d Address: %x\n", ++num, add);
+                
             #endif
         }
+        //if()
+        
     }   
 }
 
