@@ -247,7 +247,7 @@ void RPR0521RS_Init(RPR0521RS_t RPR0521RS){
  */
 void RPR0521RS_SYMTEMCONTROL(RPR0521RS_t RPR0521RS)
 {
- int data = 0;
+ uint8_t data = 0;
     /////////// Config SW reset  ////////////////////
     if(RPR0521RS.RPR0521RS_SW_RST == Initial_Reset_Not_Started){
         
@@ -287,7 +287,7 @@ void RPR0521RS_SYMTEMCONTROL(RPR0521RS_t RPR0521RS)
  */
 void RPR0521RS_ALS_PS_CONTROLL (RPR0521RS_t RPR0521RS)
 {
-        int data = 0;
+        uint8_t data = 0;
         switch(RPR0521RS.DATA0_GAIN)
         {
             case Gain_DATA0_X1:
@@ -450,7 +450,7 @@ void RPR0521RS_Mode_Config(RPR0521RS_t RPR0521RS){
 }
 void RPR0521RS_PS_CONTROLL(RPR0521RS_t RPR0521RS)
 {
-    int data=0;
+    uint8_t data=0;
 ///////////////////////Config PS_GAIN ///////////////////////////////////
     switch(RPR0521RS.PS_GAIN)
     {
@@ -508,7 +508,7 @@ void RPR0521RS_PS_CONTROLL(RPR0521RS_t RPR0521RS)
 }
 void RPR0521RS_INTERRUPTT(RPR0521RS_t RPR0521RS)
 {
-    int data = 0;
+    uint8_t data = 0;
     //////////////////////Config PS_INT_STAUTS//////////////////////////////
     if(RPR0521RS.PS_INT_STAUTS == PS_Int_Signal_Inactive)
     {

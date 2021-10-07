@@ -57,7 +57,7 @@
 #include "exceptions.h"
 #include "uart2.h"
 
-#define I2C_Enable                  1
+//#define I2C_Enable                  1
 #define UART_Enable                 1
 #define RPR0521RS_Enable            1
 #define i2c_using_simple_Enable     1
