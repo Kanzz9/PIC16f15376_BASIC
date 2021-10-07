@@ -11,15 +11,16 @@
 
 void I2C_Scan_Multi(void){
     
-    i2c_error_t I2C_Status = I2C_FAIL;
+    i2c_error_t I2C_Status;
     uint8_t num, add = 0;
 
     for(add=0; add<=127; add++){
         I2C_Status = i2c_open(add);
+        while(!i2c_open(add));
         DELAY_milliseconds(5);
-        if(I2C_Status == I2C_NOERR){
+        if(I2C_Status){
             
-            I2C_Status = I2C_FAIL;
+            while(I2C_Status == i2c_close()); // sit here until finished.
             #if(UART_Enable)
                 printf("Device: %d Address: %x\n", ++num, add);
                 
@@ -50,7 +51,7 @@ void I2C_Write(uint16_t slaveDeviceAddress, uint8_t dataAddress, uint8_t *pData,
 }
 uint8_t I2C_Read(uint16_t slaveDeviceAddress, uint8_t dataAddress, uint8_t *pData, uint16_t nCount)
 {
-
-
+    
+    i2c_readDataBlock(slaveDeviceAddress, dataAddress, pData, nCount);
 }
 #endif
