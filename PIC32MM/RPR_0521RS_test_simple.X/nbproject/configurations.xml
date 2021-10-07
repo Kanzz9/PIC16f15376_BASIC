@@ -2,7 +2,7 @@
 <configurationDescriptor version="65">
   <logicalFolder name="root" displayName="root" projectFiles="true">
     <logicalFolder name="f1" displayName="Head" projectFiles="true">
-      <itemPath>../lib/RPR0521RS.c</itemPath>
+      <itemPath>../lib/RPR0521RS_1.c</itemPath>
     </logicalFolder>
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
