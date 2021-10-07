@@ -3,7 +3,7 @@
  
  */
 #include "RPR0521RS.h"
-#include "I2C.h"
+
 #include <stdint.h>
 #include "mcc.h"
 #if(RPR0521RS_Enable)
