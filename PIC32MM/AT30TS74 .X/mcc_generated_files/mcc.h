@@ -50,16 +50,20 @@
 #include "pin_manager.h"
 #include <stdint.h>
 #include <stdbool.h>
+#include "../drivers/i2c_master.h"
+#include "i2c_simple_master.h"
+#include "i2c1_driver.h"
 
-#include "i2c1.h"
+//#include "i2c1.h"
 #include "interrupt_manager.h"
 #include "exceptions.h"
 #include "uart2.h"
 #include "watchdog.h"
 #include "delay.h"
-#define I2C_Enable 1
-#define UART_Enable 1
-#define AT30TS74_Enable 1
+//#define I2C_Enable 1
+#define UART_Enable                 1
+#define AT30TS74_Enable                    1
+#define i2c_using_simple_Enable     1
 //#warning "This file will be removed in future MCC releases. Use system.h instead."
 
 #endif	/* MCC_H */

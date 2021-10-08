@@ -57,8 +57,11 @@ int main(void)
     
     uint16_t ps_data;
     RPR0521RS_t RPR0521RS;
+    uint16_t PS_Data, PS_TH,PS_TL, data0;
+    uint16_t ALS_DATA_0=0, ALS_DATA_1=0;
     RPR0521RS.Mesu_time = ALS_STB_PS_10ms;
-        
+   // RPR0521RS.PS_GAIN = PS_GAIN_X1;
+    //RPR0521RS.LED_CURR = LED_100mA;
     
     RPR0521RS_Init(RPR0521RS);
     while (1)
@@ -67,8 +70,22 @@ int main(void)
 
        RPR0521RS_ReadID();
        ps_data = RPR0521RS_Read_PS_DATA();
-       printf("ps: %d", ps_data);
-       DELAY_milliseconds(1000);
+       RPR0521RS_Read_ALS_DATA(&ALS_DATA_0, &ALS_DATA_1);
+        PS_TH = RPR0521RS_Read_PS_TH();
+        PS_TL = RPR0521RS_Read_PS_TL();
+//        data0 = RPR0521RS_Read_ALS_DATA0_TH;
+        printf("ALS_DATA_0: %d\n", ALS_DATA_0);
+        printf("ALS_DATA_1: %d\n", ALS_DATA_1);
+        printf("PS_TH: %d\n", PS_TH);
+       //printf("DATA: %d\n", data0
+         printf("PS_Data: %d\n", ps_data);
+             if(ps_data <= 0)
+                printf("Unknown\n");
+            if(1 <= ps_data && ps_data <30)
+                printf("far\n");
+            if(ps_data >= 30)
+                printf("near\n");
+         DELAY_milliseconds(1000);
         
     }
     return 1; 

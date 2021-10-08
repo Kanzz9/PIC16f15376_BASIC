@@ -9,8 +9,8 @@
 #ifndef AT30TS74_H
 #define AT30TS74_H
 //#include "mcc.h"
-
-
+//#include "i2c_using_simple.h"
+#include "mcc.h"
 
 #define AT30TS74_Temp_Register  0x00
 #define AT30TS74_Config         0x01
@@ -88,6 +88,6 @@ typedef struct{
 }AT30TS74_t;
 void AT30TS74_Config_Reg(AT30TS74_t AT30TS74);
 void AT30TS74_Selected_reg(AT30TS74_t AT30TS74);
-void AR30TS74_Init(AT30TS74_t AT30TS74);
+void AT30TS74_Init(AT30TS74_t AT30TS74);
 void AT30TS74_Read_Temp(void);
 #endif
