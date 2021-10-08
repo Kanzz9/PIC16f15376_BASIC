@@ -46,8 +46,9 @@
   Section: Included Files
 */
 #include "mcc_generated_files/system.h"
-#include "I2C.h"
 #include "AT30TS74.h"
+//#include "delay.h"
+#include "mcc_generated_files/mcc.h"
 /*
                          Main application
  */
@@ -56,7 +57,9 @@ int main(void)
     // initialize the device
     SYSTEM_Initialize();
     AT30TS74_t AT30TS74;
-    AR30TS74_Init(AT30TS74);
+    AT30TS74.AT30TS74_Selected=Selected_Temperature_Register;
+    
+    AT30TS74_Init(AT30TS74);
     while (1)
     {
         // Add your application code

@@ -23,11 +23,8 @@ void I2C_Scan_Multi(void){
             while(I2C_Status == i2c_close()); // sit here until finished.
             #if(UART_Enable)
                 printf("Device: %d Address: %x\n", ++num, add);
-                
             #endif
         }
-        //if()
-        
     }   
 }
 

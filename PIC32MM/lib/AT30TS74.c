@@ -1,14 +1,20 @@
 #include "AT30TS74.h"
-#include "I2C.h"
-#include <stdint.h>
-#include "mcc.h"
 
+#include <stdint.h>
+//#include "mcc.h"
+#if(i2c_using_simple_Enable)
+    #include "i2c_using_simple.h"
+
+#elif(I2C_Enable)
+
+    #include "I2C.h"
+
+#endif
 
 
 #if(AT30TS74_Enable)
 
-
-void AR30TS74_Init(AT30TS74_t AT30TS74)
+void AT30TS74_Init(AT30TS74_t AT30TS74)
 {
    AT30TS74_Selected_reg(AT30TS74); 
    AT30TS74_Config_Reg(AT30TS74);
@@ -29,7 +35,7 @@ void AR30TS74_Init(AT30TS74_t AT30TS74)
  */
 void AT30TS74_Selected_reg(AT30TS74_t AT30TS74)   
 {
-     int data = 0;
+     uint8_t data = 0;
      switch(AT30TS74.AT30TS74_Selected)
         {
             case Selected_Temperature_Register:
@@ -83,7 +89,7 @@ void AT30TS74_Read_Temp(void)
         {
             tmp>>=7;
             temp=tmp;
-            temp*=0.5f;
+            temp=(temp*0.5f);
         }
     printf("\nT=%.2f%cC\n", temp, 0xB0);
 }
@@ -104,7 +110,7 @@ void AT30TS74_Read_Temp(void)
  */
 void AT30TS74_Config_Reg(AT30TS74_t AT30TS74)
 {
-    int data = 0;
+    uint8_t data = 0;
     if(AT30TS74.AT30TS74_One_Shot_Mode==Normal_Operation)
     {
         data &=0x7FFF;

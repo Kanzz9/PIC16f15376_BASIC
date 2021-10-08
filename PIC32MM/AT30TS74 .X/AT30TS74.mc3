@@ -2,12 +2,20 @@
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
+         <string>16 Bit I2CMASTER</string>
+         <string>class com.microchip.mcc.foundationservices.modules.softwaredriver.MCU16I2CMaster.MCU16I2CMASTER</string>
+      </entry>
+      <entry>
          <string>DELAY</string>
          <string>class com.microchip.mcc.foundationservices.modules.softwaredriver.delay.DELAY</string>
       </entry>
       <entry>
          <string>I2C1</string>
-         <string>class com.microchip.mcc.mcu16.modules.i2c.I2C</string>
+         <string>class com.microchip.mcc.foundationservices.mcu16.modules.peripheraldriver.i2c.I2C</string>
+      </entry>
+      <entry>
+         <string>I2CSIMPLE</string>
+         <string>class com.microchip.mcc.foundationservices.modules.softwaredriver.I2CSimple.I2CSIMPLE</string>
       </entry>
       <entry>
          <string>ICD</string>
@@ -56,10 +64,30 @@
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
       <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.mcu16.Mcu16PeripheralLibrary" version="1.170.0"/>
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.boardsupportlibrary.BoardSuppportLibrary" version="1.12.0"/>
       <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.foundationservices.library.FoundationServicesLibrary" version="0.2.2"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.boardsupportlibrary.BoardSuppportLibrary" version="1.12.0"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="16 Bit I2CMASTER" name="16 Bit I2CMASTER_I2C/Functions"/>
+         <value>I2C1-Foundation Services Library</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="16 Bit I2CMASTER" name="I2CMASTER_CustomKeyName"/>
+         <value>InitialValue</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="16 Bit I2CMASTER" name="comboSettings"/>
+         <value>I2C1 - TODO</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="16 Bit I2CMASTER" name="enableModule"/>
+         <value>disabled</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="16 Bit I2CMASTER" name="pubSub16 Bit I2CMASTER_I2C/Functions"/>
+         <value>5450.4896845976355</value>
+      </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="DELAY" name="usecaseComboSettings"/>
          <value>None</value>
@@ -409,10 +437,6 @@
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="I2C1" registerAlias="BICI" settingAlias="context"/>
-         <value>OFF</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="I2C1" registerAlias="BICI" settingAlias="enable"/>
          <value>disabled</value>
       </entry>
@@ -581,10 +605,6 @@
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="I2C1" registerAlias="MICI" settingAlias="context"/>
-         <value>OFF</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="I2C1" registerAlias="MICI" settingAlias="enable"/>
          <value>enabled</value>
       </entry>
@@ -601,10 +621,6 @@
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="I2C1" registerAlias="SICI" settingAlias="context"/>
-         <value>OFF</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="I2C1" registerAlias="SICI" settingAlias="enable"/>
          <value>enabled</value>
       </entry>
@@ -615,6 +631,30 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="I2C1" registerAlias="SICI" settingAlias="priority"/>
          <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="I2CSIMPLE" name=" I2CSIMPLE_CustomKeyName"/>
+         <value>InitialValue</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="I2CSIMPLE" name="I2CSIMPLE_I2CMASTER/Functions"/>
+         <value>16 Bit I2CMASTER-Foundation Services Library</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="I2CSIMPLE" name="comboSettings"/>
+         <value>I2CMASTER1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="I2CSIMPLE" name="enableModule"/>
+         <value>disabled</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="I2CSIMPLE" name="pubSubI2CSIMPLE_I2CMASTER/Functions"/>
+         <value>7929.023522313102</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="I2CSIMPLE" name="useCaseComboBoxSettings"/>
+         <value>None</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ICD" name="customMasterSlaveViewerEnable"/>
@@ -2781,15 +2821,7 @@
          <value>OFF</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="SCL%aux3"/>
-         <value>OFF</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="SDA%aux0"/>
-         <value>OFF</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="SDA%aux2"/>
          <value>OFF</value>
       </entry>
       <entry>
@@ -9681,58 +9713,18 @@
          <value>0</value>
       </entry>
    </tokenMap>
-   <generatedFileHashHistoryMap class="java.util.HashMap">
+   <generatedFileHashHistoryMap class="java.util.TreeMap">
       <entry>
-         <file>mcc_generated_files\interrupt_manager.h</file>
-         <hash>08e63aa0700024b52c88acbf8d23280afcb6ec6300b8cf5bd6bffa7f7210e2b7</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\mcc.h</file>
-         <hash>39e2c795d63b9c1f166a6804d22609cb197e0bbed23cdd2e199e15afbd87d1c4</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\exceptions.h</file>
-         <hash>18c19797d9ed7b78772c9a15732e1707ee831444afffcf35ef4f33ceb33ec8f8</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\i2c1.c</file>
-         <hash>193d1adadad719729193e80d54b1bc93b1f8a28f20752d4df561ee1339c64033</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\uart2.h</file>
-         <hash>f5f940ead3bdce980282697a72abe7b8d6b4289a0dbdb0e166dd89c95382830b</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\exceptions.c</file>
-         <hash>dff6facd9e44bb28c4f18a7d8814c0773f0c80b84c878d05b45b88c189698016</hash>
+         <file>main.c</file>
+         <hash>b8217cc7c6b640db4367fe514f54236dbe131ae973fa0c789eb97267dd5574ca</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\clock.c</file>
          <hash>9cab3037d48329ce3f8a140eedbe1f6b93091f24857e22b5fea692b39ff0cf9b</hash>
       </entry>
       <entry>
-         <file>main.c</file>
-         <hash>b8217cc7c6b640db4367fe514f54236dbe131ae973fa0c789eb97267dd5574ca</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\uart2.c</file>
-         <hash>87c745283b2a124b3cd27fd1b218cb570e26c81a9582c9157c01215dfc269b02</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\pin_manager.h</file>
-         <hash>84f1bb814af1c60b854bddce8f37ee3116043a6379faa30252b25bc718f630fc</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\i2c1.h</file>
-         <hash>cc2e208c8a01c0806ff56c17922a0ad3371088eef48083b55d8d4a7295c859df</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\pin_manager.c</file>
-         <hash>648d9376f3755af54dc39c3fbaa48f17549e0f467ed066f46f7384987d2d3feb</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\system.h</file>
-         <hash>0e1e81da56d3f441c2c747893c82a147eec2c553af0aecc26aa29217c8a8e69c</hash>
+         <file>mcc_generated_files\clock.h</file>
+         <hash>2f182becac0c01c35c4c6debecc2954b891fbf677e5fbde7df3ca79a9641079f</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\delay.c</file>
@@ -9743,24 +9735,92 @@
          <hash>dda77102dba9adc0f9aef1c8c542cfee6d6cccc96446f4cd1bf07be2150a4d95</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\system.c</file>
-         <hash>08256b8feed4d73f334e497fff5f9a9471a98ff91eaacde92ff45d8c4ecdc8ba</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\clock.h</file>
-         <hash>2f182becac0c01c35c4c6debecc2954b891fbf677e5fbde7df3ca79a9641079f</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\docs\delay.dox</file>
          <hash>13d4874d789b563dd4499efacd71882cbc38f8459da91ac17f13fa76079be93b</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\docs\i2c_simple.dox</file>
+         <hash>1192d1c2a9473538887a2fae1d9c6e67d9d7833010dccb831311a503f3a29da6</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\drivers\i2c_master.c</file>
+         <hash>c011dc2fda139c4decb4b9a7149a9e533e3cfe897e6fb6a4303a1fe1ba6fbe53</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\drivers\i2c_master.h</file>
+         <hash>3379d8d398a99f63ac18a150d9e36311f0632e40d873ae7c72b7ea98b1dce330</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\drivers\i2c_simple_master.c</file>
+         <hash>1fc178de5eeb73c96c63859fe9e9b225191ee00f52e715587123c5cc55f49825</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\drivers\i2c_simple_master.h</file>
+         <hash>86aae88f79fb9c2e96db38b792d2fd9f9795e9e73b0b86b36adf671e73fcc97a</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\drivers\i2c_types.c</file>
+         <hash>2b32c8e36998b8423bc0546a1b71af9c3e5538d9ebfde61578b71a0f128b57f3</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\drivers\i2c_types.h</file>
+         <hash>2434d9fc0cff9745231b2d78009fe2186ca818bd350148645c5d43c58c8e859b</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\exceptions.c</file>
+         <hash>dff6facd9e44bb28c4f18a7d8814c0773f0c80b84c878d05b45b88c189698016</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\exceptions.h</file>
+         <hash>18c19797d9ed7b78772c9a15732e1707ee831444afffcf35ef4f33ceb33ec8f8</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\i2c1_driver.c</file>
+         <hash>9c88603b2957a96333a3c0751daadb0029d97769eb0a9fbab620059db26dd85b</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\i2c1_driver.h</file>
+         <hash>1c250bd30e492d47493d6ec2843d17def5fd0ef35173bd0c71191d19d4ab146c</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\interrupt_manager.c</file>
          <hash>4e481dc5ccbc654ee46504f2a373232934d4605c17e82fcf926ba57c63027359</hash>
       </entry>
       <entry>
+         <file>mcc_generated_files\interrupt_manager.h</file>
+         <hash>08e63aa0700024b52c88acbf8d23280afcb6ec6300b8cf5bd6bffa7f7210e2b7</hash>
+      </entry>
+      <entry>
          <file>mcc_generated_files\mcc.c</file>
          <hash>d5d5d8675d65889492c299b9c10e9478f32235e37a4c0906cc80720a349c166f</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\mcc.h</file>
+         <hash>724123199f0754b064f1e520fe4bb9a7cff5fbd94e757ae58eed504720242298</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\pin_manager.c</file>
+         <hash>648d9376f3755af54dc39c3fbaa48f17549e0f467ed066f46f7384987d2d3feb</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\pin_manager.h</file>
+         <hash>84f1bb814af1c60b854bddce8f37ee3116043a6379faa30252b25bc718f630fc</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\system.c</file>
+         <hash>6515fbc3877092473c3e14348caeb42b493d0ecc51679b6501a6340152b38cca</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\system.h</file>
+         <hash>0e1e81da56d3f441c2c747893c82a147eec2c553af0aecc26aa29217c8a8e69c</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\uart2.c</file>
+         <hash>87c745283b2a124b3cd27fd1b218cb570e26c81a9582c9157c01215dfc269b02</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\uart2.h</file>
+         <hash>f5f940ead3bdce980282697a72abe7b8d6b4289a0dbdb0e166dd89c95382830b</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\watchdog.h</file>
