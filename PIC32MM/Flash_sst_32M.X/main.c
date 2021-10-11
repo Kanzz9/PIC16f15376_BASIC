@@ -50,15 +50,30 @@
 /*
                          Main application
  */
+void SST_High_Speed_Read(char *buf, uint32_t addr, uint8_t len);
 int main(void)
 {
     // initialize the device
     SYSTEM_Initialize();
+    char b[1]={B};
+    SST_High_Speed_Read(b, 0x100, 200);
     while (1)
     {
         // Add your application code
     }
     return 1; 
+}
+void SST_High_Speed_Read(char *buf, uint32_t addr, uint8_t len)
+{
+	
+	spi2_writeByte(0x0B);
+	spi2_writeByte((addr & 0xff0000) >> 16);
+	spi2_writeByte((addr & 0x00ff00) >> 8);
+	spi2_writeByte(addr & 0x0000ff);
+	spi2_writeByte(0);	
+	while(len-- > 0)
+		*buf++ = spi2_writeByte(0);
+	
 }
 /**
  End of File

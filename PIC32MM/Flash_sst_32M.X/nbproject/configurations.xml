@@ -10,12 +10,7 @@
         <logicalFolder name="drivers" displayName="drivers" projectFiles="true">
           <itemPath>mcc_generated_files/drivers/spi_master.h</itemPath>
         </logicalFolder>
-        <logicalFolder name="examples" displayName="examples" projectFiles="true">
-          <itemPath>mcc_generated_files/examples/spi_master_example.h</itemPath>
-        </logicalFolder>
-        <itemPath>mcc_generated_files/spi2_driver.h</itemPath>
         <itemPath>mcc_generated_files/system.h</itemPath>
-        <itemPath>mcc_generated_files/spi2_types.h</itemPath>
         <itemPath>mcc_generated_files/exceptions.h</itemPath>
         <itemPath>mcc_generated_files/pin_manager.h</itemPath>
         <itemPath>mcc_generated_files/mcc.h</itemPath>
@@ -23,6 +18,8 @@
         <itemPath>mcc_generated_files/clock.h</itemPath>
         <itemPath>mcc_generated_files/interrupt_manager.h</itemPath>
         <itemPath>mcc_generated_files/uart2.h</itemPath>
+        <itemPath>mcc_generated_files/spi2_driver.h</itemPath>
+        <itemPath>mcc_generated_files/spi2_types.h</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
@@ -42,17 +39,14 @@
         <logicalFolder name="drivers" displayName="drivers" projectFiles="true">
           <itemPath>mcc_generated_files/drivers/spi_master.c</itemPath>
         </logicalFolder>
-        <logicalFolder name="examples" displayName="examples" projectFiles="true">
-          <itemPath>mcc_generated_files/examples/spi_master_example.c</itemPath>
-        </logicalFolder>
         <itemPath>mcc_generated_files/pin_manager.c</itemPath>
-        <itemPath>mcc_generated_files/spi2_driver.c</itemPath>
         <itemPath>mcc_generated_files/system.c</itemPath>
         <itemPath>mcc_generated_files/clock.c</itemPath>
         <itemPath>mcc_generated_files/mcc.c</itemPath>
         <itemPath>mcc_generated_files/exceptions.c</itemPath>
         <itemPath>mcc_generated_files/interrupt_manager.c</itemPath>
         <itemPath>mcc_generated_files/uart2.c</itemPath>
+        <itemPath>mcc_generated_files/spi2_driver.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
     </logicalFolder>
@@ -117,10 +111,10 @@
         <property key="extra-include-directories" value=""/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
-        <property key="isolate-each-function" value="false"/>
+        <property key="isolate-each-function" value="true"/>
         <property key="make-warnings-into-errors" value="false"/>
-        <property key="optimization-level" value=""/>
-        <property key="place-data-into-section" value="false"/>
+        <property key="optimization-level" value="-O2"/>
+        <property key="place-data-into-section" value="true"/>
         <property key="post-instruction-scheduling" value="default"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="preprocessor-macros" value=""/>
@@ -189,7 +183,7 @@
         <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros" value=""/>
-        <property key="remove-unused-sections" value="false"/>
+        <property key="remove-unused-sections" value="true"/>
         <property key="report-memory-usage" value="false"/>
         <property key="serial-length" value=""/>
         <property key="serial-origin" value=""/>
@@ -228,9 +222,10 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="common-include-directories" value=""/>
+        <property key="common-include-directories"
+                  value="mcc_generated_files;mcc_generated_files\drivers"/>
         <property key="gp-relative-option" value=""/>
-        <property key="legacy-libc" value="true"/>
+        <property key="legacy-libc" value="false"/>
         <property key="mdtcm" value=""/>
         <property key="mitcm" value=""/>
         <property key="mstacktcm" value="false"/>
