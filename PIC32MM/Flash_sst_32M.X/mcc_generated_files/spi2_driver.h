@@ -29,7 +29,7 @@
 #include <stdio.h>
 #include "spi2_types.h"
 
-#define INLINE  inline 
+#define INLINE  //inline 
 
 /* arbitration interface */
 INLINE void spi2_close(void);

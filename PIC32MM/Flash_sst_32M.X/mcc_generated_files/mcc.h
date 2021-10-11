@@ -51,14 +51,15 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-#include "watchdog.h"
-#include "spi2_driver.h"
+#include "delay.h"
+//#include "drivers/spi_master.h"
+//#include "spi2_driver.h"
 #include "uart2.h"
+#include "watchdog.h"
 #include "interrupt_manager.h"
 #include "exceptions.h"
-#include "drivers/spi_master.h"
 
-#warning "This file will be removed in future MCC releases. Use system.h instead."
+//#warning "This file will be removed in future MCC releases. Use system.h instead."
 
 #endif	/* MCC_H */
 /**

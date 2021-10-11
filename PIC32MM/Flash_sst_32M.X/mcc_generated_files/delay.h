@@ -1,8 +1,8 @@
 /**
 \file
-\defgroup doc_driver_spi_example SPI Driver Example Source Code Reference
-\ingroup doc_driver_spi
-\brief This file contains the API that implements the SPI master driver example functionalities.
+\defgroup doc_driver_delay_code Delay Driver Source Code Reference
+\ingroup doc_driver_delay
+\brief This file contains the API to generate delays in the millisecond and microsecond ranges.
 \copyright (c) 2020 Microchip Technology Inc. and its subsidiaries.
 \page License
     (c) 2020 Microchip Technology Inc. and its subsidiaries. You may use this
@@ -26,9 +26,12 @@
     TERMS.
 */
 
-#ifndef _SPI_MASTER_EXAMPLE_H
-#define _SPI_MASTER_EXAMPLE_H
+#ifndef _DELAY_H
+#define _DELAY_H
 
-uint8_t SPI_Master_test(void);
+#include <stdint.h>
 
-#endif  /* _SPI_MASTER_EXAMPLE_H */
+void DELAY_milliseconds(uint16_t milliseconds);
+void DELAY_microseconds(uint16_t microseconds);
+
+#endif	// _DELAY_H

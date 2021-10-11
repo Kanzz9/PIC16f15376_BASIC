@@ -600,6 +600,188 @@ inline static void SCK2OUT_SetValue(bool value)
 
 */
 #define SCK2OUT_SetDigitalOutput()   ( TRISBCLR = (1 << 7) )
+/**
+  @Summary
+    Sets the GPIO pin, RD0, high using LATD0.
+
+  @Description
+    Sets the GPIO pin, RD0, high using LATD0.
+
+  @Preconditions
+    The RD0 must be set to an output.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Set RD0 high (1)
+    SS_SetHigh();
+    </code>
+
+*/
+#define SS_SetHigh()          ( LATDSET = (1 << 0) )
+/**
+  @Summary
+    Sets the GPIO pin, RD0, low using LATD0.
+
+  @Description
+    Sets the GPIO pin, RD0, low using LATD0.
+
+  @Preconditions
+    The RD0 must be set to an output.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Set RD0 low (0)
+    SS_SetLow();
+    </code>
+
+*/
+#define SS_SetLow()           ( LATDCLR = (1 << 0) )
+
+/**
+  @Summary
+    Sets a value to the GPIO pin.
+
+  @Description
+    Sets or Resets the GPIO pin, RD0, low or high using LATD0.
+
+  @Preconditions
+    The RD0 must be set to an output.
+
+  @Returns
+    None.
+
+  @Param
+    bool value; : value to be set to the GPIO pin.
+
+  @Example
+    <code>
+    // Set RD0 to low.
+    SS_SetValue(false);
+    </code>
+
+*/
+inline static void SS_SetValue(bool value)
+{
+  if(value)
+  {
+    SS_SetHigh();
+  }
+  else
+  {
+    SS_SetLow();
+  }
+}
+
+/**
+  @Summary
+    Toggles the GPIO pin, RD0, using LATD0.
+
+  @Description
+    Toggles the GPIO pin, RD0, using LATD0.
+
+  @Preconditions
+    The RD0 must be set to an output.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Toggle RD0
+    SS_Toggle();
+    </code>
+
+*/
+#define SS_Toggle()           ( LATDINV = (1 << 0) )
+/**
+  @Summary
+    Reads the value of the GPIO pin, RD0.
+
+  @Description
+    Reads the value of the GPIO pin, RD0.
+
+  @Preconditions
+    None.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    uint16_t portValue;
+
+    // Read RD0
+    postValue = SS_GetValue();
+    </code>
+
+*/
+#define SS_GetValue()         PORTDbits.RD0
+/**
+  @Summary
+    Configures the GPIO pin, RD0, as an input.
+
+  @Description
+    Configures the GPIO pin, RD0, as an input.
+
+  @Preconditions
+    None.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Sets the RD0 as an input
+    SS_SetDigitalInput();
+    </code>
+
+*/
+#define SS_SetDigitalInput()   ( TRISDSET = (1 << 0) )
+/**
+  @Summary
+    Configures the GPIO pin, RD0, as an output.
+
+  @Description
+    Configures the GPIO pin, RD0, as an output.
+
+  @Preconditions
+    None.
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    <code>
+    // Sets the RD0 as an output
+    SS_SetDigitalOutput();
+    </code>
+
+*/
+#define SS_SetDigitalOutput()   ( TRISDCLR = (1 << 0) )
 
 /**
     Section: Function Prototypes

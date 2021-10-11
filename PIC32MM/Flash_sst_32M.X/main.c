@@ -46,20 +46,105 @@
   Section: Included Files
 */
 #include "mcc_generated_files/system.h"
-
+#include "stdio.h"
+#include "delay.h"
+#include "mcc.h"
 /*
                          Main application
  */
+uint8_t SST_Read(uint8_t *buf, uint32_t addr, uint8_t len);
+uint8_t SST_High_Speed_Read(uint8_t *buf, uint32_t addr, uint8_t len);
+unsigned char SST_Read_Status_Register(void);
+void SST_Read_ID(unsigned char *buf);
+void SST_Read_Jedec_ID(uint8_t *buf);
 int main(void)
 {
     // initialize the device
     SYSTEM_Initialize();
+    //printf("\nFlash TEST\n");
+    uint8_t b=0xAA;
+    uint8_t a,buf=0;
+   // 
+    
     while (1)
     {
         // Add your application code
+        printf("\nFlash TEST\n");
+//        a = SST_High_Speed_Read(&b, 0x00, 20);
+//        printf("b = %x \n",a);
+        SST_Read_ID(&buf);
+        SST_Read_Jedec_ID(&buf);
+        
+        DELAY_milliseconds(1000);
     }
-    return 1; 
+    return 0; 
 }
+uint8_t SST_Read(uint8_t *buf, uint32_t addr, uint8_t len)// read 25M
+{
+	SS_SetLow();
+	spi2_writeByte(0x03);
+	spi2_writeByte((addr & 0xff0000) >> 16);
+	spi2_writeByte((addr & 0x00ff00) >> 8);
+	spi2_writeByte(addr & 0x0000ff);
+	//spi2_writeByte(0);	
+	while(len-- > 0)
+		*buf++ = spi2_writeByte(0);
+    SS_SetHigh();
+	return *buf;
+}
+
+uint8_t SST_High_Speed_Read(uint8_t *buf, uint32_t addr, uint8_t len)// read 80M
+{
+	SS_SetLow();
+	spi2_exchangeByte(0x0B);
+	spi2_exchangeByte((addr & 0xff0000) >> 16);
+	spi2_exchangeByte((addr & 0x00ff00) >> 8);
+	spi2_exchangeByte(addr & 0x0000ff);
+	spi2_exchangeByte(0);	
+	while(len-- > 0)
+		*buf++ = spi2_exchangeByte(0);
+     SS_SetHigh();
+	return *buf;
+}
+unsigned char SST_Read_Status_Register(void)
+{
+    
+	unsigned char res;
+    SS_SetLow();
+	spi2_writeByte(0x01);
+	res = spi2_writeByte(0);
+    SS_SetHigh();
+	return res;
+}
+void SST_Read_ID(unsigned char *buf)
+{
+    int num;
+    uint8_t ID;
+	SS_SetLow();
+	spi2_writeByte(0x90);
+	spi2_writeByte(0);
+	spi2_writeByte(0);
+	spi2_writeByte(0);
+	*buf++ = spi2_writeByte(0);
+	*buf = spi2_writeByte(0);
+    ID = *buf;
+    printf("%d ADDr: %x\n",++num,ID);   
+	SS_SetHigh();
+}
+void SST_Read_Jedec_ID(uint8_t *buf)
+{
+    int num;
+    uint8_t ID;
+	SS_SetLow();
+	spi2_writeByte(0x9f);
+	*buf++ = spi2_writeByte(0);
+	*buf++ = spi2_writeByte(0);
+	*buf = spi2_writeByte(0);
+    ID = *buf;
+    printf("%d ADDr2: %x\n",++num,ID);
+	SS_SetHigh();
+}
+
 /**
  End of File
 */
