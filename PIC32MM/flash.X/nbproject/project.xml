@@ -3,8 +3,8 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>Flash_sst_32M</name>
-            <creation-uuid>1f76782f-51e1-45e9-91ca-3383a71a788f</creation-uuid>
+            <name>flash</name>
+            <creation-uuid>c7828607-fc32-4708-bfd5-3f2e88e8989f</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
             <cpp-extensions/>

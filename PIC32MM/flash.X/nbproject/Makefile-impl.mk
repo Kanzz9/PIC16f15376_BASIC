@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Flash_sst_32M.X
+PROJECTNAME=flash.X
 
 # Active Configuration
 DEFAULTCONF=default
