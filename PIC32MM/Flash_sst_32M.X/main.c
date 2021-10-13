@@ -57,26 +57,26 @@ uint8_t SST_High_Speed_Read(uint8_t *buf, uint32_t addr, uint8_t len);
 //unsigned char SST_Read_Status_Register(void);
 //void SST_Write_Enable(void);
 //void SST_Write_Disable(void);
+void erase_chip();
 //void SST_Read_ID(unsigned char *buf);
 void SST_Read_Jedec_ID(uint8_t *buf);
+void SST_Read_Jedec_ID2();
 int main(void)
 {
     // initialize the device
     SYSTEM_Initialize();
+  
     //printf("\nFlash TEST\n");
-    uint8_t b=0xAA;
-    uint8_t a,buf;
-   // 
-//    SST_Read_ID(&buf);
+    //uint8_t b=0xAA;
+    uint8_t buf;
   
     while (1)
     {
         // Add your application code
         printf("\nFlash TEST\n");
-//        a = SST_High_Speed_Read(&b, 0x00, 20);
-//        printf("b = %x \n",a);
-        SST_Read_Jedec_ID(&buf);
+        SST_Read_Jedec_ID2();
         DELAY_milliseconds(1000);
+        erase_chip();
     }
     return 0; 
 }
@@ -116,7 +116,7 @@ uint8_t SST_High_Speed_Read(uint8_t *buf, uint32_t addr, uint8_t len)// read 80M
 //    
 //	unsigned char res;
 //    SS_SetLow();
-//	spi2_exchangeByte(0x01);
+//	spi2_exchangeByte(0x05);
 //	res = spi2_exchangeByte(0);
 //    SS_SetHigh();
 //	return res;
@@ -128,60 +128,77 @@ uint8_t SST_High_Speed_Read(uint8_t *buf, uint32_t addr, uint8_t len)// read 80M
 //	spi2_exchangeByte(0x06);
 //    SS_SetHigh();
 //}
-////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
 //void SST_Write_Disable(void)
 //{
 //    SS_SetLow();
 //	spi2_exchangeByte(0x04);
 //    SS_SetHigh();
 //}
+void erase_chip()
+{
+    spi2_open(MASTER0_CONFIG);
+    SS_SetLow();
+    spi2_exchangeByte(0x60);
+    SS_SetHigh();
+    
+}
 //void SST_Read_ID(unsigned char *buf)
 //{
 //    int num;
 //	SS_SetLow();
-//	spi2_exchangeByte(0x90);
-//	spi2_exchangeByte(0);
-//	spi2_exchangeByte(0);
-//	spi2_exchangeByte(0);
-//	*buf++ = spi2_exchangeByte(0);
-//	*buf = spi2_exchangeByte(0);
-//    ID = *buf;
-//    printf("%d ADDr: %x\n",++num,ID);   
+//	spi2_exchangeByte(0xAB);
+//        *buf = spi2_exchangeByte(0);
+//        *buf++;
+//        *buf = spi2_exchangeByte(0);
+//        *buf++;
+//        *buf = spi2_exchangeByte(0);
+//        *buf++;
+//        *buf = spi2_exchangeByte(0);
+//        *buf++;
+//    printf("%d ADDr: %x\n",*buf);   
 //	SS_SetHigh();
 //}
-void SST_Read_Jedec_ID(uint8_t *buf)
+//void SST_Read_Jedec_ID(uint8_t *buf)
+//{
+//    spi2_open(MASTER0_CONFIG);
+//	SS_SetLow();
+//	spi2_exchangeByte(0x9f);
+//    
+//        *buf = spi2_exchangeByte(0);
+//        *buf++;
+//        *buf = spi2_exchangeByte(0);
+//        *buf++;
+//        *buf = spi2_exchangeByte(0);
+//        *buf++;
+//        *buf = spi2_exchangeByte(0);
+//        *buf++;
+//	SS_SetHigh();
+//    spi2_close();
+//            
+//    printf("ADDr2: %02x  %02x  %02x  %02x\n",*buf);
+//}
+void SST_Read_Jedec_ID2()
 {
     //int num;
-    //uint32_t i;
-    true;
+    uint8_t buf[4];
+    
     spi2_open(MASTER0_CONFIG);
+  //  spi_master_open(MASTER0)==0;
+    DELAY_milliseconds(3);
 	SS_SetLow();
 	spi2_exchangeByte(0x9f);
+    buf[0]=spi2_exchangeByte(0);  
+    buf[1]=spi2_exchangeByte(0); 
+    buf[2]=spi2_exchangeByte(0);
+    buf[3]=spi2_exchangeByte(0);
     
-    if(1){
-        *buf = spi2_exchangeByte(0);
-        *buf++;
-        *buf = spi2_exchangeByte(0);
-        *buf++;
-        *buf = spi2_exchangeByte(0);
-        *buf++;
-        *buf = spi2_exchangeByte(0);
-        *buf++;
-    }
-    #elif
-    {
-    
-        buf[0]=spi2_exchangeByte(0);  
-        buf[1]=spi2_exchangeByte(0); 
-        buf[2]=spi2_exchangeByte(0); }
-    #endif
-
 	SS_SetHigh();
+    
     spi2_close();
             
-    printf("ADDr2: %02x  %02x  %02x  %02x\n",*buf);
+    printf("ADDr2: %02x  %02x  %02x  %02x\n",buf[0], buf[1], buf[2], buf[3]);
 }
-
 /**
  End of File
 */

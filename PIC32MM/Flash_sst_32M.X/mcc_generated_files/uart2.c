@@ -61,8 +61,8 @@ void UART2_Initialize(void)
     U2MODE = (0x8008 & ~(1<<15));  // disabling UARTEN bit
     // UTXISEL TX_ONE_CHAR; UTXINV disabled; ADDR 0; MASK 0; URXEN disabled; OERR disabled; URXISEL RX_ONE_CHAR; UTXBRK disabled; UTXEN disabled; ADDEN disabled; 
     U2STA = 0x00;
-    // BaudRate = 9600; Frequency = 1000000 Hz; BRG 25; 
-    U2BRG = 0x19;
+    // BaudRate = 9600; Frequency = 8000000 Hz; BRG 207; 
+    U2BRG = 0xCF;
     
     //Make sure to set LAT bit corresponding to TxPin as high before UART initialization
     U2STASET = _U2STA_UTXEN_MASK;
