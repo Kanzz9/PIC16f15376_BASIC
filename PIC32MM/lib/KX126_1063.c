@@ -36,16 +36,19 @@ uint8_t KX126_1063_PARTID(void)
 }
 void KX126_1063_getAccelAxis(uint8_t *x_axis, uint8_t *y_axis, uint8_t *z_axis)
 {
-    I2C_Read(KX126_1063_DEVICE_ADDRESS, KX126_1063__X_AXIS_OUTPUT_LOW, x_axis, 1); 
-    I2C_Read(KX126_1063_DEVICE_ADDRESS, KX126_1063__Y_AXIS_OUTPUT_LOW, y_axis, 1);
-    I2C_Read(KX126_1063_DEVICE_ADDRESS, KX126_1063__Z_AXIS_OUTPUT_LOW, z_axis, 1);
+    uint8_t buf1[1],buf2[1],buf3[1];
+    *x_axis = I2C_Read(KX126_1063_DEVICE_ADDRESS, KX126_1063__X_AXIS_OUTPUT_LOW, buf1, 1); 
+    *y_axis = I2C_Read(KX126_1063_DEVICE_ADDRESS, KX126_1063__Y_AXIS_OUTPUT_LOW, buf2, 1);
+    *z_axis = I2C_Read(KX126_1063_DEVICE_ADDRESS, KX126_1063__Z_AXIS_OUTPUT_LOW, buf3, 1);
 }
 
 void KX126_1063_getHighPassAccelAxis(uint8_t *x_axis, uint8_t *y_axis, uint8_t *z_axis)
 {
-    I2C_Read(KX126_1063_DEVICE_ADDRESS, KX126_1063_XHP_L, x_axis, 1);
-    I2C_Read(KX126_1063_DEVICE_ADDRESS, KX126_1063_YHP_L, y_axis, 1);
-    I2C_Read(KX126_1063_DEVICE_ADDRESS, KX126_1063_ZHP_L, z_axis, 1);
+    uint8_t buf1[1],buf2[1],buf3[1];
+    
+    *x_axis = I2C_Read(KX126_1063_DEVICE_ADDRESS, KX126_1063_XHP_L, buf1, 1);
+    *y_axis = I2C_Read(KX126_1063_DEVICE_ADDRESS, KX126_1063_YHP_L, buf2, 1);
+    *z_axis = I2C_Read(KX126_1063_DEVICE_ADDRESS, KX126_1063_ZHP_L, buf3, 1);
 }
 void KX126_1063_Control1(KX126_1063_t KX126_1063)
 {
@@ -98,4 +101,21 @@ void KX126_1063_Control1(KX126_1063_t KX126_1063)
     I2C_Write(KX126_1063_DEVICE_ADDRESS,KX126_1063_CONTROL1,&data,1);
     I2C_Read(KX126_1063_DEVICE_ADDRESS,KX126_1063_CONTROL1,&data,1);
 }
+void KX126_1063_Control2(KX126_1063_t KX126_1063)
+{
+    uint8_t data =0;
+    if(KX126_1063.KX126_1063_SRST == SRST_no_action){
+        data &= 0x7F; 
+    }
+    else data |= 0x80; 
+    //
+    if(KX126_1063.KX126_1063_COTC == COTC_no_action){
+        data &= 0xBF; 
+    }
+    else data |= 0x40; 
+    I2C_Write(KX126_1063_DEVICE_ADDRESS,KX126_1063_CONTROL2,&data,1);
+    I2C_Read(KX126_1063_DEVICE_ADDRESS,KX126_1063_CONTROL2,&data,1);
+}
+
+
 #endif

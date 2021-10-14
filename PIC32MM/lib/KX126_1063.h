@@ -25,6 +25,10 @@
 
 
 #define KX126_1063_CONTROL1             0x1A
+#define KX126_1063_CONTROL2             0x1B
+#define KX126_1063_CONTROL3             0x1C
+#define KX126_1063_CONTROL4             0x1D
+#define KX126_1063_CONTROL5             0x1E
 typedef enum{
    
    stand_by_mode = 0,
@@ -71,7 +75,21 @@ typedef enum{
    TPE_enable
 }KX126_1063_TPE_t;
 
-///
+///initiates software reset
+typedef enum{
+   
+   SRST_no_action = 0,
+   SRST_start
+} KX126_1063_SRST_t;
+///Command test control
+typedef enum{
+   
+   COTC_no_action = 0,
+   SRST_set
+} KX126_1063_COTC_t;
+//
+
+
 typedef struct{
     KX126_1063_PC1_t                        KX126_1063_PC1;
     KX126_1063_RES_t                        KX126_1063_RES;
@@ -80,6 +98,8 @@ typedef struct{
     KX126_1063_TDTE_t                       KX126_1063_TDTE;
     KX126_1063_PDE_t                        KX126_1063_PDE;
     KX126_1063_TPE_t                        KX126_1063_TPE;
+    KX126_1063_SRST_t                       KX126_1063_SRST;
+    KX126_1063_COTC_t                       KX126_1063_COTC;
 }KX126_1063_t;
 
 //////////////////
