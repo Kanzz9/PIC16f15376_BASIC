@@ -1,17 +1,17 @@
 /**
-  @Generated PIC24 / dsPIC33 / PIC32MM MCUs Header File
+  WATCHDOG Generated Driver File
 
-  @Company:
+  @Company
     Microchip Technology Inc.
 
-  @File Name:
-    mcc.h
+  @File Name
+    watchdog.h
 
-  @Summary:
-    This is the mcc.h file generated using PIC24 / dsPIC33 / PIC32MM MCUs
+  @Summary
+    This is the generated driver implementation file for the WATCHDOG driver using PIC24 / dsPIC33 / PIC32MM MCUs
 
-  @Description:
-    This file will be removed in future MCC releases. Use system.h instead.
+  @Description
+    This header file provides implementations for driver APIs for WATCHDOG.
     Generation Information :
         Product Revision  :  PIC24 / dsPIC33 / PIC32MM MCUs - 1.170.0
         Device            :  PIC32MM0256GPM048
@@ -42,33 +42,42 @@
     TERMS.
 */
 
-#ifndef MCC_H
-#define	MCC_H
-#include <xc.h>
-#include "system.h"
-#include "clock.h"
-#include "pin_manager.h"
-#include <stdint.h>
-#include <stdbool.h>
-#include "stdio.h"
+#ifndef WATCHDOG_H
+#define	WATCHDOG_H
 
-#include "delay.h"
-#include "interrupt_manager.h"
-#include "exceptions.h"
-#include "uart2.h"
-
-//#define I2C_Enable                  1
-#define UART_Enable                 1
-#define RPR0521RS_Enable            1
-#define i2c_using_simple_Enable     1
+#define WATCHDOG_CLR_KEY 0x5743
  
-//#include "I2C.h"
-//#include "RPR0521RS.h"
-#include "i2c_using_simple.h"
-#include "../drivers/i2c_master.h"
-#include "i2c_simple_master.h"
-#include "i2c1_driver.h"
-#endif	/* MCC_H */
+/* Enables Watch Dog Timer (WDT) using the software bit.
+ * @example
+ * <code>
+ * WATCHDOG_TimerSoftwareEnable();
+ * </code>
+ */
+inline static void WATCHDOG_TimerSoftwareEnable(void)
+{
+    WDTCONbits.ON = 1;
+}
+/* Disables Watch Dog Timer (WDT) using the software bit.
+ * @example
+ * <code>
+ * WATCHDOG_TimerSoftwareDisable();
+ * </code>
+ */
+inline static void WDT_TimerSoftwareDisable(void)
+{
+    WDTCONbits.ON = 0;
+}
+/* Clears the Watch Dog Timer (WDT).
+ * @example
+ * <code>
+ * WATCHDOG_TimerClear();
+ * </code>
+ */
+inline static void WATCHDOG_TimerClear(void)
+{
+    WDTCONbits.WDTCLRKEY = WATCHDOG_CLR_KEY;
+}
+#endif	/*WATCHDOG_H */
 /**
  End of File
 */

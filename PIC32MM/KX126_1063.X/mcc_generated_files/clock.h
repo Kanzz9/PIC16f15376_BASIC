@@ -1,17 +1,17 @@
 /**
-  @Generated PIC24 / dsPIC33 / PIC32MM MCUs Header File
+  @Generated PIC24 / dsPIC33 / PIC32MM MCUs Source File
 
   @Company:
     Microchip Technology Inc.
 
   @File Name:
-    mcc.h
+    clock.h
 
   @Summary:
-    This is the mcc.h file generated using PIC24 / dsPIC33 / PIC32MM MCUs
+    This is the clock.h file generated using PIC24 / dsPIC33 / PIC32MM MCUs
 
   @Description:
-    This file will be removed in future MCC releases. Use system.h instead.
+    This header file provides implementations for driver APIs for all modules selected in the GUI.
     Generation Information :
         Product Revision  :  PIC24 / dsPIC33 / PIC32MM MCUs - 1.170.0
         Device            :  PIC32MM0256GPM048
@@ -42,33 +42,39 @@
     TERMS.
 */
 
-#ifndef MCC_H
-#define	MCC_H
-#include <xc.h>
-#include "system.h"
-#include "clock.h"
-#include "pin_manager.h"
-#include <stdint.h>
+#ifndef CLOCK_H
+#define	CLOCK_H
+
+/**
+  Section: Included Files
+*/
+
 #include <stdbool.h>
-#include "stdio.h"
 
-#include "delay.h"
-#include "interrupt_manager.h"
-#include "exceptions.h"
-#include "uart2.h"
+#ifndef _XTAL_FREQ
+#define _XTAL_FREQ  8000000UL
+#endif
 
-//#define I2C_Enable                  1
-#define UART_Enable                 1
-#define RPR0521RS_Enable            1
-#define i2c_using_simple_Enable     1
- 
-//#include "I2C.h"
-//#include "RPR0521RS.h"
-#include "i2c_using_simple.h"
-#include "../drivers/i2c_master.h"
-#include "i2c_simple_master.h"
-#include "i2c1_driver.h"
-#endif	/* MCC_H */
+#define CLOCK_SystemFrequencyGet()        (8000000UL)
+
+#define CLOCK_PeripheralFrequencyGet()    (CLOCK_SystemFrequencyGet())
+
+#define CLOCK_InstructionFrequencyGet()   (CLOCK_SystemFrequencyGet())
+/**
+ * @Param
+    none
+ * @Returns
+    none
+ * @Description
+    Initializes the oscillator to the default states configured in the
+ *                  MCC GUI
+ * @Example
+    CLOCK_Initialize(void);
+ */
+void CLOCK_Initialize(void);
+
+
+#endif	/* CLOCK_H */
 /**
  End of File
 */

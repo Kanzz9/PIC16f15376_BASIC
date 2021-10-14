@@ -1,17 +1,17 @@
 /**
-  @Generated PIC24 / dsPIC33 / PIC32MM MCUs Header File
+  @Generated PIC24 / dsPIC33 / PIC32MM MCUs Source File
 
   @Company:
     Microchip Technology Inc.
 
   @File Name:
-    mcc.h
+    mcc.c
 
   @Summary:
-    This is the mcc.h file generated using PIC24 / dsPIC33 / PIC32MM MCUs
+    This is the mcc.c file generated using PIC24 / dsPIC33 / PIC32MM MCUs
 
   @Description:
-    This file will be removed in future MCC releases. Use system.h instead.
+    The configuration contents of this file are moved to system.c and this file will be removed in future MCC releases. 
     Generation Information :
         Product Revision  :  PIC24 / dsPIC33 / PIC32MM MCUs - 1.170.0
         Device            :  PIC32MM0256GPM048
@@ -42,33 +42,6 @@
     TERMS.
 */
 
-#ifndef MCC_H
-#define	MCC_H
-#include <xc.h>
-#include "system.h"
-#include "clock.h"
-#include "pin_manager.h"
-#include <stdint.h>
-#include <stdbool.h>
-#include "stdio.h"
-
-#include "delay.h"
-#include "interrupt_manager.h"
-#include "exceptions.h"
-#include "uart2.h"
-
-//#define I2C_Enable                  1
-#define UART_Enable                 1
-#define RPR0521RS_Enable            1
-#define i2c_using_simple_Enable     1
- 
-//#include "I2C.h"
-//#include "RPR0521RS.h"
-#include "i2c_using_simple.h"
-#include "../drivers/i2c_master.h"
-#include "i2c_simple_master.h"
-#include "i2c1_driver.h"
-#endif	/* MCC_H */
 /**
  End of File
 */

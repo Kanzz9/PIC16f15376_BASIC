@@ -1,17 +1,17 @@
 /**
-  @Generated PIC24 / dsPIC33 / PIC32MM MCUs Header File
+  @Generated PIC24 / dsPIC33 / PIC32MM MCUs Source File
 
   @Company:
     Microchip Technology Inc.
 
   @File Name:
-    mcc.h
+    clock.c
 
   @Summary:
-    This is the mcc.h file generated using PIC24 / dsPIC33 / PIC32MM MCUs
+    This is the clock.c file generated using PIC24 / dsPIC33 / PIC32MM MCUs
 
   @Description:
-    This file will be removed in future MCC releases. Use system.h instead.
+    This header file provides implementations for driver APIs for all modules selected in the GUI.
     Generation Information :
         Product Revision  :  PIC24 / dsPIC33 / PIC32MM MCUs - 1.170.0
         Device            :  PIC32MM0256GPM048
@@ -42,33 +42,23 @@
     TERMS.
 */
 
-#ifndef MCC_H
-#define	MCC_H
-#include <xc.h>
-#include "system.h"
+#include "xc.h"
+#include "stdint.h"
 #include "clock.h"
-#include "pin_manager.h"
-#include <stdint.h>
-#include <stdbool.h>
-#include "stdio.h"
+#include "system.h"
 
-#include "delay.h"
-#include "interrupt_manager.h"
-#include "exceptions.h"
-#include "uart2.h"
-
-//#define I2C_Enable                  1
-#define UART_Enable                 1
-#define RPR0521RS_Enable            1
-#define i2c_using_simple_Enable     1
- 
-//#include "I2C.h"
-//#include "RPR0521RS.h"
-#include "i2c_using_simple.h"
-#include "../drivers/i2c_master.h"
-#include "i2c_simple_master.h"
-#include "i2c1_driver.h"
-#endif	/* MCC_H */
-/**
- End of File
-*/
+void CLOCK_Initialize(void)
+{
+    SYSTEM_RegUnlock();
+    // ORPOL disabled; SIDL disabled; SRC SOSC; TUN Center frequency; POL disabled; ON disabled; 
+    OSCTUN = 0x00;
+    // SBOREN disabled; VREGS disabled; RETEN disabled; 
+    PWRCON = 0x00;
+    //CF No Clock Failure has been detected;; FRCDIV FRC/1; SLPEN Device will enter Idle mode when a WAIT instruction is issued; NOSC FRCDIV; SOSCEN disabled; CLKLOCK Clock and PLL selections are not locked and may be modified; OSWEN Switch is Complete; 
+    OSCCON = (0x00);
+    SYSTEM_RegLock();
+    // ON disabled; DIVSWEN disabled; RSLP disabled; ROSEL SYSCLK; OE disabled; SIDL disabled; RODIV 0; 
+    REFO1CON = 0x00;
+    // ROTRIM 0; 
+    REFO1TRIM = 0x00;
+}

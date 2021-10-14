@@ -51,23 +51,20 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include "stdio.h"
-
-#include "delay.h"
+#include "KX126_1063.h"
 #include "interrupt_manager.h"
 #include "exceptions.h"
+#include "drivers/i2c_simple_master.h"
+#include "watchdog.h"
 #include "uart2.h"
-
-//#define I2C_Enable                  1
-#define UART_Enable                 1
-#define RPR0521RS_Enable            1
-#define i2c_using_simple_Enable     1
- 
-//#include "I2C.h"
-//#include "RPR0521RS.h"
-#include "i2c_using_simple.h"
-#include "../drivers/i2c_master.h"
-#include "i2c_simple_master.h"
 #include "i2c1_driver.h"
+#include "delay.h"
+#include "drivers/i2c_master.h"
+#define i2c_using_simple_Enable 1
+#define UART_Enable             1
+#define KX126_1063_Enable       1
+//#warning "This file will be removed in future MCC releases. Use system.h instead."
+
 #endif	/* MCC_H */
 /**
  End of File

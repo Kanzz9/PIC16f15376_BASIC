@@ -1,23 +1,23 @@
 /**
-  @Generated PIC24 / dsPIC33 / PIC32MM MCUs Header File
+  Generated main.c file from MPLAB Code Configurator
 
-  @Company:
+  @Company
     Microchip Technology Inc.
 
-  @File Name:
-    mcc.h
+  @File Name
+    main.c
 
-  @Summary:
-    This is the mcc.h file generated using PIC24 / dsPIC33 / PIC32MM MCUs
+  @Summary
+    This is the generated main.c using PIC24 / dsPIC33 / PIC32MM MCUs.
 
-  @Description:
-    This file will be removed in future MCC releases. Use system.h instead.
+  @Description
+    This source file provides main entry point for system initialization and application code development.
     Generation Information :
         Product Revision  :  PIC24 / dsPIC33 / PIC32MM MCUs - 1.170.0
         Device            :  PIC32MM0256GPM048
     The generated drivers are tested against the following:
         Compiler          :  XC16 v1.61
-        MPLAB             :  MPLAB X v5.45
+        MPLAB 	          :  MPLAB X v5.45
 */
 
 /*
@@ -42,33 +42,35 @@
     TERMS.
 */
 
-#ifndef MCC_H
-#define	MCC_H
-#include <xc.h>
-#include "system.h"
-#include "clock.h"
-#include "pin_manager.h"
-#include <stdint.h>
-#include <stdbool.h>
-#include "stdio.h"
+/**
+  Section: Included Files
+*/
+#include "mcc_generated_files/system.h"
+#include "KX126_1063.h"
+/*
+                         Main application
+ */
 
-#include "delay.h"
-#include "interrupt_manager.h"
-#include "exceptions.h"
-#include "uart2.h"
-
-//#define I2C_Enable                  1
-#define UART_Enable                 1
-#define RPR0521RS_Enable            1
-#define i2c_using_simple_Enable     1
- 
-//#include "I2C.h"
-//#include "RPR0521RS.h"
-#include "i2c_using_simple.h"
-#include "../drivers/i2c_master.h"
-#include "i2c_simple_master.h"
-#include "i2c1_driver.h"
-#endif	/* MCC_H */
+int main(void)
+{
+    // initialize the device
+    SYSTEM_Initialize();
+    uint8_t x_axis , y_axis, z_axis;
+    while (1)
+    {
+        // Add your application code
+       
+       //KX126_1063_ReadID();
+       //KX126_1063_getHighPassAccelAxis(&x_axis, &y_axis, &z_axis);
+       KX126_1063_getAccelAxis(&x_axis, &y_axis, &z_axis);
+       printf("toa do x: %d\n", x_axis);
+       printf("toa do y: %d\n", y_axis);
+       printf("toa do z: %d\n", z_axis);
+       DELAY_milliseconds(1000);
+    }
+    return 1; 
+}
 /**
  End of File
 */
+

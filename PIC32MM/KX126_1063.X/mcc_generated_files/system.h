@@ -1,17 +1,17 @@
 /**
-  @Generated PIC24 / dsPIC33 / PIC32MM MCUs Header File
+  @Generated PIC24 / dsPIC33 / PIC32MM MCUs Source File
 
   @Company:
     Microchip Technology Inc.
 
   @File Name:
-    mcc.h
+    system.h
 
   @Summary:
-    This is the mcc.h file generated using PIC24 / dsPIC33 / PIC32MM MCUs
+    This is the system.h file generated using PIC24 / dsPIC33 / PIC32MM MCUs
 
   @Description:
-    This file will be removed in future MCC releases. Use system.h instead.
+    This header file provides implementations for driver APIs for all modules selected in the GUI.
     Generation Information :
         Product Revision  :  PIC24 / dsPIC33 / PIC32MM MCUs - 1.170.0
         Device            :  PIC32MM0256GPM048
@@ -42,33 +42,63 @@
     TERMS.
 */
 
-#ifndef MCC_H
-#define	MCC_H
-#include <xc.h>
-#include "system.h"
-#include "clock.h"
-#include "pin_manager.h"
-#include <stdint.h>
-#include <stdbool.h>
-#include "stdio.h"
+#ifndef _XTAL_FREQ
+#define _XTAL_FREQ  8000000UL
+#endif
+#define WDT_CLR_KEY 0x5743
 
-#include "delay.h"
-#include "interrupt_manager.h"
-#include "exceptions.h"
-#include "uart2.h"
+#include "xc.h"
+#include "stdint.h"
 
-//#define I2C_Enable                  1
-#define UART_Enable                 1
-#define RPR0521RS_Enable            1
-#define i2c_using_simple_Enable     1
- 
-//#include "I2C.h"
-//#include "RPR0521RS.h"
-#include "i2c_using_simple.h"
-#include "../drivers/i2c_master.h"
-#include "i2c_simple_master.h"
-#include "i2c1_driver.h"
-#endif	/* MCC_H */
+#ifndef SYSTEM_H
+#define	SYSTEM_H
+/**
+ * @Param
+    none
+ * @Returns
+    none
+ * @Description
+    Unlocks the write protected register to enable any write operation
+ *                  MCC GUI
+ * @Example
+    SYSTEM_RegUnlock();
+ */
+inline static void SYSTEM_RegUnlock(void)
+{
+    SYSKEY = 0x0; //write invalid key to force lock
+    SYSKEY = 0xAA996655; //write Key1 to SYSKEY
+    SYSKEY = 0x556699AA; //write Key2 to SYSKEY
+}
+
+/**
+ * @Param
+    none
+ * @Returns
+    none
+ * @Description
+    Locks the write protected register to disable any write operation
+ *                  MCC GUI
+ * @Example
+    SYSTEM_RegLock();
+ */
+inline static void SYSTEM_RegLock(void)
+{
+   SYSKEY = 0x00000000; 
+}
+
+/**
+ * @Param
+    none
+ * @Returns
+    none
+ * @Description
+    Initializes the device to the default states configured in the
+ *                  MCC GUI
+ * @Example
+    SYSTEM_Initialize(void);
+ */
+void SYSTEM_Initialize(void);
+#endif	/* SYSTEM_H */
 /**
  End of File
 */
