@@ -55,7 +55,21 @@ int main(void)
 {
     // initialize the device
     SYSTEM_Initialize();
-    uint8_t x_axis , y_axis, z_axis;
+    KX126_1063_t KX126_1063;
+    KX126_1063.KX126_1063_PC1 == stand_by_mode;
+    KX126_1063.KX126_1063_RES == higher_power_lower_noise_mode;
+    KX126_1063.KX126_1063_DRDYE == enable;
+    KX126_1063.KX126_1063_Selects_ACC_RANGEOUT == range_2g;
+    KX126_1063.KX126_1063_OTP == set_12dot5_hz;
+    KX126_1063.KX126_1063_OTDT == set_400hz;
+    KX126_1063.KX126_1063_OWUF == set_0dot781_hz;
+    KX126_1063.KX126_1063_OBT == s_0d781hz;
+    KX126_1063.KX126_1063_HPE == HPE_Enable;
+    KX126_1063.KX126_1063_IIR_BYPASS == filtering_applied;
+    KX126_1063.KX126_1063_LPRO == set_ODRslash9;
+    KX126_1063_Init(KX126_1063);
+    
+    int8_t x_axis , y_axis, z_axis;
     while (1)
     {
         // Add your application code
@@ -66,6 +80,7 @@ int main(void)
        printf("toa do x: %d\n", x_axis);
        printf("toa do y: %d\n", y_axis);
        printf("toa do z: %d\n", z_axis);
+      // printf("");
        DELAY_milliseconds(1000);
     }
     return 1; 
