@@ -60,8 +60,8 @@
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
       <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.mcu16.Mcu16PeripheralLibrary" version="1.170.0"/>
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.foundationservices.library.FoundationServicesLibrary" version="0.2.2"/>
       <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.boardsupportlibrary.BoardSuppportLibrary" version="1.12.0"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.foundationservices.library.FoundationServicesLibrary" version="0.2.2"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -94,7 +94,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="INTERNAL OSCILLATOR" name="CLOCK_PBCLK"/>
-         <value>8000000</value>
+         <value>4000000</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="INTERNAL OSCILLATOR" name="CLOCK_PRIMARY"/>
@@ -106,7 +106,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="INTERNAL OSCILLATOR" name="CLOCK_SYSCLK"/>
-         <value>8000000</value>
+         <value>4000000</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="INTERNAL OSCILLATOR" name="CLOCK_USB"/>
@@ -286,11 +286,11 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="INTERNAL OSCILLATOR" name="FrcPostscaler"/>
-         <value>1:1</value>
+         <value>1:2</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="INTERNAL OSCILLATOR" name="FrcPostscalerClock"/>
-         <value>8000000</value>
+         <value>4000000</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="INTERNAL OSCILLATOR" name="OSCPinsInput"/>
@@ -1450,7 +1450,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="INTERNAL OSCILLATOR" registerAlias="OSCCON"/>
-         <value>0</value>
+         <value>16777216</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="INTERNAL OSCILLATOR" registerAlias="OSCTUN"/>
@@ -1562,7 +1562,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="INTERNAL OSCILLATOR" registerAlias="OSCCON" settingAlias="RCDIV"/>
-         <value>FRC/1</value>
+         <value>FRC/2</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="INTERNAL OSCILLATOR" registerAlias="OSCCON" settingAlias="SLPEN"/>
@@ -8650,11 +8650,11 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="SPIMASTER" name="pubSubSPIMASTERConfigurations"/>
-         <value>4071.324654098574</value>
+         <value>490.70374547174777</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="SPIMASTER" name="pubSubspiSubscriber"/>
-         <value>4221.21161735163</value>
+         <value>1216.7153118243846</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="SPIMASTER" name="spiSubscriber"/>
@@ -8666,7 +8666,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="SPIMASTER" name="validate"/>
-         <value>0.8498041305194821</value>
+         <value>0.26736074674635546</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="SPIMASTER" name="spiConfigurations%0%dataInputSample"/>
@@ -9230,7 +9230,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="UART2" name="InternalClock"/>
-         <value>8000000</value>
+         <value>4000000</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="UART2" name="Parity"/>
@@ -9542,7 +9542,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="UART2" registerAlias="UBRG"/>
-         <value>207</value>
+         <value>103</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="UART2" registerAlias="UMODE"/>
@@ -9558,7 +9558,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="UART2" registerAlias="UBRG" settingAlias="BRG"/>
-         <value>207</value>
+         <value>103</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="UART2" registerAlias="UERI" settingAlias="SubPriority"/>
@@ -9824,27 +9824,27 @@
       </entry>
       <entry>
          <file>mcc_generated_files\system.h</file>
-         <hash>4b776a993ae86ac80a6b544e4d5eeb74e58c61a730cdce41f61efe150c9531bd</hash>
+         <hash>948821e60b32f6eced0924918e275bd5fdf74947012bcd31ba117b2e3d85da28</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\delay.c</file>
          <hash>c009023f48f1a8617013e25ba3249babdbd5d8460577f4b103f4d836d66ae797</hash>
       </entry>
       <entry>
+         <file>mcc_generated_files\system.c</file>
+         <hash>4827c8e9d026622ff16e7cd0ba7f7a160fc058d8c0103c4e5c209c40b3afb242</hash>
+      </entry>
+      <entry>
          <file>mcc_generated_files\delay.h</file>
          <hash>dda77102dba9adc0f9aef1c8c542cfee6d6cccc96446f4cd1bf07be2150a4d95</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\system.c</file>
-         <hash>f26d30da679e2f80728c9b81ec32d0874438cae483294b1cc06bee408324f891</hash>
+         <file>mcc_generated_files\clock.h</file>
+         <hash>773f49c4b1cb9bcb6108d13b16344840fa7f1c1816b34aebed9bed4497ab1b9d</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\docs\spi.dox</file>
          <hash>518908892e2d8bc846cfc4b846e70d96c4f59fab7dbddc55fadee679aeaa9697</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\clock.h</file>
-         <hash>ac2086ef30d36a9efb4b3ac622c9867e31f6b115f70e026e19e347b6a47fea21</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\docs\delay.dox</file>
@@ -9860,7 +9860,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\mcc.h</file>
-         <hash>644b7bc6bf091313c6b1ed3f3a5ba7c77d034a867f88b560b8dfb71bbfa79c56</hash>
+         <hash>6771b9dbea5a80b66b9a2dd7d11aa55aa3dfe645920fb28bcb36fe57798df5db</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\exceptions.h</file>
@@ -9876,7 +9876,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\clock.c</file>
-         <hash>9b5e731c1b13bf70637115c61a1070e67d44b3762725929d566ec4efe8464949</hash>
+         <hash>c5e65efb91376ae5d30fa6a5364a9093a2fbc9a86226901b1534f588213063db</hash>
       </entry>
       <entry>
          <file>main.c</file>
@@ -9884,7 +9884,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\uart2.c</file>
-         <hash>e6d7a375ae22496c8742709a87fa82a337b70892582fd1b1041d4cb74ce6531f</hash>
+         <hash>6827e021e1c16be6aa6007ae3ff1a5740d038c455acfd204a979a6b9c1b36811</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\pin_manager.h</file>
@@ -9896,7 +9896,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\pin_manager.c</file>
-         <hash>c29e2a24ff0dd77c49816adc5f3daabbd5160c810dfe839140b5e9772e388349</hash>
+         <hash>f4826b09f51bc840c66c2036437b3e61df96547baf184a74a481d8e1bcff1db7</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\spi2_types.h</file>
@@ -9904,7 +9904,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\spi2_driver.c</file>
-         <hash>0c6d2f6efb1dd5339be60be872fad634222d23483750a158bfae417fb433522a</hash>
+         <hash>123e758f35cfeba3a0aaca16db2e3894a196aaaab3570767ac378e7bb8eec7cb</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\interrupt_manager.c</file>

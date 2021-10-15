@@ -63,7 +63,7 @@
 #define i2c_using_simple_Enable     1
  
 //#include "I2C.h"
-#include "RPR0521RS.h"
+//#include "RPR0521RS.h"
 #include "i2c_using_simple.h"
 #include "../drivers/i2c_master.h"
 #include "i2c_simple_master.h"

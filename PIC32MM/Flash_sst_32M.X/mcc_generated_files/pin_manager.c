@@ -64,7 +64,7 @@ void PIN_MANAGER_Initialize (void)
     LATA = 0x0000;
     LATB = 0x0000;
     LATC = 0x0000;
-    LATD = 0x0000;
+    LATD = 0x0001;
 
     /****************************************************************************
      * Setting the GPIO Direction SFR(s)
@@ -108,10 +108,10 @@ void PIN_MANAGER_Initialize (void)
     RPCONbits.IOLOCK = 0;
 
     RPINR11bits.SDI2R = 0x000B;    //RB5->SPI2:SDI2
-    RPOR1bits.RP5R = 0x0004;    //RA4->UART2:U2TX
     RPOR2bits.RP12R = 0x0009;    //RB7->SPI2:SCK2OUT
     RPOR5bits.RP24R = 0x0008;    //RA9->SPI2:SDO2
     RPINR9bits.U2RXR = 0x000A;    //RB4->UART2:U2RX
+    RPOR1bits.RP5R = 0x0004;    //RA4->UART2:U2TX
 
     RPCONbits.IOLOCK = 1; // lock   PPS
     SYSTEM_RegLock(); 

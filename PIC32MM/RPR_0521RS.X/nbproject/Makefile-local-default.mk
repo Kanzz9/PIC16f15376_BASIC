@@ -15,24 +15,45 @@
 # $ makeMP_CC="/opt/microchip/mplabc30/v3.30c/bin/pic30-gcc" ...  
 #
 SHELL=cmd.exe
+<<<<<<< HEAD
 PATH_TO_IDE_BIN=D:/program files/Microchip/MPLABX/v5.45/mplab_platform/platform/../mplab_ide/modules/../../bin/
+=======
+PATH_TO_IDE_BIN=E:/microchip/MPLAB X IDE/mplab_platform/platform/../mplab_ide/modules/../../bin/
+>>>>>>> cce1e1cc0d33292771a05450124b72d8e39c9e54
 # Adding MPLAB X bin directory to path.
-PATH:=D:/program files/Microchip/MPLABX/v5.45/mplab_platform/platform/../mplab_ide/modules/../../bin/:$(PATH)
+PATH:=E:/microchip/MPLAB X IDE/mplab_platform/platform/../mplab_ide/modules/../../bin/:$(PATH)
 # Path to java used to run MPLAB X when this makefile was created
+<<<<<<< HEAD
 MP_JAVA_PATH="D:\program files\Microchip\MPLABX\v5.45\sys\java\zulu8.40.0.25-ca-fx-jre8.0.222-win_x64/bin/"
+=======
+MP_JAVA_PATH="E:\microchip\MPLAB X IDE\sys\java\zulu8.40.0.25-ca-fx-jre8.0.222-win_x64/bin/"
+>>>>>>> cce1e1cc0d33292771a05450124b72d8e39c9e54
 OS_CURRENT="$(shell uname -s)"
-MP_CC="D:\program files\Microchip\xc32\v2.50\bin\xc32-gcc.exe"
-MP_CPPC="D:\program files\Microchip\xc32\v2.50\bin\xc32-g++.exe"
+MP_CC="C:\Program Files\Microchip\xc32\v3.01\bin\xc32-gcc.exe"
+MP_CPPC="C:\Program Files\Microchip\xc32\v3.01\bin\xc32-g++.exe"
 # MP_BC is not defined
+<<<<<<< HEAD
 MP_AS="D:\program files\Microchip\xc32\v2.50\bin\xc32-as.exe"
 MP_LD="D:\program files\Microchip\xc32\v2.50\bin\xc32-ld.exe"
 MP_AR="D:\program files\Microchip\xc32\v2.50\bin\xc32-ar.exe"
 DEP_GEN=${MP_JAVA_PATH}java -jar "D:/program files/Microchip/MPLABX/v5.45/mplab_platform/platform/../mplab_ide/modules/../../bin/extractobjectdependencies.jar"
 MP_CC_DIR="D:\program files\Microchip\xc32\v2.50\bin"
 MP_CPPC_DIR="D:\program files\Microchip\xc32\v2.50\bin"
+=======
+MP_AS="C:\Program Files\Microchip\xc32\v3.01\bin\xc32-as.exe"
+MP_LD="C:\Program Files\Microchip\xc32\v3.01\bin\xc32-ld.exe"
+MP_AR="C:\Program Files\Microchip\xc32\v3.01\bin\xc32-ar.exe"
+DEP_GEN=${MP_JAVA_PATH}java -jar "E:/microchip/MPLAB X IDE/mplab_platform/platform/../mplab_ide/modules/../../bin/extractobjectdependencies.jar"
+MP_CC_DIR="C:\Program Files\Microchip\xc32\v3.01\bin"
+MP_CPPC_DIR="C:\Program Files\Microchip\xc32\v3.01\bin"
+>>>>>>> cce1e1cc0d33292771a05450124b72d8e39c9e54
 # MP_BC_DIR is not defined
-MP_AS_DIR="D:\program files\Microchip\xc32\v2.50\bin"
-MP_LD_DIR="D:\program files\Microchip\xc32\v2.50\bin"
-MP_AR_DIR="D:\program files\Microchip\xc32\v2.50\bin"
+MP_AS_DIR="C:\Program Files\Microchip\xc32\v3.01\bin"
+MP_LD_DIR="C:\Program Files\Microchip\xc32\v3.01\bin"
+MP_AR_DIR="C:\Program Files\Microchip\xc32\v3.01\bin"
 # MP_BC_DIR is not defined
+<<<<<<< HEAD
 DFP_DIR=D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC32MM-GPM-0XX_DFP/1.2.31
+=======
+DFP_DIR=E:/microchip/MPLAB X IDE/packs/Microchip/PIC32MM-GPM-0XX_DFP/1.2.31
+>>>>>>> cce1e1cc0d33292771a05450124b72d8e39c9e54
