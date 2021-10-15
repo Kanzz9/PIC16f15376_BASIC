@@ -73,7 +73,7 @@
 #pragma config SOSCEN = OFF    //Secondary Oscillator Enable bit->Secondary oscillator is disabled
 #pragma config IESO = ON    //Two Speed Startup Enable bit->Two speed startup is enabled
 #pragma config POSCMOD = OFF    //Primary Oscillator Selection bit->Primary oscillator is disabled
-#pragma config OSCIOFNC = ON    //System Clock on CLKO Pin Enable bit->System clock is connected to CLKO/OSC2 pin
+#pragma config OSCIOFNC = OFF    //System Clock on CLKO Pin Enable bit->OSCO pin operates as a normal I/O
 #pragma config SOSCSEL = ON    //Secondary Oscillator External Clock Enable bit->SCLKI pin configured for Digital mode
 #pragma config FCKSM = CSECME    //Clock Switching and Fail-Safe Clock Monitor Enable bits->Clock switching is enabled; Fail-safe clock monitor is enabled
 
@@ -83,12 +83,12 @@
 #include "pin_manager.h"
 #include "clock.h"
 #include "system.h"
-#include "interrupt_manager.h"
-#include "exceptions.h"
 #include "spi2_driver.h"
 #include "drivers/spi_master.h"
-#include "delay.h"
+#include "interrupt_manager.h"
+#include "exceptions.h"
 #include "uart2.h"
+#include "delay.h"
 
 void SYSTEM_Initialize(void)
 {

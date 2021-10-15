@@ -54,8 +54,8 @@ void CLOCK_Initialize(void)
     OSCTUN = 0x00;
     // SBOREN disabled; VREGS disabled; RETEN disabled; 
     PWRCON = 0x00;
-    //CF No Clock Failure has been detected;; FRCDIV FRC/1; SLPEN Device will enter Idle mode when a WAIT instruction is issued; NOSC FRCDIV; SOSCEN disabled; CLKLOCK Clock and PLL selections are not locked and may be modified; OSWEN Switch is Complete; 
-    OSCCON = (0x00);
+    //CF No Clock Failure has been detected;; FRCDIV FRC/8; SLPEN Device will enter Idle mode when a WAIT instruction is issued; NOSC FRCDIV; SOSCEN disabled; CLKLOCK Clock and PLL selections are not locked and may be modified; OSWEN Switch is Complete; 
+    OSCCON = (0x3000000);
     SYSTEM_RegLock();
     // ON disabled; DIVSWEN disabled; RSLP disabled; ROSEL SYSCLK; OE disabled; SIDL disabled; RODIV 0; 
     REFO1CON = 0x00;
