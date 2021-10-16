@@ -18,6 +18,8 @@ void KX126_1063_Init(KX126_1063_t KX126_1063){
     KX126_1063_Control2(KX126_1063);
     KX126_1063_Control3(KX126_1063);
     KX126_1063_Output_data_control(KX126_1063);
+    KX126_1063_BUF_CNTL2_R(KX126_1063);
+
 }
 uint8_t KX126_1063_ReadID(void)
 {   
