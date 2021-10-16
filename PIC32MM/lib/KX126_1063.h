@@ -90,6 +90,7 @@
 #define KX126_1063_BUF_CLEAR            0x5E
 #define KX126_1063_BUF_READ             0x5F
 
+
 typedef enum{
    
    stand_by_mode = 0,
