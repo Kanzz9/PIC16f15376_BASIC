@@ -91,8 +91,8 @@ int main(void)
 //       printf("toa do z: %d\n", z_axis);
       // printf("");
        
-        I2C_Read(KX126_1063_DEVICE_ADDRESS, 0x11, %x_axis, 1);
-        printf("who am i: %d\n", y_axis);
+        I2C_Read(KX126_1063_DEVICE_ADDRESS, 0x11, &x_axis, 1);
+        printf("who am i: %x\n", x_axis);
         DELAY_milliseconds(1000);
     }
     return 1; 
