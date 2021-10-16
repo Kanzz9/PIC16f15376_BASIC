@@ -8,21 +8,58 @@
 #define KX126_1063_H
 #include "mcc.h"
 //////
-#define KX126_1063_DEVICE_ADDRESS       0x1E
-#define KX126_1063_MANUFACT_ID          0x00
-#define KX126_1063_PART_ID              0x01    
-#define KX126_1063_XHP_L                0X02
-#define KX126_1063_XHP_H                0X03
-#define KX126_1063_YHP_L                0X04
-#define KX126_1063_YHP_H                0X05
-#define KX126_1063_ZHP_L                0X06
-#define KX126_1063_ZHP_H                0X07
-#define KX126_1063__X_AXIS_OUTPUT_LOW   0x08
-#define KX126_1063__X_AXIS_OUTPUT_HIGH  0x09
-#define KX126_1063__Y_AXIS_OUTPUT_LOW   0x0A
-#define KX126_1063__Y_AXIS_OUTPUT_HIGH  0x0B
-#define KX126_1063__Z_AXIS_OUTPUT_LOW   0x0C
-#define KX126_1063__Z_AXIS_OUTPUT_HIGH  0x0D
+#define KX126_1063_DEVICE_ADDRESS      0x1E
+
+#define KX126_1063_MANUFACT_ID         0x00
+#define KX126_1063_PART_ID             0x01    
+#define KX126_1063_XHP_L               0X02
+#define KX126_1063_XHP_H               0X03
+#define KX126_1063_YHP_L               0X04
+#define KX126_1063_YHP_H               0X05
+#define KX126_1063_ZHP_L               0X06
+#define KX126_1063_ZHP_H               0X07
+#define KX126_1063__XOUTL              0x08
+#define KX126_1063__XOUTH              0x09
+#define KX126_1063__YOUTL              0x0A
+#define KX126_1063__YOUTH              0x0B
+#define KX126_1063__ZOUTL              0x0C
+#define KX126_1063__ZOUTH              0x0D
+#define KX126_1063__PED_STPL           0x0E
+#define KX126_1063__PED_STPH           0x0F
+#define KX126_1063__WHO_AM_I               0x10
+#define KX126_1063__TSCP               
+#define KX126_1063__TSPP 
+#define KX126_1063__INS1 
+#define KX126_1063__INS2 
+#define KX126_1063__INS3 
+#define KX126_1063__STAT 
+#define KX126_1063__INT_REL 
+#define KX126_1063__CNTL1 
+#define KX126_1063__CNTL2 
+#define KX126_1063__CNTL3 
+#define KX126_1063__CNTL4
+#define KX126_1063__CNTL5
+#define KX126_1063__ODCNTL
+#define KX126_1063__INC1
+#define KX126_1063__INC2
+#define KX126_1063__INC3
+#define KX126_1063__INC4
+#define KX126_1063__INC5
+#define KX126_1063__INC6
+#define KX126_1063__INC7
+#define KX126_1063__TILT_TIMER
+#define KX126_1063__CNTL3
+#define KX126_1063__CNTL3
+#define KX126_1063__CNTL3
+#define KX126_1063__CNTL3
+#define KX126_1063__CNTL3
+#define KX126_1063__CNTL3
+#define KX126_1063__CNTL3
+#define KX126_1063__CNTL3
+#define KX126_1063__CNTL3
+#define KX126_1063__CNTL3
+
+
 
 //////
 #define KX126_1063_CONTROL1             0x1A
