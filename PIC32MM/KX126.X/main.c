@@ -47,6 +47,7 @@
 */
 #include "mcc_generated_files/system.h"
 #include "KX126_1063.h"
+#include "i2c_using_simple.h"
 /*
                          Main application
  */
@@ -84,12 +85,15 @@ int main(void)
        
        //KX126_1063_ReadID();
        //KX126_1063_getHighPassAccelAxis(&x_axis, &y_axis, &z_axis);
-       KX126_1063_getAccelAxis(&x_axis, &y_axis, &z_axis);
-       printf("toa do x: %d\n", x_axis);
-       printf("toa do y: %d\n", y_axis);
-       printf("toa do z: %d\n", z_axis);
+//       KX126_1063_getAccelAxis(&x_axis, &y_axis, &z_axis);
+//       printf("toa do x: %d\n", x_axis);
+//       printf("toa do y: %d\n", y_axis);
+//       printf("toa do z: %d\n", z_axis);
       // printf("");
-       DELAY_milliseconds(1000);
+       
+        I2C_Read(KX126_1063_DEVICE_ADDRESS, 0x11, %x_axis, 1);
+        printf("who am i: %d\n", y_axis);
+        DELAY_milliseconds(1000);
     }
     return 1; 
 }
