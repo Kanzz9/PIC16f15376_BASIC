@@ -59,14 +59,36 @@
 #define KX126_1063__TWS                 0x2F
 #define KX126_1063__FFTH                0x30
 #define KX126_1063__FFC                 0x31
-#define KX126_1063__FFCNTL              0X32
-#define KX126_1063__TILT_ANGLE_LL       0X33
-#define KX126_1063__TILT_ANGLE_HL       0X34
-#define KX126_1063__HYST_SET            0X35
+#define KX126_1063__FFCNTL              0x32
+#define KX126_1063__TILT_ANGLE_LL       0x34
+#define KX126_1063__TILT_ANGLE_HL       0x35
+#define KX126_1063__HYST_SET            0x36
+#define KX126_1063__LP_CNTL             0x37
+#define KX126_1063__WUFTH               0x3C
+#define KX126_1063__BTSWUFTH            0x3D             
+#define KX126_1063__BTSTH               0x3E
+#define KX126_1063__BTSC                0x3F             
+#define KX126_1063__WUFC                0x40
+#define KX126_1063__PED_WM_L            0x41
+#define KX126_1063__PED_WM_H            0x42
+#define KX126_1063__PED_CNTL1           0x43
+#define KX126_1063__PED_CNTL2           0x44
+#define KX126_1063__PED_CNTL3           0x45
+#define KX126_1063__PED_CNTL4           0x46
+#define KX126_1063__PED_CNTL5           0x47
+#define KX126_1063__PED_CNTL6           0x48
+#define KX126_1063__PED_CNTL7           0x49
+#define KX126_1063__PED_CNTL8           0x4A
+#define KX126_1063__PED_CNTL9           0x4B
+#define KX126_1063__PED_CNTL10          0x4C
+#define KX126_1063__SELF_TEST           0x4D
 
-
+#define KX126_1063_BUF_CNTL1            0x5A
 #define KX126_1063_BUF_CNTL2            0x5B
-
+#define KX126_1063_BUF_STATUS_1         0x5C
+#define KX126_1063_BUF_STATUS_2         0x5D
+#define KX126_1063_BUF_CLEAR            0x5E
+#define KX126_1063_BUF_READ             0x5F
 
 typedef enum{
    
