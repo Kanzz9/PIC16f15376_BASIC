@@ -10,14 +10,23 @@
         <logicalFolder name="drivers" displayName="drivers" projectFiles="true">
           <itemPath>mcc_generated_files/drivers/spi_master.h</itemPath>
         </logicalFolder>
+        <itemPath>mcc_generated_files/interrupt_manager.h</itemPath>
+        <itemPath>mcc_generated_files/uart2.h</itemPath>
+        <itemPath>mcc_generated_files/watchdog.h</itemPath>
+        <itemPath>mcc_generated_files/clock.h</itemPath>
         <itemPath>mcc_generated_files/system.h</itemPath>
-        <itemPath>mcc_generated_files/exceptions.h</itemPath>
         <itemPath>mcc_generated_files/pin_manager.h</itemPath>
+        <itemPath>mcc_generated_files/spi2_types.h</itemPath>
         <itemPath>mcc_generated_files/mcc.h</itemPath>
+<<<<<<< HEAD:PIC32MM/flash.X/nbproject/configurations.xml
+        <itemPath>mcc_generated_files/exceptions.h</itemPath>
+        <itemPath>mcc_generated_files/spi2_driver.h</itemPath>
+=======
         <itemPath>mcc_generated_files/watchdog.h</itemPath>
         <itemPath>mcc_generated_files/clock.h</itemPath>
         <itemPath>mcc_generated_files/interrupt_manager.h</itemPath>
         <itemPath>mcc_generated_files/uart2.h</itemPath>
+>>>>>>> cce1e1cc0d33292771a05450124b72d8e39c9e54:PIC32MM/Flash_sst_32M.X/nbproject/configurations.xml
         <itemPath>mcc_generated_files/delay.h</itemPath>
         <itemPath>mcc_generated_files/spi2_types.h</itemPath>
         <itemPath>mcc_generated_files/spi2_driver.h</itemPath>
@@ -34,20 +43,30 @@
                      displayName="MCC Generated Files"
                      projectFiles="true">
         <logicalFolder name="docs" displayName="docs" projectFiles="true">
+<<<<<<< HEAD:PIC32MM/flash.X/nbproject/configurations.xml
+          <itemPath>mcc_generated_files/docs/spi_basic.dox</itemPath>
+          <itemPath>mcc_generated_files/docs/spi.dox</itemPath>
+          <itemPath>mcc_generated_files/docs/delay.dox</itemPath>
+=======
           <itemPath>mcc_generated_files/docs/delay.dox</itemPath>
           <itemPath>mcc_generated_files/docs/spi.dox</itemPath>
           <itemPath>mcc_generated_files/docs/spi_basic.dox</itemPath>
+>>>>>>> cce1e1cc0d33292771a05450124b72d8e39c9e54:PIC32MM/Flash_sst_32M.X/nbproject/configurations.xml
         </logicalFolder>
         <logicalFolder name="drivers" displayName="drivers" projectFiles="true">
           <itemPath>mcc_generated_files/drivers/spi_master.c</itemPath>
         </logicalFolder>
-        <itemPath>mcc_generated_files/pin_manager.c</itemPath>
-        <itemPath>mcc_generated_files/system.c</itemPath>
-        <itemPath>mcc_generated_files/clock.c</itemPath>
-        <itemPath>mcc_generated_files/mcc.c</itemPath>
         <itemPath>mcc_generated_files/exceptions.c</itemPath>
-        <itemPath>mcc_generated_files/interrupt_manager.c</itemPath>
         <itemPath>mcc_generated_files/uart2.c</itemPath>
+<<<<<<< HEAD:PIC32MM/flash.X/nbproject/configurations.xml
+        <itemPath>mcc_generated_files/mcc.c</itemPath>
+        <itemPath>mcc_generated_files/interrupt_manager.c</itemPath>
+        <itemPath>mcc_generated_files/clock.c</itemPath>
+        <itemPath>mcc_generated_files/spi2_driver.c</itemPath>
+        <itemPath>mcc_generated_files/system.c</itemPath>
+        <itemPath>mcc_generated_files/pin_manager.c</itemPath>
+=======
+>>>>>>> cce1e1cc0d33292771a05450124b72d8e39c9e54:PIC32MM/Flash_sst_32M.X/nbproject/configurations.xml
         <itemPath>mcc_generated_files/delay.c</itemPath>
         <itemPath>mcc_generated_files/spi2_driver.c</itemPath>
       </logicalFolder>
@@ -57,7 +76,7 @@
                    displayName="Important Files"
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
-      <itemPath>Flash_sst_32M.mc3</itemPath>
+      <itemPath>MyConfig.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
@@ -68,7 +87,7 @@
         <targetDevice>PIC32MM0256GPM048</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>PICkit3PlatformTool</platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>3.01</languageToolchainVersion>
         <platform>3</platform>
@@ -123,7 +142,6 @@
         <property key="preprocessor-macros" value=""/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
-        <property key="tentative-definitions" value="-fno-common"/>
         <property key="toplevel-reordering" value=""/>
         <property key="unaligned-access" value=""/>
         <property key="use-cci" value="false"/>
@@ -155,7 +173,6 @@
       </C32-AS>
       <C32-CO>
         <property key="coverage-enable" value=""/>
-        <property key="stack-guidance" value="false"/>
       </C32-CO>
       <C32-LD>
         <property key="additional-options-use-response-files" value="false"/>
@@ -227,8 +244,7 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="common-include-directories"
-                  value="mcc_generated_files;mcc_generated_files\drivers"/>
+        <property key="common-include-directories" value=""/>
         <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>
         <property key="mdtcm" value=""/>
@@ -237,9 +253,10 @@
         <property key="omit-pack-options" value="1"/>
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
-        <property key="stack-smashing" value=""/>
         <property key="wpo-lto" value="false"/>
       </C32Global>
+<<<<<<< HEAD:PIC32MM/flash.X/nbproject/configurations.xml
+=======
       <PICkit3PlatformTool>
         <property key="ADC 1" value="true"/>
         <property key="AutoSelectMemRanges" value="auto"/>
@@ -386,6 +403,7 @@
         <property key="programoptions.uselvpprogramming" value="false"/>
         <property key="voltagevalue" value="3.25"/>
       </Tool>
+>>>>>>> 084ee971d71da3c71a948214f6a6a727386bfa9f:PIC32MM/Flash_sst_32M.X/nbproject/configurations.xml
     </conf>
   </confs>
 </configurationDescriptor>

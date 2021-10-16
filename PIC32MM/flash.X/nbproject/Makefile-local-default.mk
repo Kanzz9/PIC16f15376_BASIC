@@ -15,24 +15,45 @@
 # $ makeMP_CC="/opt/microchip/mplabc30/v3.30c/bin/pic30-gcc" ...  
 #
 SHELL=cmd.exe
+<<<<<<< HEAD:PIC32MM/flash.X/nbproject/Makefile-local-default.mk
+PATH_TO_IDE_BIN=D:/program files/Microchip/MPLABX/v5.45/mplab_platform/platform/../mplab_ide/modules/../../bin/
+# Adding MPLAB X bin directory to path.
+PATH:=D:/program files/Microchip/MPLABX/v5.45/mplab_platform/platform/../mplab_ide/modules/../../bin/:$(PATH)
+# Path to java used to run MPLAB X when this makefile was created
+MP_JAVA_PATH="D:\program files\Microchip\MPLABX\v5.45\sys\java\zulu8.40.0.25-ca-fx-jre8.0.222-win_x64/bin/"
+=======
 PATH_TO_IDE_BIN=C:/Program Files/Microchip/MPLABX/v5.50/mplab_platform/platform/../mplab_ide/modules/../../bin/
 # Adding MPLAB X bin directory to path.
 PATH:=C:/Program Files/Microchip/MPLABX/v5.50/mplab_platform/platform/../mplab_ide/modules/../../bin/:$(PATH)
 # Path to java used to run MPLAB X when this makefile was created
 MP_JAVA_PATH="C:\Program Files\Microchip\MPLABX\v5.50\sys\java\zulu8.40.0.25-ca-fx-jre8.0.222-win_x64/bin/"
+>>>>>>> cce1e1cc0d33292771a05450124b72d8e39c9e54:PIC32MM/Flash_sst_32M.X/nbproject/Makefile-local-default.mk
 OS_CURRENT="$(shell uname -s)"
 MP_CC="C:\Program Files\Microchip\xc32\v3.01\bin\xc32-gcc.exe"
 MP_CPPC="C:\Program Files\Microchip\xc32\v3.01\bin\xc32-g++.exe"
 # MP_BC is not defined
+<<<<<<< HEAD:PIC32MM/flash.X/nbproject/Makefile-local-default.mk
+MP_AS="D:\program files\Microchip\xc32\v2.50\bin\xc32-as.exe"
+MP_LD="D:\program files\Microchip\xc32\v2.50\bin\xc32-ld.exe"
+MP_AR="D:\program files\Microchip\xc32\v2.50\bin\xc32-ar.exe"
+DEP_GEN=${MP_JAVA_PATH}java -jar "D:/program files/Microchip/MPLABX/v5.45/mplab_platform/platform/../mplab_ide/modules/../../bin/extractobjectdependencies.jar"
+MP_CC_DIR="D:\program files\Microchip\xc32\v2.50\bin"
+MP_CPPC_DIR="D:\program files\Microchip\xc32\v2.50\bin"
+=======
 MP_AS="C:\Program Files\Microchip\xc32\v3.01\bin\xc32-as.exe"
 MP_LD="C:\Program Files\Microchip\xc32\v3.01\bin\xc32-ld.exe"
 MP_AR="C:\Program Files\Microchip\xc32\v3.01\bin\xc32-ar.exe"
 DEP_GEN=${MP_JAVA_PATH}java -jar "C:/Program Files/Microchip/MPLABX/v5.50/mplab_platform/platform/../mplab_ide/modules/../../bin/extractobjectdependencies.jar"
 MP_CC_DIR="C:\Program Files\Microchip\xc32\v3.01\bin"
 MP_CPPC_DIR="C:\Program Files\Microchip\xc32\v3.01\bin"
+>>>>>>> cce1e1cc0d33292771a05450124b72d8e39c9e54:PIC32MM/Flash_sst_32M.X/nbproject/Makefile-local-default.mk
 # MP_BC_DIR is not defined
 MP_AS_DIR="C:\Program Files\Microchip\xc32\v3.01\bin"
 MP_LD_DIR="C:\Program Files\Microchip\xc32\v3.01\bin"
 MP_AR_DIR="C:\Program Files\Microchip\xc32\v3.01\bin"
 # MP_BC_DIR is not defined
+<<<<<<< HEAD:PIC32MM/flash.X/nbproject/Makefile-local-default.mk
+DFP_DIR=D:/program files/Microchip/MPLABX/v5.45/packs/Microchip/PIC32MM-GPM-0XX_DFP/1.2.31
+=======
 DFP_DIR=C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC32MM-GPM-0XX_DFP/1.2.31
+>>>>>>> cce1e1cc0d33292771a05450124b72d8e39c9e54:PIC32MM/Flash_sst_32M.X/nbproject/Makefile-local-default.mk

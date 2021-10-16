@@ -4,8 +4,13 @@
   <defaultConf>0</defaultConf>
   <confs>
     <conf name="default" type="2">
+<<<<<<< HEAD:PIC32MM/flash.X/nbproject/private/configurations.xml
+      <platformToolSN>noToolString</platformToolSN>
+      <languageToolchainDir>D:\program files\Microchip\xc32\v2.50\bin</languageToolchainDir>
+=======
       <platformToolSN>:=MPLABComm-USB-Microchip:=&lt;vid>04D8:=&lt;pid>900A:=&lt;rev>0002:=&lt;man>Microchip Technology Inc.:=&lt;prod>PICkit 3:=&lt;sn>DEFAULT_PK3 :=&lt;drv>x:=&lt;xpt>h:=end</platformToolSN>
       <languageToolchainDir>C:\Program Files\Microchip\xc32\v3.01\bin</languageToolchainDir>
+>>>>>>> cce1e1cc0d33292771a05450124b72d8e39c9e54:PIC32MM/Flash_sst_32M.X/nbproject/private/configurations.xml
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
