@@ -8,68 +8,65 @@
 #define KX126_1063_H
 #include "mcc.h"
 //////
-#define KX126_1063_DEVICE_ADDRESS      0x1E
+#define KX126_1063_DEVICE_ADDRESS       0x1E
 
-#define KX126_1063_MANUFACT_ID         0x00
-#define KX126_1063_PART_ID             0x01    
-#define KX126_1063_XHP_L               0X02
-#define KX126_1063_XHP_H               0X03
-#define KX126_1063_YHP_L               0X04
-#define KX126_1063_YHP_H               0X05
-#define KX126_1063_ZHP_L               0X06
-#define KX126_1063_ZHP_H               0X07
-#define KX126_1063__XOUTL              0x08
-#define KX126_1063__XOUTH              0x09
-#define KX126_1063__YOUTL              0x0A
-#define KX126_1063__YOUTH              0x0B
-#define KX126_1063__ZOUTL              0x0C
-#define KX126_1063__ZOUTH              0x0D
-#define KX126_1063__PED_STPL           0x0E
-#define KX126_1063__PED_STPH           0x0F
-#define KX126_1063__WHO_AM_I               0x10
-#define KX126_1063__TSCP               
-#define KX126_1063__TSPP 
-#define KX126_1063__INS1 
-#define KX126_1063__INS2 
-#define KX126_1063__INS3 
-#define KX126_1063__STAT 
-#define KX126_1063__INT_REL 
-#define KX126_1063__CNTL1 
-#define KX126_1063__CNTL2 
-#define KX126_1063__CNTL3 
-#define KX126_1063__CNTL4
-#define KX126_1063__CNTL5
-#define KX126_1063__ODCNTL
-#define KX126_1063__INC1
-#define KX126_1063__INC2
-#define KX126_1063__INC3
-#define KX126_1063__INC4
-#define KX126_1063__INC5
-#define KX126_1063__INC6
-#define KX126_1063__INC7
-#define KX126_1063__TILT_TIMER
-#define KX126_1063__CNTL3
-#define KX126_1063__CNTL3
-#define KX126_1063__CNTL3
-#define KX126_1063__CNTL3
-#define KX126_1063__CNTL3
-#define KX126_1063__CNTL3
-#define KX126_1063__CNTL3
-#define KX126_1063__CNTL3
-#define KX126_1063__CNTL3
-#define KX126_1063__CNTL3
+#define KX126_1063_MANUFACT_ID          0x00
+#define KX126_1063_PART_ID              0x01    
+#define KX126_1063_XHP_L                0X02
+#define KX126_1063_XHP_H                0X03
+#define KX126_1063_YHP_L                0X04
+#define KX126_1063_YHP_H                0X05
+#define KX126_1063_ZHP_L                0X06
+#define KX126_1063_ZHP_H                0X07
+#define KX126_1063__XOUTL               0x08
+#define KX126_1063__XOUTH               0x09
+#define KX126_1063__YOUTL               0x0A
+#define KX126_1063__YOUTH               0x0B
+#define KX126_1063__ZOUTL               0x0C
+#define KX126_1063__ZOUTH               0x0D
+#define KX126_1063__PED_STPL            0x0E
+#define KX126_1063__PED_STPH            0x0F
+#define KX126_1063__COTR                0x10
+#define KX126_1063__WHO_AM_I            0x11
+#define KX126_1063__TSCP                0x12
+#define KX126_1063__TSPP                0x13
+#define KX126_1063__INS1                0x14
+#define KX126_1063__INS2                0x15
+#define KX126_1063__INS3                0x16
+#define KX126_1063__STAT                0x17
+#define KX126_1063__INT_REL             0x19
+#define KX126_1063__CNTL1               0x1A
+#define KX126_1063__CNTL2               0x1B
+#define KX126_1063__CNTL3               0x1C
+#define KX126_1063__CNTL4               0x1D
+#define KX126_1063__CNTL5               0x1E
+#define KX126_1063__ODCNTL              0x1F
+#define KX126_1063__INC1                0x20
+#define KX126_1063__INC2                0x21
+#define KX126_1063__INC3                0x22
+#define KX126_1063__INC4                0x23
+#define KX126_1063__INC5                0x24
+#define KX126_1063__INC6                0x25
+#define KX126_1063__INC7                0x26
+#define KX126_1063__TILT_TIMER          0x27
+#define KX126_1063__TDTRC               0x28
+#define KX126_1063__TDTC                0x29
+#define KX126_1063__TTH                 0x2A
+#define KX126_1063__TTL                 0x2B
+#define KX126_1063__FTD                 0x2C
+#define KX126_1063__STD                 0x2D
+#define KX126_1063__TLT                 0x2E
+#define KX126_1063__TWS                 0x2F
+#define KX126_1063__FFTH                0x30
+#define KX126_1063__FFC                 0x31
+#define KX126_1063__FFCNTL              0X32
+#define KX126_1063__TILT_ANGLE_LL       0X33
+#define KX126_1063__TILT_ANGLE_HL       0X34
+#define KX126_1063__HYST_SET            0X35
 
-
-
-//////
-#define KX126_1063_CONTROL1             0x1A
-#define KX126_1063_CONTROL2             0x1B
-#define KX126_1063_CONTROL3             0x1C
-#define KX126_1063_CONTROL4             0x1D
-#define KX126_1063_CONTROL5             0x1E
-#define KX126_1063_CONTROL_DATA_OUT     0x1F
 
 #define KX126_1063_BUF_CNTL2            0x5B
+
 
 typedef enum{
    
