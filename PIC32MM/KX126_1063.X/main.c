@@ -70,6 +70,11 @@ int main(void)
     KX126_1063.KX126_1063_HPE = HPE_Disabled;
     KX126_1063.KX126_1063_IIR_BYPASS = filtering_applied;
     KX126_1063.KX126_1063_LPRO = set_ODRslash9;
+    
+    KX126_1063.KX126_1063_BUFE = sample_buffer_inactive;
+    KX126_1063.KX126_1063_BRES = set_8_bit_samples;
+    KX126_1063.KX126_1063_BFIE = BFIE_disabled;
+    KX126_1063.KX126_1063_BM = set_FIFO;
     KX126_1063_Init(KX126_1063);
     
     int8_t x_axis , y_axis, z_axis;
