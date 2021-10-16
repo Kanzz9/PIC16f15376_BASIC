@@ -64,7 +64,7 @@ void KX126_1063_getHighPassAccelAxis(int8_t *x_axis, int8_t *y_axis, int8_t *z_a
 }
 void KX126_1063_Control1(KX126_1063_t KX126_1063)
 {
-    uint8_t data =0;
+    uint8_t data ;
     if(KX126_1063.KX126_1063_PC1 == stand_by_mode){
         data &= 0x7F; 
     }
@@ -132,7 +132,7 @@ void KX126_1063_Control2(KX126_1063_t KX126_1063)
 //
 void KX126_1063_Control3(KX126_1063_t KX126_1063)
 {
-    uint8_t data =0;
+    uint8_t data ;
     switch(KX126_1063.KX126_1063_OTP)
         {
             case set_1dot563_hz:
@@ -209,7 +209,7 @@ void KX126_1063_Control3(KX126_1063_t KX126_1063)
 }
 void KX126_1063_Control4(KX126_1063_t KX126_1063)
 {
-    uint8_t data =0;
+    uint8_t data ;
     if(KX126_1063.KX126_1063_C_MODE == filtering_applied){
             data &= 0x7F; 
         }
@@ -331,5 +331,43 @@ void KX126_1063_Output_data_control(KX126_1063_t KX126_1063)
     I2C_Write(KX126_1063_DEVICE_ADDRESS,KX126_1063_CONTROL_DATA_OUT,&data,1);
     I2C_Read(KX126_1063_DEVICE_ADDRESS,KX126_1063_CONTROL_DATA_OUT,&data,1);
     
+}
+void KX126_1063_BUF_CNTL2_R(KX126_1063_t KX126_1063)
+{
+    uint8_t data;
+    
+    if(KX126_1063.KX126_1063_BUFE == sample_buffer_inactive){
+            data &= 0x7F; 
+        }
+        else data |= 0x80; 
+    //
+    if(KX126_1063.KX126_1063_BRES == set_8_bit_samples){
+        data &= 0xBF; 
+    }
+    else data |= 0x40;
+    //
+    if(KX126_1063.KX126_1063_BFIE == BFIE_disabled){
+        data &= 0xDF; 
+    }
+    else data |= 0x20; 
+    //
+    switch(KX126_1063.KX126_1063_BM)
+        {
+            case set_FIFO:
+                data &=0xF8;
+                break;
+            case set_Stream:
+                data |= 0x01;
+                break; 
+            case set_Trigger:
+                data |= 0x02;
+                break;  
+            default:
+                data |= 0x03;
+                break;
+        }
+    //
+    I2C_Write(KX126_1063_DEVICE_ADDRESS,KX126_1063_BUF_CNTL2,&data,1);
+    I2C_Read(KX126_1063_DEVICE_ADDRESS,KX126_1063_BUF_CNTL2,&data,1);
 }
 #endif

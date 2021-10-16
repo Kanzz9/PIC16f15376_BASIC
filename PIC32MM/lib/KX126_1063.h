@@ -31,6 +31,9 @@
 #define KX126_1063_CONTROL4             0x1D
 #define KX126_1063_CONTROL5             0x1E
 #define KX126_1063_CONTROL_DATA_OUT     0x1F
+
+#define KX126_1063_BUF_CNTL2            0x5B
+
 typedef enum{
    
    stand_by_mode = 0,
@@ -196,6 +199,34 @@ typedef enum{
     s_50hz,
     s_100hz        
 } KX126_1063_OBT_t;
+//controls activation of the sample buffer
+typedef enum{
+   
+   sample_buffer_inactive = 0,
+   sample_buffer_active
+} KX126_1063_BUFE_t;
+//determines the resolution of the acceleration data samples collected by the sample buffer
+typedef enum{
+   
+   set_8_bit_samples = 0,
+   set_16_bit_samples
+} KX126_1063_BRES_t;
+//buffer full interrupt enable bit
+typedef enum{
+   
+   BFIE_disabled = 0,
+   BFIE_Enable_and_updated_in_INS2
+} KX126_1063_BFIE_t;
+//selects the operating mode of the sample buffer
+typedef enum{
+   
+    set_FIFO = 0,
+    set_Stream,
+    set_Trigger,
+    set_FILO
+           
+} KX126_1063_BM_t;
+//
 typedef struct{
     KX126_1063_PC1_t                        KX126_1063_PC1;
     KX126_1063_RES_t                        KX126_1063_RES;
@@ -218,6 +249,10 @@ typedef struct{
     KX126_1063_BTSE_t                       KX126_1063_BTSE;
     KX126_1063_HPE_t                        KX126_1063_HPE;
     KX126_1063_OBT_t                        KX126_1063_OBT;
+    KX126_1063_BUFE_t                       KX126_1063_BUFE;
+    KX126_1063_BRES_t                       KX126_1063_BRES;
+    KX126_1063_BFIE_t                       KX126_1063_BFIE;
+    KX126_1063_BM_t                         KX126_1063_BM;
 }KX126_1063_t;
 
 //////////////////
