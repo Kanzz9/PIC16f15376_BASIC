@@ -79,7 +79,7 @@ int main(void)
 //    KX126_1063_Init(KX126_1063);
     
     uint8_t CNTL1=0x80;
-    I2C_Write(KX126_1063_DEVICE_ADDRESS, KX126_1063_CNTL1, CNTL1, 1);
+    I2C_Write(KX126_1063_DEVICE_ADDRESS, KX126_1063_CNTL1, &CNTL1, 1);
     
     
     int8_t x_axis , y_axis, z_axis;
