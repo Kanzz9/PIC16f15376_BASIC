@@ -82,13 +82,14 @@ int main(void)
 
     uint8_t CNTL=0x00;
     I2C_Write(KX126_1063_DEVICE_ADDRESS, KX126_1063_CNTL1, &CNTL, 1);
-    CNTL=0xC1;
+    CNTL=0xC3;
     I2C_Write(KX126_1063_DEVICE_ADDRESS, KX126_1063_BUF_CNTL2, &CNTL, 1);
     CNTL=0x80;
     I2C_Write(KX126_1063_DEVICE_ADDRESS, KX126_1063_CNTL1, &CNTL, 1);
 
     
-    int8_t x_axis , y_axis, z_axis;
+    int8_t axis[6]={0};
+    int16_t x_axis, y_axis, z_axis;
     uint8_t cntl_1;
     uint16_t number_sample = 0;
     while (1)
@@ -108,6 +109,15 @@ int main(void)
         printf("CNTL1 default: %x\n", cntl_1);
         I2C_Read(KX126_1063_DEVICE_ADDRESS, KX126_1063_BUF_STATUS_1, &number_sample, 2);
         printf("number_sample: %d\n", number_sample);
+        
+        I2C_Read(KX126_1063_DEVICE_ADDRESS, KX126_1063_BUF_READ, axis, 6);
+        x_axis = axis[1]<<8| axis[0];
+        y_axis = axis[3]<<8| axis[2];
+        z_axis = axis[5]<<8| axis[4];
+        
+        printf("x_axis: %d\n", x_axis);
+        printf("y_axis: %d\n", y_axis);
+        printf("z_axis: %d\n", z_axis);
         DELAY_milliseconds(1000);
     }
     return 1; 
