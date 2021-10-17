@@ -80,6 +80,7 @@ int main(void)
     
     int8_t x_axis , y_axis, z_axis;
     uint8_t cntl_1;
+    uint16_t number_sample = 0;
     while (1)
     {
         // Add your application code
@@ -95,6 +96,8 @@ int main(void)
        
 //        I2C_Read(KX126_1063_DEVICE_ADDRESS, 0x11, &x_axis, 1);
         printf("CNTL1 default: %x\n", cntl_1);
+        I2C_Read(KX126_1063_DEVICE_ADDRESS, KX126_1063_BUF_STATUS_1, number_sample, 2);
+        printf("number_sample: %d\n", number_sample);
         DELAY_milliseconds(1000);
     }
     return 1; 
