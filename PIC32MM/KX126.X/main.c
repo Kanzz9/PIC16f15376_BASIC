@@ -57,7 +57,7 @@ int main(void)
     // initialize the device
     SYSTEM_Initialize();
     KX126_1063_t KX126_1063;
-    KX126_1063.KX126_1063_PC1 = low_power_higher_noise_mode;
+    KX126_1063.KX126_1063_PC1 = higher_power_lower_noise_mode;
     KX126_1063.KX126_1063_RES = low_power_higher_noise_mode;
     KX126_1063.KX126_1063_DRDYE = disable;
     KX126_1063.KX126_1063_Selects_ACC_RANGEOUT = range_2g;
@@ -84,15 +84,15 @@ int main(void)
         // Add your application code
        
        //KX126_1063_ReadID();
-       //KX126_1063_getHighPassAccelAxis(&x_axis, &y_axis, &z_axis);
-//       KX126_1063_getAccelAxis(&x_axis, &y_axis, &z_axis);
-//       printf("toa do x: %d\n", x_axis);
-//       printf("toa do y: %d\n", y_axis);
-//       printf("toa do z: %d\n", z_axis);
+       KX126_1063_getHighPassAccelAxis(&x_axis, &y_axis, &z_axis);
+       KX126_1063_getAccelAxis(&x_axis, &y_axis, &z_axis);
+       printf("toa do x: %d\n", x_axis);
+       printf("toa do y: %d\n", y_axis);
+       printf("toa do z: %d\n", z_axis);
       // printf("");
        
-        I2C_Read(KX126_1063_DEVICE_ADDRESS, 0x11, &x_axis, 1);
-        printf("who am i: %x\n", x_axis);
+//        I2C_Read(KX126_1063_DEVICE_ADDRESS, 0x11, &x_axis, 1);
+//        printf("who am i: %x\n", x_axis);
         DELAY_milliseconds(1000);
     }
     return 1; 
