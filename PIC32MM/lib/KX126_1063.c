@@ -10,7 +10,7 @@
     #include "I2C.h"
 
 #endif
-
+//
 #if(KX126_1063_Enable)
 
 void KX126_1063_Init(KX126_1063_t KX126_1063){
