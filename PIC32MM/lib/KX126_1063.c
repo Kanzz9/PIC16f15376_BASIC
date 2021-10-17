@@ -44,9 +44,9 @@ uint8_t KX126_1063_PARTID(void)
 void KX126_1063_getAccelAxis(int8_t *x_axis, int8_t *y_axis, int8_t *z_axis)
 {
     int8_t buf1[2],buf2[2],buf3[2];
-     I2C_Read(KX126_1063_DEVICE_ADDRESS, KX126_1063__XOUTL, buf1, 1); 
-     I2C_Read(KX126_1063_DEVICE_ADDRESS, KX126_1063__YOUTL, buf2, 1);
-     I2C_Read(KX126_1063_DEVICE_ADDRESS, KX126_1063__ZOUTL, buf3, 1);
+     I2C_Read(KX126_1063_DEVICE_ADDRESS, KX126_1063_XOUTL, buf1, 1); 
+     I2C_Read(KX126_1063_DEVICE_ADDRESS, KX126_1063_YOUTL, buf2, 1);
+     I2C_Read(KX126_1063_DEVICE_ADDRESS, KX126_1063_ZOUTL, buf3, 1);
     *x_axis = buf1[1]<<4 | buf1[0];
     *y_axis = buf2[1]<<4 | buf2[0];
     *z_axis = buf3[1]<<4 | buf3[0]; 
@@ -112,8 +112,8 @@ void KX126_1063_Control1(KX126_1063_t KX126_1063)
     else data |= 0x01;
     
     
-    I2C_Write(KX126_1063_DEVICE_ADDRESS,KX126_1063__CNTL1,&data,1);
-    I2C_Read(KX126_1063_DEVICE_ADDRESS,KX126_1063__CNTL1,&data,1);
+    I2C_Write(KX126_1063_DEVICE_ADDRESS,KX126_1063_CNTL1,&data,1);
+    I2C_Read(KX126_1063_DEVICE_ADDRESS,KX126_1063_CNTL1,&data,1);
 }
 //
 void KX126_1063_Control2(KX126_1063_t KX126_1063)
@@ -128,8 +128,8 @@ void KX126_1063_Control2(KX126_1063_t KX126_1063)
         data &= 0xBF; 
     }
     else data |= 0x40; 
-    I2C_Write(KX126_1063_DEVICE_ADDRESS,KX126_1063__CNTL2,&data,1);
-    I2C_Read(KX126_1063_DEVICE_ADDRESS,KX126_1063__CNTL2,&data,1);
+    I2C_Write(KX126_1063_DEVICE_ADDRESS,KX126_1063_CNTL2,&data,1);
+    I2C_Read(KX126_1063_DEVICE_ADDRESS,KX126_1063_CNTL2,&data,1);
 }
 //
 void KX126_1063_Control3(KX126_1063_t KX126_1063)
@@ -206,8 +206,8 @@ void KX126_1063_Control3(KX126_1063_t KX126_1063)
                 data |= 0x07;
                 break;
         }
-    I2C_Write(KX126_1063_DEVICE_ADDRESS,KX126_1063__CNTL3,&data,1);
-    I2C_Read(KX126_1063_DEVICE_ADDRESS,KX126_1063__CNTL3,&data,1);
+    I2C_Write(KX126_1063_DEVICE_ADDRESS,KX126_1063_CNTL3,&data,1);
+    I2C_Read(KX126_1063_DEVICE_ADDRESS,KX126_1063_CNTL3,&data,1);
 }
 //
 void KX126_1063_Control4(KX126_1063_t KX126_1063)
@@ -331,8 +331,8 @@ void KX126_1063_Output_data_control(KX126_1063_t KX126_1063)
                 data |= 0x0F;
                 break;
         }
-    I2C_Write(KX126_1063_DEVICE_ADDRESS,KX126_1063__ODCNTL,&data,1);
-    I2C_Read(KX126_1063_DEVICE_ADDRESS,KX126_1063__ODCNTL,&data,1);
+    I2C_Write(KX126_1063_DEVICE_ADDRESS,KX126_1063_ODCNTL,&data,1);
+    I2C_Read(KX126_1063_DEVICE_ADDRESS,KX126_1063_ODCNTL,&data,1);
     
 }
 void KX126_1063_BUF_CNTL2_R(KX126_1063_t KX126_1063)
