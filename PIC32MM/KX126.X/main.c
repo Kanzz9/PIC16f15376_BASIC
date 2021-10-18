@@ -88,7 +88,7 @@ int main(void)
     I2C_Write(KX126_1063_DEVICE_ADDRESS, KX126_1063_CNTL1, &CNTL, 1);
 
     
-    int8_t axis[6]={0};
+    uint8_t axis[6]={0};
     int16_t x_axis, y_axis, z_axis;
     uint8_t cntl_1;
     uint16_t number_sample = 0;
