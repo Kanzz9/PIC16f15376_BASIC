@@ -95,7 +95,7 @@ int main(void)
     while (1)
     {
         // Add your application code
-       
+       //
        //KX126_1063_ReadID();
        I2C_Read(KX126_1063_DEVICE_ADDRESS, KX126_1063_CNTL1, &cntl_1, 1); 
 //       KX126_1063_getHighPassAccelAxis(&x_axis, &y_axis, &z_axis);
