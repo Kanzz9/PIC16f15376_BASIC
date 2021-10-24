@@ -8546,7 +8546,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="UART2" name="RedirectPrintf"/>
-         <value>enabled</value>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="UART2" name="SWRXBufferSize"/>
@@ -9062,7 +9062,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="UART3" name="AllInterrupts"/>
-         <value>disabled</value>
+         <value>enabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="UART3" name="BaudRate"/>
@@ -9090,11 +9090,11 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="UART3" name="RedirectPrintf"/>
-         <value>disabled</value>
+         <value>enabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="UART3" name="SWRXBufferSize"/>
-         <value>8</value>
+         <value>255</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="UART3" name="SWTXBufferSize"/>
@@ -9422,7 +9422,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="UART3" registerAlias="UERI" settingAlias="enable"/>
-         <value>disabled</value>
+         <value>enabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="UART3" registerAlias="UERI" settingAlias="flag"/>
@@ -9506,7 +9506,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="UART3" registerAlias="URXI" settingAlias="enable"/>
-         <value>disabled</value>
+         <value>enabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="UART3" registerAlias="URXI" settingAlias="flag"/>
@@ -9590,7 +9590,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="UART3" registerAlias="UTXI" settingAlias="enable"/>
-         <value>disabled</value>
+         <value>enabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="UART3" registerAlias="UTXI" settingAlias="flag"/>
@@ -9668,7 +9668,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\mcc.h</file>
-         <hash>f488506aa3b82421455ef8bb0c095e1587fe61fa2d867fb3a1e1179eb4e2281a</hash>
+         <hash>97a34909bed1fa08da21e6776d197a133491629d89f83300211acdf25c1cf861</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\exceptions.h</file>
@@ -9688,7 +9688,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\uart3.c</file>
-         <hash>032e1f786ac07cd8de12879e8455fc0afd99eac6772ca87d784df944d943bf4d</hash>
+         <hash>2440735621ef69ca2803e3be05402a76f0789ed83306327e66e7b0a09997efa2</hash>
       </entry>
       <entry>
          <file>main.c</file>
@@ -9696,7 +9696,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\uart2.c</file>
-         <hash>e6d7a375ae22496c8742709a87fa82a337b70892582fd1b1041d4cb74ce6531f</hash>
+         <hash>a2d54ea265f2008500515040a3f8b6d2c94f51b65fb5c5eed9c8e74439a93639</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\pin_manager.h</file>
@@ -9704,7 +9704,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\uart3.h</file>
-         <hash>ccb58c680d4b76276ddf2352a1f4c72b143bded447c34e11cf04207a0cd52286</hash>
+         <hash>57310efc0674daff24591061aa543bf16c42418fa23946243a130539a6ea4d10</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\system.h</file>
@@ -9712,7 +9712,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\pin_manager.c</file>
-         <hash>47f89e5b8cdf608d153493c85ba0d0d87f63d854bdae02f6108b7754826d0b64</hash>
+         <hash>4474c6de47e2a15a0cc8e0977ac11fdcd8d4068d42aef5164d474f3758544027</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\delay.c</file>
@@ -9720,7 +9720,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\system.c</file>
-         <hash>e57e6ed1616c8db1dc123675b14dc7a3a7db7fc032960c607946e9ba73cfeffc</hash>
+         <hash>6c3fab01618d5ba416fd667afee2db0af9c8e14ef7fd803d5abe6d8432917695</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\delay.h</file>
@@ -9736,7 +9736,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\interrupt_manager.c</file>
-         <hash>67362aba64463a7fc207eb13957084e00e752f711d9cf386c8f0debcb34120f7</hash>
+         <hash>bddab935da1b056458ccac2c3878cb859a73f216f70a0f5c6506e2b250b14eba</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\mcc.c</file>

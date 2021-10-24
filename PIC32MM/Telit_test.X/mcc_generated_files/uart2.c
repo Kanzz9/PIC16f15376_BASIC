@@ -110,10 +110,6 @@ bool UART2_IsTxDone(void)
     return U2STAbits.TRMT;
 }
 
-void _mon_putc(char c) 
-{
-    UART2_Write(c);
-}
 
 /*******************************************************************************
 

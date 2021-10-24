@@ -55,4 +55,19 @@ void INTERRUPT_Initialize (void)
     // Enable Multi Vector Configuration
     INTCONbits.MVEC = 1;
     
+    //    UERI: UART 3 Error
+    //    Priority: 1
+        IPC15bits.U3EIP = 1;
+    //    Sub Priority: 0
+        IPC15bits.U3EIS = 0;
+    //    UTXI: UART 3 Transmission
+    //    Priority: 1
+        IPC15bits.U3TXIP = 1;
+    //    Sub Priority: 0
+        IPC15bits.U3TXIS = 0;
+    //    URXI: UART 3 Reception
+    //    Priority: 1
+        IPC14bits.U3RXIP = 1;
+    //    Sub Priority: 0
+        IPC14bits.U3RXIS = 0;
 }

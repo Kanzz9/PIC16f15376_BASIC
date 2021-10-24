@@ -49,6 +49,7 @@
 #include "uart3.h"
 #include "mcc_generated_files/system.h"
 #include "mcc_generated_files/pin_manager.h"
+#include "delay.h"
 //#include "pin_manager.h"
 
 /*
@@ -69,12 +70,17 @@ int main(void)
 {
     // initialize the device
     SYSTEM_Initialize();
+    char data;
     while (1)
     {
-        PW_ON_GSM_SetHigh();
-        printf("AT\n");
-        sprintf(buff,"hien thi");
-        puts_uart(buff);
+//        PW_ON_GSM_SetHigh();
+//        printf("AT\n");
+//        sprintf(buff,"hien thi");
+//        puts_uart(buff);
+        data = UART3_Read();
+        printf("%c",data);
+        //UART3_Write(data);
+        DELAY_microseconds(1000);
     }
     return 1; 
 }
