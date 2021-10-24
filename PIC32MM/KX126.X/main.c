@@ -89,7 +89,7 @@ int main(void)
 
     
     uint8_t axis[6]={0};
-    int16_t x_axis, y_axis, z_axis;
+    float x_axis, y_axis, z_axis;
     uint8_t cntl_1;
     uint16_t number_sample = 0;
     while (1)
@@ -107,17 +107,20 @@ int main(void)
        
 //        I2C_Read(KX126_1063_DEVICE_ADDRESS, 0x11, &x_axis, 1);
         printf("CNTL1 default: %x\n", cntl_1);
-        I2C_Read(KX126_1063_DEVICE_ADDRESS, KX126_1063_BUF_STATUS_1, &number_sample, 2);
-        printf("number_sample: %d\n", number_sample);
+       // I2C_Read(KX126_1063_DEVICE_ADDRESS, KX126_1063_BUF_STATUS_1, &number_sample, 2);
+        //printf("number_sample: %d\n", number_sample);
         
         I2C_Read(KX126_1063_DEVICE_ADDRESS, KX126_1063_BUF_READ, axis, 6);
         x_axis = axis[1]<<8| axis[0];
+        x_axis = (1.99994*x_axis)/32767;
         y_axis = axis[3]<<8| axis[2];
+        y_axis = (1.99994*y_axis)/32767;
         z_axis = axis[5]<<8| axis[4];
+        z_axis = (1.99994*z_axis)/32767;
         
-        printf("x_axis: %d\n", x_axis);
-        printf("y_axis: %d\n", y_axis);
-        printf("z_axis: %d\n", z_axis);
+        printf("x_axis: %.3f\n", x_axis);
+        printf("y_axis: %.3f\n", y_axis);
+        printf("z_axis: %.3f\n", z_axis);
         DELAY_milliseconds(1000);
     }
     return 1; 
