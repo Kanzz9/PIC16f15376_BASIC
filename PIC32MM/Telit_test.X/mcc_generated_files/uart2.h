@@ -1,5 +1,5 @@
 /**
-  UART2 Generated Driver API Header File
+  UART2 Generated Driver API Header File 
 
   @Company
     Microchip Technology Inc.
@@ -11,8 +11,8 @@
     This is the generated header file for the UART2 driver using PIC24 / dsPIC33 / PIC32MM MCUs
 
   @Description
-    This header file provides APIs for driver for UART2.
-    Generation Information :
+    This header file provides APIs for driver for UART2. 
+    Generation Information : 
         Product Revision  :  PIC24 / dsPIC33 / PIC32MM MCUs - 1.170.0
         Device            :  PIC32MM0256GPM048
     The generated drivers are tested against the following:
@@ -46,7 +46,7 @@
 #define _UART2_H
 
 /**
-  Section: Included Files
+ Section: Included Files
 */
 
 #include <stdbool.h>
@@ -57,77 +57,86 @@
     extern "C" {
 
 #endif
-
 /**
-  Section: UART2 APIs
+  Section: UART2 Driver Routines
 */
 
 /**
   @Summary
-    Initialization routine that takes inputs from the UART2 GUI.
+    Initializes the UART instance : 2
 
   @Description
-    This routine initializes the UART2 driver.
-    This routine must be called before any other UART2 routine is called.
-
+    This routine initializes the UART driver instance for : 2
+    index.
+    This routine must be called before any other UART routine is called.
+    
   @Preconditions
-    None
-
-  @Param
-    None
+    None.
 
   @Returns
-    None
+    None.
 
+  @Param
+    None.
+
+  @Comment
+    None.    
+ 
   @Example
     None.
-    
+
 */
 
 void UART2_Initialize(void);
 
 /**
   @Summary
-    Read a byte of data from the UART2.
+    Read a byte of data from the UART2
 
   @Description
     This routine reads a byte of data from the UART2.
 
   @Preconditions
-    UART2_Initialize() function should have been called
-    before calling this function. This is a blocking function.
-    So the receive status should be checked to see
+    UART2_Initialize function should have been called 
+    before calling this function. The transfer status should be checked to see 
     if the receiver is not empty before calling this function.
 
   @Param
-    None
+    None.
 
   @Returns
     A data byte received by the driver.
+
+  @Example
+    None.
 */
 
-uint8_t UART2_Read(void);
+uint8_t UART2_Read( void);
 
 /**
   @Summary
-    Writes a byte of data to the UART2.
+    Writes a byte of data to the UART2
 
   @Description
     This routine writes a byte of data to the UART2.
 
   @Preconditions
-    UART2_Initialize() function should have been called
-    before calling this function. The transfer status should be checked to see
-    if transmitter is not busy before calling this function.
+    UART2_Initialize function should have been called 
+    before calling this function. The transfer status should be checked to see if
+    transmitter is not full before calling this function.
 
   @Param
-    txData  - Data byte to write to the UART2
+    byte         - Data byte to write to the UART2
 
   @Returns
-    None
+    None.
+
+  @Example
+    None.
 */
 
-void UART2_Write(uint8_t txData);
+void UART2_Write( uint8_t byte);
+
 
 /**
   @Description
@@ -158,6 +167,87 @@ bool UART2_IsTxReady(void);
     false if there is still data pending to transfer.
 */
 bool UART2_IsTxDone(void);
+
+/**
+  @Summary
+    Assigns a function pointer with a transmit callback address.
+
+  @Description
+    This routine assigns a function pointer with a transmit callback address.
+
+  @Param
+    Address of the callback routine.
+
+  @Returns
+    None
+ 
+  @Example 
+    <code>
+        UART2_SetTxInterruptHandler(&UART2_Transmit_CallBack);
+    </code>
+*/
+void UART2_SetTxInterruptHandler(void (* interruptHandler)(void));
+
+/**
+  @Summary
+    Transmit callback routine.
+
+  @Description
+    This routine is a transmit callback function.
+
+  @Param
+    None.
+
+  @Returns
+    None
+ 
+  @Example 
+    <code>
+        UART2_SetTxInterruptHandler(&UART2_Transmit_CallBack);
+    </code>
+*/
+void UART2_Transmit_CallBack(void);
+
+/**
+  @Summary
+    Assigns a function pointer with a receive callback address.
+
+  @Description
+    This routine assigns a function pointer with a receive callback address.
+
+  @Param
+    Address of the callback routine.
+
+  @Returns
+    None
+ 
+  @Example 
+    <code>
+        UART2_SetRxInterruptHandler(&UART2_Receive_CallBack);
+    </code>
+*/
+void UART2_SetRxInterruptHandler(void (* interruptHandler)(void));
+
+/**
+  @Summary
+    Receive callback routine.
+
+  @Description
+    This routine is a receive callback function.
+
+  @Param
+    None.
+
+  @Returns
+    None
+ 
+  @Example 
+    <code>
+        UART2_SetTxInterruptHandler(&UART2_Receive_CallBack);
+    </code>
+*/
+void UART2_Receive_CallBack(void);
+
 
 /*******************************************************************************
 
@@ -194,6 +284,309 @@ typedef enum
     /* Indicates that Transmit buffer is full */
     UART2_TX_FULL = (1 << 9) 
 }UART2_STATUS;
+
+/** UART2 Driver Transfer Flags
+
+  @Summary
+    Specifies the status of the receive or transmit
+
+  @Description
+    This type specifies the status of the receive or transmit operation.
+    More than one of these values may be OR'd together to create a complete
+    status value.  To test a value of this type, the bit of interest must be
+    AND'ed with value and checked to see if the result is non-zero.
+*/
+
+typedef enum
+{
+    /* Indicates that the core driver buffer is full */
+    UART2_TRANSFER_STATUS_RX_FULL = (1 << 0) ,
+    /* Indicates that at least one byte of Data has been received */
+    UART2_TRANSFER_STATUS_RX_DATA_PRESENT = (1 << 1) ,
+    /* Indicates that the core driver receiver buffer is empty */
+    UART2_TRANSFER_STATUS_RX_EMPTY = (1 << 2) ,
+    /* Indicates that the core driver transmitter buffer is full */
+    UART2_TRANSFER_STATUS_TX_FULL = (1 << 3) ,
+    /* Indicates that the core driver transmitter buffer is empty */
+    UART2_TRANSFER_STATUS_TX_EMPTY = (1 << 4) 
+} UART2_TRANSFER_STATUS;
+
+/**
+  @Summary
+    Returns the number of bytes read by the UART2 peripheral
+
+  @Description
+    This routine returns the number of bytes read by the Peripheral and fills the
+    application read buffer with the read data.
+
+  @Preconditions
+    UART2_Initialize function should have been called 
+    before calling this function
+
+  @Param
+    buffer       - Buffer into which the data read from the UART2
+
+  @Param
+    numbytes     - Total number of bytes that need to be read from the UART2
+                   (must be equal to or less than the size of the buffer)
+
+  @Returns
+    Number of bytes actually copied into the caller's buffer or -1 if there
+    is an error.
+
+  @Example
+    <code>
+    char                     myBuffer[MY_BUFFER_SIZE];
+    unsigned int             numBytes;
+    UART2_TRANSFER_STATUS status ;
+
+    // Pre-initialize myBuffer with MY_BUFFER_SIZE bytes of valid data.
+
+    numBytes = 0;
+    while( numBytes < MY_BUFFER_SIZE);
+    {
+        status = UART2_TransferStatusGet ( ) ;
+        if (status & UART2_TRANSFER_STATUS_RX_FULL)
+        {
+            numBytes += UART2_ReadBuffer( myBuffer + numBytes, MY_BUFFER_SIZE - numBytes )  ;
+            if(numBytes < readbufferLen)
+            {
+                continue;
+            }
+            else
+            {
+                break;
+            }
+        }
+        else
+        {
+            continue;
+        }
+
+        // Do something else...
+    }
+    </code>
+*/
+unsigned int __attribute__((deprecated)) UART2_ReadBuffer( uint8_t *buffer ,  unsigned int numbytes);
+
+/**
+  @Summary
+    Returns the number of bytes written into the internal buffer
+
+  @Description
+    This API transfers the data from application buffer to internal buffer and 
+    returns the number of bytes added in that queue
+
+  @Preconditions
+    UART2_Initialize function should have been called 
+    before calling this function
+
+  @Example
+    <code>
+    char                     myBuffer[MY_BUFFER_SIZE];
+    unsigned int             numBytes;
+    UART2_TRANSFER_STATUS status ;
+
+    // Pre-initialize myBuffer with MY_BUFFER_SIZE bytes of valid data.
+
+    numBytes = 0;
+    while( numBytes < MY_BUFFER_SIZE);
+    {
+        status = UART2_TransferStatusGet ( ) ;
+        if (status & UART2_TRANSFER_STATUS_TX_EMPTY)
+        {
+            numBytes += UART2_WriteBuffer ( myBuffer + numBytes, MY_BUFFER_SIZE - numBytes )  ;
+            if(numBytes < writebufferLen)
+            {
+                continue;
+            }
+            else
+            {
+                break;
+            }
+        }
+        else
+        {
+            continue;
+        }
+
+        // Do something else...
+    }
+    </code>
+*/
+unsigned int __attribute__((deprecated)) UART2_WriteBuffer( uint8_t *buffer , unsigned int numbytes );
+
+/**
+  @Summary
+    Returns the transmitter and receiver transfer status
+
+  @Description
+    This returns the transmitter and receiver transfer status.The returned status 
+    may contain a value with more than one of the bits
+    specified in the UART2_TRANSFER_STATUS enumeration set.  
+    The caller should perform an "AND" with the bit of interest and verify if the
+    result is non-zero (as shown in the example) to verify the desired status
+    bit.
+
+  @Preconditions
+    UART2_Initialize function should have been called 
+    before calling this function
+
+  @Param
+    None.
+
+  @Returns
+    A UART2_TRANSFER_STATUS value describing the current status 
+    of the transfer.
+
+  @Example
+    Refer to UART2_ReadBuffer and UART2_WriteBuffer for example
+
+*/
+UART2_TRANSFER_STATUS __attribute__((deprecated)) UART2_TransferStatusGet (void );
+
+/**
+  @Summary
+    Returns the character in the read sequence at the offset provided, without
+    extracting it
+
+  @Description
+    This routine returns the character in the read sequence at the offset provided,
+    without extracting it
+ 
+  @Param
+    None.
+    
+  @Example 
+    <code>
+    uint8_t readBuffer[5];
+    unsigned int data, numBytes = 0;
+    unsigned int readbufferLen = sizeof(readBuffer);
+    UART2_Initialize();
+    
+    while(numBytes < readbufferLen)        
+    {   
+        UART2_TasksReceive ( );
+        //Check for data at a particular place in the buffer
+        data = UART2_Peek(3);
+        if(data == 5)
+        {
+            //discard all other data if byte that is wanted is received.    
+            //continue other operation
+            numBytes += UART2_ReadBuffer ( readBuffer + numBytes , readbufferLen ) ;
+        }
+        else
+        {
+            break;
+        }
+    }
+    </code>
+ 
+*/
+uint8_t __attribute__((deprecated)) UART2_Peek(uint16_t offset);
+
+/**
+  @Summary
+    Returns the status of the receive buffer
+
+  @Description
+    This routine returns if the receive buffer is empty or not.
+
+  @Param
+    None.
+ 
+  @Returns
+    True if the receive buffer is empty
+    False if the receive buffer is not empty
+    
+  @Example
+    <code>
+    char                     myBuffer[MY_BUFFER_SIZE];
+    unsigned int             numBytes;
+    UART2_TRANSFER_STATUS status ;
+
+    // Pre-initialize myBuffer with MY_BUFFER_SIZE bytes of valid data.
+
+    numBytes = 0;
+    while( numBytes < MY_BUFFER_SIZE);
+    {
+        status = UART2_TransferStatusGet ( ) ;
+        if (!UART2_ReceiveBufferIsEmpty())
+        {
+            numBytes += UART2_ReadBuffer( myBuffer + numBytes, MY_BUFFER_SIZE - numBytes )  ;
+            if(numBytes < readbufferLen)
+            {
+                continue;
+            }
+            else
+            {
+                break;
+            }
+        }
+        else
+        {
+            continue;
+        }
+
+        // Do something else...
+    }
+    </code>
+ 
+*/
+bool __attribute__((deprecated)) UART2_ReceiveBufferIsEmpty (void);
+
+/**
+  @Summary
+    Returns the status of the transmit buffer
+
+  @Description
+    This routine returns if the transmit buffer is full or not.
+
+ @Param
+    None.
+ 
+ @Returns
+    True if the transmit buffer is full
+    False if the transmit buffer is not full
+
+ @Example
+    Refer to UART2_Initialize() for example.
+ 
+*/
+bool __attribute__((deprecated)) UART2_TransmitBufferIsFull (void);
+
+/**
+  @Summary
+    Returns the transmitter and receiver status
+
+  @Description
+    This returns the transmitter and receiver status. The returned status may 
+    contain a value with more than one of the bits
+    specified in the UART2_STATUS enumeration set.  
+    The caller should perform an "AND" with the bit of interest and verify if the
+    result is non-zero (as shown in the example) to verify the desired status
+    bit.
+
+  @Preconditions
+    UART2_Initialize function should have been called 
+    before calling this function
+
+  @Param
+    None.
+
+  @Returns
+    A UART2_STATUS value describing the current status 
+    of the transfer.
+
+  @Example
+    <code>
+        while(!(UART2_StatusGet & UART2_TX_COMPLETE ))
+        {
+           // Wait for the tranmission to complete
+        }
+    </code>
+*/
+uint32_t __attribute__((deprecated)) UART2_StatusGet (void );
 
 /**
   @Summary
@@ -243,41 +636,58 @@ void __attribute__((deprecated)) UART2_Disable(void);
 
 /**
   @Summary
-    Returns the transmitter and receiver status
+    Returns the number of bytes remaining in the receive buffer
 
   @Description
-    This returns the transmitter and receiver status. The returned status may 
-    contain a value with more than one of the bits
-    specified in the UART2_STATUS enumeration set.  
-    The caller should perform an "AND" with the bit of interest and verify if the
-    result is non-zero (as shown in the example) to verify the desired status
-    bit.
-
-  @Preconditions
-    UART2_Initialize function should have been called 
-    before calling this function
+    This routine returns the number of bytes remaining in the receive buffer.
 
   @Param
     None.
 
   @Returns
-    A UART2_STATUS value describing the current status 
-    of the transfer.
-
-  @Example
+    Remaining size of receive buffer.
+    
+  @Example 
     <code>
-        while(!(UART2_StatusGet & UART2_TX_COMPLETE ))
-        {
-           // Wait for the tranmission to complete
-        }
+    uint8_t readBuffer[MY_BUFFER_SIZE];
+    unsigned int size, numBytes = 0;
+    UART2_Initialize();
+
+    // Pre-initialize readBuffer with MY_BUFFER_SIZE bytes of valid data.
+    
+    while (size < MY_BUFFER_SIZE) {
+        size = UART2_ReceiveBufferSizeGet();
+    }
+    numBytes = UART2_ReadBuffer(readBuffer, MY_BUFFER_SIZE);
     </code>
+ 
 */
-uint32_t __attribute__((deprecated)) UART2_StatusGet (void );
+
+unsigned int __attribute__((deprecated)) UART2_ReceiveBufferSizeGet(void);
+
+/**
+  @Summary
+    Returns the number of bytes remaining in the transmit buffer.
+
+  @Description
+    This routine returns the number of bytes remaining in the transmit buffer.
+
+ @Param
+    None.
+ 
+ @Returns
+    Remaining size of transmit buffer.
+
+ @Example
+    Refer to UART2_Initialize(); for example.
+*/
+
+unsigned int __attribute__((deprecated)) UART2_TransmitBufferSizeGet(void);
 
 #ifdef __cplusplus  // Provide C++ Compatibility
 
     }
 
 #endif
-
+    
 #endif  // _UART2_H

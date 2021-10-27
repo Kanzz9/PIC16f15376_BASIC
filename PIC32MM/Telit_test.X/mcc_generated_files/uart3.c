@@ -322,14 +322,6 @@ bool UART3_IsTxDone(void)
     return false;
 }
 
-void _mon_putc(char c) 
-{
-    while(UART3_IsTxReady() == false)
-    {
-    }
-  
-    UART3_Write(c);
-}
 
 /*******************************************************************************
 
